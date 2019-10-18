@@ -1,7 +1,7 @@
-# 009. Palindrome Number
+# 009. Palindrome Number(E)
 [009. Palindrome Number](https://leetcode-cn.com/problems/palindrome-number/)
 
-## 1. 题目描述\(简单\)
+## 1. 题目描述(简单)
 
 Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
 
