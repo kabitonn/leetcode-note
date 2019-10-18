@@ -1,6 +1,7 @@
-## [31. Next Permutation](https://leetcode-cn.com/problems/next-permutation/)
+# 031. Next Permutation
+[link](https://leetcode-cn.com/problems/next-permutation/)
 
-## 1. 题目描述\(中等\)
+## 题目描述\(中等\)
 
 Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.
 
@@ -16,14 +17,14 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
 1,1,5 → 1,5,1
 ```
 
-## 2. 思路
+## 思路
 
 1. 找到最靠后的前者小于后者的两个数，交换两数位置，逆序第一个数后面的部分
 2. 从后往前找到第一个不再递增的数，从该位置起向后找到比该数大的最小的值，交换两数位置，逆序第一个数后面的部
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 双重循环
+### 双重循环
 
 双重循环找到靠后的前者小于后者的两个数
 
@@ -62,7 +63,7 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
     }
 ```
 
-### 3.2 单重循环
+### 单重循环
 
 从右向左找到第一个数字不再递增的位置，然后从右边找到一个刚好大于当前位的数字即可
 

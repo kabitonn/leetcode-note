@@ -1,6 +1,7 @@
-## [83. Remove Duplicates from Sorted List](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)
+# 083. Remove Duplicates from Sorted List
+[link](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given a sorted linked list, delete all duplicates such that each element appear only once.
 
@@ -14,14 +15,14 @@ Example 2:
 Input: 1->1->2->3->3
 Output: 1->2->3
 ```
-## 2. 思路
+## 思路
 
 1. 迭代
 2. 递归
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 迭代
+### 迭代
 
 找到一个，删除一个；相等的话就删除下一个节点，不相等就后移
 
@@ -40,7 +41,7 @@ Output: 1->2->3
     }
 ```
 
-### 3.2 递归
+### 递归
 
 ```java
     public ListNode deleteDuplicates(ListNode head) {
@@ -54,7 +55,7 @@ Output: 1->2->3
         return head;
     }
 ```
-### 3.3 迭代2
+### 迭代2
 
 遇到重复数字，跳过后续所有
 
@@ -96,7 +97,7 @@ Output: 1->2->3
 ```
 
 
-### 3.4 递归2
+### 递归2
 
 
 ```java

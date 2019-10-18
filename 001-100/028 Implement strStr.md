@@ -1,6 +1,7 @@
-## [28. Implement strStr\(\)](https://leetcode-cn.com/problems/implement-strstr/)
+# 028. Implement strStr\(\)
+[link](https://leetcode-cn.com/problems/implement-strstr/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Implement strStr\(\).
 
@@ -20,7 +21,7 @@ Input: haystack = "aaaaa", needle = "bba"
 Output: -1
 ```
 
-## 2. 思路
+## 思路
 
 1. 遍历每个字符
 2. 遍历相同长度子串
@@ -28,9 +29,9 @@ Output: -1
 4. KMP
 
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 遍历每个字符比较
+### 遍历每个字符比较
 ```java
     public int strStr(String haystack, String needle) {
         if(needle.length()==0)
@@ -71,7 +72,7 @@ Output: -1
     }
 ```
 
-### 3.2 遍历相同长度子串
+### 遍历相同长度子串
 ```java
     public int strStr(String haystack, String needle) {
     	for(int i=0;i<=haystack.length()-needle.length();i++) {
@@ -82,7 +83,7 @@ Output: -1
     }
 ```
 
-### 3.3 BF
+### BF
 
 ```java
     public int strStr(String haystack, String needle) {
@@ -108,7 +109,7 @@ Output: -1
 ```
 
 
-### 3.4 KMP
+### KMP
 
 ```java
     public int strStr(String haystack, String needle) {

@@ -1,6 +1,7 @@
-## [67. Add Binary](https://leetcode-cn.com/problems/add-binary/)
+# 067. Add Binary
+[link](https://leetcode-cn.com/problems/add-binary/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given two binary strings, return their sum (also a binary string).
 
@@ -17,13 +18,13 @@ Input: a = "1010", b = "1011"
 Output: "10101"
 ```
 
-## 2. 思路
+## 思路
 1. 低位相加插入头部
 2. 低位相加插入尾部reverse
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1
+### 
 
 
 ```java
@@ -56,7 +57,7 @@ Output: "10101"
 
 空间复杂度：O(1) 。
 
-### 3.2
+### 
 
 多次 insert 会很耗费时间，不如最后直接 reverse
 

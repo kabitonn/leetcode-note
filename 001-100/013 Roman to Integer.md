@@ -1,6 +1,7 @@
-## [13. Roman to Integer](https://leetcode-cn.com/problems/roman-to-integer/)
+# 013. Roman to Integer
+[link](https://leetcode-cn.com/problems/roman-to-integer/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 
@@ -61,14 +62,14 @@ Output: 1994
 Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 ```
 
-## 2. 思路
+## 思路
 
 1. 针对可能是两个字符组成的罗马数字判断当前字符和下一个字符，其余只判断当前字符
 2. 每次获取两个字符的组合判断是否有效，若有效相加有效值，若无效，获取单个字符对应有效值
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1
+### 
 
 ```java
     public int romanToInt(String s) {
@@ -153,7 +154,7 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
     }
 ```
 
-### 3.2
+### 
 
 ```java
     public int romanToInt(String s) {

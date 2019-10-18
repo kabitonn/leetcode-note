@@ -1,6 +1,7 @@
-## [23. Merge k Sorted Lists](https://leetcode-cn.com/problems/merge-k-sorted-lists/)
+# 023. Merge k Sorted Lists
+[link](https://leetcode-cn.com/problems/merge-k-sorted-lists/)
 
-## 1. 题目描述\(困难\)
+## 题目描述\(困难\)
 
 Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
 
@@ -16,7 +17,7 @@ Input:
 Output: 1->1->2->3->4->4->5->6
 ```
 
-## 2. 思路
+## 思路
 
 1. 利用二路归并，水平归并，依此和后者链表归并
 2. 两两归并
@@ -24,9 +25,9 @@ Output: 1->1->2->3->4->4->5->6
 4. 优先队列
 5. 存储所有节点值，排序后生成
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 水平归并
+### 水平归并
 
 ```java
     public ListNode mergeKLists(ListNode[] lists) {
@@ -68,7 +69,7 @@ Output: 1->1->2->3->4->4->5->6
     }
 ```
 
-### 3.2 两两归并
+### 两两归并
 
 ```java
     public ListNode mergeKLists(ListNode[] lists) {
@@ -86,7 +87,7 @@ Output: 1->1->2->3->4->4->5->6
     }
 ```
 
-### 3.3 垂直归并
+### 垂直归并
 
 ```java
     public ListNode mergeKLists(ListNode[] lists) {
@@ -115,7 +116,7 @@ Output: 1->1->2->3->4->4->5->6
     }
 ```
 
-### 3.4 优先队列
+### 优先队列
 
 ```java
     public ListNode mergeKLists(ListNode[] lists) {
@@ -144,7 +145,7 @@ Output: 1->1->2->3->4->4->5->6
     }
 ```
 
-### 3.5 暴力法-数组排序
+### 暴力法-数组排序
 
 ```java
     public ListNode mergeKLists(ListNode[] lists) {

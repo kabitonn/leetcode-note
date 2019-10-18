@@ -1,6 +1,7 @@
-## [70. Climbing Stairs](https://leetcode-cn.com/problems/climbing-stairs/)
+# 070. Climbing Stairs
+[link](https://leetcode-cn.com/problems/climbing-stairs/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 You are climbing a stair case. It takes n steps to reach to the top.
 
@@ -29,15 +30,15 @@ Explanation: There are three ways to climb to the top.
 3. 2 steps + 1 step
 ```
 
-## 2. 思路
+## 思路
 
 1. 递归
 2. 迭代
 3. 公式法
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 递归
+### 递归
 
 ```java
     public int climbStairs(int n) {
@@ -46,7 +47,7 @@ Explanation: There are three ways to climb to the top.
     }
 ```
 
-### 3.2 迭代
+### 迭代
 
 ```java
     public int climbStairs(int n) {
@@ -62,7 +63,7 @@ Explanation: There are three ways to climb to the top.
     }
 ```
 
-### 3.3 公式法
+### 公式法
 
 ![](/assets/001-100/070-solution-3-1.png)
 

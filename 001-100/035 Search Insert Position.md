@@ -1,6 +1,7 @@
-## [35. Search Insert Position](https://leetcode-cn.com/problems/search-insert-position/)
+# 035. Search Insert Position
+[link](https://leetcode-cn.com/problems/search-insert-position/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
 
@@ -34,14 +35,14 @@ Input: [1,3,5,6], 0
 Output: 0
 ```
 
-## 2. 思路
+## 思路
 
 1. 遍历
 2. 二分查找
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 遍历
+### 遍历
 
 ```java
     public int searchInsert(int[] nums, int target) {
@@ -54,7 +55,7 @@ Output: 0
     }
 ```
 
-### 3.2 二分查找
+### 二分查找
 
 插入在相等值的左边，所以查找左边界，存在相等即为左边界，不存在即为小于里的最大值，low==nums.length，即为nums小于target
 

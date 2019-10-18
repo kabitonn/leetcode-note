@@ -1,6 +1,7 @@
-## [8. String to Integer \(atoi\)](https://leetcode-cn.com/problems/string-to-integer-atoi/)
+# 008. String to Integer \(atoi\)
+[link](https://leetcode-cn.com/problems/string-to-integer-atoi/)
 
-## 1. 题目描述\(中等\)
+## 题目描述\(中等\)
 
 Implement atoi which converts a string to an integer.
 
@@ -59,7 +60,7 @@ Explanation: The number "-91283472332" is out of the range of a 32-bit signed in
              Thefore INT_MIN (−2^31)is returned.
 ```
 
-## 2. 思路
+## 思路
 
 从左遍历字符串，可以遇到空格，直到遇到 ' + ' 或者数字或者 ' - ' 就表示要转换的数字开始，如果之后遇到除了数字的其他字符（包括空格）就结束遍历，输出结果
 
@@ -67,9 +68,9 @@ Explanation: The number "-91283472332" is out of the range of a 32-bit signed in
 
 如果转换的数字超出了 int ，就返回 intMax 或者 intMin。
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 溢出预处理
+### 溢出预处理
 
 ```java
     public int myAtoi(String str) {
@@ -114,7 +115,7 @@ Explanation: The number "-91283472332" is out of the range of a 32-bit signed in
     }
 ```
 
-### 3.2 转换数据类型
+### 转换数据类型
 
 ```java
     public int myAtoi(String str) {

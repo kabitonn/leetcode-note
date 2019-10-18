@@ -17,9 +17,10 @@
         "github-buttons",
         "copy-code-button",
         "-lunr",
+        "-livereload",
         "-search",
         "search-plus",
-        "-livereload",
+        "emphasize",
         "expandable-chapters-small"
     ],
     "pluginsConfig": {
@@ -27,8 +28,8 @@
             "buttons": [
                 {
                     "user": "kabitonn",
-                    "repo": "leetcode",
-                    "type": "star",
+                    "repo": "leetcode-note",
+                    "types": "star",
                     "size": "small",
                     "count": true
                 }

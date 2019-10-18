@@ -1,6 +1,7 @@
-## [53. Maximum Subarray](https://leetcode-cn.com/problems/maximum-subarray/)
+# 053. Maximum Subarray
+[link](https://leetcode-cn.com/problems/maximum-subarray/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Given an integer array nums, find the contiguous subarray \(containing at least one number\) which has the largest sum and return its sum.
 
@@ -16,13 +17,13 @@ Follow up:
 
 > If you have figured out the O\(n\) solution, try coding another solution using the divide and conquer approach, which is more subtle.
 
-## 2. 思路
+## 思路
 
 1. 动态规划
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 动态规划1
+### 动态规划1
 
 一维数组 dp [ i ] 表示以下标 i 结尾的子数组的元素的最大的和，也就是这个子数组最后一个元素是下边为 i 的元素，并且这个子数组是所有以 i 结尾的子数组中，和最大的
 
@@ -52,7 +53,7 @@ Follow up:
 
 空间复杂度：O(n)。
 
-### 3.2 动态规划2
+### 动态规划2
 
 用一个变量表示以下标 i 结尾的子数组的元素的最大的和
 ```java
@@ -72,7 +73,7 @@ Follow up:
 空间复杂度：O(1)。
 
 
-### 3.3 折半分治
+### 折半分治
 
 1. 终止条件：left == right，那么 maxSubArrayPart 直接返回 nums [ left] 
 2. 问题分解

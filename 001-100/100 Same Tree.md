@@ -1,6 +1,7 @@
-## [100. Same Tree](https://leetcode-cn.com/problems/same-tree/)
+# 100. Same Tree
+[link](https://leetcode-cn.com/problems/same-tree/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given two binary trees, write a function to check if they are the same or not.
 
@@ -38,14 +39,14 @@ Output: false
 ```
 
 
-## 2. 思路
+## 思路
 
 1. 递归
 2. 迭代
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 递归
+### 递归
 只要把两个树同时遍历一下，遍历过程中判断数值是否相等或者同时为 null 即可
 而遍历的方法，当然可以选择 DFS 里的先序遍历，中序遍历，后序遍历，或者 BFS。
 
@@ -78,7 +79,7 @@ Output: false
           \
            4
 ```
-### 3.2 迭代
+### 迭代
 
 自定义栈
 

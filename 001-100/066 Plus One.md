@@ -1,6 +1,7 @@
-## [66. Plus One](https://leetcode-cn.com/problems/plus-one/)
+# 066. Plus One
+[link](https://leetcode-cn.com/problems/plus-one/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
 
@@ -20,14 +21,14 @@ Input: [4,3,2,1]
 Output: [4,3,2,2]
 Explanation: The array represents the integer 4321.
 ```
-## 2. 思路
+## 思路
 
 1. 将1看做一个数
 2. 1即为1
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 两数相加
+### 两数相加
 
 每位数字和进位相加
 
@@ -58,7 +59,7 @@ Explanation: The array represents the integer 4321.
 时间复杂度：O(n)
 
 
-### 3.2 个位加1
+### 个位加1
 
 若有进位继续相加，进位时，carry为1，低位为0
 
@@ -79,7 +80,7 @@ Explanation: The array represents the integer 4321.
 
 时间复杂度：O(n)
 
-### 3.3 转换为数字相加
+### 转换为数字相加
 
 
 ```java

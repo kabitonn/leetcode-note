@@ -1,6 +1,7 @@
-## [88. Merge Sorted Array](https://leetcode-cn.com/problems/merge-sorted-array/)
+# 088. Merge Sorted Array
+[link](https://leetcode-cn.com/problems/merge-sorted-array/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
 
@@ -17,12 +18,12 @@ nums2 = [2,5,6],       n = 3
 Output: [1,2,2,3,5,6]
 ```
 
-## 2. 思路
+## 思路
 1. 后序插入以节省空间
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1
+### 1
 后序选择大者插入
 
 ```java

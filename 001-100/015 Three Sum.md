@@ -1,6 +1,7 @@
-## [15. 3Sum](https://leetcode-cn.com/problems/3sum/)
+# 015. 3Sum
+[link](https://leetcode-cn.com/problems/3sum/)
 
-## 1. 题目描述\(中等\)
+## 题目描述\(中等\)
 
 Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
 
@@ -19,15 +20,15 @@ A solution set is:
 ]
 ```
 
-## 2. 思路
+## 思路
 
 1. 三个值的取值遍历求和，判断，利用set去除重复的list
 2. 数组排序，对选定的一个值，选取low、high两指针，判断当前三者和和目标差的正负，决定哪个指针移动，利用set去除重复的list
 3. 数组排序，对选定的一个值，选取low、high两指针，判断当前三者和和目标差的正负，决定哪个指针移动，若找到目标后，双指针判断后续元素是否一致进行去重操作
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 暴力遍历
+### 暴力遍历
 
 ```java
     public List<List<Integer>> threeSum(int[] nums) {
@@ -57,7 +58,7 @@ A solution set is:
     }
 ```
 
-### 3.2  双指针 set去重
+### 双指针 set去重
 
 ```java
     public List<List<Integer>> threeSum(int[] nums) {
@@ -93,7 +94,7 @@ A solution set is:
     }
 ```
 
-### 3.3 双指针-有序判断去重
+### 双指针-有序判断去重
 
 ```java
     public List<List<Integer>> threeSum2(int[] nums) {

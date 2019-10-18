@@ -1,6 +1,7 @@
-## [19. Remove Nth Node From End of List](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)
+# 019. Remove Nth Node From End of List
+[link](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)
 
-## 1. 题目描述(中等)
+## 题目描述(中等)
 
 Given a linked list, remove the n-th node from the end of list and return its head.
 
@@ -16,16 +17,16 @@ Follow up:
 
 > Could you do this in one pass?
 
-## 2. 思路
+## 思路
 
 1. 前后指针遍历$$n+(l-n)*2 = 2l - n$$
     1. 单个指针遍历$$l+l-n = 2l - n$$
 2. 一次遍历，存储结点
 
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 两次遍历
+### 两次遍历
 
 
 
@@ -70,7 +71,7 @@ Follow up:
     }
 ```
 
-### 3.2 一次遍历
+### 一次遍历
 
 
 

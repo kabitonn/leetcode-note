@@ -1,6 +1,7 @@
-## [69. Sqrt(x)](https://leetcode-cn.com/problems/sqrtx/)
+# 069. Sqrt(x)
+[link](https://leetcode-cn.com/problems/sqrtx/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Implement int sqrt(int x).
 
@@ -20,14 +21,15 @@ Output: 2
 Explanation: The square root of 8 is 2.82842..., and since 
              the decimal part is truncated, 2 is returned.
 ```
-## 2. 思路
+## 思路
 求小于等于算术平方根的最大值
 1. 遍历
 2. 二分
 3. 牛顿法
-## 3. 解决方法
 
-### 3.1 遍历
+## 解决方法
+
+### 遍历
 
 
 
@@ -42,7 +44,7 @@ Explanation: The square root of 8 is 2.82842..., and since
     }
 ```
 
-### 3.2 二分
+### 二分
 
 
 ```java 
@@ -64,7 +66,7 @@ Explanation: The square root of 8 is 2.82842..., and since
     }
 ```
 
-### 3.3 改进二分
+### 改进二分
 
 
 ```java
@@ -83,7 +85,7 @@ Explanation: The square root of 8 is 2.82842..., and since
 
 
 
-### 3.4 
+### 
 
 $$x_{k+1} = x_k - f(x_k)/f'(x_k)$$
 $$f(x_n) = x^2 - n$$

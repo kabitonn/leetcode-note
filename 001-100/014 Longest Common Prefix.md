@@ -1,6 +1,7 @@
-## [14. Longest Common Prefix](https://leetcode-cn.com/problems/longest-common-prefix/)
+# 014. Longest Common Prefix
+[link](https://leetcode-cn.com/problems/longest-common-prefix/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Write a function to find the longest common prefix string amongst an array of strings.
 
@@ -25,13 +26,13 @@ Explanation: There is no common prefix among the input strings.
 
 > All given inputs are in lowercase letters a-z
 
-## 2. 思路
+## 思路
 
 1. 对所有字符串从第一列开始比较
 2. 前一个依次和后一个求LCP，
 3. 递归，两个两个分别求LCP
 
-## 3. 解决方法
+## 解决方法
 
 ### 3.1 垂直比较
 

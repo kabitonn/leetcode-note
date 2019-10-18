@@ -1,6 +1,7 @@
-## [34. Find First and Last Position of Element in Sorted Array](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+# 034. Find First and Last Position of Element in Sorted Array
+[link](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 
-## 1. 题目描述\(中等\)
+## 题目描述\(中等\)
 
 Given an array of integers nums sorted in ascending order, find the starting and ending position of a given target value.
 
@@ -22,13 +23,13 @@ Input: nums = [5,7,7,8,8,10], target = 6
 Output: [-1,-1]
 ```
 
-## 2. 思路
+## 思路
 
 二分查找
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 一般二分查找+前后遍历
+### 一般二分查找+前后遍历
 
 一般二分查找找到相等值索引，前后遍历找到最小最大索引
 
@@ -57,7 +58,7 @@ Output: [-1,-1]
     }
 ```
 
-### 3.2 改进二分查找
+### 改进二分查找
 
 修改二分查找，找到和目标值相等的索引最小的值，向后遍历找到索引最大值
 
@@ -111,7 +112,7 @@ Output: [-1,-1]
     }
 ```
 
-### 3.3 二分查找改
+### 二分查找改
 
 ```java
     public int[] searchRange(int[] nums, int target) {
@@ -144,9 +145,9 @@ Output: [-1,-1]
     }
 ```
 
-## 4. 二分查找细节
+## 二分查找细节
 
-### 4.1 寻找一个数（基本二分搜索）
+### 寻找一个数（基本二分搜索）
 
 搜索一个数，如果存在，返回其索引，否则返回 -1
 
@@ -180,7 +181,7 @@ Output: [-1,-1]
 
     当然是 \[left, mid - 1\] 或者 \[mid + 1, right\] 对不对？因为 mid 已经搜索过，应该从搜索区间中去除。
 
-### 4.2 寻找左侧边界的二分搜索
+### 寻找左侧边界的二分搜索
 
 ```java
     public int binarySearchMin(int[] nums, int target) {
@@ -232,7 +233,7 @@ Output: [-1,-1]
 
     答：都是一样的，因为 while 终止的条件是 left == right。
 
-### 4.3 寻找右侧边界的二分查找
+### 寻找右侧边界的二分查找
 
 ```java
     public int binarySearchMax(int[] nums, int target) {

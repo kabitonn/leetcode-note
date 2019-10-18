@@ -1,6 +1,7 @@
-## [16. 3Sum Closest](https://leetcode-cn.com/problems/3sum-closest/)
+# 016. 3Sum Closest
+[link](https://leetcode-cn.com/problems/3sum-closest/)
 
-## 1. 题目描述\(中等\)
+## 题目描述\(中等\)
 
 Given an array nums of n integers and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assume that each input would have exactly one solution.
 
@@ -11,15 +12,15 @@ Given array nums = [-1, 2, 1, -4], and target = 1.
 The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 ```
 
-## 2. 思路
+## 思路
 
 1. 遍历所有三者之和，求出与目标差值，求最小值
    1. 对排序数组可改进，若当前差值已大于当前循环最小值，可跳出该层循环
 2. 数组排序，选定一个元素，头尾双指针遍历
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 暴力遍历
+### 暴力遍历
 
 ```java
     public int threeSumClosest(int[] nums, int target) {
@@ -72,7 +73,7 @@ The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
     }
 ```
 
-### 3.2 双指针
+### 双指针
 
 ```java
     public int threeSumClosest(int[] nums, int target) {

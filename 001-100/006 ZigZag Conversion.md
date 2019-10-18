@@ -1,6 +1,7 @@
-## [6. ZigZag Conversion](https://leetcode-cn.com/problems/zigzag-conversion/)
+# 006. ZigZag Conversion
+[link](https://leetcode-cn.com/problems/zigzag-conversion/)
 
-## 1. 题目描述\(中等\)
+## 题目描述\(中等\)
 
 The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: \(you may want to display this pattern in a fixed font for better legibility\)
 
@@ -33,14 +34,14 @@ Y A   H R
 P     I
 ```
 
-## 2. 思路
+## 思路
 
 1. 依据字符串书写顺序分别写入不同的行
 2. 书写规律
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 顺序写依次存入不同行
+### 顺序写依次存入不同行
 
 ```java
     public String convert(String s, int numRows) {
@@ -72,7 +73,7 @@ P     I
 
 空间复杂度：$$O(n)$$，保存每个字符需要的空间。
 
-### 3.2 Z字形规律
+### Z字形规律
 
 找出按 Z 形排列后字符的规律，然后直接保存起来。
 

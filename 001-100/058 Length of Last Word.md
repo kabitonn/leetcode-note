@@ -1,6 +1,7 @@
-## [58. Length of Last Word](https://leetcode-cn.com/problems/length-of-last-word/)
+# 058. Length of Last Word
+[link](https://leetcode-cn.com/problems/length-of-last-word/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given a string s consists of upper/lower-case alphabets and empty space characters ' ', return the length of last word in the string.
 
@@ -13,14 +14,14 @@ Example:
 Input: "Hello World"
 Output: 5
 ```
-## 2. 思路
+## 思路
 
 1. 过滤尾部空格，从后向前遍历，找到第一个不为字母的索引
 2. 从后向前找到第一个不为空格的索引end，继续向前找到第一个部位字母的索引
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1
+### 1
 
 ```java
     public int lengthOfLastWord(String s) {
@@ -39,7 +40,7 @@ Output: 5
 
 空间复杂度：O(1)。
 
-### 3.2 
+### 
 
 
 ```java

@@ -1,6 +1,8 @@
-# [4. Median of Two Sorted Arrays](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)
+# 004. Median of Two Sorted Arrays
+[link](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)
 
-## 1. 题目描述\(困难\)
+
+## 题目描述\(困难\)
 
 There are two sorted arrays nums1 and nums2 of size m and n respectively.
 
@@ -24,15 +26,15 @@ nums2 = [3, 4]
 The median is (2 + 3)/2 = 2.5
 ```
 
-## 2. 思路
+## 思路
 
 1. 归并全部数组
 2. 归并部分数组，知道中位数出现
 3. 利用中位数定义，将两个数组划分为数量相等的两部分
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 暴力法-归并数组
+### 暴力法-归并数组
 
 归并两个有序数组，返回中位数
 
@@ -63,7 +65,7 @@ The median is (2 + 3)/2 = 2.5
     }
 ```
 
-### 3.2 暴力法-归并部分数组
+### 暴力法-归并部分数组
 
 不需要归并全部数组，根据奇偶数只需归并中间部分的两个数；
 
@@ -101,7 +103,7 @@ The median is (2 + 3)/2 = 2.5
 
 空间复杂度：我们申请了常数个变量，所以空间复杂度是  O(1) 。
 
-### 3.3 递归（迭代）
+### 递归（迭代）
 
 > 中位数（又称中值，英语：Median），统计学中的专有名词，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。
 >

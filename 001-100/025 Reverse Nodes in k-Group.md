@@ -1,15 +1,16 @@
-## [Reverse Nodes in k-Group](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)
+# 025. Reverse Nodes in k-Group
+[link](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)
 
-## 1. 题目描述\(困难\)
+## 题目描述\(困难\)
 
-## 2. 思路
+## 思路
 
 1. 递归：k个一组的链表断开，保存一组后的新的头结点，逆置当前k个节点连接顺序，并递归调用剩余部分，将剩余部分新头部连接至逆置后的链表
 2. 迭代：k个一组的链表断开，保存一组后的新的头结点，逆置当前k个节点连接顺序，保存当前k个节点的尾结点作为连接点，连接下一次逆置后的新头部
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 递归
+### 递归
 
 ```java
     public ListNode reverseKGroup(ListNode head, int k) {
@@ -63,7 +64,7 @@
     }
 ```
 
-### 3.2 迭代
+### 迭代
 
 ```java
     public ListNode reverseKGroup(ListNode head, int k) {

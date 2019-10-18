@@ -1,6 +1,7 @@
-## [26. Remove Duplicates from Sorted Array](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
+# 026. Remove Duplicates from Sorted Array
+[link](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
 
@@ -26,14 +27,14 @@ Your function should return length = 5, with the first five elements of nums bei
 It doesn't matter what values are set beyond the returned length.
 ```
 
-## 2. 思路
+## 思路
 
 1. 有序数组，和前者一样即为重复
 2. 和每次第一个不重复的值比较，不一样对有效索引递增
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1
+### 1
 
 ```java
     public int removeDuplicates(int[] nums) {
@@ -49,7 +50,7 @@ It doesn't matter what values are set beyond the returned length.
     }
 ```
 
-### 3.2
+### 2
 
 ```java
     public int removeDuplicates(int[] nums) {

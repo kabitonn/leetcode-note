@@ -1,6 +1,7 @@
-## [3. Longest Substring Without Repeating Characters](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
+# 003. Longest Substring Without Repeating Characters
+[link](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
 
-## 1. 题目描述\(中等\)
+## 题目描述\(中等\)
 
 Given a string, find the length of the longest substring without repeating characters.
 
@@ -32,16 +33,16 @@ Explanation: The answer is "wke", with the length of 3.
 
 > that the answer must be a substring, "pwke" is a subsequence and not a substring.
 
-## 2. 思路
+## 思路
 
 1. 遍历所有情况，求最大值
 2. 双指针，若出现重复，去除当前子串头部元素，继续遍历
 3. 滑动窗口，若出现重复，找出子串内重复的元素j'，直接令窗口头向后滑动为j'+1
 4. 数组模拟map实现滑动窗口，适用key数目较少情况 
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 暴力法
+### 暴力法
 
 依次判断以当前元素为首的无重复元素子串是否为最长子串，以i为首j为尾的子串是否为无重复元素子串，若为重复元素子串，循环i+1为首的子串；若为无重复元素子串，判断当前长度j-i+1与maxNum并修改。
 
@@ -94,7 +95,7 @@ Explanation: The answer is "wke", with the length of 3.
 时间复杂度O\(n^2\)  
 空间复杂度O\(min\(n,m\)\),需要 O\(k\) 的空间来检查子字符串中是否有重复字符，其中 k 表示 Set 的大小。而 Set 的大小取决于字符串n 的大小以及字符集/字母m的大小。
 
-### 3.2 双指针\(滑动窗口\)
+### 双指针\(滑动窗口\)
 
 通过使用 HashSet 作为滑动窗口，我们可以用 O\(1\) 的时间来完成对字符是否在当前的子字符串中的检查。
 
@@ -127,7 +128,7 @@ j，如果它不在 HashSet 中，我们会继续滑动 jj。直到 s[j] 已经�
 时间复杂度：O(2n) = O(n)，在最糟糕的情况下，每个字符将被i和j访问两次。  
 空间复杂度：O(min(m, n))，与之前的方法相同。滑动窗口法需要 O(k)的空间，其中k 表示 Set 的大小。而 Set 的大小取决于字符串 n的大小以及字符集 / 字母m的大小。
 
-### 3.3 优化滑动窗口
+### 优化滑动窗口
 
 上述的方法最多需要执行 2n 个步骤。事实上，它可以被进一步优化为仅需要 n 个步骤。我们可以定义字符到索引的映射，而不是使用集合来判断一个字符是否存在。 当我们找到重复的字符时，我们可以立即跳过该窗口。
 
@@ -159,7 +160,7 @@ j，如果它不在 HashSet 中，我们会继续滑动 jj。直到 s[j] 已经�
 
 空间复杂度：也是一样的，O(min(m, n))。
 
-### 3.4 优化滑动窗口改
+### 优化滑动窗口改
 
 采用数组模拟map，适用于字符集较小情况。
 

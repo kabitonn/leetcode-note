@@ -1,6 +1,7 @@
-## [24. Swap Nodes in Pairs](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)
+# 024. Swap Nodes in Pairs
+[link](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)
 
-## 1. 题目描述\(中等\)
+## 题目描述\(中等\)
 
 Given a linked list, swap every two adjacent nodes and return its head.
 
@@ -12,14 +13,14 @@ Example:
 Given 1->2->3->4, you should return the list as 2->1->4->3.
 ```
 
-## 2. 思路
+## 思路
 
 1. 迭代：依次交换两个节点连接关系
 2. 递归：交换头部两个节点，后续递归调用
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 迭代
+### 迭代
 
 ![](/assets/001-100/024-solution-1-1.png)
 
@@ -49,7 +50,7 @@ Given 1->2->3->4, you should return the list as 2->1->4->3.
     }
 ```
 
-### 3.2 递归
+### 递归
 
 ![](/assets/001-100/024-solution-2-1.png)
 

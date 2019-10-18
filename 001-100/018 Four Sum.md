@@ -1,6 +1,7 @@
-## [18. 4Sum](https://leetcode-cn.com/problems/4sum/)
+# 018. 4Sum
+[link](https://leetcode-cn.com/problems/4sum/)
 
-## 1. 题目描述\(中等\)
+## 题目描述\(中等\)
 
 Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of target.
 
@@ -20,13 +21,13 @@ A solution set is:
 ]
 ```
 
-## 2. 思路
+## 思路
 
 1. 遍历选定两个元素，头尾两指针移动遍历
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 双指针
+### 双指针
 
 ```java
     public List<List<Integer>> fourSum(int[] nums, int target) {

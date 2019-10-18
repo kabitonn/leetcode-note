@@ -1,6 +1,7 @@
-## [20. Valid Parentheses](https://leetcode-cn.com/problems/valid-parentheses/)
+# 020. Valid Parentheses
+[link](https://leetcode-cn.com/problems/valid-parentheses/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
@@ -35,14 +36,14 @@ Input: "{[]}"
 Output: true
 ```
 
-## 2. 思路
+## 思路
 
 1. 栈
 2. 数组模拟栈
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 栈
+### 栈
 
 
 
@@ -89,7 +90,7 @@ Output: true
 ```
 
 
-### 3.2 模拟栈
+### 模拟栈
 
 
 

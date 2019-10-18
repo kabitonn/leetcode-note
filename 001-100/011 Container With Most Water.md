@@ -1,6 +1,7 @@
-## [11. Container With Most Water](https://leetcode-cn.com/problems/container-with-most-water/)
+# 011. Container With Most Water
+[link](https://leetcode-cn.com/problems/container-with-most-water/)
 
-## 1. 题目描述\(中等\)
+## 题目描述\(中等\)
 
 Given n non-negative integers a1, a2, ..., an , where each represents a point at coordinate \(i, ai\). n vertical lines are drawn such that the two endpoints of line i is at \(i, ai\) and \(i, 0\). Find two lines, which together with x-axis forms a container, such that the container contains the most water.
 
@@ -19,15 +20,15 @@ Input: [1,8,6,2,5,4,8,3,7]
 Output: 49
 ```
 
-## 2. 思路
+## 思路
 
 1. 直接遍历任意两根柱子求容量
 2. 选定一根柱子，第二根若小于已遍历过的当前最大值，进行下次循环
 3. 左右两个柱子，低的柱子向对端移动找到更高的才有可能在底边短的情况下容量更大；
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 暴力法-遍历
+### 暴力法-遍历
 
 ```java
     public int maxArea(int[] height) {
@@ -49,7 +50,7 @@ Output: 49
 
 空间复杂度：O(1)。
 
-### 3.2 暴力法改进
+### 暴力法改进
 
 ```java
     public int maxArea(int[] height) {
@@ -76,7 +77,7 @@ Output: 49
     }
 ```
 
-### 3.3 双指针
+### 双指针
 
 ```java
     public int maxArea(int[] height) {

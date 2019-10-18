@@ -1,6 +1,7 @@
-## [33. Search in Rotated Sorted Array](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
+# 033. Search in Rotated Sorted Array
+[link](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
 
-## 1. 题目描述\(中等\)
+## 题目描述\(中等\)
 
 Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
 
@@ -26,11 +27,11 @@ Input: nums = [4,5,6,7,0,1,2], target = 3
 Output: -1
 ```
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 遍历
+### 遍历
 
 ```java
     public int search(int[] nums, int target) {
@@ -42,7 +43,7 @@ Output: -1
     }
 ```
 
-### 3.2 两段二分
+### 两段二分
 
 我们每次只关心 mid 的值，所以 mid 要么就是 nums [ mid ]，要么就是 inf 或者 -inf。
 
@@ -118,7 +119,7 @@ Output: -1
 
 
 
-### 3.3 确认旋转点后二分
+### 确认旋转点后二分
 
 
 

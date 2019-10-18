@@ -1,6 +1,7 @@
-## [2. Add Two Numbers](https://leetcode-cn.com/problems/add-two-numbers/)
+# 002. Add Two Numbers
+[link](https://leetcode-cn.com/problems/add-two-numbers/)
 
-## 1. 题目描述（中等）
+## 题目描述（中等）
 
 You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
 
@@ -14,7 +15,7 @@ Output: 7 -> 0 -> 8
 Explanation: 342 + 465 = 807.
 ```
 
-## 2. 思路
+## 思路
 
 两数相加从有效低位开始相加，低位即两链表_l1_和_l2_的头部，两位数字相加出现进位_carry_，
 
@@ -33,9 +34,9 @@ Explanation: 342 + 465 = 807.
 * 判断 carry 是否等于 1 ，如果等于 1 ，在链表末尾增加一个为 1 的节点。
 * 返回 start 的 next ，也就是个位数开始的地方。
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 carry不作为循环条件
+### carry不作为循环条件
 
 ```java
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -64,7 +65,7 @@ Explanation: 342 + 465 = 807.
     }
 ```
 
-### 3.2 carry也作为循环条件
+###carry也作为循环条件
 
 ```java
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -90,13 +91,13 @@ Explanation: 342 + 465 = 807.
     }
 ```
 
-## 4. 拓展
+## 拓展
 
 如果链表中的数字不是按逆序存储的呢？例如：
 
 > \(3→4→2\)+\(4→6→5\)=8→0→7
 
-### 4.1 思路1
+### 思路1
 
 首先想到的是链表先逆序计算，然后将结果再逆序呗，这就转换到我们之前的情况了。
 

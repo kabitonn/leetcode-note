@@ -1,6 +1,7 @@
-## [12. Integer to Roman](https://leetcode-cn.com/problems/integer-to-roman/)
+# 012. Integer to Roman
+[link](https://leetcode-cn.com/problems/integer-to-roman/)
 
-## 1. 题目描述\(中等\)
+## 题目描述\(中等\)
 
 Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 
@@ -63,14 +64,14 @@ Output: "MCMXCIV"
 
 > Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
-## 2. 思路
+## 思路
 
 1. 最大的依此减去当前包含最大的值对应的字符
 2. 直接对每一位数字转换为对应的字符
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1
+### 
 
 ```java
     public String intToRoman(int num) {
@@ -88,7 +89,7 @@ Output: "MCMXCIV"
     }
 ```
 
-### 3.2
+### 
 
 ```java
    public String intToRoman(int num) {
