@@ -1,4 +1,4 @@
-# 003. Longest Substring Without Repeating Characters
+# 003. Longest Substring Without Repeating Characters(M)
 [003. Longest Substring Without Repeating Characters](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
 
 ## 题目描述\(中等\)

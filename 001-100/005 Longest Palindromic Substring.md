@@ -1,4 +1,4 @@
-# 005. Longest Palindromic Substring
+# 005. Longest Palindromic Substring(H)
 [005. Longest Palindromic Substring](https://leetcode-cn.com/problems/longest-palindromic-substring/)
 
 ## 题目描述\(中等\)

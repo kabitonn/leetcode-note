@@ -1,4 +1,4 @@
-# 006. ZigZag Conversion
+# 006. ZigZag Conversion(M)
 [006. ZigZag Conversion](https://leetcode-cn.com/problems/zigzag-conversion/)
 
 ## 题目描述\(中等\)

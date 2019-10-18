@@ -1,4 +1,4 @@
-# 004. Median of Two Sorted Arrays
+# 004. Median of Two Sorted Arrays(H)
 [004. Median of Two Sorted Arrays](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)
 
 
