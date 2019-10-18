@@ -1,4 +1,4 @@
-# 278. First Bad Version
+# 278. First Bad Version(E)
 [278. First Bad Version](https://leetcode-cn.com/problems/first-bad-version/)
 
 ## 题目描述\(简单\)

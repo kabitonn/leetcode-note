@@ -1,4 +1,4 @@
-# 434. Number of Segments in a String
+# 434. Number of Segments in a String(E)
 [434. Number of Segments in a String](https://leetcode-cn.com/problems/number-of-segments-in-a-string/)
 
 ## 题目描述(简单)

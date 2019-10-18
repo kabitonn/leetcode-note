@@ -1,4 +1,4 @@
-# 367. Valid Perfect Square
+# 367. Valid Perfect Square(E)
 [367. Valid Perfect Square](https://leetcode-cn.com/problems/valid-perfect-square/)
 
 ## 题目描述\(简单\)

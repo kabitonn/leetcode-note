@@ -1,4 +1,4 @@
-# 069. Sqrt(x)
+# 069. Sqrt(x)(E)
 [069. Sqrt(x)](https://leetcode-cn.com/problems/sqrtx/)
 
 ## 题目描述(简单)

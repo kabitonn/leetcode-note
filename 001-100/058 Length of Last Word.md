@@ -1,4 +1,4 @@
-# 058. Length of Last Word
+# 058. Length of Last Word(E)
 [058. Length of Last Word](https://leetcode-cn.com/problems/length-of-last-word/)
 
 ## 题目描述(简单)

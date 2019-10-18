@@ -1,4 +1,4 @@
-# 066. Plus One
+# 066. Plus One(E)
 [066. Plus One](https://leetcode-cn.com/problems/plus-one/)
 
 ## 题目描述(简单)

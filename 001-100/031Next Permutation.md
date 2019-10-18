@@ -1,4 +1,4 @@
-# 031. Next Permutation
+# 031. Next Permutation(M)
 [031. Next Permutation](https://leetcode-cn.com/problems/next-permutation/)
 
 ## 题目描述\(中等\)

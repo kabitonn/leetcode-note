@@ -1,4 +1,4 @@
-# 350. Intersection of Two Arrays II
+# 350. Intersection of Two Arrays II(E)
 [350. Intersection of Two Arrays II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/)
 
 ## 题目描述(简单)

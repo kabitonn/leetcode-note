@@ -1,4 +1,4 @@
-# 053. Maximum Subarray
+# 053. Maximum Subarray(E)
 [053. Maximum Subarray](https://leetcode-cn.com/problems/maximum-subarray/)
 
 ## 题目描述\(简单\)

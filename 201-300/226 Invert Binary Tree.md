@@ -1,4 +1,4 @@
-# 226. Invert Binary Tree
+# 226. Invert Binary Tree(E)
 [226. Invert Binary Tree](https://leetcode-cn.com/problems/invert-binary-tree/)
 
 ## 题目描述(简单)

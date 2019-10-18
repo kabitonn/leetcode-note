@@ -1,4 +1,4 @@
-# 371. Sum of Two Integers
+# 371. Sum of Two Integers(E)
 [371. Sum of Two Integers](https://leetcode-cn.com/problems/sum-of-two-integers/)
 
 ## 题目描述\(简单\)

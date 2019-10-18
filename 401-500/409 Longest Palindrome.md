@@ -1,4 +1,4 @@
-# 409. Longest Palindrome
+# 409. Longest Palindrome(E)
 [409. Longest Palindrome](https://leetcode-cn.com/problems/longest-palindrome/)
 
 ## 题目描述(简单)

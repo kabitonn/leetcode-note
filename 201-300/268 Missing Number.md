@@ -1,4 +1,4 @@
-# [268. Missing Number
+# [268. Missing Number(E)
 [268. Missing Number](https://leetcode-cn.com/problems/missing-number/)
 
 ## 题目描述(简单)

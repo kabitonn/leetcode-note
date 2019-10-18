@@ -1,4 +1,4 @@
-# 033. Search in Rotated Sorted Array
+# 033. Search in Rotated Sorted Array(M)
 [033. Search in Rotated Sorted Array](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
 
 ## 题目描述\(中等\)

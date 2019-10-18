@@ -1,4 +1,4 @@
-# 383. Ransom Note
+# 383. Ransom Note(E)
 [383. Ransom Note](https://leetcode-cn.com/problems/ransom-note/)
 
 ## 题目描述(简单)

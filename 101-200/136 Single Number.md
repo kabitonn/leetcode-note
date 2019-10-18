@@ -1,4 +1,5 @@
-## [136. Single Number](https://leetcode-cn.com/problems/single-number/)
+# 136. Single Number(E)
+[136. Single Number](https://leetcode-cn.com/problems/single-number/)
 
 ## 题目描述(简单)
 

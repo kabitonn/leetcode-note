@@ -1,4 +1,4 @@
-# 283. Move Zeroes
+# 283. Move Zeroes(E)
 [283. Move Zeroes](https://leetcode-cn.com/problems/move-zeroes/)
 
 ## 题目描述\(简单\)

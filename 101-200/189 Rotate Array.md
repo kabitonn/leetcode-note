@@ -1,4 +1,5 @@
-## [189. Rotate Array](https://leetcode-cn.com/problems/rotate-array/)
+# 189. Rotate Array(E)
+[189. Rotate Array](https://leetcode-cn.com/problems/rotate-array/)
 
 ## 题目描述\(简单\)
 

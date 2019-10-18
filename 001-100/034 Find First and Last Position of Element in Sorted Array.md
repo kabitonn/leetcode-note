@@ -1,4 +1,4 @@
-# 034. Find First and Last Position of Element in Sorted Array
+# 034. Find First and Last Position of Element in Sorted Array(M)
 [034. Find First and Last Position of Element in Sorted Array](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 
 ## 题目描述\(中等\)

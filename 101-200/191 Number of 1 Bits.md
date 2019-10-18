@@ -1,4 +1,5 @@
-## [191. Number of 1 Bits](https://leetcode-cn.com/problems/number-of-1-bits/)
+# 191. Number of 1 Bits(E)
+[191. Number of 1 Bits](https://leetcode-cn.com/problems/number-of-1-bits/)
 
 ## 题目描述\(简单\)
 

@@ -1,4 +1,4 @@
-# 292. Nim Game
+# 292. Nim Game(E)
 [292. Nim Game](https://leetcode-cn.com/problems/nim-game/)
 
 ## 题目描述(简单)

@@ -1,4 +1,4 @@
-# 242. Valid Anagram
+# 242. Valid Anagram(E)
 [242. Valid Anagram](https://leetcode-cn.com/problems/valid-anagram/)
 
 ## 题目描述(简单)

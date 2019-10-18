@@ -1,4 +1,4 @@
-# 204. Count Primes
+# 204. Count Primes(E)
 [204. Count Primes](https://leetcode-cn.com/problems/count-primes/)
 
 ## 题目描述(简单)

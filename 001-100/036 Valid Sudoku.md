@@ -1,1 +1,1 @@
-# 036. Valid Sudoku
+# 036. Valid Sudoku(M)

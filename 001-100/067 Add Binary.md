@@ -1,4 +1,4 @@
-# 067. Add Binary
+# 067. Add Binary(E)
 [067. Add Binary](https://leetcode-cn.com/problems/add-binary/)
 
 ## 题目描述(简单)

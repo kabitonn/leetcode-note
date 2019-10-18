@@ -1,4 +1,4 @@
-# 203. Remove Linked List Elements
+# 203. Remove Linked List Elements(E)
 [203. Remove Linked List Elements](https://leetcode-cn.com/problems/remove-linked-list-elements/)
 
 ## 题目描述(简单)

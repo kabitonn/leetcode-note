@@ -1,4 +1,4 @@
-# 290. Word Pattern
+# 290. Word Pattern(E)
 [290. Word Pattern](https://leetcode-cn.com/problems/word-pattern/)
 
 ## 题目描述(简单)

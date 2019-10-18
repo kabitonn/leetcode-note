@@ -1,4 +1,4 @@
-# 070. Climbing Stairs
+# 070. Climbing Stairs(E)
 [070. Climbing Stairs](https://leetcode-cn.com/problems/climbing-stairs/)
 
 ## 题目描述\(简单\)

@@ -1,4 +1,4 @@
-# 100. Same Tree
+# 100. Same Tree(E)
 [100. Same Tree](https://leetcode-cn.com/problems/same-tree/)
 
 ## 题目描述(简单)

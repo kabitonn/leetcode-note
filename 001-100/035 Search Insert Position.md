@@ -1,4 +1,4 @@
-# 035. Search Insert Position
+# 035. Search Insert Position(E)
 [035. Search Insert Position](https://leetcode-cn.com/problems/search-insert-position/)
 
 ## 题目描述\(简单\)

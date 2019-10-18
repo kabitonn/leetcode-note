@@ -1,4 +1,4 @@
-# 205. Isomorphic Strings
+# 205. Isomorphic Strings(E)
 [205. Isomorphic Strings](https://leetcode-cn.com/problems/isomorphic-strings/)
 
 ## 题目描述(简单)

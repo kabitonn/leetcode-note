@@ -1,4 +1,4 @@
-# 349. Intersection of Two Arrays
+# 349. Intersection of Two Arrays(E)
 [349. Intersection of Two Arrays](https://leetcode-cn.com/problems/intersection-of-two-arrays/)
 
 ## 题目描述(简单)

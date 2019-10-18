@@ -1,4 +1,4 @@
-# 025. Reverse Nodes in k-Group
+# 025. Reverse Nodes in k-Group(H)
 [025. Reverse Nodes in k-Group](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)
 
 ## 题目描述\(困难\)

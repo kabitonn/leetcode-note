@@ -1,4 +1,4 @@
-# 387. First Unique Character in a String
+# 387. First Unique Character in a String(E)
 [387. First Unique Character in a String](https://leetcode-cn.com/problems/first-unique-character-in-a-string/)
 
 ## 题目描述(简单)

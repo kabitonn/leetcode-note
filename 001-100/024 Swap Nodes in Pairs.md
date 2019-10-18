@@ -1,4 +1,4 @@
-# 024. Swap Nodes in Pairs
+# 024. Swap Nodes in Pairs(M)
 [024. Swap Nodes in Pairs](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)
 
 ## 题目描述\(中等\)

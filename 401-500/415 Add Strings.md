@@ -1,4 +1,4 @@
-# 415. Add Strings
+# 415. Add Strings(E)
 [415. Add Strings](https://leetcode-cn.com/problems/add-strings/)
 
 ## 题目描述(简单)

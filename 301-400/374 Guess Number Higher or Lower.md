@@ -1,4 +1,4 @@
-# 374. Guess Number Higher or Lower
+# 374. Guess Number Higher or Lower(E)
 [374. Guess Number Higher or Lower](https://leetcode-cn.com/problems/guess-number-higher-or-lower/)
 
 ## 题目描述(简单)

@@ -1,4 +1,5 @@
-## [155. Min Stack](https://leetcode-cn.com/problems/min-stack/)
+# 155. Min Stack(E)
+[155. Min Stack](https://leetcode-cn.com/problems/min-stack/)
 
 ## 题目描述(简单)
 

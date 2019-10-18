@@ -1,4 +1,4 @@
-# 018. 4Sum
+# 018. 4Sum(M)
 [018. 4Sum](https://leetcode-cn.com/problems/4sum/)
 
 ## 题目描述\(中等\)

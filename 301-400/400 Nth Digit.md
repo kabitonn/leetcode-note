@@ -1,4 +1,4 @@
-# 400. Nth Digit
+# 400. Nth Digit(E)
 [400. Nth Digit](https://leetcode-cn.com/problems/nth-digit/)
 
 ## 题目描述\(简单\)

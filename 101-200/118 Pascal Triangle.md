@@ -1,4 +1,5 @@
-## [118. Pascal's Triangle](https://leetcode-cn.com/problems/pascals-triangle/)
+# 118. Pascal's Triangle(E)
+[118. Pascal's Triangle](https://leetcode-cn.com/problems/pascals-triangle/)
 
 ## 题目描述\(简单\)
 

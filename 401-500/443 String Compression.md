@@ -1,4 +1,4 @@
-# 443. String Compression
+# 443. String Compression(E)
 [443. String Compression](https://leetcode-cn.com/problems/string-compression/)
 
 ## 题目描述(简单)

@@ -1,4 +1,5 @@
-## [160. Intersection of Two Linked Lists](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)
+# 160. Intersection of Two Linked Lists(E)
+[160. Intersection of Two Linked Lists](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)
 
 ## 题目描述\(简单\)
 

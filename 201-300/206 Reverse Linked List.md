@@ -1,4 +1,4 @@
-# 206. Reverse Linked List
+# 206. Reverse Linked List(E)
 [206. Reverse Linked List](https://leetcode-cn.com/problems/reverse-linked-list/)
 
 ## 题目描述\(简单\)

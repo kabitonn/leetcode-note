@@ -1,4 +1,4 @@
-# 029. Divide Two Integers
+# 029. Divide Two Integers(M)
 [029. Divide Two Integers](https://leetcode-cn.com/problems/divide-two-integers/)
 
 ## 题目描述\(中等\)

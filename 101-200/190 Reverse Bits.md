@@ -1,4 +1,5 @@
-## [190. Reverse Bits](https://leetcode-cn.com/problems/reverse-bits/)
+# 190. Reverse Bits(E)
+[190. Reverse Bits](https://leetcode-cn.com/problems/reverse-bits/)
 
 ## 题目描述(简单)
 

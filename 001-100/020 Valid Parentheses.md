@@ -1,4 +1,4 @@
-# 020. Valid Parentheses
+# 020. Valid Parentheses(E)
 [020. Valid Parentheses](https://leetcode-cn.com/problems/valid-parentheses/)
 
 ## 题目描述(简单)

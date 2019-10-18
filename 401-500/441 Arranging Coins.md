@@ -1,4 +1,4 @@
-# 441. Arranging Coins
+# 441. Arranging Coins(E)
 [441. Arranging Coins](https://leetcode-cn.com/problems/arranging-coins/)
 
 ## 题目描述(简单)

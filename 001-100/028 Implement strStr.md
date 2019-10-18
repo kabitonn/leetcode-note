@@ -1,9 +1,9 @@
-# 028. Implement strStr\(\)
+# 028. Implement strStr()(E)
 [028. Implement strStr\(\)](https://leetcode-cn.com/problems/implement-strstr/)
 
-## 题目描述\(简单\)
+## 题目描述(简单)
 
-Implement strStr\(\).
+Implement strStr().
 
 Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
 

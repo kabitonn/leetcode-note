@@ -1,4 +1,4 @@
-# 345. Reverse Vowels of a String
+# 345. Reverse Vowels of a String(E)
 [345. Reverse Vowels of a String](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/)
 
 ## 题目描述\(简单\)

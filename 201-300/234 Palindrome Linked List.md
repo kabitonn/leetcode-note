@@ -1,4 +1,4 @@
-# 234. Palindrome Linked List
+# 234. Palindrome Linked List(E)
 [234. Palindrome Linked List](https://leetcode-cn.com/problems/palindrome-linked-list/)
 
 ## 题目描述(简单)

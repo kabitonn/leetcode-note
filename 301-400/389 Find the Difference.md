@@ -1,4 +1,4 @@
-# 389. Find the Difference
+# 389. Find the Difference(E)
 [389. Find the Difference](https://leetcode-cn.com/problems/find-the-difference/)
 
 ## 题目描述(简单)

@@ -1,4 +1,4 @@
-# 303. Range Sum Query - Immutable
+# 303. Range Sum Query - Immutable(E)
 [303. Range Sum Query - Immutable](https://leetcode-cn.com/problems/range-sum-query-immutable/)
 
 ## 题目描述\(简单\)

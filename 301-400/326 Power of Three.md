@@ -1,4 +1,4 @@
-# 326. Power of Three
+# 326. Power of Three(E)
 [326. Power of Three](https://leetcode-cn.com/problems/power-of-three/)
 
 ## 题目描述(简单)

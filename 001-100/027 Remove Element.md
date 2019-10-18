@@ -1,4 +1,4 @@
-# 027. Remove Element
+# 027. Remove Element(E)
 [027. Remove Element](https://leetcode-cn.com/problems/remove-element/)
 
 ## 题目描述\(简单\)

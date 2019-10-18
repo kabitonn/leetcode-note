@@ -1,4 +1,4 @@
-# 022. Generate Parentheses
+# 022. Generate Parentheses(M)
 [022. Generate Parentheses](https://leetcode-cn.com/problems/generate-parentheses/)
 
 ## 题目描述\(中等\)

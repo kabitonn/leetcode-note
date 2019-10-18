@@ -1,4 +1,4 @@
-# 219. Contains Duplicate II
+# 219. Contains Duplicate II(E)
 [219. Contains Duplicate II](https://leetcode-cn.com/problems/contains-duplicate-ii/)
 
 ## 题目描述(简单)

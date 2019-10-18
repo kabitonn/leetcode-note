@@ -1,4 +1,4 @@
-# 202. Happy Number
+# 202. Happy Number(E)
 [202. Happy Number](https://leetcode-cn.com/problems/happy-number/)
 
 ## 题目描述\(简单\)

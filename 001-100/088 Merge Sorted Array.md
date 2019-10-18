@@ -1,4 +1,4 @@
-# 088. Merge Sorted Array
+# 088. Merge Sorted Array(E)
 [088. Merge Sorted Array](https://leetcode-cn.com/problems/merge-sorted-array/)
 
 ## 题目描述(简单)

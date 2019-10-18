@@ -1,7 +1,7 @@
 # 012. Integer to Roman(M)
 [012. Integer to Roman](https://leetcode-cn.com/problems/integer-to-roman/)
 
-## 题目描述\(中等\)
+## 题目描述(中等)
 
 Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 

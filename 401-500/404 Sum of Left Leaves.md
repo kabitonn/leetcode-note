@@ -1,4 +1,4 @@
-# 404. Sum of Left Leaves
+# 404. Sum of Left Leaves(E)
 [404. Sum of Left Leaves](https://leetcode-cn.com/problems/sum-of-left-leaves/)
 
 ## 题目描述(简单)

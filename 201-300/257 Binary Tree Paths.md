@@ -1,4 +1,4 @@
-# 257. Binary Tree Paths
+# 257. Binary Tree Paths(E)
 [257. Binary Tree Paths](https://leetcode-cn.com/problems/binary-tree-paths/)
 
 ## 题目描述(简单)

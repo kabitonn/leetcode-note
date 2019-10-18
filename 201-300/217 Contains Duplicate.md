@@ -1,4 +1,4 @@
-# 217. Contains Duplicate
+# 217. Contains Duplicate(E)
 [217. Contains Duplicate](https://leetcode-cn.com/problems/contains-duplicate/)
 
 ## 题目描述(简单)

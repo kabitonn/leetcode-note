@@ -1,4 +1,4 @@
-# 232. Implement Queue using Stacks
+# 232. Implement Queue using Stacks(E)
 [232. Implement Queue using Stacks](https://leetcode-cn.com/problems/implement-queue-using-stacks/)
 
 ## 题目描述\(简单\)

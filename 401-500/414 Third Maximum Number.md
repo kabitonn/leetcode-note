@@ -1,4 +1,4 @@
-# 414. Third Maximum Number
+# 414. Third Maximum Number(E)
 [414. Third Maximum Number](https://leetcode-cn.com/problems/third-maximum-number/)
 
 ## 题目描述(简单)

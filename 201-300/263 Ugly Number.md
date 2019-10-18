@@ -1,4 +1,4 @@
-# 263. Ugly Number
+# 263. Ugly Number(E)
 [263. Ugly Number](https://leetcode-cn.com/problems/ugly-number/)
 
 ## 题目描述(简单)

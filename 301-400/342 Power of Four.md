@@ -1,4 +1,4 @@
-# 342. Power of Four
+# 342. Power of Four(E)
 [342. Power of Four](https://leetcode-cn.com/problems/power-of-four/)
 
 ## 题目描述(简单)

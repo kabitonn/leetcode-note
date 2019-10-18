@@ -1,4 +1,4 @@
-# 344. Reverse String
+# 344. Reverse String(E)
 [344. Reverse String](https://leetcode-cn.com/problems/reverse-string/)
 
 ## 题目描述(简单)

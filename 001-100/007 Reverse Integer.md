@@ -1,7 +1,7 @@
 # 007. Reverse Integer(E)
 [007. Reverse Integer](https://leetcode-cn.com/problems/reverse-integer/)
 
-## 题目描述
+## 题目描述(简单)
 
 Given a 32-bit signed integer, reverse digits of an integer.
 

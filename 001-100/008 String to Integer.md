@@ -1,7 +1,7 @@
 # 008. String to Integer (atoi)(M)
 [008. String to Integer (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/)
 
-## 题目描述\(中等\)
+## 题目描述(中等)
 
 Implement atoi which converts a string to an integer.
 

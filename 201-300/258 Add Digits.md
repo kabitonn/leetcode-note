@@ -1,4 +1,4 @@
-# 258. Add Digits
+# 258. Add Digits(E)
 [258. Add Digits](https://leetcode-cn.com/problems/add-digits/)
 
 ## 题目描述(简单)
