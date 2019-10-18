@@ -2,7 +2,7 @@
 [004. Median of Two Sorted Arrays](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)
 
 
-## 题目描述\(困难\)
+## 题目描述(困难)
 
 There are two sorted arrays nums1 and nums2 of size m and n respectively.
 
