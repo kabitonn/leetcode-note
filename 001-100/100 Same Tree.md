@@ -57,9 +57,9 @@ Output: false
         else {return isSameTree(p.left, q.left)&&isSameTree(p.right, q.right);}
     }
 ```
-时间复杂度：$$O（N）$$。对每个节点进行了访问。
+时间复杂度：O(N)。对每个节点进行了访问。
 
-空间复杂度：$$O（h$$），h 是树的高度，也就是压栈所耗费的空间。当然 h 最小为$$ log（N）$$，最大就等于 N。
+空间复杂度：O(h)，h 是树的高度，也就是压栈所耗费的空间。当然 h 最小为 log(N)，最大就等于 N。
 ```
 最好情况例子
 
