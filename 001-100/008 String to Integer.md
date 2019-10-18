@@ -1,5 +1,5 @@
 # 008. String to Integer \(atoi\)
-[link](https://leetcode-cn.com/problems/string-to-integer-atoi/)
+[008. String to Integer \(atoi\)](https://leetcode-cn.com/problems/string-to-integer-atoi/)
 
 ## 题目描述\(中等\)
 

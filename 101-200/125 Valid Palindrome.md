@@ -1,6 +1,6 @@
 ## [125. Valid Palindrome](https://leetcode-cn.com/problems/valid-palindrome/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
 
@@ -18,14 +18,14 @@ Output: false
 ```
 
 
-## 2. 思路
+## 思路
 
 1. 首尾双指针，非字母数字字符跳过，忽略大小写判断是否相等
 2. 字符串转换为统一大小写字母
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1
+### 1
 
 
 
@@ -68,7 +68,7 @@ Output: false
 
 
 
-### 3.2
+### 2
 
 
 ```java

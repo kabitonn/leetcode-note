@@ -1,6 +1,7 @@
-## [349. Intersection of Two Arrays](https://leetcode-cn.com/problems/intersection-of-two-arrays/)
+# 349. Intersection of Two Arrays
+[349. Intersection of Two Arrays](https://leetcode-cn.com/problems/intersection-of-two-arrays/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given two arrays, write a function to compute their intersection.
 
@@ -20,11 +21,11 @@ Note:
 - The result can be in any order.
 
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 排序
+### 排序
 
 
 ```java
@@ -57,7 +58,7 @@ Note:
     }
 ```
 
-### 3.2 两个set
+### 两个set
 
 
 ```java 
@@ -79,7 +80,7 @@ Note:
 
 
 
-### 3.3 HashSet 内置函数
+### HashSet 内置函数
 
 
 ```java

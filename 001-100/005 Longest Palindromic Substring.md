@@ -1,5 +1,5 @@
 # 005. Longest Palindromic Substring
-[link](https://leetcode-cn.com/problems/longest-palindromic-substring/)
+[005. Longest Palindromic Substring](https://leetcode-cn.com/problems/longest-palindromic-substring/)
 
 ## 题目描述\(中等\)
 

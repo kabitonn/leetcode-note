@@ -1,6 +1,7 @@
-## [292. Nim Game](https://leetcode-cn.com/problems/nim-game/)
+# 292. Nim Game
+[292. Nim Game](https://leetcode-cn.com/problems/nim-game/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 You are playing the following Nim Game with your friend: There is a heap of stones on the table, each time one of you take turns to remove 1 to 3 stones. The one who removes the last stone will be the winner. You will take the first turn to remove the stones.
 
@@ -15,11 +16,11 @@ Explanation: If there are 4 stones in the heap, then you will never win the game
              removed by your friend.
 ```
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 规律
+### 规律
 
 如果堆中石头的数量 n 不能被 4 整除，那么你总是可以赢得 Nim 游戏的胜利
 第一次拿完使剩余石头是4的倍数即可获胜

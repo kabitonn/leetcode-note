@@ -1,6 +1,6 @@
 ## [172. Factorial Trailing Zeroes](https://leetcode-cn.com/problems/factorial-trailing-zeroes/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given an integer n, return the number of trailing zeroes in n!.
 
@@ -21,12 +21,12 @@ Explanation: 5! = 120, one trailing zero.
 
 
 
-## 2. 思路
+## 思路
 组成阶乘的数中共有多少对 2 和 5 的组合即可。又因为 5 的个数一定比 2 少，问题简化为计算 5 的个数
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 迭代
+### 迭代
 
 
 ```java
@@ -42,7 +42,7 @@ Explanation: 5! = 120, one trailing zero.
 
 
 
-### 3.2 递归
+### 递归
 
 
 ```java

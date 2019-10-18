@@ -1,6 +1,7 @@
-## [231. Power of Two](https://leetcode-cn.com/problems/power-of-two/)
+# 231. Power of Two
+[231. Power of Two](https://leetcode-cn.com/problems/power-of-two/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given an integer, write a function to determine if it is a power of two.
 
@@ -21,11 +22,11 @@ Example 3:
 Input: 218
 Output: false
 ```
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 遍历每一位
+### 遍历每一位
 遍历每一位只有最高位为1
 
 ```java
@@ -41,7 +42,7 @@ Output: false
 
 
 
-### 3.2 最低位即最高位的1
+### 最低位即最高位的1
 
 n&(n-1)可将最低位的1变为0，二次幂的最高位为1，其余为0
 

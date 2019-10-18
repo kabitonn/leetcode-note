@@ -1,6 +1,6 @@
 ## [191. Number of 1 Bits](https://leetcode-cn.com/problems/number-of-1-bits/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Write a function that takes an unsigned integer and return the number of '1' bits it has \(also known as the Hamming weight\).
 
@@ -37,11 +37,11 @@ Follow up:
 
 > If this function is called many times, how would you optimize it?
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 右移遍历
+### 右移遍历
 
 ```java
     public int hammingWeight(int n) {
@@ -67,7 +67,7 @@ Follow up:
     }
 ```
 
-### 3.2 位运算小技巧
+### 位运算小技巧
 将 n 和 n-1 做与运算会将最低位的 1 变成 0
 
 ![](/assets/101-200/191-solution-2-1.png)

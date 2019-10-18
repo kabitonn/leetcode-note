@@ -1,5 +1,5 @@
 # 069. Sqrt(x)
-[link](https://leetcode-cn.com/problems/sqrtx/)
+[069. Sqrt(x)](https://leetcode-cn.com/problems/sqrtx/)
 
 ## 题目描述(简单)
 

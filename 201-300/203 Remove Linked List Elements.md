@@ -1,6 +1,7 @@
-## [203. Remove Linked List Elements](https://leetcode-cn.com/problems/remove-linked-list-elements/)
+# 203. Remove Linked List Elements
+[203. Remove Linked List Elements](https://leetcode-cn.com/problems/remove-linked-list-elements/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Remove all elements from a linked list of integers that have value val.
 
@@ -10,11 +11,11 @@ Input:  1->2->6->3->4->5->6, val = 6
 Output: 1->2->3->4->5
 ```
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 迭代双指针 虚拟头结点
+### 迭代双指针 虚拟头结点
 
 
 ```java
@@ -35,7 +36,7 @@ Output: 1->2->3->4->5
         return start.next;
     }
 ```
-### 3.2 不使用虚拟头结点
+### 不使用虚拟头结点
 
 
 ```java
@@ -59,7 +60,7 @@ Output: 1->2->3->4->5
 
 
 
-### 3.3 递归
+### 递归
 
 
 ```java

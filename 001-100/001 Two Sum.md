@@ -1,5 +1,5 @@
 # 001. Two Sum
-[link](https://leetcode-cn.com/problems/two-sum/)
+[001. Two Sum](https://leetcode-cn.com/problems/two-sum/)
 
 ## 题目描述（简单）
 

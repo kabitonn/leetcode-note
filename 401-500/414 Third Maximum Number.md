@@ -1,6 +1,7 @@
-## [414. Third Maximum Number](https://leetcode-cn.com/problems/third-maximum-number/)
+# 414. Third Maximum Number
+[414. Third Maximum Number](https://leetcode-cn.com/problems/third-maximum-number/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O(n).
 
@@ -30,11 +31,11 @@ Explanation: Note that the third maximum here means the third maximum distinct n
              Both numbers with value 2 are both considered as second maximum.
 ```
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 排序
+### 排序
 
 
 ```java
@@ -56,7 +57,7 @@ Explanation: Note that the third maximum here means the third maximum distinct n
 ```
 
 
-### 3.2 只排序前三大
+### 只排序前三大
 
 
 ```java

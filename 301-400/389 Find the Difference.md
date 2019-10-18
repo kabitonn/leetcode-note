@@ -1,6 +1,7 @@
-## [389. Find the Difference](https://leetcode-cn.com/problems/find-the-difference/)
+# 389. Find the Difference
+[389. Find the Difference](https://leetcode-cn.com/problems/find-the-difference/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given two strings s and t which consist of only lowercase letters.
 
@@ -21,11 +22,11 @@ Explanation:
 'e' is the letter that was added.
 ```
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 哈希表
+### 哈希表
 
 
 ```java
@@ -45,7 +46,7 @@ Explanation:
 
 
 
-### 3.2 求和
+### 求和
 
 
 ```java
@@ -63,7 +64,7 @@ Explanation:
 
 
 
-### 3.3 异或
+### 异或
 
 
 ```java

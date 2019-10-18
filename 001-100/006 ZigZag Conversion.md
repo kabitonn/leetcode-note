@@ -1,5 +1,5 @@
 # 006. ZigZag Conversion
-[link](https://leetcode-cn.com/problems/zigzag-conversion/)
+[006. ZigZag Conversion](https://leetcode-cn.com/problems/zigzag-conversion/)
 
 ## 题目描述\(中等\)
 

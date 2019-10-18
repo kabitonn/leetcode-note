@@ -1,6 +1,7 @@
-## [438. Find All Anagrams in a String](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/)
+# 438. Find All Anagrams in a String
+[438. Find All Anagrams in a String](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Given a string s and a non-empty string p, find all the start indices of p's anagrams in s.
 
@@ -37,11 +38,11 @@ The substring with start index = 1 is "ba", which is an anagram of "ab".
 The substring with start index = 2 is "ab", which is an anagram of "ab".
 ```
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 遍历等长子串
+### 遍历等长子串
 
 取等长子串判断isAnagram
 
@@ -72,7 +73,7 @@ The substring with start index = 2 is "ab", which is an anagram of "ab".
     }
 ```
 
-### 3.2 滑动窗口遍历
+### 滑动窗口遍历
 
 ```java
     public List<Integer> findAnagrams(String s, String p) {
@@ -97,7 +98,7 @@ The substring with start index = 2 is "ab", which is an anagram of "ab".
     }
 ```
 
-### 3.3 双指针+滑动窗户+计数法
+### 双指针+滑动窗户+计数法
 
 
 

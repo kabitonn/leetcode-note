@@ -1,6 +1,6 @@
 ## [118. Pascal's Triangle](https://leetcode-cn.com/problems/pascals-triangle/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Given a non-negative integer numRows, generate the first numRows of Pascal's triangle.
 
@@ -22,13 +22,13 @@ Output:
 ]
 ```
 
-## 2. 思路
+## 思路
 动态规划
 根据上一行计算当前行
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1
+### 1
 
 
 ```java 

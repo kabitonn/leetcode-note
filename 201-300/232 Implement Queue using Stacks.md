@@ -1,6 +1,7 @@
-## [232. Implement Queue using Stacks](https://leetcode-cn.com/problems/implement-queue-using-stacks/)
+# 232. Implement Queue using Stacks
+[232. Implement Queue using Stacks](https://leetcode-cn.com/problems/implement-queue-using-stacks/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Implement the following operations of a queue using stacks.
 
@@ -27,16 +28,16 @@ queue.empty(); // returns false
 * Depending on your language, stack may not be supported natively. You may simulate a stack by using a list or deque \(double-ended queue\), as long as you use only standard operations of a stack.
 * You may assume that all operations are valid \(for example, no pop or peek operations will be called on an empty queue\).
 
-## 2. 思路
+## 思路
 
 入队：栈1压栈push即可  
 出队：利用辅助栈出队，实现先入先出  
 队首元素：辅助栈的栈顶  
 判空：两个栈均为空
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1
+### 1
 
 ```java
 public class MyQueue {

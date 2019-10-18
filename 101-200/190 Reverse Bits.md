@@ -1,6 +1,6 @@
 ## [190. Reverse Bits](https://leetcode-cn.com/problems/reverse-bits/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Reverse bits of a given 32 bits unsigned integer.
 
@@ -31,12 +31,12 @@ Follow up:
 > If this function is called many times, how would you optimize it?
 
 
-## 2. 思路
+## 思路
 移位取低位置高位
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1
+### 1
 
 
 ```java

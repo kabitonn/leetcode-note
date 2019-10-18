@@ -1,6 +1,7 @@
-## [101. Symmetric Tree](https://leetcode-cn.com/problems/symmetric-tree/)
+# 101. Symmetric Tree
+[101. Symmetric Tree](https://leetcode-cn.com/problems/symmetric-tree/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
 
@@ -26,14 +27,14 @@ But the following [1,2,2,null,3,null,3] is not:
 
 
 
-## 2. 思路
+## 思路
 1. 递归
 2. 迭代
 3. 层次遍历回文序列
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 递归
+### 递归
 
 判断当前节点是否相等以及左子树和右子树镜像判断
 
@@ -52,7 +53,7 @@ But the following [1,2,2,null,3,null,3] is not:
 空间复杂度：递归调用的次数受树的高度限制。在最糟糕情况下，树是线性的，其高度为 O(n)。因此，在最糟糕的情况下，由栈上的递归调用造成的空间复杂度为 O(n)。
 
 
-### 3.2 迭代
+### 迭代
 
 
 
@@ -77,7 +78,7 @@ But the following [1,2,2,null,3,null,3] is not:
     }
 ```
 
-### 3.3 层次遍历回文
+### 层次遍历回文
 每层的遍历结果是回文序列
 
 ```java

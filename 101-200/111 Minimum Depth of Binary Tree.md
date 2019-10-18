@@ -1,6 +1,6 @@
 ## [111. Minimum Depth of Binary Tree](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given a binary tree, find its minimum depth.
 
@@ -21,14 +21,14 @@ return its minimum depth = 2.
 ```
 
 
-## 2. 思路
+## 思路
 
 1. 递归
 2. 迭代
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 递归DFS
+### 递归DFS
 
 
 ```java
@@ -45,7 +45,7 @@ return its minimum depth = 2.
 
 
 
-### 3.2 迭代DFS
+### 迭代DFS
 
 
 ```java
@@ -80,7 +80,7 @@ return its minimum depth = 2.
 时间复杂度：每个节点恰好被访问一遍，复杂度为 O(N)。
 空间复杂度：最坏情况下我们会在栈中保存整棵树，此时空间复杂度为O(N)。
 
-### 3.3 迭代BFS
+### 迭代BFS
 
 
 ```java

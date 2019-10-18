@@ -1,6 +1,7 @@
-## [374. Guess Number Higher or Lower](https://leetcode-cn.com/problems/guess-number-higher-or-lower/)
+# 374. Guess Number Higher or Lower
+[374. Guess Number Higher or Lower](https://leetcode-cn.com/problems/guess-number-higher-or-lower/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 We are playing the Guess Game. The game is as follows:
 
@@ -20,13 +21,13 @@ Input: n = 10, pick = 6
 Output: 6
 ```
 
-## 2. 思路
+## 思路
 
 二分查找
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 基本二分
+### 基本二分
 
 
 ```java
@@ -50,7 +51,7 @@ Output: 6
 ```
 
 
-### 3.2 二分修改
+### 二分修改
 
 
 ```java
@@ -69,7 +70,7 @@ Output: 6
         return low;
     }
 ```
-### 3.3 遍历
+### 遍历
 
 
 ```java

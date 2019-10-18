@@ -1,6 +1,7 @@
-## [367. Valid Perfect Square](https://leetcode-cn.com/problems/valid-perfect-square/)
+# 367. Valid Perfect Square
+[367. Valid Perfect Square](https://leetcode-cn.com/problems/valid-perfect-square/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Given a positive integer num, write a function which returns True if num is a perfect square else False.
 
@@ -20,11 +21,11 @@ Input: 14
 Output: false
 ```
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 二分
+### 二分
 
 转换为浮点数判断大小
 
@@ -49,7 +50,7 @@ Output: false
     }
 ```
 
-### 3.2 二分求左边界
+### 二分求左边界
 
 求出小于等于算术平方根的最大值，判断其平方
 
@@ -93,7 +94,7 @@ Output: false
     }
 ```
 
-### 3.3 牛顿迭代法
+### 牛顿迭代法
 
 ![](/assets/301-400/367-solution-3-1.png)
 
@@ -107,7 +108,7 @@ Output: false
     }
 ```
 
-### 3.4 公式法
+### 公式法
 
 利用 1+3+5+7+9+…+\(2n-1\)=n^2，即完全平方数肯定是前n个连续奇数的和
 
@@ -122,7 +123,7 @@ Output: false
     }
 ```
 
-### 3.5 内置函数
+### 内置函数
 
 ```java
     public boolean isPerfectSquare(int num) {

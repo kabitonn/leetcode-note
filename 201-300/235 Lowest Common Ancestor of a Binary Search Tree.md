@@ -1,6 +1,7 @@
-## [235. Lowest Common Ancestor of a Binary Search Tree](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+# 235. Lowest Common Ancestor of a Binary Search Tree
+[235. Lowest Common Ancestor of a Binary Search Tree](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Given a binary search tree \(BST\), find the lowest common ancestor \(LCA\) of two given nodes in the BST.
 
@@ -31,7 +32,7 @@ Explanation: The LCA of nodes 2 and 4 is 2, since a node can be a descendant of 
 * All of the nodes' values will be unique.
 * p and q are different and both values will exist in the BST.
 
-## 2. 思路
+## 思路
 
 二叉搜索树（BST）的性质：
 
@@ -43,9 +44,9 @@ Explanation: The LCA of nodes 2 and 4 is 2, since a node can be a descendant of 
 1. 递归
 2. 迭代
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 递归
+### 递归
 
 1. 从根节点开始遍历树
 2. 如果节点 p 和节点 q 都在右子树上，那么以右孩子为根节点继续 1 的操作
@@ -73,7 +74,7 @@ Explanation: The LCA of nodes 2 and 4 is 2, since a node can be a descendant of 
 
 
 
-### 3.2 迭代
+### 迭代
 由于我们不需要回溯来找到 LCA 节点，所以我们是完全可以不利用栈或者是递归的;只需要找到分割点就可以,这个分割点就是能让节点 p 和节点 q 不能在同一颗子树上的那个节点，或者是节点 p 和节点 q 中的一个，这种情况下其中一个节点是另一个节点的父亲节点。
 
 

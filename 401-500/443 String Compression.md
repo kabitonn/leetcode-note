@@ -1,6 +1,7 @@
-## [443. String Compression](https://leetcode-cn.com/problems/string-compression/)
+# 443. String Compression
+[443. String Compression](https://leetcode-cn.com/problems/string-compression/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given an array of characters, compress it **in-place**.
 
@@ -57,11 +58,11 @@ Notice each digit has it's own entry in the array.
 2. 1 <= len(chars) <= 1000.
 
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 双指针
+### 双指针
 每次遇到新字符先写入旧字符
 
 ```java
@@ -96,7 +97,7 @@ Notice each digit has it's own entry in the array.
 
 
 
-### 3.2 双指针
+### 双指针
 原地算法 双指针
 每次遇到新字符直接写入新字符
 index 已压缩的结果的末尾,

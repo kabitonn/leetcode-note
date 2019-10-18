@@ -1,5 +1,5 @@
 # 009. Palindrome Number
-[link](https://leetcode-cn.com/problems/palindrome-number/)
+[009. Palindrome Number](https://leetcode-cn.com/problems/palindrome-number/)
 
 ## 1. 题目描述\(简单\)
 

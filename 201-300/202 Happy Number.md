@@ -1,6 +1,7 @@
-## [202. Happy Number](https://leetcode-cn.com/problems/happy-number/)
+# 202. Happy Number
+[202. Happy Number](https://leetcode-cn.com/problems/happy-number/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Write an algorithm to determine if a number is "happy".
 
@@ -18,13 +19,13 @@ Explanation:
 12 + 02 + 02 = 1
 ```
 
-## 2. 思路
+## 思路
 
 迭代/递归
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 set判断重复
+### set判断重复
 
 ```java
     public boolean isHappy(int n) {
@@ -45,7 +46,7 @@ Explanation:
     }
 ```
 
-### 3.2 特殊值终止
+### 特殊值终止
 10以内只有1和7是符合要求的数，其余可直接返回false
 
 ```java

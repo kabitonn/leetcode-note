@@ -1,6 +1,6 @@
 ## [110. Balanced Binary Tree](https://leetcode-cn.com/problems/balanced-binary-tree/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given a binary tree, determine if it is height-balanced.
 
@@ -35,13 +35,13 @@ Return false.
 
 
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1
+### 1
 
 
 
-### 3.2
+### 2
 

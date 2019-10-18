@@ -1,5 +1,5 @@
 # 027. Remove Element
-[link](https://leetcode-cn.com/problems/remove-element/)
+[027. Remove Element](https://leetcode-cn.com/problems/remove-element/)
 
 ## 题目描述\(简单\)
 

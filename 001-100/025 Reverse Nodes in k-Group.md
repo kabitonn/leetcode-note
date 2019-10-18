@@ -1,5 +1,5 @@
 # 025. Reverse Nodes in k-Group
-[link](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)
+[025. Reverse Nodes in k-Group](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)
 
 ## 题目描述\(困难\)
 

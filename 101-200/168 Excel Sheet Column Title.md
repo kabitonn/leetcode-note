@@ -1,6 +1,6 @@
 ## [168. Excel Sheet Column Title](https://leetcode-cn.com/problems/excel-sheet-column-title/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given a positive integer, return its corresponding column title as appear in an Excel sheet.
 
@@ -32,12 +32,12 @@ Output: "ZY"
 ```
 
 
-## 2. 思路
+## 思路
 进制转换
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1
+### 1
 
 ```java
     public String convertToTitle(int n) {
@@ -52,7 +52,7 @@ Output: "ZY"
     }
 ```
 
-### 3.2
+### 2
 
 
 ```java

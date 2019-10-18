@@ -1,5 +1,5 @@
 # 015. 3Sum
-[link](https://leetcode-cn.com/problems/3sum/)
+[015. 3Sum](https://leetcode-cn.com/problems/3sum/)
 
 ## 题目描述\(中等\)
 

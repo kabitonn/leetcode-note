@@ -1,6 +1,7 @@
-## [257. Binary Tree Paths](https://leetcode-cn.com/problems/binary-tree-paths/)
+# 257. Binary Tree Paths
+[257. Binary Tree Paths](https://leetcode-cn.com/problems/binary-tree-paths/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given a binary tree, return all root-to-leaf paths.
 
@@ -21,11 +22,11 @@ Output: ["1->2->5", "1->3"]
 Explanation: All root-to-leaf paths are: 1->2->5, 1->3
 ```
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 递归DFS
+### 递归DFS
 
 
 ```java
@@ -104,7 +105,7 @@ public List<String> binaryTreePaths(TreeNode root) {
 空间复杂度：O(N)。这里不考虑存储答案 paths 使用的空间，仅考虑额外的空间复杂度。额外的空间复杂度为递归时使用的栈空间，在最坏情况下，当二叉树中每个节点只有一个孩子节点时，递归的层数为 NN，此时空间复杂度为 O(N)。在最好情况下，当二叉树为平衡二叉树时，它的高度为 log(N)，此时空间复杂度为 log(N)。
 
 
-### 3.2 迭代DFS
+### 迭代DFS
 
 
 ```java

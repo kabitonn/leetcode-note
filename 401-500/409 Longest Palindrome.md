@@ -1,6 +1,7 @@
-## [409. Longest Palindrome](https://leetcode-cn.com/problems/longest-palindrome/)
+# 409. Longest Palindrome
+[409. Longest Palindrome](https://leetcode-cn.com/problems/longest-palindrome/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given a string which consists of lowercase or uppercase letters, find the length of the longest palindromes that can be built with those letters.
 
@@ -21,14 +22,14 @@ Explanation:
 One longest palindrome that can be built is "dccaccd", whose length is 7.
 ```
 
-## 2. 思路
+## 思路
 
 贪心法
 计算每种字符出现频率，奇数的除去偶数部分只计一次
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 HashMap
+### HashMap
 
 
 ```java
@@ -53,7 +54,7 @@ One longest palindrome that can be built is "dccaccd", whose length is 7.
 
 
 
-### 3.2 数组模拟map
+### 数组模拟map
 
 
 $$count/2*2$$ 实现只计偶数部分

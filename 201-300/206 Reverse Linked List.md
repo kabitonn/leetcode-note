@@ -1,6 +1,7 @@
-## [206. Reverse Linked List](https://leetcode-cn.com/problems/reverse-linked-list/)
+# 206. Reverse Linked List
+[206. Reverse Linked List](https://leetcode-cn.com/problems/reverse-linked-list/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Reverse a singly linked list.
 
@@ -15,14 +16,14 @@ Follow up:
 
 > A linked list can be reversed either iteratively or recursively. Could you implement both?
 
-## 2. 思路
+## 思路
 
 1. 递归
 2. 迭代
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 递归
+### 递归
 
 ```java
     public ListNode reverseList(ListNode head) {
@@ -38,7 +39,7 @@ Follow up:
 时间复杂度：O(n)，n 是链表的长度
 空间复杂度：O(n)，由于使用递归，将会使用隐式栈空间。递归深度可能会达到 n 层。
 
-### 3.2 迭代
+### 迭代
 
 ```java
     public ListNode reverseList1(ListNode head) {
@@ -73,7 +74,7 @@ Follow up:
 时间复杂度：O(n)，n 是链表的长度，时间复杂度是
 空间复杂度：O(1)。
 
-### 3.3 list倒序
+### list倒序
 
 ```java
     public ListNode reverseList2(ListNode head) {

@@ -1,6 +1,7 @@
-## [263. Ugly Number](https://leetcode-cn.com/problems/ugly-number/)
+# 263. Ugly Number
+[263. Ugly Number](https://leetcode-cn.com/problems/ugly-number/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Write a program to check whether a given number is an ugly number.
 
@@ -30,13 +31,13 @@ Explanation: 14 is not ugly since it includes another prime factor 7.
 - Input is within the 32-bit signed integer range: $$[-2^{31}, 2^{31}-1]$$.
 
 
-## 2. 思路
+## 思路
 
 不断将5,3,2的因子除掉
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 暴力法
+### 暴力法
 
 
 ```java

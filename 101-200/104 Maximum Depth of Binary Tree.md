@@ -1,6 +1,7 @@
-## [104. Maximum Depth of Binary Tree](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)
+#  Maximum Depth of Binary Tree
+[104. Maximum Depth of Binary Tree](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)
 
-## 1. 题目描述(简单)
+##  题目描述(简单)
 
 Given a binary tree, find its maximum depth.
 
@@ -21,14 +22,14 @@ return its depth = 3.
 ```
 
 
-## 2. 思路
+##  思路
 
 1. 递归
 2. 迭代
 
-## 3. 解决方法
+##  解决方法
 
-### 3.1 递归DFS
+### 递归DFS
 DFS深度遍历
 
 ```java
@@ -39,7 +40,7 @@ DFS深度遍历
 ```
 
 
-### 3.2 迭代DFS
+### 迭代DFS
 
 
 ```java
@@ -68,7 +69,7 @@ DFS深度遍历
     }
 ```
 
-### 3.3 迭代BFS
+### 迭代BFS
 层次遍历层次即深度
 
 ```java

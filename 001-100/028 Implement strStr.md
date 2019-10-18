@@ -1,5 +1,5 @@
 # 028. Implement strStr\(\)
-[link](https://leetcode-cn.com/problems/implement-strstr/)
+[028. Implement strStr\(\)](https://leetcode-cn.com/problems/implement-strstr/)
 
 ## 题目描述\(简单\)
 

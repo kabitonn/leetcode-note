@@ -1,6 +1,7 @@
-## [205. Isomorphic Strings](https://leetcode-cn.com/problems/isomorphic-strings/)
+# 205. Isomorphic Strings
+[205. Isomorphic Strings](https://leetcode-cn.com/problems/isomorphic-strings/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given two strings s and t, determine if they are isomorphic.
 
@@ -27,11 +28,11 @@ Output: true
 - You may assume both s and t have the same length.
 
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 HashMap替换对应字符
+### HashMap替换对应字符
 哈希映射，两个字符串相互映射(一对一)。
 
 ```java
@@ -71,7 +72,7 @@ Output: true
 
 
 
-### 3.2 字符首次出现的位置比较
+### 字符首次出现的位置比较
 
 对比两个字符串对应位置的字符在字符串内第一次出现的位置。
 

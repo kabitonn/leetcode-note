@@ -1,6 +1,6 @@
 ## [122. Best Time to Buy and Sell Stock II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Say you have an array for which the ith element is the price of a given stock on day i.
 
@@ -37,11 +37,11 @@ Output: 0
 Explanation: In this case, no transaction is done, i.e. max profit = 0.
 ```
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 一次遍历
+### 一次遍历
 
 ![](/assets/101-200/122-solution-1-1.png)
 
@@ -62,7 +62,7 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 时间复杂度：O(n)，遍历一次。  
 空间复杂度：O(1)，需要常量的空间。
 
-### 3.2 峰谷法
+### 峰谷法
 
 ![](/assets/101-200/122-solution-2-1.png)
 

@@ -1,6 +1,7 @@
-## [217. Contains Duplicate](https://leetcode-cn.com/problems/contains-duplicate/)
+# 217. Contains Duplicate
+[217. Contains Duplicate](https://leetcode-cn.com/problems/contains-duplicate/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given an array of integers, find if the array contains any duplicates.
 
@@ -21,11 +22,11 @@ Example 3:
 Input: [1,1,1,3,3,4,3,2,4,2]
 Output: true
 ```
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 set
+### set
 
 
 ```java
@@ -41,7 +42,7 @@ Output: true
 
 
 
-### 3.2 排序比较相邻
+### 排序比较相邻
 
 
 ```java

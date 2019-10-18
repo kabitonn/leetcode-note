@@ -1,6 +1,7 @@
-## [400. Nth Digit](https://leetcode-cn.com/problems/nth-digit/)
+# 400. Nth Digit
+[400. Nth Digit](https://leetcode-cn.com/problems/nth-digit/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Find the $$n^{th}$$ digit of the infinite integer sequence 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ...
 
@@ -30,7 +31,7 @@ Explanation:
 The 11th digit of the sequence 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ... is a 0, which is part of the number 10.
 ```
 
-## 2. 思路
+## 思路
 
 ```
 1-9/10-99/100-999/……
@@ -38,9 +39,9 @@ The 11th digit of the sequence 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ... is a 0, wh
 
 每组个数是上一组的10倍，位数比上一组多1；求出n是哪一组第几个数的哪一位
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1
+### 1
 
 num为所求位数所在的数字
 
@@ -66,7 +67,7 @@ num为所求位数所在的数字
     }
 ```
 
-### 3.2
+### 2
 
 将n-1，避免了所求数字在相邻间切换
 

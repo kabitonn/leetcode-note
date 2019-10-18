@@ -1,5 +1,5 @@
 # 083. Remove Duplicates from Sorted List
-[link](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)
+[083. Remove Duplicates from Sorted List](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)
 
 ## 题目描述(简单)
 

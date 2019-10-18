@@ -1,6 +1,6 @@
 ## [169. Majority Element](https://leetcode-cn.com/problems/majority-element/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given an array of size n, find the majority element. The majority element is the element that appears more than $$ \lfloor n / 2 \rfloor $$ times.
 
@@ -18,11 +18,11 @@ Output: 2
 ```
 
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 排序中位数
+### 排序中位数
 
 
 ```java
@@ -33,7 +33,7 @@ Output: 2
 ```
 
 
-### 3.2 哈希表
+### 哈希表
 
 
 ```java
@@ -50,7 +50,7 @@ Output: 2
     }
 ```
 
-### 3.3 Boyer Moore投票法
+### Boyer Moore投票法
 
 如果我们把众数记为 +1，把其他数记为 -1 ，将它们全部加起来，显然和大于 0 ，从结果本身我们可以看出众数比其他数多。
 

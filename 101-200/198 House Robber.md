@@ -1,6 +1,6 @@
 ## [198. House Robber\(E\)](https://leetcode-cn.com/problems/house-robber/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and **it will automatically contact the police if two adjacent houses were broken into on the same night.**
 
@@ -24,15 +24,15 @@ Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (m
              Total amount you can rob = 2 + 9 + 1 = 12.
 ```
 
-## 2. 思路
+## 思路
 
 动态规划
 
 $$ f(k) $$ = max $$ (f(k-2) + A_k, f(k-1)) $$
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1
+### 1
 
 max\[i\]为抢该房子的最大值
 
@@ -56,7 +56,7 @@ max\[i\]为抢该房子的最大值
 时间复杂度：O(n)。其中 n 为房子的数量。  
 空间复杂度：O(n)。
 
-### 3.2
+### 2
 
 sum1为抢当前房子的最大值  
 sum2为不抢当前房子最大值
@@ -78,7 +78,7 @@ sum2为不抢当前房子最大值
 时间复杂度：O(n)。其中 n 为房子的数量。  
 空间复杂度：O(1)
 
-### 3.3
+### 3
 
 sumEven 和 sumOdd为相邻奇偶数位置的最大值
 

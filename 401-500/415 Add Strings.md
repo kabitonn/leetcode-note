@@ -1,6 +1,7 @@
-## [415. Add Strings](https://leetcode-cn.com/problems/add-strings/)
+# 415. Add Strings
+[415. Add Strings](https://leetcode-cn.com/problems/add-strings/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given two non-negative integers num1 and num2 represented as string, return the sum of num1 and num2.
 
@@ -13,11 +14,11 @@ Given two non-negative integers num1 and num2 represented as string, return the 
 
 
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 双指针
+### 双指针
 
 
 ```java
@@ -43,7 +44,7 @@ Given two non-negative integers num1 and num2 represented as string, return the 
     }
 ```
 
-### 3.2 双指针
+### 双指针
 
 ```java
     public String addStrings(String num1, String num2) {
@@ -64,5 +65,5 @@ Given two non-negative integers num1 and num2 represented as string, return the 
 
 
 
-### 3.2
+### 2
 

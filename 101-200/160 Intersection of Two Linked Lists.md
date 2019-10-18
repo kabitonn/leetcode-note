@@ -1,6 +1,6 @@
 ## [160. Intersection of Two Linked Lists](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Write a program to find the node at which the intersection of two singly linked lists begins.
 
@@ -54,11 +54,11 @@ Explanation: The two lists do not intersect, so return null.
 * You may assume there are no cycles anywhere in the entire linked structure.
 * Your code should preferably run in O\(n\) time and use only O\(1\) memory.
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 二次遍历
+### 二次遍历
 
 设定两个指针分别指向两个链表头部，一起向前走直到其中一个到达末端，另一个与末端距离则是两链表的 长度差 。再通过长链表指针先走的方式消除长度差，最终两链表即可同时走到相交点。
 
@@ -96,7 +96,7 @@ Explanation: The two lists do not intersect, so return null.
     }
 ```
 
-### 3.2 双指针
+### 双指针
 
 拼接两链表。 设长-短链表为 C ，短-长链表为 D （分别代表长链表在前和短链表在前的拼接链表），则当 C 走到长短链表交接处时， D 走在长链表中，且与长链表头距离为长度差; 当双指针相同时跳出循环，交点或null
 
@@ -115,7 +115,7 @@ Explanation: The two lists do not intersect, so return null.
     }
 ```
 
-### 3.3 构造环求入口点
+### 构造环求入口点
 
 ```java
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {

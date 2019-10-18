@@ -1,5 +1,5 @@
 # 022. Generate Parentheses
-[link](https://leetcode-cn.com/problems/generate-parentheses/)
+[022. Generate Parentheses](https://leetcode-cn.com/problems/generate-parentheses/)
 
 ## 题目描述\(中等\)
 

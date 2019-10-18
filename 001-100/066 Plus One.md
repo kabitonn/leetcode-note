@@ -1,5 +1,5 @@
 # 066. Plus One
-[link](https://leetcode-cn.com/problems/plus-one/)
+[066. Plus One](https://leetcode-cn.com/problems/plus-one/)
 
 ## 题目描述(简单)
 

@@ -1,6 +1,7 @@
-## [219. Contains Duplicate II](https://leetcode-cn.com/problems/contains-duplicate-ii/)
+# 219. Contains Duplicate II
+[219. Contains Duplicate II](https://leetcode-cn.com/problems/contains-duplicate-ii/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.
 
@@ -19,11 +20,11 @@ Example 3:
 Input: nums = [1,2,3,1,2,3], k = 2
 Output: false
 ```
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 遍历
+### 遍历
 
 
 ```java
@@ -39,7 +40,7 @@ Output: false
 时间复杂度：$$O(n * \min(k,n))$$每次搜索都要花费$$ O(\min(k, n))$$ 的时间，哪怕k比n大，一次搜索中也只需比较 n 次。
 
 空间复杂度：O(1)
-### 3.2 HashMap
+### HashMap
 
 
 ```java
@@ -60,7 +61,7 @@ Output: false
 空间复杂度：O(n)，这里使用了哈希表存储已经出现的数，可以说是以空间换时间了。
 
 
-### 3.3 HashSet 滑动窗口
+### HashSet 滑动窗口
 
 遍历数组，对于每个元素做以下操作：
 - 在散列表中搜索当前元素，如果找到了就返回 true。

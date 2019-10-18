@@ -1,6 +1,7 @@
-## [404. Sum of Left Leaves](https://leetcode-cn.com/problems/sum-of-left-leaves/)
+# 404. Sum of Left Leaves
+[404. Sum of Left Leaves](https://leetcode-cn.com/problems/sum-of-left-leaves/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Find the sum of all left leaves in a given binary tree.
 
@@ -15,11 +16,11 @@ Example:
 There are two left leaves in the binary tree, with values 9 and 15 respectively. Return 24.
 ```
 
-## 2. 思路
+## 思路
 判断左节点是叶子结点
-## 3. 解决方法
+## 解决方法
 
-### 3.1 递归
+### 递归
 
 
 ```java
@@ -32,7 +33,7 @@ There are two left leaves in the binary tree, with values 9 and 15 respectively.
 
 
 
-### 3.2 迭代
+### 迭代
 
 
 ```java

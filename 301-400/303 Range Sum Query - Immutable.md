@@ -1,6 +1,7 @@
-## [303. Range Sum Query - Immutable](https://leetcode-cn.com/problems/range-sum-query-immutable/)
+# 303. Range Sum Query - Immutable
+[303. Range Sum Query - Immutable](https://leetcode-cn.com/problems/range-sum-query-immutable/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Given an integer array nums, find the sum of the elements between indices i and j \(i ≤ j\), inclusive.
 
@@ -19,11 +20,11 @@ Note:
 * You may assume that the array does not change.
 * There are many calls to sumRange function.
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 暴力法
+### 暴力法
 
 ```java
 public class NumArray {
@@ -45,7 +46,7 @@ public class NumArray {
 空间复杂度：O(1)
 
 
-### 3.2 动态规划+缓存
+### 动态规划+缓存
 
 
 $$sums[k]$$ 定义为 $$nums[0 \cdots k-1]$$的累积和

@@ -1,6 +1,6 @@
 ## [171. Excel Sheet Column Number(E)](https://leetcode-cn.com/problems/excel-sheet-column-number/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given a column title as appear in an Excel sheet, return its corresponding column number.
 
@@ -32,12 +32,12 @@ Output: 701
 ```
 
 
-## 2. 思路
+## 思路
 26进制转10进制
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1
+### 1
 
 ```java
     public int titleToNumber(String s) {

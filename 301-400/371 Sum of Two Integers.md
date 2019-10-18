@@ -1,6 +1,7 @@
-## [371. Sum of Two Integers](https://leetcode-cn.com/problems/sum-of-two-integers/)
+# 371. Sum of Two Integers
+[371. Sum of Two Integers](https://leetcode-cn.com/problems/sum-of-two-integers/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Calculate the sum of two integers a and b, but you are not allowed to use the operator + and -.
 
@@ -18,11 +19,11 @@ Input: a = -2, b = 3
 Output: 1
 ```
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 位运算
+### 位运算
 
 $$a \bigoplus b$$ 无进位的相加  
 $$(a \& b) $$每一位的进位

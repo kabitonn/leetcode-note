@@ -1,6 +1,7 @@
-## [345. Reverse Vowels of a String](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/)
+# 345. Reverse Vowels of a String
+[345. Reverse Vowels of a String](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Write a function that takes a string as input and reverse only the vowels of a string.
 
@@ -22,11 +23,11 @@ Output: "leotcede"
 
 > The vowels does not include the letter "y".
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 双指针
+### 双指针
 
 ```java
     public String reverseVowels(String s) {

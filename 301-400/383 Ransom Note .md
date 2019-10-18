@@ -1,6 +1,7 @@
-## [383. Ransom Note](https://leetcode-cn.com/problems/ransom-note/)
+# 383. Ransom Note
+[383. Ransom Note](https://leetcode-cn.com/problems/ransom-note/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given an arbitrary ransom note string and another string containing letters from all the magazines, write a function that will return true if the ransom note can be constructed from the magazines ; otherwise, it will return false.
 
@@ -14,11 +15,11 @@ canConstruct("aa", "ab") -> false
 canConstruct("aa", "aab") -> true
 ```
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 HashMap
+### HashMap
 map保存每种字符的个数，ransom出现一次减一，小于0则说明无法构造
 
 ```java

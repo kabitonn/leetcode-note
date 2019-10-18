@@ -1,6 +1,7 @@
-## [412. Fizz Buzz](https://leetcode-cn.com/problems/fizz-buzz/)
+# 412. Fizz Buzz
+[412. Fizz Buzz](https://leetcode-cn.com/problems/fizz-buzz/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Write a program that outputs the string representation of numbers from 1 to n.
 
@@ -30,11 +31,11 @@ Return:
 ]
 ```
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 字符串连接
+### 字符串连接
 
 1. 能不能被 3 整除
 2. 能不能被 5 整除
@@ -56,7 +57,7 @@ Return:
 
 
 
-### 3.2 模拟法
+### 模拟法
 
 1. 初始化一个空的答案列表。
 2. 遍历 $$1 ... N$$

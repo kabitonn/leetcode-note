@@ -1,5 +1,5 @@
 # 021. Merge Two Sorted Lists
-[link](https://leetcode-cn.com/problems/merge-two-sorted-lists/)
+[021. Merge Two Sorted Lists](https://leetcode-cn.com/problems/merge-two-sorted-lists/)
 
 ## 题目描述\(简单\)
 

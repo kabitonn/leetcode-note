@@ -1,5 +1,5 @@
 # 024. Swap Nodes in Pairs
-[link](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)
+[024. Swap Nodes in Pairs](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)
 
 ## 题目描述\(中等\)
 

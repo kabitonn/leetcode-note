@@ -1,6 +1,6 @@
 ## [136. Single Number](https://leetcode-cn.com/problems/single-number/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given a non-empty array of integers, every element appears twice except for one. Find that single one.
 
@@ -20,16 +20,16 @@ Output: 4
 
 
 
-## 2. 思路
+## 思路
 
 1. 排序，前后相等即为重复
 2. HashMap
 3. 异或
 
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 排序
+### 排序
 
 
 ```java
@@ -48,7 +48,7 @@ Output: 4
 ```
 
 
-### 3.2 HashMap
+### HashMap
 
 
 ```java
@@ -69,7 +69,7 @@ Output: 4
 ```
 
 
-### 3.3 异或运算
+### 异或运算
 - $$ a \bigoplus 0 = a $$
 - $$ a \bigoplus a = 0 $$
 - $$ a \bigoplus b \bigoplus a=(a \bigoplus a) \bigoplus b=0 \bigoplus b=b $$

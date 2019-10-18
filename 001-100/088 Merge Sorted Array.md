@@ -1,5 +1,5 @@
 # 088. Merge Sorted Array
-[link](https://leetcode-cn.com/problems/merge-sorted-array/)
+[088. Merge Sorted Array](https://leetcode-cn.com/problems/merge-sorted-array/)
 
 ## 题目描述(简单)
 

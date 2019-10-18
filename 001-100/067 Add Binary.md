@@ -1,5 +1,5 @@
 # 067. Add Binary
-[link](https://leetcode-cn.com/problems/add-binary/)
+[067. Add Binary](https://leetcode-cn.com/problems/add-binary/)
 
 ## 题目描述(简单)
 

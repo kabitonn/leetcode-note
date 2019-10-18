@@ -1,6 +1,7 @@
-## [344. Reverse String](https://leetcode-cn.com/problems/reverse-string/)
+# 344. Reverse String
+[344. Reverse String](https://leetcode-cn.com/problems/reverse-string/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Write a function that reverses a string. The input string is given as an array of characters char[].
 
@@ -21,11 +22,11 @@ Input: ["H","a","n","n","a","h"]
 Output: ["h","a","n","n","a","H"]
 ```
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 双指针 交换位置
+### 双指针 交换位置
 
 
 ```java
@@ -41,7 +42,7 @@ Output: ["h","a","n","n","a","H"]
 
 
 
-### 3.2 双指针 异或交换
+### 双指针 异或交换
 
 
 ```java

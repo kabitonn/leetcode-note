@@ -1,6 +1,7 @@
-## [342. Power of Four](https://leetcode-cn.com/problems/power-of-four/)
+# 342. Power of Four
+[342. Power of Four](https://leetcode-cn.com/problems/power-of-four/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given an integer (signed 32 bits), write a function to check whether it is a power of 4.
 
@@ -17,11 +18,11 @@ Output: false
 **Follow up**: Could you solve it without loops/recursion?
 
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 暴力法 循环迭代
+### 暴力法 循环迭代
 
 
 ```java
@@ -36,7 +37,7 @@ Output: false
 
 
 
-### 3.2 公式法
+### 公式法
 
 
 ```java
@@ -46,7 +47,7 @@ Output: false
 		return (Math.log10(n) / Math.log10(4)) % 1 == 0;
 	}
 ```
-### 3.3 位运算
+### 位运算
 
 
 

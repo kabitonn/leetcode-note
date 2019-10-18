@@ -1,6 +1,7 @@
-## [387. First Unique Character in a String](https://leetcode-cn.com/problems/first-unique-character-in-a-string/)
+# 387. First Unique Character in a String
+[387. First Unique Character in a String](https://leetcode-cn.com/problems/first-unique-character-in-a-string/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.
 
@@ -16,11 +17,11 @@ return 2.
 **Note:** You may assume the string contain only lowercase letters.
 
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 哈希表+遍历哈希
+### 哈希表+遍历哈希
 
 map存储字符出现的索引，若多次出现将其修改为-1；
 ```java
@@ -46,7 +47,7 @@ map存储字符出现的索引，若多次出现将其修改为-1；
         return first;
     }
 ```
-### 3.2 哈希表+遍历字符
+### 哈希表+遍历字符
 map存储字符出现的频率，自前向后遍历第一个1即为结果
 
 
@@ -86,7 +87,7 @@ map存储字符出现的频率，自前向后遍历第一个1即为结果
 
 
 
-### 3.3 首次出现索引和末次出现索引
+### 首次出现索引和末次出现索引
 
 
 ```java

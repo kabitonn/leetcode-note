@@ -1,6 +1,7 @@
-## [405. Convert a Number to Hexadecimal](https://leetcode-cn.com/problems/convert-a-number-to-hexadecimal/)
+# [405. Convert a Number to Hexadecimal
+[405. Convert a Number to Hexadecimal](https://leetcode-cn.com/problems/convert-a-number-to-hexadecimal/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given an integer, write an algorithm to convert it to hexadecimal. For negative integer, two’s complement method is used.
 
@@ -29,11 +30,11 @@ Output:
 ```
 
 
-## 2. 思路
+## 思路
 10进制转16进制，取后四位bit转换，右移4位
-## 3. 解决方法
+## 解决方法
 
-### 3.1 无符号右移4位 位与运算
+### 无符号右移4位 位与运算
 
 ```java
     public String toHex(int num) {

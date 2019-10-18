@@ -1,6 +1,6 @@
 ## [141. Linked List Cycle](https://leetcode-cn.com/problems/linked-list-cycle/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Given a linked list, determine if it has a cycle in it.
 
@@ -40,14 +40,14 @@ Follow up:
 
 > Can you solve it using O\(1\) \(i.e. constant\) memory?
 
-## 2. 思路
+## 思路
 
 1. 双指针
 2. 哈希
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 快慢指针相交
+### 快慢指针相交
 
 
 ```java
@@ -71,7 +71,7 @@ Follow up:
         - 环形部分
 空间复杂度：O(1)，我们只使用了慢指针和快指针两个结点，所以空间复杂度为 O(1)
 
-### 3.2 哈希集
+### 哈希集
 
 
 ```java

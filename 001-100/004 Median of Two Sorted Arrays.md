@@ -1,5 +1,5 @@
 # 004. Median of Two Sorted Arrays
-[link](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)
+[004. Median of Two Sorted Arrays](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)
 
 
 ## 题目描述\(困难\)

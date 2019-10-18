@@ -1,6 +1,7 @@
-## [226. Invert Binary Tree](https://leetcode-cn.com/problems/invert-binary-tree/)
+# 226. Invert Binary Tree
+[226. Invert Binary Tree](https://leetcode-cn.com/problems/invert-binary-tree/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Invert a binary tree.
 
@@ -27,13 +28,13 @@ This problem was inspired by this original tweet by Max Howell:
 > Google: 90% of our engineers use the software you wrote (Homebrew), but you can’t invert a binary tree on a whiteboard so f*** off.
 
 
-## 2. 思路
+## 思路
 
 1. 递归
 2. 迭代
-## 3. 解决方法
+## 解决方法
 
-### 3.1 递归
+### 递归
 反转一颗空树结果还是一颗空树。对于一颗根为 r，左子树为 $${right}$$， 右子树为 $${left}$$ 的树来说，它的反转树是一颗根为 r，左子树为 $${right}$$ 的反转树，右子树为 $${left}$$ 的反转树的树。
 
 ```java
@@ -50,7 +51,7 @@ This problem was inspired by this original tweet by Max Howell:
 时间复杂度: O(n)，其中 n 是树中节点的个数。
 空间复杂度: O(n)，在最坏情况下栈内需要存放 O(h) 个方法调用，其中 h 是树的高度。由于 $$h\in O(n)$$
 
-### 3.2 迭代BFS
+### 迭代BFS
 核心在于遍历节点，只要能接触到每一个节点，就能反转它的左右孩子，至于遍历方式反而不重要，DFS也可
 
 ```java

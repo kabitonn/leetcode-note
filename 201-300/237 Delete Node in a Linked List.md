@@ -1,6 +1,7 @@
-## [237. Delete Node in a Linked List](https://leetcode-cn.com/problems/delete-node-in-a-linked-list/)
+# 237. Delete Node in a Linked List
+[237. Delete Node in a Linked List](https://leetcode-cn.com/problems/delete-node-in-a-linked-list/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Write a function to delete a node \(except the tail\) in a singly linked list, given only access to that node.
 
@@ -33,11 +34,11 @@ Explanation: You are given the third node with value 1, the linked list should b
 * The given node will not be the tail and it will always be a valid node of the linked list.
 * Do not return anything from your function.
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 与下一个节点交换
+### 与下一个节点交换
 因为我们知道要删除的节点不是列表的末尾，所以我们可以保证这种方法是可行的
 
 ```java 

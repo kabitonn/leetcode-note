@@ -1,6 +1,7 @@
-## [326. Power of Three](https://leetcode-cn.com/problems/power-of-three/)
+# 326. Power of Three
+[326. Power of Three](https://leetcode-cn.com/problems/power-of-three/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given an integer, write a function to determine if it is a power of three.
 
@@ -28,11 +29,11 @@ Output: false
 > Could you do it without using any loop / recursion?
 
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 暴力法 循环迭代
+### 暴力法 循环迭代
 
 
 ```java
@@ -48,7 +49,7 @@ Output: false
 空间复杂度：O(1)，没有使用额外的空间。
 
 
-### 3.2 公式法
+### 公式法
 
 $$n = 3^i $$
 $$ i = log_{3}(n) = \frac {log_b(n)} {log_b(3)}$$
@@ -66,7 +67,7 @@ $$ i = log_{3}(n) = \frac {log_b(n)} {log_b(3)}$$
 空间复杂度：O(1)
 
 
-### 3.3 整数限制
+### 整数限制
 
 Integer.MAX_VALUE (2147483647)
 知道了 n 的限制，我们现在可以推断出 n 的最大值，也就是 3 的幂，是 1162261467。我们计算如下：

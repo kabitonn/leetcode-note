@@ -1,5 +1,5 @@
 # 020. Valid Parentheses
-[link](https://leetcode-cn.com/problems/valid-parentheses/)
+[020. Valid Parentheses](https://leetcode-cn.com/problems/valid-parentheses/)
 
 ## 题目描述(简单)
 

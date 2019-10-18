@@ -1,6 +1,7 @@
-## [242. Valid Anagram](https://leetcode-cn.com/problems/valid-anagram/)
+# 242. Valid Anagram
+[242. Valid Anagram](https://leetcode-cn.com/problems/valid-anagram/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given two strings s and t , write a function to determine if t is an anagram of s.
 
@@ -20,14 +21,14 @@ You may assume the string contains only lowercase alphabets.
 > What if the inputs contain unicode characters? How would you adapt your solution to such case?
 
 
-## 2. 思路
+## 思路
 
 1. 判断每种字符个数相等
 2. 排序
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 哈希表
+### 哈希表
 
 
 ```java
@@ -59,7 +60,7 @@ You may assume the string contains only lowercase alphabets.
 
 
 
-### 3.2 数组模拟哈希
+### 数组模拟哈希
 
 
 ```java
@@ -107,7 +108,7 @@ You may assume the string contains only lowercase alphabets.
 时间复杂度：O(n)。因为访问计数器表是一个固定的时间操作。
 空间复杂度：O(1)。
 
-### 3.3 排序
+### 排序
 
 
 ```java

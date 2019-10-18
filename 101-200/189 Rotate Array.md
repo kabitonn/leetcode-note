@@ -1,6 +1,6 @@
 ## [189. Rotate Array](https://leetcode-cn.com/problems/rotate-array/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 Given an array, rotate the array to the right by k steps, where k is non-negative.
 
@@ -30,11 +30,11 @@ rotate 2 steps to the right: [3,99,-1,-100]
 * Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
 * Could you do it in-place with O\(1\) extra space?
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 旋转k次
+### 旋转k次
 
 ```java
     public void rotate(int[] nums, int k) {
@@ -54,7 +54,7 @@ rotate 2 steps to the right: [3,99,-1,-100]
 时间复杂度：O(n*k)。每个元素都被移动 1 步O(n) k次O(k)） 。  
 空间复杂度：O(1) 。没有额外空间被使用。
 
-### 3.2 三次反转
+### 三次反转
 
 ```java
    public void rotate(int[] nums, int k) {
@@ -80,7 +80,7 @@ rotate 2 steps to the right: [3,99,-1,-100]
 空间复杂度：O(1)。 没有使用额外的空间。
 
 
-### 3.3 环状替换
+### 环状替换
 
 如果我们直接把每一个数字放到它最后的位置，但这样的后果是遗失原来的元素。因此，我们需要把被替换的数字保存在变量 temptemp 里面。然后，我们将被替换数字（temp）放到它正确的位置，并继续这个过程 n 次， n 是数组的长度。这是因为我们需要将数组里所有的元素都移动。但是，这种方法可能会有个问题，如果 $$n\%k==0 0$$，其中 $$k=k\%n$$ （因为如果 k 大于 n ，移动 k 次实际上相当于移动 $$k\%n$$次）。这种情况下，我们会发现在没有遍历所有数字的情况下回到出发数字。此时，我们应该从下一个数字开始再重复相同的过程。
 

@@ -1,6 +1,7 @@
-## [441. Arranging Coins](https://leetcode-cn.com/problems/arranging-coins/)
+# 441. Arranging Coins
+[441. Arranging Coins](https://leetcode-cn.com/problems/arranging-coins/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 You have a total of n coins that you want to form in a staircase shape, where every k-th row must have exactly k coins.
 
@@ -33,11 +34,11 @@ The coins can form the following rows:
 Because the 4th row is incomplete, we return 3.
 ```
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 遍历
+### 遍历
 
 
 ```java
@@ -52,7 +53,7 @@ Because the 4th row is incomplete, we return 3.
 
 
 
-### 3.2 二分法
+### 二分法
 
 求小于等于符合要求的最大值
 求满足 $$i * (i + 1) / 2 <= n $$的最大的那个 i
@@ -71,7 +72,7 @@ Because the 4th row is incomplete, we return 3.
     	return low;
     }
 ```
-### 3.3 解数学公式
+### 解数学公式
 
 
 ```java

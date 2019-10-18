@@ -1,5 +1,5 @@
 # 070. Climbing Stairs
-[link](https://leetcode-cn.com/problems/climbing-stairs/)
+[070. Climbing Stairs](https://leetcode-cn.com/problems/climbing-stairs/)
 
 ## 题目描述\(简单\)
 

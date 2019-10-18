@@ -1,5 +1,5 @@
 # 023. Merge k Sorted Lists
-[link](https://leetcode-cn.com/problems/merge-k-sorted-lists/)
+[023. Merge k Sorted Lists](https://leetcode-cn.com/problems/merge-k-sorted-lists/)
 
 ## 题目描述\(困难\)
 

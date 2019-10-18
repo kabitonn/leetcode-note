@@ -1,6 +1,6 @@
 ## [155. Min Stack](https://leetcode-cn.com/problems/min-stack/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
 
@@ -22,12 +22,12 @@ minStack.top();      --> Returns 0.
 minStack.getMin();   --> Returns -2.
 ```
 
-## 2. 思路
+## 思路
 
 栈顶存放最小值
-## 3. 解决方法
+## 解决方法
 
-### 3.1
+### 1
 
 入栈出栈判断最小值是否改变并进行栈操作
 

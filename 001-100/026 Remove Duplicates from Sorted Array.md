@@ -1,5 +1,5 @@
 # 026. Remove Duplicates from Sorted Array
-[link](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
+[026. Remove Duplicates from Sorted Array](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
 
 ## 题目描述\(简单\)
 

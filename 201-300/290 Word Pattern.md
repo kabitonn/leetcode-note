@@ -1,6 +1,7 @@
-## [290. Word Pattern](https://leetcode-cn.com/problems/word-pattern/)
+# 290. Word Pattern
+[290. Word Pattern](https://leetcode-cn.com/problems/word-pattern/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given a pattern and a string str, find if str follows the same pattern.
 
@@ -10,6 +11,7 @@ Example 1:
 ```
 Input: pattern = "abba", str = "dog cat cat dog"
 Output: true
+```
 Example 2:
 ```
 Input:pattern = "abba", str = "dog cat cat fish"
@@ -29,12 +31,12 @@ Output: false
 > You may assume pattern contains only lowercase letters, and str contains lowercase letters that may be separated by a single space.
 
 
-## 2. 思路
+## 思路
 利用map存储word和pattern的一一对应关系
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 HashMap
+### HashMap
 
 利用mapS2C存储word和pattern的一一对应关系，若key存在则判断value值和当前char相等，若key不存在仍需判断需要加入的value不存在，如果将要加入的value存在即说明该char已经对应逼得key,无法实现一对一映射关系，返回false
 

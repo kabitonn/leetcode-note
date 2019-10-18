@@ -1,6 +1,6 @@
 ## [107. Binary Tree Level Order Traversal II](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/)
 
-## 1. 题目描述(简单)
+##  题目描述(简单)
 
 Given a binary tree, return the bottom-up level order traversal of its nodes' values. (ie, from left to right, level by level from leaf to root).
 
@@ -21,12 +21,12 @@ return its bottom-up level order traversal as:
 ```
 
 
-## 2. 思路
+##  思路
 层次遍历BFS
 
-## 3. 解决方法
+##  解决方法
 
-### 3.1 迭代BFS
+### 迭代BFS
 
 
 ```java
@@ -53,7 +53,7 @@ return its bottom-up level order traversal as:
 ```
 
 
-### 3.2 递归BFS
+### 递归BFS
 
 
 ```java

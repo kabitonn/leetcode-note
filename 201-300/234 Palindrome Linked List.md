@@ -1,6 +1,7 @@
-## [234. Palindrome Linked List](https://leetcode-cn.com/problems/palindrome-linked-list/)
+# 234. Palindrome Linked List
+[234. Palindrome Linked List](https://leetcode-cn.com/problems/palindrome-linked-list/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given a singly linked list, determine if it is a palindrome.
 
@@ -18,11 +19,11 @@ Output: true
 Could you do it in O(n) time and O(1) space?
 
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 遍历存储
+### 遍历存储
 
 
 ```java
@@ -42,7 +43,7 @@ Could you do it in O(n) time and O(1) space?
 ```
 
 
-### 3.2 Stack逆序后半部分
+### Stack逆序后半部分
 
 
 ```java
@@ -63,7 +64,7 @@ Could you do it in O(n) time and O(1) space?
         return true;
     }
 ```
-### 3.3 快慢指针-后部翻转
+### 快慢指针-后部翻转
 
 
 ```java

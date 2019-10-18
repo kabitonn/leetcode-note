@@ -1,6 +1,7 @@
-## [268. Missing Number](https://leetcode-cn.com/problems/missing-number/)
+# [268. Missing Number
+[268. Missing Number](https://leetcode-cn.com/problems/missing-number/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
 
@@ -18,13 +19,13 @@ Output: 8
 - Your algorithm should run in linear runtime complexity. Could you implement it using only constant extra space complexity?
 
 
-## 2. 思路
+## 思路
 
 
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 排序
+### 排序
 
 
 ```java
@@ -42,7 +43,7 @@ Output: 8
 
 
 
-### 3.2 求总合
+### 求总合
 
 差值即为missing
 
@@ -57,7 +58,7 @@ Output: 8
 ```
 
 
-### 3.3 索引和值异或运算
+### 索引和值异或运算
 
 missing为缺少的值的索引
 

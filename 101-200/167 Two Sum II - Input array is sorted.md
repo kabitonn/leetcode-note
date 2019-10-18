@@ -1,6 +1,6 @@
 ## [167. Two Sum II - Input array is sorted](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.
 
@@ -19,11 +19,11 @@ Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
 ```
 
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 遍历
+### 遍历
 
 
 ```java
@@ -44,7 +44,7 @@ Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
 ```
 
 
-### 3.2 双指针
+### 双指针
 
 
 ```java

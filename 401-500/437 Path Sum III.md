@@ -1,6 +1,7 @@
-## [437. Path Sum III](https://leetcode-cn.com/problems/path-sum-iii/)
+# 437. Path Sum III
+[437. Path Sum III](https://leetcode-cn.com/problems/path-sum-iii/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 You are given a binary tree in which each node contains an integer value.
 
@@ -29,11 +30,11 @@ Return 3. The paths that sum to 8 are:
 3. -3 -> 11
 ```
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 双重递归
+### 双重递归
 遍历节点作为起始点，计算sum
 
 ```java
@@ -51,7 +52,7 @@ Return 3. The paths that sum to 8 are:
 
 
 
-### 3.2 HashMap缓存 回溯
+### HashMap缓存 回溯
 
 取DFS加回溯，每次访问到一个节点，把该节点加入到当前的pathSum中
 然后判断是否存在一个之前的前n项和，其值等于pathSum与sum之差

@@ -1,6 +1,7 @@
-## [278. First Bad Version](https://leetcode-cn.com/problems/first-bad-version/)
+# 278. First Bad Version
+[278. First Bad Version](https://leetcode-cn.com/problems/first-bad-version/)
 
-## 1. 题目描述\(简单\)
+## 题目描述\(简单\)
 
 You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
 
@@ -20,13 +21,13 @@ call isBadVersion(4) -> true
 Then 4 is the first bad version.
 ```
 
-## 2. 思路
+## 思路
 
 二分法求true的左边界
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 二分法左边界
+### 二分法左边界
 
 ```java
     public int firstBadVersion(int n) {
@@ -47,7 +48,7 @@ Then 4 is the first bad version.
 时间复杂度：$$O(\log n)$$。搜索空间每次减少一半，因此时间复杂度为 $$O(\log n)$$。
 空间复杂度：$$O(1)$$。
 
-### 3.2 线性查找(超时)
+### 线性查找(超时)
 
 
 ```java

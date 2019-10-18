@@ -1,6 +1,7 @@
-## [350. Intersection of Two Arrays II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/)
+# 350. Intersection of Two Arrays II
+[350. Intersection of Two Arrays II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Given two arrays, write a function to compute their intersection.
 
@@ -26,11 +27,11 @@ Output: [4,9]
 - What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
 
 
-## 2. 思路
+## 思路
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 排序
+### 排序
 
 
 ```java
@@ -60,7 +61,7 @@ Output: [4,9]
 
 
 
-### 3.2 HashMap
+### HashMap
 
 
 ```java
@@ -84,5 +85,5 @@ Output: [4,9]
 ```
 
 
-### 3.3 
+### 
 
