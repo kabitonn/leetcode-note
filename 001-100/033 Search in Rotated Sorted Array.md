@@ -10,7 +10,7 @@ You are given a target value to search. If found in the array return its index, 
 
 You may assume no duplicate exists in the array.
 
-Your algorithm's runtime complexity must be in the order of $$O(log n)$$.
+Your algorithm's runtime complexity must be in the order of O(log (n)).
 
 Example 1:
 

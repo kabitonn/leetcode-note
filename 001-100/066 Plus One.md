@@ -55,7 +55,7 @@ Explanation: The array represents the integer 4321.
 	}
 ```
 
-时间复杂度：$$O(n)$$
+时间复杂度：O(n)
 
 
 ### 3.2 个位加1
@@ -77,7 +77,7 @@ Explanation: The array represents the integer 4321.
 	}
 ```
 
-时间复杂度：$$O(n)$$
+时间复杂度：O(n)
 
 ### 3.3 转换为数字相加
 

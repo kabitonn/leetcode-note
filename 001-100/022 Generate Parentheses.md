@@ -26,7 +26,7 @@ For example, given n = 3, a solution set is:
 
 ### 3.1 暴力法-遍历判断
 
-列举所有的情况，每一位有左括号和右括号两种情况，总共 $$2n$$ 位，所以总共 $$2^{2n}$$种情况
+列举所有的情况，每一位有左括号和右括号两种情况，总共 2n 位，所以总共 $$2^{2n}$$种情况
 
 ```java
     public List<String> generateParenthesis(int n) {
