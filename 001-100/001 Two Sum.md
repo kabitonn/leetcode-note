@@ -1,7 +1,7 @@
 # 001. Two Sum(E)
 [001. Two Sum](https://leetcode-cn.com/problems/two-sum/)
 
-## 题目描述（简单）
+## 题目描述(简单)
 
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 
