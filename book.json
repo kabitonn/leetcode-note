@@ -11,7 +11,7 @@
         "summary": "SUMMARY.md"
     },
     "plugins": [
-        "mathjax",
+        "katex",
         "splitter",
         "anchor-navigation-ex",
         "github-buttons",
