@@ -28,7 +28,7 @@ Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (m
 
 动态规划
 
-$$f(k) = max(f(k – 2) + A_k, f(k – 1))$$
+$$ f(k) $$ = max $$ (f(k-2) + A_k, f(k-1)) $$
 
 ## 3. 解决方法
 
