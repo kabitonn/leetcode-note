@@ -52,8 +52,8 @@ You may assume the string contains only lowercase alphabets.
         return true;
     }
 ```
-时间复杂度：$$O(n)$$。因为访问计数器表是一个固定的时间操作。
-空间复杂度：$$O(1)$$。
+时间复杂度：O(n)。因为访问计数器表是一个固定的时间操作。
+空间复杂度：O(1)。
 
 
 
@@ -104,8 +104,8 @@ You may assume the string contains only lowercase alphabets.
 
 
 
-时间复杂度：$$O(n)$$。因为访问计数器表是一个固定的时间操作。
-空间复杂度：$$O(1)$$。
+时间复杂度：O(n)。因为访问计数器表是一个固定的时间操作。
+空间复杂度：O(1)。
 
 ### 3.3 排序
 
@@ -119,7 +119,7 @@ You may assume the string contains only lowercase alphabets.
     	return Arrays.equals(ss, tt);
     }
 ```
-时间复杂度：$$O(n \log n)$$，假设 n 是 s 的长度，排序成本 $$O(n\log n)$$ 和比较两个字符串的成本 $$O(n)$$。排序时间占主导地位，总体时间复杂度为 $$O(n \log n)$$。
-空间复杂度：$$O(1)$$，空间取决于排序实现，
+时间复杂度：$$O(n \log n)$$，假设 n 是 s 的长度，排序成本 $$O(n\log n)$$ 和比较两个字符串的成本 O(n)。排序时间占主导地位，总体时间复杂度为 $$O(n \log n)$$。
+空间复杂度：O(1)，空间取决于排序实现，
 
 

@@ -67,9 +67,9 @@ Explanation: The LCA of nodes 2 and 4 is 2, since a node can be a descendant of 
 		}
 	}
 ```
-时间复杂度：$$O(N)$$ 其中 N 为 BST 中节点的个数，在最坏的情况下我们可能需要访问 BST 中所有的节点。
+时间复杂度：O(N) 其中 N 为 BST 中节点的个数，在最坏的情况下我们可能需要访问 BST 中所有的节点。
 
-空间复杂度：$$O(N)$$ 所需开辟的额外空间主要是递归栈产生的，之所以是 N 是因为 BST 的高度为 N。
+空间复杂度：O(N) 所需开辟的额外空间主要是递归栈产生的，之所以是 N 是因为 BST 的高度为 N。
 
 
 

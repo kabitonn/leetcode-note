@@ -41,8 +41,8 @@ public class NumArray {
     }
 }
 ```
-时间复杂度：每次查询的时间 $$O(n)$$，每个 sumrange 查询需要 $$O(n)$$ 时间。
-空间复杂度：$$O(1)$$
+时间复杂度：每次查询的时间 O(n)，每个 sumrange 查询需要 O(n) 时间。
+空间复杂度：O(1)
 
 
 ### 3.2 动态规划+缓存
@@ -50,7 +50,7 @@ public class NumArray {
 
 $$sums[k]$$ 定义为 $$nums[0 \cdots k-1]$$的累积和
 
-$$sumrange（i，j）=sums[j+1]−sums[i]$$
+$$sumrange(i, j)=sums[j+1]−sums[i]$$
 
 
 ```java
@@ -67,8 +67,8 @@ public class NumArray {
     }
 }
 ```
-时间复杂度：每次查询的时间 $$O(1)$$，$$O(n)$$预计算时间。由于累积和被缓存，每个sumrange查询都可以用 $$O(1)$$ 时间计算。
-空间复杂度：$$O(n)$$.
+时间复杂度：每次查询的时间 O(1)，O(n)预计算时间。由于累积和被缓存，每个sumrange查询都可以用 O(1) 时间计算。
+空间复杂度：O(n).
 
 
 
