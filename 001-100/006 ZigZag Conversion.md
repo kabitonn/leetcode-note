@@ -1,7 +1,7 @@
 # 006. ZigZag Conversion(M)
 [006. ZigZag Conversion](https://leetcode-cn.com/problems/zigzag-conversion/)
 
-## 题目描述\(中等\)
+## 题目描述(中等)
 
 The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: \(you may want to display this pattern in a fixed font for better legibility\)
 
