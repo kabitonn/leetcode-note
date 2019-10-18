@@ -102,7 +102,7 @@
     * [099. Recover Binary Search Tree(H)](/001-100/099 Recover Binary Search Tree.md)
     * [100. Same Tree(E)](/001-100/100 Same Tree.md)
 
-* [101-200](/101-200/README.md)
+>* [101-200](/101-200/README.md)
     * [101. Symmetric Tree(E)](/101-200/101 Symmetric Tree.md)
     * [102. Binary Tree Level Order Traversal(M)](/101-200/102 Binary Tree Level Order Traversal.md)
     * [103. Binary Tree Zigzag Level Order Traversal(M)](/101-200/103 Binary Tree Zigzag Level Order Traversal.md)
@@ -306,7 +306,7 @@
     * [299. Bulls and Cows(M)](/201-300/299 Bulls and Cows.md)
     * [300. Longest Increasing Subsequence(M)](/201-300/300 Longest Increasing Subsequence.md)
 
->* [301-400](/301-400/README.md)
+* [301-400](/301-400/README.md)
     * [303. Range Sum Query - Immutable(E)](/301-400/303 Range Sum Query - Immutable.md)
     * [326. Power of Three(E)](/301-400/326 Power of Three.md)
     * [342. Power of Four(E)](/301-400/342 Power of Four.md)
@@ -322,7 +322,7 @@
     * [389. Find the Difference(E)](/301-400/389 Find the Difference.md)
     * [400. Nth Digit(E)](/301-400/400 Nth Digit.md)
 
-> * [401-500](/401-500/README.md)
+* [401-500](/401-500/README.md)
     * [404. Sum of Left Leaves(E)](/401-500/404 Sum of Left Leaves.md)
     * [405. Convert a Number to Hexadecimal(E)](/401-500/405 Convert a Number to Hexadecimal.md)
     * [409. Longest Palindrome(E)](/401-500/409 Longest Palindrome.md)
