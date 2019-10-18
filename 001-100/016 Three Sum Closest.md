@@ -1,4 +1,4 @@
-# 016. 3Sum Closest
+# 016. 3Sum Closest(M)
 [016. 3Sum Closest](https://leetcode-cn.com/problems/3sum-closest/)
 
 ## 题目描述\(中等\)

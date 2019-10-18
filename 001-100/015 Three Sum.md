@@ -1,4 +1,4 @@
-# 015. 3Sum
+# 015. 3Sum(M)
 [015. 3Sum](https://leetcode-cn.com/problems/3sum/)
 
 ## 题目描述\(中等\)
