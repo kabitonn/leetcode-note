@@ -47,7 +47,7 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
     }
 ```
 时间复杂度：$$O(n^2)$$，循环运行$$n(n-1)/2$$次
-空间复杂度：$$O(1)$$
+空间复杂度：O(1)
 
 
 ### 3.2 一次遍历 动态规划
@@ -66,8 +66,8 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
         return maxProfit;
     }
 ```
-时间复杂度：$$O(n)$$
-空间复杂度：$$O(1)$$
+时间复杂度：O(n)
+空间复杂度：O(1)
 
 
 

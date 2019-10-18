@@ -59,8 +59,8 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
     }
 ```
 
-时间复杂度：$$O(n)$$，遍历一次。  
-空间复杂度：$$O(1)$$，需要常量的空间。
+时间复杂度：O(n)，遍历一次。  
+空间复杂度：O(1)，需要常量的空间。
 
 ### 3.2 峰谷法
 
@@ -86,6 +86,6 @@ $$TotalProfit = \sum_i(height(peak_i) - height(valley_i)) $$
     }
 ```
 
-时间复杂度：$$O(n)$$，遍历一次。  
-空间复杂度：$$O(1)$$，需要常量的空间。
+时间复杂度：O(n)，遍历一次。  
+空间复杂度：O(1)，需要常量的空间。
 
