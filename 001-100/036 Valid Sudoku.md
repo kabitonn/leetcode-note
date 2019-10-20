@@ -114,4 +114,76 @@ Explanation: Same as Example 1, except with the 5 in the top left corner being
 
 空间复杂度：O(1)。
 
-###
+### 遍历一次存储
+
+```java
+    public boolean isValidSudoku2(char[][] board) {
+        for (int i = 0; i < board.length; i++) {
+            HashSet<Character> row = new HashSet<>();
+            HashSet<Character> col = new HashSet<>();
+            HashSet<Character> cube = new HashSet<>();
+            for (int j = 0; j < board[0].length; j++) {
+                if (board[i][j] != '.' && !row.add(board[i][j])) {
+                    return false;
+                }
+                if (board[j][i] != '.' && !col.add(board[j][i])) {
+                    return false;
+                }
+
+                int cubeRow = 3 * (i / 3) + j / 3;
+                int cubeCol = 3 * (i % 3) + j % 3;
+                if (board[cubeRow][cubeCol] != '.' && !cube.add(board[cubeRow][cubeCol])) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+```
+
+```java
+    public boolean isValidSudoku1(char[][] board) {
+        Set<String> seen = new HashSet<>();
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                char ch = board[i][j];
+                if (ch == '.') {
+                    continue;
+                }
+                if (!seen.add(ch + "in row" + i) ||
+                    !seen.add(ch + "in column" + j) ||
+                    !seen.add(ch + "in block" + i / 3 + "-" + j / 3)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+```
+
+
+### 二进制位来表示对应数字是否存在
+
+```java
+    public boolean isValidSudoku3(char[][] board) {
+        int[] rows = new int[9];
+        int[] cols = new int[9];
+        int[] grid = new int[9];
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (board[i][j] != '.') {
+                    int bytes = 1 << (board[i][j] - '1');
+                    if ((bytes & (rows[i] | cols[j] | grid[i / 3 * 3 + j / 3])) != 0) {
+                        return false;
+                    }
+                    rows[i] |= bytes;
+                    cols[j] |= bytes;
+                    grid[i / 3 * 3 + j / 3] |= bytes;
+                }
+            }
+        }
+        return true;
+    }
+```
