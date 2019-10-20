@@ -19,8 +19,8 @@ Follow up:
 
 ## 思路
 
-1. 前后指针遍历$$n+(l-n)*2 = 2l - n$$
-    1. 单个指针遍历$$l+l-n = 2l - n$$
+1. 前后指针遍历 $$ n+(l-n)*2 = 2l - n $$
+    1. 单个指针遍历 $$ l+l-n = 2l - n $$
 2. 一次遍历，存储结点
 
 
@@ -28,7 +28,7 @@ Follow up:
 
 ### 两次遍历
 
-
+先让第一个指针遍历 n 步，然后再让它俩同时开始遍历，这样的话，当第一个指针到头的时候，第二个指针就离第一个指针有 n 的距离，所以第二个指针的位置就刚好是倒数第 n 个结点。
 
 ```java
     public ListNode removeNthFromEnd(ListNode head, int n) {
@@ -49,7 +49,7 @@ Follow up:
     }
 ```
 
-
+先遍历一遍得到它的长度，之后用长度减去 n 就是要删除的结点的位置，然后遍历到结点的前一个位置
 
 ```java
     public ListNode removeNthFromEnd1(ListNode head, int n) {
@@ -71,9 +71,13 @@ Follow up:
     }
 ```
 
+时间复杂度: O(n)
+
+空间复杂度：O(1)
+
 ### 一次遍历
 
-
+第一次遍历链表确定长度的时候，顺便把每个结点存到数组里，空间换时间
 
 ```java
     public ListNode removeNthFromEnd2(ListNode head, int n) {
@@ -93,7 +97,9 @@ Follow up:
     	return start.next;
     }
 ```
+时间复杂度：O(L)
 
+空间复杂度：O(L)
 
 
 
