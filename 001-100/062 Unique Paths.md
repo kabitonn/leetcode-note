@@ -71,7 +71,7 @@ $$C_N^k = N!/(k!(N−k)!)=(N∗(n−1)∗(N−2)∗...(N−k+1))/k! $$
 ### 递归
 ```java
     public int uniquePaths(int m, int n) {
-        return uniquePaths(m,n,new int[m+1][n+1]);
+        return uniquePaths(m, n, new int[m + 1][n + 1]);
     }
 
     public int uniquePaths(int m, int n, int[][] path) {
