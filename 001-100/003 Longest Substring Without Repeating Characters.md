@@ -43,7 +43,7 @@ Explanation: The answer is "wke", with the length of 3.
 
 ## 解决方法
 
-### 暴力法
+### 1. 暴力法
 
 依次判断以当前元素为首的无重复元素子串是否为最长子串，以i为首j为尾的子串是否为无重复元素子串，若为重复元素子串，循环i+1为首的子串；若为无重复元素子串，判断当前长度j-i+1与maxNum并修改。
 
@@ -96,7 +96,7 @@ Explanation: The answer is "wke", with the length of 3.
 时间复杂度O\(n^2\)  
 空间复杂度O\(min\(n,m\)\),需要 O\(k\) 的空间来检查子字符串中是否有重复字符，其中 k 表示 Set 的大小。而 Set 的大小取决于字符串n 的大小以及字符集字母m的大小。
 
-### 双指针\(滑动窗口\)
+### 2. 双指针\(滑动窗口\)
 
 通过使用 HashSet 作为滑动窗口，我们可以用 O\(1\) 的时间来完成对字符是否在当前的子字符串中的检查。
 
@@ -128,10 +128,9 @@ Explanation: The answer is "wke", with the length of 3.
 时间复杂度：O\(2n\) = O\(n\)，在最糟糕的情况下，每个字符将被i和j访问两次。  
 空间复杂度：O\(min\(m, n\)\)，与之前的方法相同。滑动窗口法需要 O\(k\)的空间，其中k 表示 Set 的大小。而 Set 的大小取决于字符串 n的大小以及字符集 / 字母m的大小。
 
-### 优化滑动窗口
+### 3. 优化滑动窗口
 
 ![](/assets/001-100/003-solution-3-1.png)
-
 
 ![](/assets/001-100/003-solution-3--2.png)
 
@@ -165,7 +164,7 @@ Explanation: The answer is "wke", with the length of 3.
 
 空间复杂度：也是一样的，O\(min\(m, n\)\)。
 
-### 优化滑动窗口改
+### 4. 优化滑动窗口改
 
 采用数组模拟map，适用于字符集较小情况。
 
