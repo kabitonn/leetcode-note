@@ -154,6 +154,7 @@ visited记录是否使用过(数组或二进制位来实现)
 ### 递归(动态规划)
 
 在之前存在数字的已有情况下，数字空隙插入新的数字即可
+
 ```java
     public List<List<Integer>> permute5(int[] nums) {
         return permute5(nums, nums.length);
