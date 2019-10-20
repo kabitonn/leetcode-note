@@ -104,7 +104,7 @@ n is a 32-bit signed integer, within the range $$ [−2^{31}, 2^{31} − 1] $
 
 时间复杂度：log(n)。
 
-空间复杂度：
+空间复杂度：log(n)
 
 ### 二进制位确定累乘数
 
