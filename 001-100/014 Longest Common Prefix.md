@@ -38,7 +38,7 @@ Explanation: There is no common prefix among the input strings.
 
 ![](/assets/001-100/014-solution-1.png)
 所有字符串垂直排列，然后一列一列的比较，直到某一个字符串到达结尾或者该列字符不完全相同。
-
+首先找到最短字符串长度，然后一列一列比较
 ```java
     public String longestCommonPrefix(String[] strs) {
         if(strs == null ||strs.length == 0)
