@@ -78,7 +78,7 @@ rotate the input matrix in-place such that it becomes:
 ```java
     public void rotate(int[][] matrix) {
         int n=matrix.length;
-        for (int i=0; i<n/2; i++) 
+        for (int i=0; i<n/2; i++) {
             for (int j=i; j<n-i-1; j++) {
                 int tmp=matrix[i][j];
                 matrix[i][j]=matrix[n-j-1][i];
@@ -86,6 +86,7 @@ rotate the input matrix in-place such that it becomes:
                 matrix[n-i-1][n-j-1]=matrix[j][n-i-1];
                 matrix[j][n-i-1]=tmp;
             }
+        }
     }
 ```
 
@@ -116,6 +117,10 @@ rotate the input matrix in-place such that it becomes:
     }
 
 ```
+
+时间复杂度：O(n²)。
+
+空间复杂度：O(1)。
 
 ### 转置加翻转
 
