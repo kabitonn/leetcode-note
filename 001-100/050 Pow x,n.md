@@ -28,7 +28,8 @@ n is a 32-bit signed integer, within the range $$ [−2^{31}, 2^{31} − 1] $
 ## 思路
 1. 累乘
 2. 指数幂相乘
-3. 
+3. 二进制位确定累乘数
+
 
 ## 解决方法
 
