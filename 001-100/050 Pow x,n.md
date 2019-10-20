@@ -56,7 +56,7 @@ n is a 32-bit signed integer, within the range $$ [−2^{31}, 2^{31} − 1] $
 
 空间复杂度：O(1)。
 
-### 指数幂累乘
+### 快速幂算法(循环)指数幂累乘
 
 ```java
     public double myPow1(double x, int n) {
@@ -85,6 +85,27 @@ n is a 32-bit signed integer, within the range $$ [−2^{31}, 2^{31} − 1] $
 
 空间复杂度：O(1)。
 
+### 快速幂算法(递归)
+
+```java
+    public double myPow(double x, int n) {
+        if (n == 0) {
+            return 1;
+        } else if (n == 1) {
+            return x;
+        } else if (n == -1) {
+            return 1 / x;
+        }
+        double half = myPow(x, n / 2);
+        double remain = myPow(x, n % 2);
+        return remain * half * half;
+    }
+```
+
+时间复杂度：log(n)。
+
+空间复杂度：
+
 ### 二进制位确定累乘数
 
 从右向左依此判断该位是否为1
@@ -112,23 +133,3 @@ n is a 32-bit signed integer, within the range $$ [−2^{31}, 2^{31} − 1] $
 
 空间复杂度：O(1)。
 
-### 递归
-
-```java
-    public double myPow(double x, int n) {
-        if (n == 0) {
-            return 1;
-        } else if (n == 1) {
-            return x;
-        } else if (n == -1) {
-            return 1 / x;
-        }
-        double half = myPow(x, n / 2);
-        double remain = myPow(x, n % 2);
-        return remain * half * half;
-    }
-```
-
-时间复杂度：log(n)。
-
-空间复杂度：
