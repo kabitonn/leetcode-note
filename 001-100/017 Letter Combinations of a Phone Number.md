@@ -1,4 +1,5 @@
-# 017. Letter Combinations of a Phone Number(M)
+# 017. Letter Combinations of a Phone Number\(M\)
+
 [017. Letter Combinations of a Phone Number](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)
 
 ## 题目描述\(中等\)
@@ -82,6 +83,8 @@ Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 ```
 
 ### 递归
+
+![](/assets/001-100/017-s-3-1.png)
 
 ```java
     private String[] mapping = new String[] {"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
