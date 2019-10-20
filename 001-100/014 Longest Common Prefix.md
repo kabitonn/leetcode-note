@@ -34,9 +34,10 @@ Explanation: There is no common prefix among the input strings.
 
 ## 解决方法
 
-### 3.1 垂直比较
+### 1. 垂直比较
 
 ![](/assets/001-100/014-solution-1.png)
+所有字符串垂直排列，然后一列一列的比较，直到某一个字符串到达结尾或者该列字符不完全相同。
 
 ```java
     public String longestCommonPrefix(String[] strs) {
@@ -58,7 +59,7 @@ Explanation: There is no common prefix among the input strings.
         return strs[0].substring(0, i);
     }
 ```
-
+官方的代码如下
 ```java
     public String longestCommonPrefix3(String[] strs) {
         if(strs == null ||strs.length == 0)
@@ -76,7 +77,11 @@ Explanation: There is no common prefix among the input strings.
     }
 ```
 
-### 3.2 水平比较
+时间复杂度：最坏的情况就是 n 个 长度为 m 的完全一样的字符串，假设 S 是所有字符的和，那么 S = m \* n，时间复杂度就是 O(S)。当然正常情况下并不需要比较所有字符串，最多比较 n * minLen 个字符就可以了。
+
+空间复杂度：O(1)，常数个额外空间。
+
+### 2. 水平比较
 
 ![](/assets/001-100/014-solution-2.png)
 
@@ -96,7 +101,7 @@ Explanation: There is no common prefix among the input strings.
     }
 ```
 
-### 3.3 递归
+### 3. 递归
 
 ![](/assets/001-100/014-solution-3.png)
 
