@@ -21,6 +21,8 @@ Output: 1->1->2->3->4->4
 
 ### 迭代
 
+遍历两个链表
+
 ```java
     public ListNode mergeTwoLists1(ListNode l1, ListNode l2) {
         ListNode start = new ListNode(0);
@@ -45,8 +47,14 @@ Output: 1->1->2->3->4->4
         return start.next;
     }
 ```
+时间复杂度：O(m + n)。
+
+空间复杂度：O(1)。
 
 ### 递归
+
+选定当前节点，递归处理剩余节点
+
 
 ```java
     public  ListNode mergeTwoLists(ListNode l1, ListNode l2) {
@@ -66,6 +74,12 @@ Output: 1->1->2->3->4->4
         }
     }
 ```
+时间复杂度：O(m + n)。因为每次调用递归都会去掉 l1 或者 l2 的头元素（直到至少有一个链表为空），函数 mergeTwoList 中只会遍历每个元素一次。所以，时间复杂度与合并后的链表长度为线性关系。
+
+空间复杂度：O(m + n)。调用 mergeTwoLists 退出时 l1 和 l2 中每个元素都一定已经被遍历过了，所以 n + m 个栈帧会消耗 O(n + m) 的空间。
+
+。
+
 
 
 
