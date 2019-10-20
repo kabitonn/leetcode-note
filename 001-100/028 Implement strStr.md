@@ -79,6 +79,8 @@ other's code
 空间复杂度：O(1)。
 
 ### 遍历相同长度子串
+取相同长度的子串判断是否相等
+
 ```java
     public int strStr(String haystack, String needle) {
     	for(int i=0;i<=haystack.length()-needle.length();i++) {
@@ -91,6 +93,7 @@ other's code
 
 ### BF
 
+本质暴力法遍历匹配
 ```java
     public int strStr(String haystack, String needle) {
     	char[] hayArr = haystack.toCharArray();
