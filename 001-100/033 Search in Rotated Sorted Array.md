@@ -149,7 +149,7 @@ Output: -1
   - mid > start: 最大值在右半部分(包括mid)。
   - mid < start：最大值在左半部分。
 
-  所以我们只需要把 mid 和 start比较，mid < start 丢弃右半部分(更新 end = mid -1 ），mid < start丢弃左半部分（更新 start = mid ）。直到 end 等于 start 时候结束就可以了。 
+  所以我们只需要把 mid 和 start比较(取mid时取右端点)，mid < start 丢弃右半部分(更新 end = mid -1 ），mid < start丢弃左半部分（更新 start = mid ）。直到 end 等于 start 时候结束就可以了。 
 
 
 
