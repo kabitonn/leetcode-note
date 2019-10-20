@@ -1,17 +1,19 @@
-# 048. Rotate Image(M)
+# 048. Rotate Image\(M\)
+
 [048. Rotate Image](https://leetcode-cn.com/problems/rotate-image/)
 
-## 题目描述(中等)
+## 题目描述\(中等\)
 
 You are given an n x n 2D matrix representing an image.
 
-Rotate the image by 90 degrees (clockwise).
+Rotate the image by 90 degrees \(clockwise\).
 
 **Note**:
 
 You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.
 
 Example 1:
+
 ```
 Given input matrix = 
 [
@@ -27,7 +29,9 @@ rotate the input matrix in-place such that it becomes:
   [9,6,3]
 ]
 ```
+
 Example 2:
+
 ```
 Given input matrix =
 [
@@ -46,12 +50,12 @@ rotate the input matrix in-place such that it becomes:
 ]
 ```
 
-
 ## 思路
 
 ## 解决方法
 
 ### 自外向内顺时针循环
+
 ```java
     //自外向内顺时针循环
     //自外向内一共有不超过 n/2 层（单个中心元素不算一层）矩形框。对于第 times 层矩形框，其框边长 len=nums-(times*2)，将其顺时针分为 4 份 len-1 的边，对四条边进行元素的循环交换即可。
@@ -76,24 +80,28 @@ rotate the input matrix in-place such that it becomes:
 ```
 
 ```java
-    public void rotate(int[][] matrix) {
-        int n=matrix.length;
-        for (int i=0; i<n/2; i++) {
-            for (int j=i; j<n-i-1; j++) {
-                int tmp=matrix[i][j];
-                matrix[i][j]=matrix[n-j-1][i];
-                matrix[n-j-1][i]=matrix[n-i-1][n-j-1];
-                matrix[n-i-1][n-j-1]=matrix[j][n-i-1];
-                matrix[j][n-i-1]=tmp;
+    public void rotate0(int[][] matrix) {
+        int n = matrix.length;
+        for (int i = 0; i < n / 2; i++) {
+            for (int j = i; j < n - i - 1; j++) {
+                int tmp = matrix[i][j];
+                matrix[i][j] = matrix[n - j - 1][i];
+                matrix[n - j - 1][i] = matrix[n - i - 1][n - j - 1];
+                matrix[n - i - 1][n - j - 1] = matrix[j][n - i - 1];
+                matrix[j][n - i - 1] = tmp;
             }
         }
     }
 ```
 
+时间复杂度：O\(n²\)。
+
+空间复杂度：O\(1\)。
 
 ### 两次翻转
+
 ```java
-//两次翻转
+    //两次翻转
     //先沿右上 - 左下的对角线翻转（270° + 一次镜像），再沿水平中线上下翻转（−180°+ 一次镜像），可以实现顺时针 90 度的旋转效果
     public void rotate1(int[][] matrix){
         if(matrix.length == 0 || matrix.length != matrix[0].length) {
@@ -115,14 +123,17 @@ rotate the input matrix in-place such that it becomes:
             }
         }
     }
-
 ```
 
-时间复杂度：O(n²)。
+时间复杂度：O\(n²\)。
 
-空间复杂度：O(1)。
+空间复杂度：O\(1\)。
 
 ### 转置加翻转
+
+
+
+![](/assets/001-100/048-s-3-1.png)
 
 ```java
 //转置加翻转
@@ -146,5 +157,9 @@ rotate the input matrix in-place such that it becomes:
             }
         }
     }
-
 ```
+
+时间复杂度：O\(n²\)。
+
+空间复杂度：O\(1\)。
+
