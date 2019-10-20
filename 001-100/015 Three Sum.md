@@ -30,6 +30,7 @@ A solution set is:
 
 ### 暴力遍历
 
+三层循环，遍历所有情况，利用set把重复情况去除
 ```java
     public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
@@ -58,7 +59,10 @@ A solution set is:
     }
 ```
 
-### 双指针 set去重
+### 双指针-排序 set去重
+
+遍历数组，用 0 减去当前的数，作为 sum ，然后再找两个数使得和为 sum。
+用两个指针，一个指向头，一个指向尾，去找这两个数字，这样的话，找另外两个数时间复杂度就会从 O(n²)，降到 O(n)。
 
 ```java
     public List<List<Integer>> threeSum(int[] nums) {
@@ -135,6 +139,10 @@ A solution set is:
         return tuples;
     }
 ```
+
+时间复杂度：O(n)，n 指的是 num
+
+空间复杂度：O(N)，最坏情况，即 N 是指 n 个元素的排列组合个数，即 $$N=C^3_n$$​​ ，用来保存结果。
 
 
 
