@@ -42,9 +42,10 @@ Output: 28
 
 ## 解决方法
 
-### 组合数计算
+### 组合数计算公式
 
 向右m-1步，向下n-1步，结果为C(m+n-2,m-1)=C(m+n-2,n-1)
+$$C_n^k = n!/(k!(n−k)!)=(n∗(n−1)∗(n−2)∗...(n−k+1))/k! $$
 
 ```java
     public int uniquePaths(int m, int n) {
