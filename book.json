@@ -41,13 +41,11 @@
         "github-buttons": {
             "buttons": [
                 {
-                    "user": "kabitonn",
-                    "repo": "leetcode-note",
+                    "repo": "kabitonn/leetcode-note",
                     "types": [
                         "star"
                     ],
-                    "size": "small",
-                    "count": true
+                    "size": "small"
                 }
             ]
         },
