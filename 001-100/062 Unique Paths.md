@@ -128,4 +128,33 @@ public int uniquePaths2(int m, int n) {
 
 空间复杂度：O(n)。
 
+另一种思路
+
+dp [i][j] = dp [i + 1][j] + dp [i][j +1]。
+
+```java
+    public int uniquePaths3(int m, int n) {
+        if (m == 0 || n == 0) {
+            return 0;
+        }
+        int[] paths = new int[m];
+        Arrays.fill(paths, 1);
+        //从右向左更新所有列
+        for (int j = n - 2; j >= 0; j--) {
+            //从下向上更新所有行
+            for (int i = m - 2; i >= 0; i--) {
+                //path[i]为右,path[i+1]为下
+                paths[i] = paths[i] + paths[i + 1];
+            }
+        }
+        return paths[0];
+    }
+```
+
+时间复杂度：O(m * n)。
+
+空间复杂度：O(m)。
+
+
+
 
