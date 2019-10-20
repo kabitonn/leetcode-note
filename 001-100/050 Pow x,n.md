@@ -2,7 +2,7 @@
 [050. Pow(x, n)](https://leetcode-cn.com/problems/powx-n/)
 ## 题目描述(中等)
 
-Implement pow(x, n), which calculates x raised to the power n (xn).
+Implement pow(x, n), which calculates x raised to the power n $$(x^n)$$.
 
 Example 1:
 ```
