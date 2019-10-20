@@ -70,7 +70,7 @@ Explanation: The number "-91283472332" is out of the range of a 32-bit signed in
 
 ## 解决方法
 
-### 溢出预处理
+### 1. 溢出预处理
 
 ```java
     public int myAtoi(String str) {
@@ -114,8 +114,12 @@ Explanation: The number "-91283472332" is out of the range of a 32-bit signed in
         return num;
     }
 ```
+时间复杂度：O（n），n 是字符串的长度。
 
-### 转换数据类型
+空间复杂度：O（1）。
+
+
+### 2. 转换数据类型
 
 ```java
     public int myAtoi(String str) {
@@ -162,5 +166,7 @@ Explanation: The number "-91283472332" is out of the range of a 32-bit signed in
     }
 ```
 
+时间复杂度：O（n），n 是字符串的长度。
 
+空间复杂度：O（1）。
 
