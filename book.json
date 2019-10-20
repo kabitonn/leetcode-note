@@ -2,6 +2,7 @@
     "title": "leetcode",
     "author": "kabitonn",
     "description": "leetcode刷题",
+    "output.name": "site",
     "language": "zh-hans",
     "links": {
         "gitbook": true
@@ -18,12 +19,15 @@
         "-search",
         "katex",
         "splitter",
+        "disqus",
         "anchor-navigation-ex",
         "github-buttons",
         "copy-code-button",
         "search-plus",
-        "sharing-plus@^0.0.2",
+        "sharing-plus",
         "emphasize",
+        "prism",
+        "prism-themes",
         "expandable-chapters-small"
     ],
     "pluginsConfig": {
@@ -32,10 +36,17 @@
                 {
                     "user": "kabitonn",
                     "repo": "leetcode-note",
-                    "type": "star",
+                    "types": [
+                        "star"
+                    ],
                     "size": "small",
                     "count": true
                 }
+            ]
+        },
+        "prism": {
+            "css": [
+                "prism-themes/themes/prism-base16-ateliersulphurpool.light.css"
             ]
         },
         "anchor-navigation-ex": {
