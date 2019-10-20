@@ -85,19 +85,21 @@ visited记录是否使用过(数组或二进制位来实现)
     }
 ```
 
-### 交换
+### 递归 交换
+
+只需要用一个 for 循环，把每一个数字都放到 start 一次
 
 ```java
     public List<List<Integer>> permute3(int[] nums) {
         List<List<Integer>> listList = new ArrayList<>();
-        backtrack3(nums, 0, listList);
+        permute(nums, 0, listList);
         return listList;
     }
 
     /**
      * 递归交换
      */
-    private void backtrack3(int[] nums, int start, List<List<Integer>> listList) {
+    private void permute(int[] nums, int start, List<List<Integer>> listList) {
         if (start == nums.length) {
             //List list = Arrays.stream(nums).boxed().collect(Collectors.toList());
             List<Integer> list = new ArrayList<>();
@@ -108,7 +110,7 @@ visited记录是否使用过(数组或二进制位来实现)
         }
         for (int i = start; i < nums.length; i++) {
             swap(nums, i, start);
-            backtrack3(nums, start + 1, listList);
+            permute(nums, start + 1, listList);
             swap(nums, i, start);
         }
     }
