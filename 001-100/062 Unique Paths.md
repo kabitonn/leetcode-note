@@ -46,7 +46,7 @@ Output: 28
 
 向右m-1步，向下n-1步，结果为C(m+n-2,m-1)=C(m+n-2,n-1)
 令N=m+n-2,k=m-1
-$$C_n^k = n!/(k!(n−k)!)=(n∗(n−1)∗(n−2)∗...(n−k+1))/k! $$
+$$C_N^k = N!/(k!(N−k)!)=(N∗(n−1)∗(N−2)∗...(N−k+1))/k! $$
 
 ```java
     public int uniquePaths(int m, int n) {
