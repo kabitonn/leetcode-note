@@ -1,32 +1,39 @@
-# 043. Multiply Strings(M)
+# 043. Multiply Strings\(M\)
+
 [043. Multiply Strings](https://leetcode-cn.com/problems/multiply-strings/)
 
-## 题目描述(中等)
+## 题目描述\(中等\)
 
 Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
 
 Example 1:
+
 ```
 Input: num1 = "2", num2 = "3"
 Output: "6"
 ```
+
 Example 2:
+
 ```
 Input: num1 = "123", num2 = "456"
 Output: "56088"
 ```
-**Note**:
-1. The length of both num1 and num2 is < 110.
-2. Both num1 and num2 contain only digits 0-9.
-3. Both num1 and num2 do not contain any leading zero, except the number 0 itself.
-4. You must not use any built-in BigInteger library or convert the inputs to integer directly.
 
+**Note**:  
+1. The length of both num1 and num2 is &lt; 110.  
+2. Both num1 and num2 contain only digits 0-9.  
+3. Both num1 and num2 do not contain any leading zero, except the number 0 itself.  
+4. You must not use any built-in BigInteger library or convert the inputs to integer directly.
 
 ## 思路
 
 ## 解决方法
 
-### 
+### 模仿乘法计算
+
+![](/assets/001-100/043-s-1-1.png)
+个位乘个位，得出一个数，然后个位乘十位，全部乘完以后，就再用十位乘以各个位。然后百位乘以各个位，最后将每次得出的数相加。十位的结果要补 1 个 0 ，百位的结果要补两个 0 
 
 ```java
     public String multiply(String num1, String num2) {
@@ -83,6 +90,7 @@ Output: "56088"
     }
 ```
 
-时间复杂度：O(m * n)。m，n 是两个字符串的长度。
+时间复杂度：O\(m \* n\)。m，n 是两个字符串的长度。
 
-空间复杂度：O(m + n)。m，n 是两个字符串的长度。
+空间复杂度：O\(1\)。
+
