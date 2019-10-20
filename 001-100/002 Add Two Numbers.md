@@ -39,7 +39,7 @@ Explanation: 342 + 465 = 807.
 
 ## 解决方法
 
-### 1. carry不作为循环条件
+### carry不作为循环条件
 
 ```java
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -68,7 +68,7 @@ Explanation: 342 + 465 = 807.
     }
 ```
 
-### 2. carry也作为循环条件
+### carry也作为循环条件
 
 ```java
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

@@ -31,6 +31,9 @@
         "expandable-chapters-small"
     ],
     "pluginsConfig": {
+        "disqus": {
+            "shortName": "leetcode note"
+        },
         "github-buttons": {
             "buttons": [
                 {

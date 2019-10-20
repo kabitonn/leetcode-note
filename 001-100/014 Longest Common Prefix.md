@@ -34,7 +34,7 @@ Explanation: There is no common prefix among the input strings.
 
 ## 解决方法
 
-### 1. 垂直比较
+### 垂直比较
 
 ![](/assets/001-100/014-solution-1.png)
 所有字符串垂直排列，然后一列一列的比较，直到某一个字符串到达结尾或者该列字符不完全相同。
@@ -81,7 +81,7 @@ Explanation: There is no common prefix among the input strings.
 
 空间复杂度：O(1)，常数个额外空间。
 
-### 2. 水平比较
+### 水平比较
 
 ![](/assets/001-100/014-solution-2.png)
 
@@ -104,7 +104,7 @@ Explanation: There is no common prefix among the input strings.
 
 空间复杂度：O(1)。
 
-### 3. 递归分治
+### 递归分治
 
 ![](/assets/001-100/014-solution-3.png)
 

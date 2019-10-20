@@ -71,7 +71,7 @@ Output: "MCMXCIV"
 
 ## 解决方法
 
-### 1. 依次取最大数值
+### 依次取最大数值
 
 ```java
 public String intToRoman(int num) {
@@ -152,7 +152,7 @@ public String intToRoman(int num) {
 
 空间复杂度：O(1).
 
-### 2. 依次取出每位值
+### 依次取出每位值
 
 ```java
    public String intToRoman(int num) {
