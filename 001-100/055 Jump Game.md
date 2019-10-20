@@ -14,11 +14,9 @@
 ## 解决方法
 
 
-### 动态规划1
-
-
-
 ### 动态规划
+若当前节点能到达时
+dp[i] = max(dp[i-1],i+nums[i])
 
 ```java
     public boolean canJump(int[] nums) {
