@@ -1,11 +1,13 @@
-# 046. Permutations(M)
+# 046. Permutations\(M\)
+
 [046. Permutations](https://leetcode-cn.com/problems/permutations/)
 
-## 题目描述(中等)
+## 题目描述\(中等\)
 
 Given a collection of distinct integers, return all possible permutations.
 
 Example:
+
 ```
 Input: [1,2,3]
 Output:
@@ -21,14 +23,16 @@ Output:
 
 ## 思路
 
-回溯
+回溯  
 迭代
 
 ## 解决方法
 
-
-
 ### 回溯
+
+![](/assets/001-100/046-s-1-1.png)
+
+
 
 visited记录是否使用过
 
@@ -55,7 +59,6 @@ visited记录是否使用过
             }
         }
     }
-
 ```
 
 ```java
@@ -83,6 +86,7 @@ visited记录是否使用过
 ```
 
 ### 交换
+
 ```java
     public List<List<Integer>> permute3(int[] nums) {
         List<List<Integer>> listList = new ArrayList<>();
@@ -118,3 +122,6 @@ visited记录是否使用过
         nums[i] = nums[i] ^ nums[j];
     }
 ```
+
+
+
