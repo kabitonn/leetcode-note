@@ -23,7 +23,7 @@ return [0, 1].
 
 ### 暴力法-双重循环
 
-双重循环，遍历所有情况判断相加和是否等于目标target，若符合则返回\(因为唯一存在\)。
+双重循环，遍历所有情况判断相加和是否等于目标target，若符合则返回(因为唯一存在)。
 
 ```java
     public int[] twoSum(int[] nums, int target) {
