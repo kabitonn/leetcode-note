@@ -34,7 +34,8 @@ It doesn't matter what values are set beyond the returned length.
 
 ## 解决方法
 
-### 1
+### 快慢指针，和前者比较
+
 
 ```java
     public int removeDuplicates(int[] nums) {
@@ -50,7 +51,11 @@ It doesn't matter what values are set beyond the returned length.
     }
 ```
 
-### 2
+时间复杂度：O(n)。
+
+空间复杂度：O(1)。
+
+### 快慢指针，和慢指针比较
 
 ```java
     public int removeDuplicates(int[] nums) {
@@ -65,6 +70,8 @@ It doesn't matter what values are set beyond the returned length.
         return len+1;
     }
 ```
+时间复杂度：O(n)。
 
+空间复杂度：O(1)。
 
 
