@@ -39,13 +39,12 @@ Output: 28
 
 1. 组合数
 2. 
-
 ## 解决方法
 
 ### 组合数计算公式
 
-向右m-1步，向下n-1步，结果为C(m+n-2,m-1)=C(m+n-2,n-1)
-令N=m+n-2,k=m-1
+向右m-1步，向下n-1步，结果为C\(m+n-2,m-1\)=C\(m+n-2,n-1\)  
+令N=m+n-2,k=m-1  
 $$C_N^k = N!/(k!(N−k)!)=(N∗(n−1)∗(N−2)∗...(N−k+1))/k! $$
 
 ```java
@@ -63,19 +62,17 @@ $$C_N^k = N!/(k!(N−k)!)=(N∗(n−1)∗(N−2)∗...(N−k+1))/k! $$
     }
 ```
 
-时间复杂度：O(min(m, n))。
+时间复杂度：O\(min\(m, n\)\)。
 
-空间复杂度：O(1)。
+空间复杂度：O\(1\)。
 
 ### 递归
 
-
-
 ### 动态规划
 
-dp[ i ][ j ] 是到达 i, j 最多路径
+dp\[ i \]\[ j \] 是到达 i, j 最多路径
 
-dp[ i ][ j ] = dp[ i - 1 ][ j ] + dp[ i ][ j - 1 ]
+dp\[ i \]\[ j \] = dp\[ i - 1 \]\[ j \] + dp\[ i \]\[ j - 1 \]
 
 ```java
     public int uniquePaths1(int m, int n) {
@@ -98,11 +95,13 @@ dp[ i ][ j ] = dp[ i - 1 ][ j ] + dp[ i ][ j - 1 ]
     }
 ```
 
-时间复杂度：O(m * n)。
+时间复杂度：O\(m \* n\)。
 
-空间复杂度：O(m * n)。
+空间复杂度：O\(m \* n\)。
 
 空间优化
+
+![](/assets/001-100/062-s-3-2.png)
 
 ```java
 public int uniquePaths2(int m, int n) {
@@ -121,16 +120,17 @@ public int uniquePaths2(int m, int n) {
         }
         return paths[n - 1];
     }
-
 ```
 
-时间复杂度：O(m * n)。
+时间复杂度：O\(m \* n\)。
 
-空间复杂度：O(n)。
+空间复杂度：O\(n\)。
 
 另一种思路
 
-dp[ i ][ j ] = dp[ i + 1 ][j] + dp[ i ][ j + 1 ]。
+dp\[ i \]\[ j \] = dp\[ i + 1 \]\[ j \] + dp\[ i \]\[ j + 1 \]。
+
+![](/assets/001-100/062-s-3-3.png)
 
 ```java
     public int uniquePaths3(int m, int n) {
@@ -151,10 +151,7 @@ dp[ i ][ j ] = dp[ i + 1 ][j] + dp[ i ][ j + 1 ]。
     }
 ```
 
-时间复杂度：O(m * n)。
+时间复杂度：O\(m \* n\)。
 
-空间复杂度：O(m)。
-
-
-
+空间复杂度：O\(m\)。
 
