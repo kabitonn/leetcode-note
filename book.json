@@ -35,6 +35,9 @@
         "disqus": {
             "shortName": "leetcode note"
         },
+        "github": {
+            "url": "https://github.com/kabitonn/leetcode-note"
+        },
         "github-buttons": {
             "buttons": [
                 {
