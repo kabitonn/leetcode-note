@@ -1,4 +1,5 @@
-# 031. Next Permutation(M)
+# 031. Next Permutation\(M\)
+
 [031. Next Permutation](https://leetcode-cn.com/problems/next-permutation/)
 
 ## 题目描述\(中等\)
@@ -65,13 +66,11 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
 
 时间复杂度：$$ O(n^2) $$。
 
-空间复杂度：O(1)。
-
-
+空间复杂度：O\(1\)。
 
 ### 单重循环
 
-![](/assets/001-100/031-s-2-1.gif)
+![](/assets/001-100/031-s-1-1.gif)
 
 从右向左找到第一个数字不再递增的位置，然后从右边找到一个刚好大于当前位的数字即可
 
@@ -107,8 +106,8 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
         }
     }
 ```
-时间复杂度：最坏的情况就是遍历完所有位，O(n)，倒置也是 O(n)，所以总体依旧是 O(n)。
 
-空间复杂度：O(1)。
+时间复杂度：最坏的情况就是遍历完所有位，O\(n\)，倒置也是 O\(n\)，所以总体依旧是 O\(n\)。
 
+空间复杂度：O\(1\)。
 
