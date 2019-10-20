@@ -1,7 +1,8 @@
-# 002. Add Two Numbers(M)
+# 002. Add Two Numbers\(M\)
+
 [002. Add Two Numbers](https://leetcode-cn.com/problems/add-two-numbers/)
 
-## 题目描述(中等)
+## 题目描述\(中等\)
 
 You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
 
@@ -16,6 +17,10 @@ Explanation: 342 + 465 = 807.
 ```
 
 ## 思路
+
+
+
+![](/assets/001-100/002-solution-1.png)
 
 两数相加从有效低位开始相加，低位即两链表 _l1_ 和 _l2_ 的头部，两位数字相加出现进位_carry_，
 
@@ -65,7 +70,7 @@ Explanation: 342 + 465 = 807.
     }
 ```
 
-###carry也作为循环条件
+### carry也作为循环条件
 
 ```java
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -95,9 +100,11 @@ Explanation: 342 + 465 = 807.
 
 如果链表中的数字不是按逆序存储的呢？例如：
 
-> \(3→4→2\)+\(4→6→5\)=8→0→7
+> (3→4→2)+(4→6→5)=8→0→7
 
 ### 思路1
 
 首先想到的是链表先逆序计算，然后将结果再逆序呗，这就转换到我们之前的情况了。
+
+链表逆序可见
 
