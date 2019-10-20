@@ -1,4 +1,5 @@
-# 023. Merge k Sorted Lists(H)
+# 023. Merge k Sorted Lists\(H\)
+
 [023. Merge k Sorted Lists](https://leetcode-cn.com/problems/merge-k-sorted-lists/)
 
 ## 题目描述\(困难\)
@@ -27,7 +28,7 @@ Output: 1->1->2->3->4->4->5->6
 
 ## 解决方法
 
-### 水平归并
+### 水平归并\(两两归并\)
 
 ```java
     public ListNode mergeKLists(ListNode[] lists) {
@@ -69,7 +70,9 @@ Output: 1->1->2->3->4->4->5->6
     }
 ```
 
-### 两两归并
+### 两两归并优化
+
+![](/assets/001-100/023-s-2-1.png)
 
 ```java
     public ListNode mergeKLists(ListNode[] lists) {
@@ -88,6 +91,10 @@ Output: 1->1->2->3->4->4->5->6
 ```
 
 ### 垂直归并
+
+![](/assets/001-100/023-s-3-1.png)
+
+
 
 ```java
     public ListNode mergeKLists(ListNode[] lists) {
@@ -115,6 +122,10 @@ Output: 1->1->2->3->4->4->5->6
         return start.next;
     }
 ```
+
+时间复杂度：假设最长的链表长度是 n ，那么 while 循环将循环 n 次。假设链表列表里有 k 个链表，for 循环执行 k 次，所以时间复杂度是 O\(kn\)。
+
+空间复杂度：O\(1\)。
 
 ### 优先队列
 
@@ -166,7 +177,7 @@ Output: 1->1->2->3->4->4->5->6
         return start.next;
     }
 ```
-时间复杂度：假设 N 是所有的数字个数，存到数组是 O(N)，排序如果是用快速排序就是 $$ O(Nlog_N) $$，存到链表是 O(N)，所以取个最大的，就是 $$ O(Nlog_N) $$
-空间复杂度：新建了一个链表，O(N)。
 
+时间复杂度：假设 N 是所有的数字个数，存到数组是 O\(N\)，排序如果是用快速排序就是 $$ O(Nlog_N) $$，存到链表是 O\(N\)，所以取个最大的，就是 $$ O(Nlog_N) $$  
+空间复杂度：新建了一个链表，O\(N\)。
 
