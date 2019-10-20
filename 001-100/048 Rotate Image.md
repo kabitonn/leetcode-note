@@ -52,6 +52,9 @@ rotate the input matrix in-place such that it becomes:
 
 ## 思路
 
+循环移动规律
+两次翻转的效果
+
 ## 解决方法
 
 ### 自外向内顺时针循环
@@ -78,6 +81,7 @@ rotate the input matrix in-place such that it becomes:
         }
     }
 ```
+任意一个(i, j) , (j, n-i-1), (n-i-1, n-j-1), (n-j-1, i)就是这四个索引号上的数交换
 
 ```java
     public void rotate0(int[][] matrix) {
@@ -131,7 +135,7 @@ rotate the input matrix in-place such that it becomes:
 
 ### 转置加翻转
 
-
+可以先转置，然后把每列对称交换交换一下
 
 ![](/assets/001-100/048-s-3-1.png)
 
