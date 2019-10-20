@@ -162,6 +162,10 @@ Explanation: Same as Example 1, except with the 5 in the top left corner being
     }
 
 ```
+时间复杂度：整个棋盘访问了一次， O(m * n)。
+
+空间复杂度：O(n)。
+
 
 
 ### 二进制位来表示对应数字是否存在
@@ -187,3 +191,11 @@ Explanation: Same as Example 1, except with the 5 in the top left corner being
         return true;
     }
 ```
+
+时间复杂度：整个棋盘访问了一次， O(m * n)。
+
+空间复杂度：O(n)。
+
+
+
+
