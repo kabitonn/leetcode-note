@@ -42,6 +42,11 @@ Output: -1
         return -1;
     }
 ```
+时间复杂度：O(n)。
+
+空间复杂度：O(1)。
+
+
 
 ### 两段二分
 
@@ -121,7 +126,18 @@ Output: -1
 
 ### 确认旋转点后二分
 
+求最小值的偏移点
+比较中点和端点值的情况
+- mid 和 start 比较
+  - mid > start: 最小值在左半部分。
+  - mid < start：最小值在左半部分。
+  
+  无论大于小于，最小值都在左半部分，所以 mid 和 start 比较是不可取的
+- mid 和 end 比较
+  - mid < end：最小值在左半部分。
+  - mid > end：最小值在右半部分。
 
+  所以我们只需要把 mid 和 end 比较，mid < end 丢弃右半部分（更新 end = mid），mid > end 丢弃左半部分（更新 start = mid + 1）。直到 end 等于 start 时候结束就可以了。 
 
 ```java
 	public int search(int[] nums, int target) {
@@ -172,4 +188,6 @@ Output: -1
 	}
 ```
 
+时间复杂度：O(log(n))。
 
+空间复杂度：O(1)。
