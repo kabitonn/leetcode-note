@@ -32,6 +32,7 @@ Output: -1
 ## 解决方法
 
 ### 遍历每个字符比较
+
 ```java
     public int strStr(String haystack, String needle) {
         if(needle.length()==0)
@@ -57,6 +58,7 @@ Output: -1
         return -1;
     }
 ```
+other's code
 
 ```java
     public int strStr(String haystack, String needle) {
@@ -71,6 +73,10 @@ Output: -1
         }
     }
 ```
+
+时间复杂度：假设 haystack 和 needle 的长度分别是 n 和 k，对于每一个 i ，我们最多执行 k - 1 次，总共会有 n 个 i ，所以时间复杂度是 O(kn)。
+
+空间复杂度：O(1)。
 
 ### 遍历相同长度子串
 ```java

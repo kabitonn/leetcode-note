@@ -30,12 +30,14 @@ Your function should return length = 5, with the first five elements of nums con
 
 ## 思路
 
-1. 遍历数组，不为val有效索引赋值并递增
-2. 遍历数组，若为val将数组最后移至该位置，否则继续遍历
+1. 遍历数组，不为val，有效索引赋值并递增
+2. 遍历数组，若为val，将数组最后移至该位置，否则继续遍历
 
 ## 解决方法
 
-### 1
+### 快慢指针 不等赋值
+
+快指针 fast 和慢指针 slow，一直移动 fast ，如果 fast 指向的值不等于给定的 val ，我们就将值赋给 slow 指向的位置，slow 后移一位。如果 fast 指向的值等于 val 了，此时 fast 后移一位就可以了，不做其他操作
 
 ```java
     public int removeElement(int[] nums, int val) {
@@ -49,7 +51,13 @@ Your function should return length = 5, with the first five elements of nums con
     }
 ```
 
-### 2
+时间复杂度：O(n)。
+
+空间复杂度：O(1)。
+
+### 快慢指针 相等移除
+
+如果当前元素等于 val 了，就把它扔掉，然后将最后一个值赋值到当前位置，并且长度减去 1
 
 ```java
     public int removeElement(int[] nums, int val) {
@@ -66,6 +74,10 @@ Your function should return length = 5, with the first five elements of nums con
         return len;
     }
 ```
+
+时间复杂度：O(n)。
+
+空间复杂度：O(1)。
 
 
 
