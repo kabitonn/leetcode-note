@@ -63,3 +63,36 @@ Your algorithm should run in O(n) time and uses constant extra space.
 ```
 
 ### 标记
+
+```java
+    public int firstMissingPositive1(int[] nums) {
+        int len = nums.length;
+        int positiveNum = positiveNum(nums);
+        for (int i = 0; i < positiveNum; i++) {
+            int index = Math.abs(nums[i]) - 1;
+            if (index < positiveNum) {
+                int temp = Math.abs(nums[index]);
+                nums[index] = temp < 0 ? temp : -temp;
+            }
+        }
+        int miss = 0;
+        for (; miss < positiveNum; miss++) {
+            if (nums[miss] >= 0) {
+                return miss + 1;
+            }
+        }
+        return miss + 1;
+    }
+
+    private int positiveNum(int[] nums) {
+        int i = 0, n = nums.length - 1;
+        while (i <= n) {
+            if (nums[i] <= 0) {
+                swap(nums, i, n--);
+            } else {
+                i++;
+            }
+        }
+        return i;
+    }
+```
