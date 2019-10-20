@@ -38,13 +38,14 @@ Output: true
 
 ## 思路
 
+如果只有一种括号，我们完全可以用一个计数器 count ，遍历整个字符串，遇到左括号加 1 ，遇到右括号减 1，遍历结束后，如果 count 等于 0 ，则表示全部匹配。
+
 1. 栈
 2. 数组模拟栈
 
 ## 解决方法
 
 ### 栈
-
 
 
 ```java
@@ -88,7 +89,8 @@ Output: true
 		return bracket.empty();
 	}
 ```
-
+时间复杂度：O(n)
+空间复杂度：O(n)
 
 ### 模拟栈
 
@@ -136,6 +138,8 @@ Output: true
         return p==0?true:false;
     }
 ```
+时间复杂度：O(n)
+空间复杂度：O(n)
 
 
 
@@ -189,6 +193,10 @@ Output: true
 		return isPair;
 	}
 ```
+
+时间复杂度：O(n)
+空间复杂度：O(n)
+
 
 
 
