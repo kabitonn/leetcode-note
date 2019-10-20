@@ -197,7 +197,7 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 
 ```java
-    public int romanToInt2(String s) {
+    public int romanToInt(String s) {
         int sum = 0;
         if (s.contains("IV")) {
             sum -= 2;
