@@ -29,6 +29,7 @@ n is a 32-bit signed integer, within the range $$ [−2^{31}, 2^{31} − 1] $
 1. 累乘
 2. 指数幂相乘
 3. 二进制位确定累乘数
+4. 递归
 
 
 ## 解决方法
@@ -104,6 +105,27 @@ n is a 32-bit signed integer, within the range $$ [−2^{31}, 2^{31} − 1] $
             N >>= 1;
         }
         return r;
+    }
+```
+
+时间复杂度：log(n)。
+
+空间复杂度：O(1)。
+
+### 递归
+
+```java
+    public double myPow(double x, int n) {
+        if (n == 0) {
+            return 1;
+        } else if (n == 1) {
+            return x;
+        } else if (n == -1) {
+            return 1 / x;
+        }
+        double half = myPow(x, n / 2);
+        double remain = myPow(x, n % 2);
+        return remain * half * half;
     }
 ```
 
