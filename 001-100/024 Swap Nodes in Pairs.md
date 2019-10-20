@@ -50,6 +50,9 @@ Given 1->2->3->4, you should return the list as 2->1->4->3.
     }
 ```
 
+时间复杂度：O(n)
+空间复杂度：O(1)
+
 ### 递归
 
 ![](/assets/001-100/024-solution-2-1.png)
