@@ -75,7 +75,8 @@ Output:
         return true;
     }
 ```
-
+时间复杂度：O(NK)
+空间复杂度：O(NK)
 
 ### 遍历判断后续
 
@@ -119,6 +120,8 @@ Output:
 
 ### 素数乘积key
 
+> 算术基本定理，又称为正整数的唯一分解定理，即：每个大于1的自然数，要么本身就是质数，要么可以写为2个以上的质数的积，而且这些质因子按大小排列之后，写法仅有一种方式。
+
 ```java
     public List<List<String>> groupAnagrams2(String[] strs) {
         int[] prime = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103};
@@ -136,6 +139,8 @@ Output:
         return new ArrayList<>(map.values());
     }
 ```
+时间复杂度：O(NK)
+空间复杂度：O(NK)
 
 ### 字母计数法作为key
 ```java
@@ -158,6 +163,9 @@ Output:
         return new ArrayList<>(map.values());
     }
 ```
+时间复杂度：O(NK)
+空间复杂度：O(NK)
+
 
 ### 有序字符串作为key
 ```java
@@ -176,3 +184,7 @@ Output:
         return new ArrayList<>(map.values());
     }
 ```
+
+时间复杂度：排序的话算作 O(K log(K)), 最外层的 for 循环，所以就是 O(n K log(K))。
+空间复杂度：O(NK)，用来存储结果
+
