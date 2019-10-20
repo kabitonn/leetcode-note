@@ -41,10 +41,9 @@
         "github-buttons": {
             "buttons": [
                 {
-                    "repo": "kabitonn/leetcode-note",
-                    "types": [
-                        "star"
-                    ],
+                    "user": "kabitonn",
+                    "repo": "leetcode-note",
+                    "type": "star",
                     "size": "small"
                 }
             ]
