@@ -157,7 +157,7 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 空间复杂度：O(1)。
 
-### 依次判断当前数值是两位表示与否
+### 2. 依次判断当前数值是两位表示与否
 依次取出两位判断是否特殊，否则为一位字母对应值
 
 ```java
@@ -194,6 +194,7 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 ```
 
 ### 3. 提前处理特殊情况
+
 
 ```java
     public int romanToInt2(String s) {
@@ -244,6 +245,7 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
         return sum;
     }
 ```
+
 
 
 
