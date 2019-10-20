@@ -134,10 +134,24 @@ Output: -1
   
   无论大于小于，最小值都在左半部分，所以 mid 和 start 比较是不可取的
 - mid 和 end 比较
-  - mid < end：最小值在左半部分。
+  - mid < end：最小值在左半部分(包括mid)。
   - mid > end：最小值在右半部分。
 
-  所以我们只需要把 mid 和 end 比较，mid < end 丢弃右半部分（更新 end = mid），mid > end 丢弃左半部分（更新 start = mid + 1）。直到 end 等于 start 时候结束就可以了。 
+  所以我们只需要把 mid 和 end 比较，mid < end 丢弃右半部分(更新 end = mid），mid > end 丢弃左半部分（更新 start = mid + 1）。直到 end 等于 start 时候结束就可以了。 
+  
+求最大值的偏移点
+- mid 和 end 比较
+  - mid < end：最大值在右半部分。
+  - mid > end：最大值在右半部分。
+
+  无论大于小于，最大值都在右半部分，所以 mid 和 end比较是不可取的
+- mid 和 start 比较
+  - mid > start: 最大值在右半部分(包括mid)。
+  - mid < start：最大值在左半部分。
+
+  所以我们只需要把 mid 和 start比较，mid < start 丢弃右半部分(更新 end = mid -1 ），mid < start丢弃左半部分（更新 start = mid ）。直到 end 等于 start 时候结束就可以了。 
+
+
 
 ```java
 	public int search(int[] nums, int target) {
