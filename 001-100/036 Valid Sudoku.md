@@ -1,19 +1,23 @@
-# 036. Valid Sudoku(M)
+# 036. Valid Sudoku\(M\)
+
 [036. Valid Sudoku](https://leetcode-cn.com/problems/valid-sudoku/)
 
-## 题目描述(中等)
+## 题目描述\(中等\)
 
-Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
 
-Each row must contain the digits 1-9 without repetition.
-Each column must contain the digits 1-9 without repetition.
-Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.
+Each row must contain the digits 1-9 without repetition.  
+Each column must contain the digits 1-9 without repetition.  
+Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.
+
+![](/assets/001-100/036-p-1.png)
 
 A partially filled sudoku which is valid.
 
 The Sudoku board could be partially filled, where empty cells are filled with the character '.'.
 
 Example 1:
+
 ```
 Input:
 [
@@ -29,35 +33,37 @@ Input:
 ]
 Output: true
 ```
+
 Example 2:
+
 ```
 Input:
 [
-  ["8","3",".",".","7",".",".",".","."],
-  ["6",".",".","1","9","5",".",".","."],
-  [".","9","8",".",".",".",".","6","."],
-  ["8",".",".",".","6",".",".",".","3"],
-  ["4",".",".","8",".","3",".",".","1"],
-  ["7",".",".",".","2",".",".",".","6"],
-  [".","6",".",".",".",".","2","8","."],
-  [".",".",".","4","1","9",".",".","5"],
-  [".",".",".",".","8",".",".","7","9"]
+  ["8","3",".",".","7",".",".",".","."],
+  ["6",".",".","1","9","5",".",".","."],
+  [".","9","8",".",".",".",".","6","."],
+  ["8",".",".",".","6",".",".",".","3"],
+  ["4",".",".","8",".","3",".",".","1"],
+  ["7",".",".",".","2",".",".",".","6"],
+  [".","6",".",".",".",".","2","8","."],
+  [".",".",".","4","1","9",".",".","5"],
+  [".",".",".",".","8",".",".","7","9"]
 ]
 Output: false
 Explanation: Same as Example 1, except with the 5 in the top left corner being 
     modified to 8. Since there are two 8's in the top left 3x3 sub-box, it is invalid.
- ```   
+```
+
 **Note:**
 
-> - A Sudoku board (partially filled) could be valid but is not necessarily solvable.
-> - Only the filled cells need to be validated according to the mentioned rules.
-> - The given board contain only digits 1-9 and the character '.'.
-> - The given board size is always 9x9.
+> * A Sudoku board \(partially filled\) could be valid but is not necessarily solvable.
+> * Only the filled cells need to be validated according to the mentioned rules.
+> * The given board contain only digits 1-9 and the character '.'.
+> * The given board size is always 9x9.
 
 ## 思路
 
 ## 解决方法
-
 
 ### 暴力解法
 
@@ -110,9 +116,10 @@ Explanation: Same as Example 1, except with the 5 in the top left corner being
         return true;
     }
 ```
-时间复杂度：整个棋盘访问了三次， O(m * n)。
 
-空间复杂度：O(1)。
+时间复杂度：整个棋盘访问了三次， O\(m \* n\)。
+
+空间复杂度：O\(1\)。
 
 ### 遍历一次存储
 
@@ -139,7 +146,6 @@ Explanation: Same as Example 1, except with the 5 in the top left corner being
         }
         return true;
     }
-
 ```
 
 ```java
@@ -160,13 +166,11 @@ Explanation: Same as Example 1, except with the 5 in the top left corner being
         }
         return true;
     }
-
 ```
-时间复杂度：整个棋盘访问了一次， O(m * n)。
 
-空间复杂度：O(n)。
+时间复杂度：整个棋盘访问了一次， O\(m \* n\)。
 
-
+空间复杂度：O\(n\)。
 
 ### 二进制位来表示对应数字是否存在
 
@@ -192,10 +196,7 @@ Explanation: Same as Example 1, except with the 5 in the top left corner being
     }
 ```
 
-时间复杂度：整个棋盘访问了一次， O(m * n)。
+时间复杂度：整个棋盘访问了一次， O\(m \* n\)。
 
-空间复杂度：O(n)。
-
-
-
+空间复杂度：O\(n\)。
 
