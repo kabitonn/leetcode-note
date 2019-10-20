@@ -71,6 +71,8 @@ For example, given n = 3, a solution set is:
 
 ### 回溯
 
+如果我们还剩一个位置，我们可以开始放一个左括号。 如果它不超过左括号的数量，我们可以放一个右括号。
+
 ```java
     public List<String> generateParenthesis(int n) {
         List<String> list = new ArrayList<>();
@@ -122,7 +124,7 @@ For example, given n = 3, a solution set is:
 
 
 
-### 递归
+### 递归(闭合数)
 
 第 0 个位置一定会是左括号，然后接着添加左括号或右括号，过程中左括号数一定大于或等于右括号数，当第一次出现左括号数等于右括号数的时候，假如此时的位置是 c 。那么位置 1 到 c - 1 之间一定是合法序列，此外 c + 1 到最后的 2n -1 也是合法序列。而假设总共是 n 组括号，1 到 c - 1 是 a 组括号， c + 1 到 2n - 1 之间则是 n - 1 - a 组括号，如下图
 
@@ -147,5 +149,7 @@ For example, given n = 3, a solution set is:
     }
 ```
 
+时间复杂度：$$ O(\frac{4^n}{\sqrt{n}}) $$
+空间复杂度：$$ O(\frac{4^n}{\sqrt{n}}) $$
 
 
