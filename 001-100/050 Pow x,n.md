@@ -50,6 +50,10 @@ n is a 32-bit signed integer, within the range $$ [−2^{31}, 2^{31} − 1] $
     }
 ```
 
+时间复杂度：O(n)。
+
+空间复杂度：O(1)。
+
 ### 指数幂累乘
 
 ```java
@@ -75,6 +79,9 @@ n is a 32-bit signed integer, within the range $$ [−2^{31}, 2^{31} − 1] $
         return r;
     }
 ```
+时间复杂度：log(n)。
+
+空间复杂度：O(1)。
 
 ### 二进制位确定累乘数
 
@@ -98,3 +105,7 @@ n is a 32-bit signed integer, within the range $$ [−2^{31}, 2^{31} − 1] $
         return r;
     }
 ```
+
+时间复杂度：log(n)。
+
+空间复杂度：O(1)。
