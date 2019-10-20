@@ -41,6 +41,8 @@ Number倒置判断相等？
 
 ### 3.1 完全reverse
 
+如果倒置后超出 int 的范围，那么它一定不是回文数字
+
 ```java
     public boolean isPalindrome(int x) {
         if(x<0) {
@@ -61,6 +63,8 @@ Number倒置判断相等？
 空间复杂度：O(1)
 
 ### 3.2 一半reverse
+
+只需要将右半部分倒置然后和左半部比较就可以
 
 ```java
     public boolean isPalindrome(int x) {
