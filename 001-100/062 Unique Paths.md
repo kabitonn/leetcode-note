@@ -67,6 +67,65 @@ $$C_N^k = N!/(k!(N−k)!)=(N∗(n−1)∗(N−2)∗...(N−k+1))/k! $$
 
 空间复杂度：O(1)。
 
+### 递归
+
+
+
 ### 动态规划
+
+dp[i][j] 是到达 i, j 最多路径
+
+dp [i][j] = dp [i - 1][j] + dp [i][j - 1]
+
+```java
+    public int uniquePaths1(int m, int n) {
+        if (m == 0 || n == 0) {
+            return 0;
+        }
+        int[][] paths = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            paths[i][0] = 1;
+        }
+        for (int i = 0; i < n; i++) {
+            paths[0][i] = 1;
+        }
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                paths[i][j] = paths[i - 1][j] + paths[i][j - 1];
+            }
+        }
+        return paths[m - 1][n - 1];
+    }
+```
+
+时间复杂度：O(m * n)。
+
+空间复杂度：O(m * n)。
+
+空间优化
+
+```java
+public int uniquePaths2(int m, int n) {
+        if (m == 0 || n == 0) {
+            return 0;
+        }
+        int[] paths = new int[n];
+        Arrays.fill(paths, 1);
+        //从上向下更新所有行
+        for (int i = 1; i < m; i++) {
+            //从左向右更新所有列
+            for (int j = 1; j < n; j++) {
+                //path[j]为上,path[j-1]为左
+                paths[j] = paths[j] + paths[j - 1];
+            }
+        }
+        return paths[n - 1];
+    }
+
+```
+
+时间复杂度：O(m * n)。
+
+空间复杂度：O(n)。
 
 
