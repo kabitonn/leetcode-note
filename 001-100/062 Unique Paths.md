@@ -73,9 +73,9 @@ $$C_N^k = N!/(k!(N−k)!)=(N∗(n−1)∗(N−2)∗...(N−k+1))/k! $$
 
 ### 动态规划
 
-dp[i][j] 是到达 i, j 最多路径
+dp[ i ][ j ] 是到达 i, j 最多路径
 
-dp [i][j] = dp [i - 1][j] + dp [i][j - 1]
+dp[ i ][ j ] = dp[ i - 1 ][ j ] + dp[ i ][ j - 1 ]
 
 ```java
     public int uniquePaths1(int m, int n) {
@@ -130,7 +130,7 @@ public int uniquePaths2(int m, int n) {
 
 另一种思路
 
-dp [i][j] = dp [i + 1][j] + dp [i][j +1]。
+dp[ i ][ j ] = dp[ i + 1 ][j] + dp[ i ][ j + 1 ]。
 
 ```java
     public int uniquePaths3(int m, int n) {
