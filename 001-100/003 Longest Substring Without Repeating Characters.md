@@ -104,7 +104,7 @@ Explanation: The answer is "wke", with the length of 3.
 
 回到我们的问题，我们使用 HashSet 将字符存储在当前窗口\[i, j\)\(最初j = i\)中。 然后我们向右侧滑动索引j，如果它不在 HashSet 中，我们会继续滑动 j。直到 s\[j\] 已经存在于 HashSet 中。此时，我们找到的没有重复字符的最长子字符串将会以索引i开头。如果我们对所有的i这样做，就可以得到答案。
 
-![](/assets/003-solution-2-1.png)
+![](/assets/001-100/003-solution-2-1.png)
 
 ```java
     public int lengthOfLongestSubstring03(String s) {
