@@ -1,4 +1,5 @@
 # 041. First Missing Positive(H)
+[041. First Missing Positive](https://leetcode-cn.com/problems/first-missing-positive/)
 
 ## 题目描述(困难)
 
