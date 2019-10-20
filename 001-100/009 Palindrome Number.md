@@ -1,7 +1,7 @@
 # 009. Palindrome Number(E)
 [009. Palindrome Number](https://leetcode-cn.com/problems/palindrome-number/)
 
-## 1. 题目描述(简单)
+## 题目描述(简单)
 
 Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
 
@@ -33,13 +33,13 @@ Follow up:
 
 > Coud you solve it without converting the integer to a string?
 
-## 2. 思路
+## 思路
 
 Number倒置判断相等？
 
-## 3. 解决方法
+## 解决方法
 
-### 3.1 完全reverse
+### 1. 完全reverse
 
 如果倒置后超出 int 的范围，那么它一定不是回文数字
 
@@ -62,7 +62,7 @@ Number倒置判断相等？
 
 空间复杂度：O(1)
 
-### 3.2 一半reverse
+### 2. 一半reverse
 
 只需要将右半部分倒置然后和左半部比较就可以
 
