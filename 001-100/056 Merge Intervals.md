@@ -1,27 +1,28 @@
-# 056. Merge Intervals(M)
+# 056. Merge Intervals\(M\)
 
 [056. 合并区间](https://leetcode-cn.com/problems/merge-intervals/)
 
-
-## 题目描述(中等)
+## 题目描述\(中等\)
 
 Given a collection of intervals, merge all overlapping intervals.
 
 Example 1:
+
 ```
 Input: [[1,3],[2,6],[8,10],[15,18]]
 Output: [[1,6],[8,10],[15,18]]
 Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].
 ```
+
 Example 2:
+
 ```
 Input: [[1,4],[4,5]]
 Output: [[1,5]]
 Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 ```
 
-**NOTE**: input types have been changed on April 15, 2019. Please reset to default code definition to get new method signature.
-
+**NOTE**: input types have been changed on April 15, 2019. Please reset to default code definition to get new method signature.
 
 ## 思路
 
@@ -29,12 +30,12 @@ Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 
 ## 解决方法
 
+## \# 排序
 
-###
+![](/assets/001-100/056-s-1-1.png)
 
-根据二维数组第一个数字大小按每一行整体排序
+根据二维数组第一个数字大小按每一行整体排序  
 判断当前区间的右节点是否大于等于下一区间的左节点，若是则更新右节点，否则当前区间断开
-
 
 ```java
     public int[][] merge(int[][] intervals) {
@@ -65,10 +66,11 @@ Explanation: Intervals [1,4] and [4,5] are considered overlapping.
             arrayList.add(new int[]{left, right});
             i++;
         }
-        return arrayList.toArray(new int[0][]);
+        return arrayList.toArray(new int[arrayList.size()+1][]);
     }
 ```
 
-时间复杂度：O(n log(n))，排序算法。
+时间复杂度：O\(n log\(n\)\)，排序算法。
 
-空间复杂度：O(n)
+空间复杂度：O\(n\)
+
