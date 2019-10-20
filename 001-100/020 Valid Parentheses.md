@@ -95,7 +95,6 @@ Output: true
 ### 模拟栈
 
 
-
 ```java
 	public boolean isValid(String s) {
         char[] stack = new char[s.length()];
