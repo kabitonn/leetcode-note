@@ -38,7 +38,9 @@ Output: 28
 ## 思路
 
 1. 组合数
-2. 
+2. 递归
+3. 动态规划
+
 ## 解决方法
 
 ### 组合数计算公式
@@ -67,6 +69,24 @@ $$C_N^k = N!/(k!(N−k)!)=(N∗(n−1)∗(N−2)∗...(N−k+1))/k! $$
 空间复杂度：O\(1\)。
 
 ### 递归
+```java
+    public int uniquePaths(int m, int n) {
+        return uniquePaths(m,n,new int[m+1][n+1]);
+    }
+
+    public int uniquePaths(int m, int n, int[][] path) {
+        if (m == 0 || n == 0) {
+            return 0;
+        } else if (m == 1 || n == 1) {
+            return 1;
+        }
+        if (path[m][n] > 0) {
+            return path[m][n];
+        }
+        path[m][n] = uniquePaths(m - 1, n, path) + uniquePaths(m, n - 1, path);
+        return path[m][n];
+    }
+```
 
 ### 动态规划
 
