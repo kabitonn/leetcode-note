@@ -115,6 +115,8 @@ public List<List<Integer>> combinationSum1(int[] candidates, int target) {
 
 ### 动态规划 外层遍历nums
 
+可以把两个 for 循环的遍历颠倒一下，外层遍历 nums，内层遍历 dp
+
 ```java
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>>[] dp = new ArrayList[target + 1];
