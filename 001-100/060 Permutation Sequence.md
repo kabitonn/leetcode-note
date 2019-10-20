@@ -40,7 +40,10 @@ Output: "2314"
 ## 解决方法
 
 
-### 
+### 解法1
+
+依此找出是以哪个数开头的组别，将该数去除，不再使用，若k==0即可确定是该组最后一个值，即该组最大值，将数组中未用过的数倒序组成最大值，添加在尾部即为结果
+
 ```java
 public String getPermutation(int n, int k) {
         List<Integer> list = new ArrayList<>();
@@ -77,6 +80,10 @@ public String getPermutation(int n, int k) {
     }
 
 ```
+
+### 解法2
+
+首先将k-1，依次找出以哪个数开头的组别，将该数去除，不再使用
 
 ```java
     public String getPermutation1(int n, int k) {
