@@ -11,15 +11,18 @@
         "summary": "SUMMARY.md"
     },
     "plugins": [
+        "-sharing",
+        "-lunr",
+        "-highlight",
+        "-livereload",
+        "-search",
         "katex",
         "splitter",
         "anchor-navigation-ex",
         "github-buttons",
         "copy-code-button",
-        "-lunr",
-        "-livereload",
-        "-search",
         "search-plus",
+        "sharing-plus@^0.0.2",
         "emphasize",
         "expandable-chapters-small"
     ],
@@ -29,7 +32,7 @@
                 {
                     "user": "kabitonn",
                     "repo": "leetcode-note",
-                    "types": "star",
+                    "type": "star",
                     "size": "small",
                     "count": true
                 }
@@ -37,6 +40,37 @@
         },
         "anchor-navigation-ex": {
             "multipleH1": false
+        },
+        "sharing": {
+            "douban": false,
+            "facebook": false,
+            "google": true,
+            "hatenaBookmark": false,
+            "instapaper": false,
+            "line": false,
+            "linkedin": true,
+            "messenger": false,
+            "pocket": false,
+            "qq": false,
+            "qzone": false,
+            "stumbleupon": false,
+            "twitter": false,
+            "viber": false,
+            "vk": false,
+            "weibo": true,
+            "whatsapp": false,
+            "all": [
+                "facebook",
+                "google",
+                "twitter",
+                "weibo",
+                "instapaper",
+                "linkedin",
+                "pocket",
+                "stumbleupon",
+                "qq",
+                "qzone"
+            ]
         }
     },
     "pdf": {
