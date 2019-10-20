@@ -22,6 +22,7 @@ The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 
 ### 暴力遍历
 
+遍历所有的情况，然后求出三个数的和，和目标值进行比较，选取差值最小的即可
 ```java
     public int threeSumClosest(int[] nums, int target) {
         Arrays.sort(nums);
@@ -43,6 +44,7 @@ The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
         return res;
     }
 ```
+对数组排序，遍历所有的情况，然后求出三个数的和，和目标值进行比较，选取差值最小的，若当前差值已大于当前循环最小值，可跳出该层循环
 
 ```java
     public int threeSumClosest(int[] nums, int target) {
@@ -74,6 +76,9 @@ The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 ```
 
 ### 双指针
+
+先将数组排序，然后先固定一个数字，然后利用头尾两个指针进行遍历，降低一个 O（n）的时间复杂度。
+如果 sum 大于 target 就减小右指针，反之，就增加左指针。
 
 ```java
     public int threeSumClosest(int[] nums, int target) {
@@ -111,6 +116,10 @@ The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
         return res;
     }
 ```
+
+时间复杂度：如果是快速排序的 $$ O(log_n) $$ 再加上 O（n²），所以就是 O（n²）。
+
+空间复杂度：O（1）。
 
 
 
