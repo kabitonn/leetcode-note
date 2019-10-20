@@ -27,7 +27,10 @@ Your algorithm should run in O(n) time and uses constant extra space.
 
 ## 思路
 
-1. 排序
+如果没限制空间复杂度要求，采用等大数组顺序保存这些数字，遍历一遍数组遇到本应出现却丢失的数字即为缺失
+
+
+1. 排序:时间复杂度不符合要求
 2. 交换
 3. 标记
 
