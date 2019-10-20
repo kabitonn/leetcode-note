@@ -125,5 +125,29 @@ visited记录是否使用过(数组或二进制位来实现)
     }
 ```
 
+### 迭代(动态规划)
+
+```java
+    public List<List<Integer>> permute4(int[] nums) {
+        List<List<Integer>> listList = new ArrayList<>();
+        listList.add(new ArrayList<>());
+        //在上边的基础上只加上最外层的 for 循环就够了，代表每次新添加的数字
+        for (int i = 0; i < nums.length; i++) {
+            int currentSize = listList.size();
+            for (int j = 0; j < currentSize; j++) {
+                for (int k = 0; k <= i; k++) {
+                    List<Integer> temp = new ArrayList<>(listList.get(j));
+                    temp.add(k, nums[i]);
+                    listList.add(temp);
+                }
+            }
+            for (int j = 0; j < currentSize; j++) {
+                listList.remove(0);
+            }
+        }
+        return listList;
+    }
+```
+
 
 
