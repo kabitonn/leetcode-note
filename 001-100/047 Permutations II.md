@@ -143,3 +143,24 @@ Output:
 
 ### 迭代 动态规划 set去重
 
+```java
+    public List<List<Integer>> permuteUnique4(int[] nums) {
+        Set<List<Integer>> setList = new HashSet<>();
+
+        setList.add(new ArrayList<>());
+        //在上边的基础上只加上最外层的 for 循环就够了，代表每次新添加的数字
+        for (int i = 0; i < nums.length; i++) {
+            Set<List<Integer>> set = new HashSet<>();
+            for (List list : setList) {
+                for (int k = 0; k <= i; k++) {
+                    List<Integer> temp = new ArrayList<>(list);
+                    temp.add(k, nums[i]);
+                    set.add(temp);
+                }
+            }
+            setList = set;
+        }
+        return new ArrayList<>(setList);
+    }
+```
+
