@@ -148,6 +148,10 @@ public String intToRoman(int num) {
     }
 ```
 
+时间复杂度：不是很清楚，也许是 O（1）？因为似乎和问题规模没什么关系了。
+
+空间复杂度：O（1）.
+
 ### 2. 依次取出每位值
 
 ```java
@@ -160,5 +164,8 @@ public String intToRoman(int num) {
     }
 ```
 
+时间复杂度：O（1）或者说是 num 的位数，不是很确定。
+
+空间复杂度：O（1）。
 
 
