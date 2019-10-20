@@ -31,10 +31,10 @@ Output:
 ### 回溯
 
 ![](/assets/001-100/046-s-1-1.png)
+每调用一层就进入一个 for 循环，相当于列出了所有解，然后挑选了我们需要的。其实本质上就是深度优先遍历 DFS。
 
 
-
-visited记录是否使用过
+visited记录是否使用过(数组或二进制位来实现)
 
 ```java
     public List<List<Integer>> permute1(int[] nums) {
