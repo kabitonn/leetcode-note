@@ -144,7 +144,7 @@ Output: true
 
 
 ```java
-	public boolean isValid(String s) {
+    public boolean isValid(String s) {
         char[] stack = new char[s.length()];
         int p = 0;
         for(int i=0;i<s.length();i++) {
