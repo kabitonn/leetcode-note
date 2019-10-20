@@ -69,6 +69,8 @@ A solution set is:
 
 ### 动态规划 set去重
 
+可能会出现[2,3]和[3,2]的重复情况
+
 ```java
 public List<List<Integer>> combinationSum1(int[] candidates, int target) {
 
