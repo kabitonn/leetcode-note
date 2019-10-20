@@ -127,6 +127,8 @@ visited记录是否使用过(数组或二进制位来实现)
 
 ### 迭代(动态规划)
 
+只需要在之前的情况里，数字的空隙插入新的数字就够了
+
 ```java
     public List<List<Integer>> permute4(int[] nums) {
         List<List<Integer>> listList = new ArrayList<>();
