@@ -94,9 +94,75 @@ Output: "1211"
         int repeatNum = getRepeatNum(last);
         return "" + repeatNum + last.charAt(0) + getNextString(last.substring(repeatNum));
     }
+    
+    private int getRepeatNum(String string) {
+        int count = 1;
+        char ch = string.charAt(0);
+        for (int i = 1; i < string.length(); i++) {
+            if (ch == string.charAt(i)) {
+                count++;
+            } else {
+                break;
+            }
+        }
+        return count;
+    }
 
 ```
 
+
+时间复杂度：。
+
+空间复杂度：O(1)。
+
 ### 迭代
+```java
+    public String countAndSay1(int n){
+        String res = "1";
+        while(n-->1){
+            String tmp = "";
+            for(int i=0;i<res.length();i++){
+                int repeatNum= getRepeatNum(res.substring(i));
+                tmp = tmp+repeatNum+res.charAt(i);
+                i=i+repeatNum-1;
+            }
+            res = tmp;
+        }
+        return res;
+    }
+
+    private int getRepeatNum(String string) {
+        int count = 1;
+        char ch = string.charAt(0);
+        for (int i = 1; i < string.length(); i++) {
+            if (ch == string.charAt(i)) {
+                count++;
+            } else {
+                break;
+            }
+        }
+        return count;
+    }
+```
 
 
+```java
+    public String countAndSay2(int n){
+        String last = "1";
+        while(n-->1){
+            StringBuilder sb = new StringBuilder();
+            int count = 1;
+            for(int i=0;i<last.length();i++){
+                if(i+1<last.length()&&last.charAt(i)==last.charAt(i+1)){
+                    count++;
+                }
+                else {
+                    sb.append(count).append(last.charAt(i));
+                    count=1;
+                }
+            }
+            last = sb.toString();
+        }
+        return last;
+    }
+```
