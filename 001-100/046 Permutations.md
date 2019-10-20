@@ -83,4 +83,38 @@ visited记录是否使用过
 ```
 
 ### 交换
+```java
+    public List<List<Integer>> permute3(int[] nums) {
+        List<List<Integer>> listList = new ArrayList<>();
+        backtrack3(nums, 0, listList);
+        return listList;
+    }
 
+    /**
+     * 递归交换
+     */
+    private void backtrack3(int[] nums, int start, List<List<Integer>> listList) {
+        if (start == nums.length) {
+            //List list = Arrays.stream(nums).boxed().collect(Collectors.toList());
+            List<Integer> list = new ArrayList<>();
+            for(int n:nums){
+                list.add(n);
+            }
+            listList.add(list);
+        }
+        for (int i = start; i < nums.length; i++) {
+            swap(nums, i, start);
+            backtrack3(nums, start + 1, listList);
+            swap(nums, i, start);
+        }
+    }
+
+    public void swap(int[] nums, int i, int j) {
+        if (i == j) {
+            return;
+        }
+        nums[i] = nums[i] ^ nums[j];
+        nums[j] = nums[i] ^ nums[j];
+        nums[i] = nums[i] ^ nums[j];
+    }
+```
