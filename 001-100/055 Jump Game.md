@@ -57,3 +57,28 @@
         return step >= len - 1;
     }
 ```
+
+### 贪心
+
+记录一个的坐标代表当前可达的最后节点，这个坐标初始等于nums.length-1，
+然后我们每判断完是否可达，都向前移动这个坐标，直到遍历结束。
+如果这个坐标等于0，那么认为可达，否则不可达。
+
+```java
+    public boolean canJump2(int[] nums) {
+        if (nums == null) {
+            return false;
+        }
+        int lastPosition = nums.length - 1;
+        for (int i = nums.length - 1; i >= 0; i--) {
+            // 逐步向前递推
+            if (nums[i] + i >= lastPosition) {
+                lastPosition = i;
+            }
+        }
+        return lastPosition == 0;
+    }
+
+```
+时间复杂度是O(n)
+空间复杂度是O(1)
