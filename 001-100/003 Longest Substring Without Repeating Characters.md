@@ -70,7 +70,7 @@ Explanation: The answer is "wke", with the length of 3.
 ```
 
 时间复杂度$$ O(n^3) $$
-空间复杂度：使用了一个 set，判断子串中有没有重复的字符。由于 set 中没有重复的字符，所以最长就是整个字符集，假设字符集的大小为 m ，那么 set 最长就是 m 。另一方面，如果字符串的长度小于 m ，是 n 。那么 set 最长也就是 n 了。综上，空间复杂度为 O(min(m, n))。
+
 
 ```java
     public int lengthOfLongestSubstring(String s) {
@@ -93,8 +93,8 @@ Explanation: The answer is "wke", with the length of 3.
         }
 ```
 
-时间复杂度O\(n^2\)  
-空间复杂度O\(min\(n,m\)\),需要 O\(k\) 的空间来检查子字符串中是否有重复字符，其中 k 表示 Set 的大小。而 Set 的大小取决于字符串n 的大小以及字符集/字母m的大小。
+时间复杂度O(n^2)  
+空间复杂度O(min(n,m)),需要 O(k) 的空间来检查子字符串中是否有重复字符，其中 k 表示 Set 的大小。而 Set 的大小取决于字符串n 的大小以及字符集字母m的大小。
 
 ### 双指针\(滑动窗口\)
 
