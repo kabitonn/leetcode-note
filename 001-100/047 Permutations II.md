@@ -56,6 +56,9 @@ Output:
 
 ### 回溯 排序去重
 
+判断该数之前有没有和它相等的，并且两数没有同时被访问(即两数在该循环中都已经不再变化)，若有则跳过该数
+
+
 ```java
     public List<List<Integer>> permuteUnique1(int[] nums) {
         List<List<Integer>> listList = new ArrayList<>();
