@@ -46,14 +46,17 @@ Output: false
                 return true;
             }
             if (nums[mid] > nums[left]) {
+                //左半段有序
                 if (target >= nums[left] && target < nums[mid]) {
                     right = mid - 1;
                 } else {
                     left = mid + 1;
                 }
             } else if (nums[mid] == nums[left]) {
+                //无法判断哪段有序
                 left++;
             } else {
+                //右半段有序
                 if (target <= nums[right] && target > nums[mid]) {
                     left = mid + 1;
                 } else {
