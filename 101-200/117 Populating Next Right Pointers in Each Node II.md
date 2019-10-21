@@ -23,9 +23,10 @@ Initially, all next pointers are set to NULL.
 
 ## 思路
 
-* 递归
+1. 递归
 * BFS
-* 
+* 迭代
+
 ## 解决方法
 
 ### 递归
