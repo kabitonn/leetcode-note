@@ -63,8 +63,19 @@ Output:
         }
     }
 ```
- 
+
+修改for循环结束条件，剩余未选的数字全选若不满足总数要求，不需要再循环。
+比如，n = 5，k = 4，list.size( ) == 1，此时代表我们还需要（4 - 1 = 3）个数字，如果 i = 4 的话，以后最多把 4 和 5 加入到 list中，而此时 list.size() 才等于 1 + 2 = 3，不够 4 个，所以 i 没必要等于 4，i 循环到 3 就足够了。
+
 ```
+    public List<List<Integer>> combine0(int n, int k) {
+        List<List<Integer>> listList = new ArrayList<>();
+        if (n <= 0 || k <= 0 || k > n) {
+            return listList;
+        }
+        backtrack1(listList, new ArrayList<>(), n, k, 1);
+        return listList;
+    }
     private void backtrack1(List<List<Integer>> listList, List<Integer> list, int n, int k, int index) {
         if (list.size() == k) {
             listList.add(new ArrayList<>(list));
