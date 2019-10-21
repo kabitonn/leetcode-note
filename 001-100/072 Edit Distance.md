@@ -1,4 +1,4 @@
-# 072. Edit Distance(M)
+# 072. Edit Distance(H)
 
 
 ## 题目描述(中等)

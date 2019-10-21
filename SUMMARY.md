@@ -73,7 +73,7 @@
   * [069. Sqrt\(x\)\(E\)](/001-100/069 Sqrt X.md)
   * [070. Climbing Stairs\(E\)](/001-100/070 Climbing Stairs.md)
   * [071. Simplify Path\(M\)](/001-100/071 Simplify Path.md)
-  * [072. Edit Distance\(M\)](/001-100/072 Edit Distance.md)
+  * [072. Edit Distance\(H\)](/001-100/072 Edit Distance.md)
   * [073. Set Matrix Zeroes\(M\)](/001-100/073 Set Matrix Zeroes.md)
   * [074. Search a 2D Matrix\(M\)](/001-100/074 Search a 2D Matrix.md)
   * [075. Sort Colors\(M\)](/001-100/075 Sort Colors.md)
