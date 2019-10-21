@@ -127,5 +127,32 @@ dp [ i ] = dp[ i + 1 ] + dp [ i + 2 ]
 ```
 ### 动态规划空间优化
 
+每次循环中只用到dp[ i + 1 ] 和 dp [ i + 2 ]
+两个变量 cur 和 last
+
+
 ```java
+    public int numDecodings3(String s) {
+        int len = s.length();
+        int last = 1, cur = 0;
+        if (s.charAt(len - 1) != '0') {
+            cur = 1;
+        } else {
+            cur = 0;
+        }
+        for (int i = len - 2; i >= 0; i--) {
+            if (s.charAt(i) == '0') {
+                last = cur;
+                cur = 0;
+                continue;
+            }
+            int n = (s.charAt(i) - '0') * 10 + s.charAt(i + 1) - '0';
+            int tmp = cur;
+            if (n <= 26) {
+                cur += last;
+            }
+            last = tmp;
+        }
+        return cur;
+    }
 ```
