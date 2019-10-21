@@ -25,6 +25,7 @@ Explanation: The array represents the integer 4321.
 
 1. 将1看做一个数
 2. 1即为1
+3. 转换两个数字相加
 
 ## 解决方法
 
@@ -104,6 +105,8 @@ Explanation: The array represents the integer 4321.
     }
 ```
 
+时间复杂度：O(n)
+空间复杂度：O(n)
 
 
 
