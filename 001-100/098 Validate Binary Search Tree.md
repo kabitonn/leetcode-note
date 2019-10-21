@@ -41,4 +41,41 @@ Explanation: The root node's value is 5 but its right child's value is 4.
 ## 解决方法
 
 
-###
+### 递归
+
+判断左子树的最右节点小于根节点
+判断右子树的最左节点大于根节点
+判断左右子树也是二叉搜索树
+
+```java
+    public boolean isValidBST(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+
+        if (root.left != null) {
+            TreeNode right = root.left;
+            while (right.right != null) {
+                right = right.right;
+            }
+            if (right.val >= root.val) {
+                return false;
+            }
+        }
+        if (root.right != null) {
+            TreeNode left = root.right;
+            while (left.left != null) {
+                left = left.left;
+            }
+            if (left.val <= root.val) {
+                return false;
+            }
+        }
+        return isValidBST(root.left) && isValidBST(root.right);
+    }
+```
+
+### 迭代
+
+
+### 
