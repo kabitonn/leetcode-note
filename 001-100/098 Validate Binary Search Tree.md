@@ -215,3 +215,49 @@ Explanation: The root node's value is 5 but its right child's value is 4.
 
 ```
 
+
+
+
+### BFS
+
+```
+    public boolean isValidBST4(TreeNode root) {
+        if (root == null || root.left == null && root.right == null) {
+            return true;
+        }
+        //利用三个队列来保存对应的节点和区间
+        Queue<TreeNode> queue = new LinkedList<>();
+        Queue<Integer> minValues = new LinkedList<>();
+        Queue<Integer> maxValues = new LinkedList<>();
+        //头结点入队列
+        TreeNode pNode = root;
+        queue.offer(pNode);
+        minValues.offer(null);
+        maxValues.offer(null);
+        while (!queue.isEmpty()) {
+            //判断队列的头元素是否符合条件并且出队列
+            Integer minValue = minValues.poll();
+            Integer maxValue = maxValues.poll();
+            pNode = queue.poll();
+            if (minValue != null && pNode.val <= minValue) {
+                return false;
+            }
+            if (maxValue != null && pNode.val >= maxValue) {
+                return false;
+            }
+            //左孩子入队列
+            if (pNode.left != null) {
+                queue.offer(pNode.left);
+                minValues.offer(minValue);
+                maxValues.offer(pNode.val);
+            }
+            //右孩子入队列
+            if (pNode.right != null) {
+                queue.offer(pNode.right);
+                minValues.offer(pNode.val);
+                maxValues.offer(maxValue);
+            }
+        }
+        return true;
+    }
+```
