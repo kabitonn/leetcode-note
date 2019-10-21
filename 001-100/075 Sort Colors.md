@@ -51,6 +51,11 @@ First, iterate the array counting number of 0's, 1's, and 2's, then overwrite ar
         }
     }
 ```
+时间复杂度 :由于对长度 N 的数组进行了一次遍历，时间复杂度为O(N) 。
+
+空间复杂度 :由于只使用了常数空间，空间复杂度为O(c) ,c为颜色种类。
+
+
 
 ### 双指针
 
