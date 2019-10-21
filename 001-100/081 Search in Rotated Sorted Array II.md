@@ -35,7 +35,7 @@ Output: false
 
 ### 二分搜索
 
-先找到哪一段是有序的 (只要判断端点即可),
+先找到哪一段是有序的 (只要判断端点即可),由于数组可以有重复数字，nums[mid] == nums[left] 时，无法判断哪段是有序的，如 nums = [ 1, 3, 1, 1, 1 ] 
 
 ```java
     public boolean search(int[] nums, int target) {
