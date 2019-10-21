@@ -40,21 +40,16 @@ Output: 1->2->3
         return head;
     }
 ```
+时间复杂度：O(n)。
 
-### 递归
+空间复杂度：O(1)。
 
-```java
-    public ListNode deleteDuplicates(ListNode head) {
-    	if (head == null) {return null;}
-        if (head.next!=null && head.val == head.next.val) {
-        	head.next = head.next.next;
-        	head = deleteDuplicates(head);
-        }else {
-			head.next = deleteDuplicates(head.next);
-		}
-        return head;
-    }
-```
+
+
+
+
+
+
 ### 迭代2
 
 遇到重复数字，跳过后续所有
@@ -95,6 +90,32 @@ Output: 1->2->3
 		return start.next;
 	}
 ```
+时间复杂度：O(n)。
+
+空间复杂度：O(1)。
+
+### 递归
+
+```java
+    public ListNode deleteDuplicates(ListNode head) {
+    	if (head == null) {return null;}
+        if (head.next!=null && head.val == head.next.val) {
+        	head.next = head.next.next;
+        	head = deleteDuplicates(head);
+        }else {
+			head.next = deleteDuplicates(head.next);
+		}
+        return head;
+    }
+```
+
+时间复杂度：O(n)。
+
+空间复杂度：O(1)。
+
+
+
+
 
 
 ### 递归2
@@ -116,6 +137,13 @@ Output: 1->2->3
         return head;
     }
 ```
+
+时间复杂度：O(n)。
+
+空间复杂度：O(1)。
+
+
+
 
 
 
