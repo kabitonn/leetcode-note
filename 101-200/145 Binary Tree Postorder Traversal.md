@@ -192,26 +192,35 @@ Morris Traversal 的逆序
 - 2.2 last.right 不为 null，说明之前已经访问过，第二次来到这里，表明当前子树遍历完成，保存 cur 的值，更新 cur = cur.right
 
 ![](/assets/101-200/145-s-4-1.png)
-
+如上图，cur 指向根节点。 当前属于 2.1 的情况，cur.left 不为 null，cur 的左子树最右边的节点的右孩子为 null，那么我们把最右边的节点的右孩子指向 cur。
 ![](/assets/101-200/145-s-4-2.png)
-
+接着，更新 cur = cur.left。
 ![](/assets/101-200/145-s-4-3.png)
-
+如上图，当前属于 2.1 的情况，cur.left 不为 null，cur 的左子树最右边的节点的右孩子为 null，那么我们把最右边的节点的右孩子指向 cur。
 ![](/assets/101-200/145-s-4-4.png)
-
+更新 cur = cur.left。
 ![](/assets/101-200/145-s-4-5.png)
-
+如上图，当前属于情况 1，cur.left 为 null，保存 cur 的值，更新 cur = cur.right。
 ![](/assets/101-200/145-s-4-6.png)
-
+如上图，当前属于 2.2 的情况，cur.left 不为 null，cur 的左子树最右边的节点的右孩子已经指向 cur，保存 cur 的值，更新 cur = cur.right。
 ![](/assets/101-200/145-s-4-7.png)
-
+如上图，当前属于情况 1，cur.left 为 null，保存 cur 的值，更新 cur = cur.right。
 ![](/assets/101-200/145-s-4-8.png)
-
+如上图，当前属于 2.2 的情况，cur.left 不为 null，cur 的左子树最右边的节点的右孩子已经指向 cur，保存 cur 的值，更新 cur = cur.right。
 ![](/assets/101-200/145-s-4-9.png)
-
+当前属于情况 1，cur.left 为 null，保存 cur 的值，更新 cur = cur.right。
 ![](/assets/101-200/145-s-4-10.png)
+cur 指向 null，结束遍历。
 
+记当前遍历的节点为 cur。
 
+1. cur.left 为 null，保存 cur 的值，更新 cur = cur.right
+
+2. cur.left 不为 null，找到 cur.left 这颗子树最右边的节点记做 last
+
+- 2.1 last.right 为 null，那么将 last.right = cur，更新 cur = cur.left
+
+- 2.2 last.right 不为 null，说明之前已经访问过，第二次来到这里，表明当前子树遍历完成，保存 cur 的值，更新 cur = cur.right
 
 
 
