@@ -44,7 +44,15 @@ Explanation: The square root of 8 is 2.82842..., and since
     }
 ```
 
+时间复杂度：$$O(\sqrt{x})$$。
+
+空间复杂度：O(1)。
+
+
+
 ### 二分
+
+求小于等于算术平方根的右边界
 
 
 ```java 
@@ -65,9 +73,15 @@ Explanation: The square root of 8 is 2.82842..., and since
     	return right;
     }
 ```
+时间复杂度：O(log (x))。
+
+空间复杂度：O(1)。
+
+
 
 ### 改进二分
 
+求小于等于算术平方根的右边界
 
 ```java
 	public int mySqrt(int x) {
@@ -82,10 +96,12 @@ Explanation: The square root of 8 is 2.82842..., and since
 		return left;
 	}
 ```
+时间复杂度：O(log (x))。
+
+空间复杂度：O(1)。
 
 
-
-### 
+### 公式-牛顿法
 
 $$x_{k+1} = x_k - f(x_k)/f'(x_k)$$
 $$f(x_n) = x^2 - n$$
@@ -100,4 +116,9 @@ $$x_{k+1} = x_k - (x_k^2 - n)/2x_k = (x_k^2 + n)/2x_k = (x_k + n/x_k)/2$$
         return (int) a;
     }
 ```
+
+时间复杂度：O(log (x))。
+
+空间复杂度：O(1)。
+
 
