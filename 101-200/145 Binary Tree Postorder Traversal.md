@@ -25,7 +25,7 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
 ## 思路
 
 - 递归
-- 迭代
+- 转换为根右左的逆序
 - Morris Traversal
 
 
@@ -53,7 +53,8 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
 
 ```
 
-### 迭代1
+### 转换为根右左的逆序
+
 
 模拟递归压栈出栈
 ```java
@@ -81,8 +82,6 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
 
 ```
 
-### 迭代2
-
 访问根节点，右子树持续压栈，直到没有右子树出栈，访问左子树，最后访问List逆序
 
 ```java
@@ -107,6 +106,41 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
         return list;
     }
 ```
+
+Morris Traversal 的逆序
+
+```java
+    public List<Integer> postorderTraversal4(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        TreeNode cur = root;
+        while (cur != null) {
+            if (cur.right == null) {
+                list.add(cur.val);
+                cur = cur.left;
+            } else {
+                TreeNode pre = cur.right;
+                while (pre.left != null && pre.left != cur) {
+                    pre = pre.left;
+                }
+                if (pre.left == null) {
+                    list.add(cur.val);
+                    pre.left = cur;
+                    cur = cur.right;
+                }
+                if (pre.left == cur) {
+                    pre.left = null;
+                    cur = cur.left;
+                }
+            }
+        }
+        Collections.reverse(list);
+        return list;
+    }
+```
+
+
+### 迭代
+
 
 ### Morris Traversal
 
