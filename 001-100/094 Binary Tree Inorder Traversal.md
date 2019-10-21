@@ -143,9 +143,48 @@ ans                  add 4   add 2           add 5   add 1
 
 cur 指向 null，结束遍历。
 
+记当前遍历的节点为 cur。
 
+1.cur.left 为 null，保存 cur 的值，更新 cur = cur.right
 
+2.cur.left 不为 null，找到 cur.left 这颗子树最右边的节点记做 last
 
+    2.1 last.right 为 null，那么将 last.right = cur，更新 cur = cur.left
+
+    2.2 last.right 不为 null，说明之前已经访问过，第二次来到这里，表明当前子树遍历完成，保存 cur 的值，更新 cur = cur.right
+
+```java
+    public List<Integer> inorderTraversal2(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        TreeNode cur = root;
+        while (cur != null) {
+            //情况 1
+            if (cur.left == null) {
+                list.add(cur.val);
+                cur = cur.right;
+            } else {
+                //找左子树最右边的节点
+                TreeNode pre = cur.left;
+                while (pre.right != null && pre.right != cur) {
+                    pre = pre.right;
+                }
+                //情况 2.1
+                if (pre.right == null) {
+                    pre.right = cur;
+                    cur = cur.left;
+                }
+                //情况 2.2
+                if (pre.right == cur) {
+                    //这里可以恢复为 null
+                    pre.right = null;
+                    list.add(cur.val);
+                    cur = cur.right;
+                }
+            }
+        }
+        return list;
+    }
+```
 
 
 
