@@ -1,5 +1,5 @@
 # 098. Validate Binary Search Tree(M)
-[](https://leetcode-cn.com/problems/validate-binary-search-tree/)
+[098. 验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)
 
 ## 题目描述(中等)
 Given a binary tree, determine if it is a valid binary search tree (BST).
