@@ -207,3 +207,62 @@ Output:
         listList.addAll(combine(n - 1, k));
         return listList;
 ```
+
+### 动态规划
+
+```java
+    List<List<Integer>>[][] dp = new List[n + 1][k + 1];
+        //更新 k = 0 的所有情况
+        for (int i = 0; i <= n; i++) {
+            dp[i][0] = new ArrayList<>();
+            dp[i][0].add(new ArrayList<>());
+        }
+        // i 从 1 到 n
+        for (int i = 1; i <= n; i++) {
+            // j 从 1 到 i 或者 k
+            for (int j = 1; j <= i && j <= k; j++) {
+                dp[i][j] = new ArrayList<>();
+                //判断是否可以从 i - 1 里边选 j 个
+                if (i > j){
+                    dp[i][j].addAll(dp[i - 1][j]);
+                }
+                //把 i - 1 里边选 j - 1 个的每个结果加上 i
+                for (List<Integer> list: dp[i - 1][j - 1]) {
+                    List<Integer> tmpList = new ArrayList<>(list);
+                    tmpList.add(i);
+                    dp[i][j].add(tmpList);
+                }
+            }
+        }
+        return dp[n][k];
+```
+
+### 动态规划空间优化
+
+```java
+    List<List<Integer>>[] dp = new List[k + 1];
+        dp[0] = new ArrayList<>();
+        dp[0].add(new ArrayList<>());
+        for (int i = 1; i <= n; i++) {
+            List<List<Integer>> temp = new ArrayList<>(dp[0]);
+            for (int j = 1; j <= i && j <= k; j++) {
+                List<List<Integer>> last = temp;
+                if(dp[j]!=null){
+                    temp = new ArrayList<>(dp[j]);
+                }
+                // 判断是否可以从 i - 1 里边选 j 个
+                if (i <= j) {
+                    dp[j] = new ArrayList<>();
+                }
+                //把 i - 1 里边选 j - 1 个的每个结果加上 i
+                for (List<Integer> list : last) {
+                    List<Integer> tmpList = new ArrayList<>(list);
+                    tmpList.add(i);
+                    dp[j].add(tmpList);
+                }
+            }
+        }
+        return dp[k];
+    }
+
+```
