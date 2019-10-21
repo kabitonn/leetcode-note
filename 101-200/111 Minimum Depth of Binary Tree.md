@@ -24,8 +24,10 @@ return its minimum depth = 2.
 
 ## 思路
 
-1. 递归
-2. 迭代
+- 递归
+- 迭代DFS
+- 迭代BFS
+
 
 ## 解决方法
 
