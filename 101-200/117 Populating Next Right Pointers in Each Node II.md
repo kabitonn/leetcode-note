@@ -175,9 +175,17 @@ Initially, all next pointers are set to NULL.
 
 ### dummy节点
 
+用一个dummy指针，当连接第一个节点的时候，就将dummy指针指向他。此外，之前用的pre指针，把它当成tail指针可能会更好理解。
+
 ![](/assets/101-200/117-s-4-1.png)
 
+cur 指针利用 next 不停的遍历当前层。
 
+如果 cur 的孩子不为 null 就将它接到 tail 后边，然后更新tail。
+
+当 cur 为 null 的时候，再利用 dummy 指针得到新的一层的开始节点。
+
+dummy 指针在链表中经常用到，他只是为了处理头结点的情况，它并不属于当前链表。
 
 ```java
     public Node connect3(Node root) {
