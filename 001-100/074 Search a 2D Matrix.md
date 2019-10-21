@@ -27,8 +27,6 @@ Output: true
 
 ## 解决方法
 
-
-
 ### 逐行判断
 ```java
     public boolean searchMatrix(int[][] matrix, int target) {
