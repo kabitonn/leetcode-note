@@ -37,33 +37,42 @@ First, iterate the array counting number of 0's, 1's, and 2's, then overwrite ar
 
 ```java
     public void sortColors(int[] nums) {
-        int redNum = 0, whiteNum = 0, blueNum = 0;
+        int[] colors = new int[3];
         for (int n : nums) {
-            if (n == 0) {
-                redNum++;
-            } else if (n == 1) {
-                whiteNum++;
-            } else if (n == 2) {
-                blueNum++;
-            }
+            colors[n]++;
         }
         int index = 0;
-        for (; index < redNum; index++) {
-            nums[index] = 0;
-        }
-        for (; index < redNum + whiteNum; index++) {
-            nums[index] = 1;
-        }
-        for (; index < nums.length; index++) {
-            nums[index] = 2;
+        int sortedNum = 0;
+        for (int i = 0; i < colors.length; i++) {
+            for (; index < colors[i] + sortedNum; index++) {
+                nums[index] = i;
+            }
+            sortedNum += colors[i];
         }
     }
 ```
 
 ### 双指针
 
-两个指针p0，p2指向当前数组0的末尾的下一项，2的首项的前一项；
+两个指针p0，p2指向当前数组0的最右边界，2的最左边界；
 p0, p2只会指向1
+
+- 初始化0的最右边界：p0 = 0。在整个算法执行过程中 nums[idx < p0] = 0.
+
+- 初始化2的最左边界 ：p2 = n - 1。在整个算法执行过程中 nums[idx > p2] = 2.
+
+- 初始化当前考虑的元素序号 ：curr = 0.
+
+- While curr <= p2 :
+
+    - 若 nums[curr] = 0 ：交换第 curr个 和 第p0个 元素，并将指针都向右移。
+
+    - 若 nums[curr] = 2 ：交换第 curr个和第 p2个元素，并将 p2指针左移 。
+
+    - 若 nums[curr] = 1 ：将指针curr右移。
+
+
+
 ```java
     public void sortColors1(int[] nums) {
         int p0 = 0, p2 = nums.length - 1;
@@ -85,6 +94,10 @@ p0, p2只会指向1
     }
 
 ```
+时间复杂度 :由于对长度 N 的数组进行了一次遍历，时间复杂度为O(N) 。
+
+空间复杂度 :由于只使用了常数空间，空间复杂度为O(1) 。
+
 
 ### 三指针
 
