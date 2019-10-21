@@ -1,5 +1,5 @@
 # 107. Binary Tree Level Order Traversal II(E)
-[107. Binary Tree Level Order Traversal II](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/)
+[107. 二叉树的层次遍历 II](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/)
 
 ##  题目描述(简单)
 
@@ -23,12 +23,15 @@ return its bottom-up level order traversal as:
 
 
 ##  思路
+
 层次遍历BFS
 
 ##  解决方法
 
 ### 迭代BFS
 
+获取层次遍历后逆序List
+或者每层结果插入头部
 
 ```java
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
@@ -54,8 +57,9 @@ return its bottom-up level order traversal as:
 ```
 
 
-### 递归BFS
+### 递归 DFS
 
+获取层次遍历后逆序List
 
 ```java
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
