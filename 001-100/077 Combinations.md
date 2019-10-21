@@ -116,7 +116,7 @@ Output:
             //当前数字加 1
             temp.set(i, temp.get(i) + 1);
             //当前数字大于 n，对应回溯法的 i == n + 1，然后回到上一层
-            //优化为剩余未选数量不够，回溯
+            //优化为剩余未选数量(k-i-1)不够，回溯
             if (temp.get(i) > n - (k - i - 1)) {
                 i--;
             } else if (i == k - 1) {
@@ -133,5 +133,33 @@ Output:
     }
 ```
 
+### 迭代生成
 
+```java
+    List<List<Integer>> listList = new ArrayList<List<Integer>>();
+        if (n == 0 || k == 0 || k > n) {
+            return listList;
+        }
+        //个数为 1 的所有可能
+        for (int i = 1; i <= n + 1 - k; i++) {
+            listList.add(Arrays.asList(i));
+        }
+        //第一层循环，从 2 到 k
+        for (int i = 2; i <= k; i++) {
+            List<List<Integer>> tmp = new ArrayList<>();
+            //第二层循环，遍历之前所有的结果
+            for (List<Integer> list : listList) {
+                //第三次循环，对每个结果进行扩展
+                //从最后一个元素加 1 开始，然后不是到 n ，而是和解法一的优化一样
+                //(k - (i - 1)) 代表剩余未选的个数，最后再加 1 是因为取了 n
+                for (int m = list.get(list.size() - 1) + 1; m <= n - (k - (i - 1)) + 1; m++) {
+                    List<Integer> newList = new ArrayList<>(list);
+                    newList.add(m);
+                    tmp.add(newList);
+                }
+            }
+            listList = tmp;
+        }
+        return listList;
+```
 
