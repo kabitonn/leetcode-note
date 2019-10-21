@@ -79,8 +79,87 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
 
 ### 迭代2
 
+访问根节点，左子树持续压栈，直到没有左子树出栈，遍历右子树
 
+```java
+    public List<Integer> preorderTraversal2(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        if (root == null) {
+            return list;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode p = root;
+        while (p != null || !stack.isEmpty()) {
+            while (p != null) {
+                list.add(p.val);
+                stack.push(p);
+                p = p.left;
+            }
+            p = stack.pop();
+            p = p.right;
+        }
+        return list;
+    }
 
+    public List<Integer> preorderTraversal3(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        if (root == null) {
+            return list;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode p = root;
+        while (p != null) {
+            list.add(p.val);
+            stack.push(p);
+            p = p.left;
+        }
+        while (!stack.isEmpty()) {
+            p = stack.pop().right;
+            while (p != null) {
+                list.add(p.val);
+                stack.push(p);
+                p = p.left;
+            }
+        }
+        return list;
+    }
+```
+
+### Morris Traversal
+
+主要思想就是利用叶子节点的左右子树是 null ，所以我们可以利用这个空间去存我们需要的节点
+
+```java
+    public List<Integer> preorderTraversal4(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        TreeNode cur = root;
+        while (cur != null) {
+            //情况 1
+            if (cur.left == null) {
+                list.add(cur.val);
+                cur = cur.right;
+            } else {
+                //找左子树最右边的节点
+                TreeNode pre = cur.left;
+                while (pre.right != null && pre.right != cur) {
+                    pre = pre.right;
+                }
+                //情况 2.1
+                if (pre.right == null) {
+                    list.add(cur.val);
+                    pre.right = cur;
+                    cur = cur.left;
+                }
+                //情况 2.2
+                if (pre.right == cur) {
+                    pre.right = null; //这里可以恢复为 null
+                    cur = cur.right;
+                }
+            }
+        }
+        return list;
+    }
+```
 
 
 
