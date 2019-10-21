@@ -79,7 +79,7 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
 
 ### 迭代2
 
-访问根节点，左子树持续压栈，直到没有左子树出栈，遍历右子树
+访问根节点，左子树持续压栈，直到没有左子树出栈，访问右子树
 
 ```java
     public List<Integer> preorderTraversal2(TreeNode root) {
