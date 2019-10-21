@@ -69,6 +69,14 @@ Given n = 3, there are a total of 5 unique BST's:
 
 ### 公式
 
+>令h ( 0 ) = 1，catalan 数满足递推式：
+h ( n ) = h ( 0 ) * h ( n - 1 ) + h ( 1 ) * h ( n - 2 ) + ... + h ( n - 1 ) * h ( 0 ) ( n >=1 )
+例如：h ( 2 ) = h ( 0 ) * h ( 1 ) + h ( 1 ) * h ( 0 ) = 1 * 1 + 1 * 1 = 2
+h ( 3 ) = h ( 0 ) * h ( 2 ) + h ( 1 ) * h ( 1 ) + h ( 2 ) * h ( 0 ) = 1 * 2 + 1 * 1 + 2 * 1 = 5
+
+$$ C_n = \frac{1}{n+1}C_{2n}^n= \frac{(2n)!}{(n+1)!n! }$$
+$$ C_n=(2n)!/(n+1)!n!=(2n)∗(2n−1)∗...∗(n+1)/(n+1)! $$
+
 ```java
     public int numTrees1(int n) {
         // Note: we should use long here instead of int, otherwise overflow
