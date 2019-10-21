@@ -67,6 +67,32 @@ Given n = 3, there are a total of 5 unique BST's:
 
 ```
 
+trick:利用对称性，可以使得循环减少一些。
+- n 是偶数的时候 1 2 | 3 4 ，for 循环中我们以每个数字为根求出每个的解。我们其实可以只求一半，根据对称性我们可以知道 1 和 4，2 和 3 求出的解分别是相等的。
+- n 是奇数的时候
+
+1 2 | 3 | 4 5，和偶数同理，只求一半，此外最中间的 3 的解也要加上
+
+```
+    public int numTrees3(int n) {
+        int[] numTrees = new int[n + 1];
+        numTrees[0] = 1;
+        numTrees[1] = 1;
+        for (int i = 2; i <= n; i++) {
+            for (int j = 1; j <= i / 2; j++) {
+                numTrees[i] += numTrees[j - 1] * numTrees[i - j];
+            }
+            numTrees[i] *= 2;
+            if ((i & 1) == 1) {
+                int j = (i >> 1) + 1;
+                numTrees[i] += numTrees[j - 1] * numTrees[i - j];
+            }
+        }
+        return numTrees[n];
+    }
+
+```
+
 ### 公式
 
 >令h ( 0 ) = 1，catalan 数满足递推式：
