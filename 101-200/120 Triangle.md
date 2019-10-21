@@ -26,6 +26,8 @@ Bonus point if you are able to do this using only O(n) extra space, where n is t
 ## 思路
 
 - DFS 递归
+- 动态规划
+
 
 ## 解决方法
 
