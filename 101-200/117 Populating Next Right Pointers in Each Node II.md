@@ -97,6 +97,7 @@ Initially, all next pointers are set to NULL.
     }
 ```
 ### BFS
+
 ```java
     public Node connect1(Node root) {
         if (root == null) {
