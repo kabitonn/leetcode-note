@@ -30,8 +30,8 @@ But the following [1,2,2,null,3,null,3] is not:
 ## 思路
 1. 递归
 2. DFS
-2. BFS
-3. 层次遍历回文序列
+3. BFS
+4. 层次遍历回文序列
 
 ## 解决方法
 
