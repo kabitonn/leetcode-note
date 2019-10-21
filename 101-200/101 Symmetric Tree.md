@@ -1,5 +1,5 @@
 # 101. Symmetric Tree(E)
-[101. Symmetric Tree](https://leetcode-cn.com/problems/symmetric-tree/)
+[101. 对称二叉树](https://leetcode-cn.com/problems/symmetric-tree/)
 
 ## 题目描述(简单)
 
@@ -60,7 +60,45 @@ But the following [1,2,2,null,3,null,3] is not:
 空间复杂度：递归调用的次数受树的高度限制。在最糟糕情况下，树是线性的，其高度为 O(n)。因此，在最糟糕的情况下，由栈上的递归调用造成的空间复杂度为 O(n)。
 
 ### DFS 栈
+解法一其实就是类似于 DFS 的先序遍历。不同之处是对于 left 子树是正常的先序遍历 根节点 -> 左子树 -> 右子树 的顺序，对于 right 子树的话是 根节点 -> 右子树 -> 左子树 的顺序。
 
+```
+public boolean isSymmetric0(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+        Stack<TreeNode> stackLeft = new Stack<>();
+        Stack<TreeNode> stackRight = new Stack<>();
+        TreeNode curLeft = root.left;
+        TreeNode curRight = root.right;
+        while (curLeft != null || !stackLeft.isEmpty() || curRight != null || !stackRight.isEmpty()) {
+            // 节点不为空一直压栈
+            while (curLeft != null) {
+                stackLeft.push(curLeft);
+                curLeft = curLeft.left;
+            }
+            while (curRight != null) {
+                stackRight.push(curRight);
+                curRight = curRight.right;
+            }
+            //长度不同就返回 false
+            if (stackLeft.size() != stackRight.size()) {
+                return false;
+            }
+            // 节点为空，就出栈
+            curLeft = stackLeft.pop();
+            curRight = stackRight.pop();
+
+            // 当前值判断
+            if (curLeft.val != curRight.val) {
+                return false;
+            }
+            curLeft = curLeft.right;
+            curRight = curRight.left;
+        }
+        return true;
+    }
+```
 
 ### BFS 队列
 
@@ -117,7 +155,7 @@ But the following [1,2,2,null,3,null,3] is not:
             }
             for (int i = 0, j = line.size() - 1; i < j; i++, j--) {
                 //if(line.get(i)==null&&line.get(j)==null) {continue;}
-                if (line.get(i) != line.get(j)) {
+                if (line.get(i).equals(line.get(j))) {
                     return false;
                 }
             }
