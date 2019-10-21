@@ -1,5 +1,5 @@
 # 070. Climbing Stairs(E)
-[070. Climbing Stairs](https://leetcode-cn.com/problems/climbing-stairs/)
+[070. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)
 
 ## 题目描述\(简单\)
 
@@ -47,7 +47,7 @@ Explanation: There are three ways to climb to the top.
     }
 ```
 
-### 迭代
+### 迭代 动态规划
 
 ```java
     public int climbStairs(int n) {
@@ -63,6 +63,12 @@ Explanation: There are three ways to climb to the top.
     }
 ```
 
+时间复杂度：耗在了求幂的时候，O(n)。
+
+空间复杂度：O(1)。
+
+
+
 ### 公式法
 
 ![](/assets/001-100/070-solution-3-1.png)
@@ -74,6 +80,8 @@ Explanation: There are three ways to climb to the top.
         return (int)(fibn/sqrt5);
     }
 ```
+时间复杂度：耗在了求幂的时候，O(log(n))。
 
+空间复杂度：O(1)。
 
 
