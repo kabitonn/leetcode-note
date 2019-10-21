@@ -100,8 +100,7 @@ Explanation: We define the gray code sequence to begin with 0.
 
 时间复杂度：$$ O(2^n) $$，因为有这么多的结果。
 
-空间复杂度：O(1)。
-
+空间复杂度：O\(1\)。
 
 ### 直接推导
 
@@ -154,6 +153,24 @@ Explanation: We define the gray code sequence to begin with 0.
     }
 ```
 
-时间复杂度：由于每添加两个数需要找第一个为 1 的位元，需要 O(n)，所以 $$ O(n2^n) $$
+时间复杂度：由于每添加两个数需要找第一个为 1 的位元，需要 O\(n\)，所以 $$ O(n2^n) $$
 
-空间复杂度：O（1）。
+空间复杂度：O\(1\)。
+
+### 公式
+
+二进制转成格雷码公式
+![](/assets/001-100/089-s-4-1.png)
+
+遍历 0 到 $$ 2^n-1 $$，然后利用公式转换即可。即最高位保留，其它位是当前位和它的高一位进行异或操作。
+
+```java
+    public List<Integer> grayCode1(int n) {
+        List<Integer> gray = new ArrayList<Integer>();
+        for (int binary = 0; binary < 1 << n; binary++) {
+            gray.add(binary ^ binary >> 1);
+        }
+        return gray;
+    }
+
+```
