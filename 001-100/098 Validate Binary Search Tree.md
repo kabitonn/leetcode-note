@@ -203,5 +203,12 @@ Explanation: The root node's value is 5 but its right child's value is 4.
         }
         return true;
     }
+    
+    private void pushStack(Stack s1, Stack s2, Stack s3, TreeNode t1, Integer m2, Integer m3) {
+        s1.push(t1);
+        s2.push(m2);
+        s3.push(m3);
+    }
+
 ```
 
