@@ -16,7 +16,7 @@ Output: ["255.255.11.135", "255.255.111.35"]
 ## 解决方法
 
 - 遍历
-- 回溯
+- 回溯 递归
 
 ### 暴力遍历
 
@@ -88,3 +88,43 @@ Output: ["255.255.11.135", "255.255.111.35"]
 时间复杂度：O(n)。
 
 空间复杂度：O(1)。
+
+### 回溯 递归
+
+```java
+    public List<String> restoreIpAddresses2(String s) {
+        List<String> list = new ArrayList<>();
+        backtrack(list, s, "", 0, 0);
+        return list;
+    }
+
+    public void backtrack(List<String> list, String s, String ip, int index, int group) {
+
+        if (s.length() - index > 3 * (4 - group)) {
+            return;
+        }
+        if (index == s.length() && group == 4) {
+            list.add(ip.substring(0,ip.length()-1));
+            return;
+        }
+        if (index >= s.length() || group == 4) {
+            return;
+        }
+        ip = ip + s.charAt(index);
+        backtrack(list, s, ip + ".", index + 1, group + 1);
+        if (s.charAt(index) == '0') {
+            return;
+        }
+        if (index + 1 < s.length()) {
+            ip = ip + s.charAt(index + 1);
+            backtrack(list, s, ip + ".", index + 2, group + 1);
+        }
+        if (index + 2 < s.length()) {
+            int num = Integer.valueOf(s.substring(index, index + 3));
+            if (num > 0 && num <= 255) {
+                ip = ip + s.charAt(index + 2);
+                backtrack(list, s, ip + ".", index + 3, group + 1);
+            }
+        }
+    }
+```
