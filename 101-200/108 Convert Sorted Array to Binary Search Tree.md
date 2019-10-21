@@ -20,11 +20,33 @@ One possible answer is: [0,-3,9,-10,null,5], which represents the following heig
 
 ## 思路
 
+- 递归
+- BFS 层次建立BST+ 中序遍历赋值
+
+
 ## 解决方法
 
-### 1
+### 递归
+升序数组就是二叉搜索树的中序遍历
+平衡二叉树，既然要做到平衡，只要把根节点选为数组的中点即可。
 
+```java
+    public TreeNode sortedArrayToBST(int[] nums) {
+        return sortedArrayToBST(nums, 0, nums.length - 1);
+    }
 
+    private TreeNode sortedArrayToBST(int[] nums, int start, int end) {
+        if (start > end) {
+            return null;
+        }
+        //int mid = start + (end - start) / 2;
+        int mid = (start + end) >>> 1;
+        TreeNode root = new TreeNode(nums[mid]);
+        root.left = sortedArrayToBST(nums, start, mid - 1);
+        root.right = sortedArrayToBST(nums, mid + 1, end);
+        return root;
+    }
 
-### 2
+```
+
 
