@@ -35,7 +35,7 @@ Output: false
 
 ### 二分搜索
 
-先找到哪一段是有序的 (只要判断端点即可)
+先找到哪一段是有序的 (只要判断端点即可),
 
 ```java
     public boolean search(int[] nums, int target) {
