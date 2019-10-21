@@ -42,7 +42,7 @@ Explanation: We define the gray code sequence to begin with 0.
 
 1. 遍历生成判断是否存在
 2. 动态规划
-3. 生成规律
+3. 生成规律直接推导
 4. 公式
 
 ## 解决方法
@@ -103,4 +103,57 @@ Explanation: We define the gray code sequence to begin with 0.
 空间复杂度：O(1)。
 
 
+### 直接推导
 
+维基百科提供的一个生成格雷码的思路。
+
+> 以二进制为 0 值的格雷码为第零项，第一项改变最右边的位元，第二项改变右起第一个为1的位元的左边位元，第三、四项方法同第一、二项，如此反复，即可排列出n个位元的格雷码。
+
+```
+以 n = 3 为例。
+
+0 0 0 第零项初始化为 0。
+
+0 0 1 第一项改变上一项最右边的位元
+
+0 1 1 第二项改变上一项右起第一个为 1 的位元的左边位
+
+0 1 0 第三项同第一项，改变上一项最右边的位元
+
+1 1 0 第四项同第二项，改变最上一项右起第一个为 1 的位元的左边位
+
+1 1 1 第五项同第一项，改变上一项最右边的位元
+
+1 0 1 第六项同第二项，改变最上一项右起第一个为 1 的位元的左边位
+
+1 0 0 第七项同第一项，改变上一项最右边的位元
+```
+
+```java
+    public List<Integer> grayCode3(int n) {
+        List<Integer> gray = new ArrayList<Integer>();
+        gray.add(0);
+        for (int i = 1; i < 1 << n; i++) {
+            int last = gray.get(i - 1);
+            if ((i & 1) == 1) {
+                //第一项改变上一项最右边的位元
+                gray.add(last ^ 1);
+            } else {
+                //第二项改变上一项右起第一个为 1 的位元的左边位
+                int tmp = last;
+                for (int bit = 0; bit < n; bit++) {
+                    if ((tmp & 1) == 1) {
+                        gray.add(last ^ (1 << (bit + 1)));
+                        break;
+                    }
+                    tmp >>= 1;
+                }
+            }
+        }
+        return gray;
+    }
+```
+
+时间复杂度：由于每添加两个数需要找第一个为 1 的位元，需要 O(n)，所以 $$ O(n2^n) $$
+
+空间复杂度：O（1）。
