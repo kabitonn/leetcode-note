@@ -55,6 +55,7 @@ Output: "/a/b/c"
 ## 解决方法
 
 ### 以分隔符'/'拆分成数组判断
+
 ```java
     public String simplifyPath(String path) {
         if (path == null || path.length() == 0) {
