@@ -1,5 +1,5 @@
 # 088. Merge Sorted Array(E)
-[88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)
+[088. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)
 
 ## 题目描述(简单)
 
