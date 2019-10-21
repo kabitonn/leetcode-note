@@ -23,7 +23,7 @@ Initially, all next pointers are set to NULL.
 
 ## 思路
 
-1. 递归
+- 递归
 * BFS
 * 迭代
 
