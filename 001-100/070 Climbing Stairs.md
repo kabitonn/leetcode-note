@@ -47,6 +47,44 @@ Explanation: There are three ways to climb to the top.
     }
 ```
 
+### 递归+memoization 
+```java
+    public int climbStairs0(int n) {
+        return climbStairsNth(n, new int[n + 1]);
+    }
+
+    private int climbStairsNth(int n, int[] memo) {
+        if (n == 1) {
+            return 1;
+        }
+        if (n == 2) {
+            return 2;
+        }
+        int n1 = 0;
+        if (memo[n - 1] == 0) {
+            n1 = climbStairsNth(n - 1, memo);
+            memo[n - 1] = n1;
+        } else {
+            n1 = memo[n - 1];
+        }
+        int n2 = 0;
+        if (memo[n - 2] == 0) {
+            n2 = climbStairsNth(n - 2, memo);
+            memo[n - 2] = n2;
+
+        } else {
+            n2 = memo[n - 2];
+        }
+        return n1 + n2;
+    }
+```
+
+时间复杂度：O(n)。
+
+空间复杂度：O(n)。
+
+
+
 ### 迭代 动态规划
 
 ```java
@@ -63,7 +101,7 @@ Explanation: There are three ways to climb to the top.
     }
 ```
 
-时间复杂度：耗在了求幂的时候，O(n)。
+时间复杂度：O(n)。
 
 空间复杂度：O(1)。
 
