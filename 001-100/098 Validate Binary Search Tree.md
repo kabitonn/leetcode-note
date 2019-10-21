@@ -36,7 +36,9 @@ Explanation: The root node's value is 5 but its right child's value is 4.
 ## 思路
 
 - 递归
-- 
+- 中序遍历
+- DFS
+- DFS BFS
 
 ## 解决方法
 
@@ -173,7 +175,9 @@ Explanation: The root node's value is 5 but its right child's value is 4.
 
 ### DFS BFS
 
-```
+用 BFS，利用一个队列，一层一层的遍历，遍历完一个就删除一个。
+
+```java
     public boolean isValidBST3(TreeNode root) {
         if (root == null) {
             return true;
