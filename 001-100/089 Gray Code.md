@@ -174,3 +174,6 @@ Explanation: We define the gray code sequence to begin with 0.
     }
 
 ```
+时间复杂度：$$ O(2^n) $$，因为有这么多的结果。
+
+空间复杂度：O\(1\)。
