@@ -30,7 +30,7 @@ Return the following binary tree:
 
 
 - 递归
-- 
+- 迭代
 
 
 ## 解决方法
@@ -262,6 +262,9 @@ inorder = [ 20, 9, 15, 3, 7 ]
 ```
 综上所述，用一个栈保存已经遍历过的节点，遍历前序遍历的数组，一直作为当前根节点的左子树，直到当前节点和中序遍历的数组的节点相等了，那么我们正序遍历中序遍历的数组，倒着遍历已经遍历过的根节点（用栈的 pop 实现），找到最后一次相等的位置，把它作为该节点的右子树。
 
+当前指向的curRoot(栈顶节点)和中序遍历的节点相等，说明该节点左子树已访问过(即已经生成)，新生成的根节点为左子树已经访问过的根节点的右子树。
+
+
 ```java
     public TreeNode buildTree3(int[] preorder, int[] inorder) {
         int n = preorder.length;
@@ -285,6 +288,42 @@ inorder = [ 20, 9, 15, 3, 7 ]
                 }
                 curRoot.right = new TreeNode(preorder[pre++]);
                 curRoot = curRoot.right;
+            }
+            stack.push(curRoot);
+        }
+        return root;
+    }
+```
+
+
+### 迭代2
+
+栈顶节点和中序遍历的节点相等，说明该节点左子树已访问过(即已经生成)，新生成的根节点为左子树已经访问过的根节点的右子树。
+
+原理和上述迭代一样
+
+```java
+    public TreeNode buildTree4(int[] preorder, int[] inorder) {
+        int n = preorder.length;
+        if (n == 0) {
+            return null;
+        }
+        int pre = 0, in = 0;
+        Stack<TreeNode> stack = new Stack<>();
+        int rootVal = preorder[pre++];
+        TreeNode root = new TreeNode(rootVal);
+        stack.push(root);
+        for (; pre < n; pre++) {
+            TreeNode curRoot = new TreeNode(preorder[pre]);
+            TreeNode back = null;
+            while (!stack.isEmpty() && stack.peek().val == inorder[in]) {
+                back = stack.pop();
+                in++;
+            }
+            if (back == null) {
+                stack.peek().left = curRoot;
+            } else {
+                back.right = curRoot;
             }
             stack.push(curRoot);
         }
