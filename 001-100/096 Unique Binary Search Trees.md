@@ -97,7 +97,7 @@ trick:利用对称性，可以使得循环减少一些。
 
 1 2 | 3 | 4 5，和偶数同理，只求一半，此外最中间的 3 的解也要加上
 
-```
+```java
     public int numTrees3(int n) {
         int[] numTrees = new int[n + 1];
         numTrees[0] = 1;
