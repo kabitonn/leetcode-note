@@ -191,6 +191,34 @@ Morris Traversal 的逆序
 
 - 2.2 last.right 不为 null，说明之前已经访问过，第二次来到这里，表明当前子树遍历完成，保存 cur 的值，更新 cur = cur.right
 
+![](/assets/101-200/145-s-4-1.png)
+
+![](/assets/101-200/145-s-4-2.png)
+
+![](/assets/101-200/145-s-4-3.png)
+
+![](/assets/101-200/145-s-4-4.png)
+
+![](/assets/101-200/145-s-4-5.png)
+
+![](/assets/101-200/145-s-4-6.png)
+
+![](/assets/101-200/145-s-4-7.png)
+
+![](/assets/101-200/145-s-4-8.png)
+
+![](/assets/101-200/145-s-4-9.png)
+
+![](/assets/101-200/145-s-4-10.png)
+
+
+
+
+
+
+
+
+
 
 
 ```java
