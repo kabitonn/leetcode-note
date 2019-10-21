@@ -49,7 +49,30 @@ Given n = 3, there are a total of 5 unique BST's:
         return sum;
     }
 ```
+### 递归 记忆化
 
+```java
+    public int numTrees4(int n) {
+        return recursive(n, new int[n + 1]);
+    }
+
+    private int recursive(int n, int[] memo) {
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+        if (memo[n] != 0) {
+            return memo[n];
+        }
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            int leftNum = recursive(i - 1, memo);
+            int rightNum = recursive(n - i, memo);
+            sum += leftNum * rightNum;
+        }
+        memo[n] = sum;
+        return sum;
+    }
+```
 
 ### 动态规划
 
