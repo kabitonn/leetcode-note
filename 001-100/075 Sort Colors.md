@@ -63,6 +63,7 @@ First, iterate the array counting number of 0's, 1's, and 2's, then overwrite ar
 ### 双指针
 
 两个指针p0，p2指向当前数组0的末尾的下一项，2的首项的前一项；
+p0, p2只会指向1,
 ```java
     public void sortColors1(int[] nums) {
         int p0 = 0, p2 = nums.length - 1;
