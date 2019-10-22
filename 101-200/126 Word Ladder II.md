@@ -1,7 +1,5 @@
 # 126. Word Ladder II\(H\)
 
-
-
 ## 题目描述\(困难\)
 
 Given two words \(beginWord and endWord\), and a dictionary's word list, find all shortest transformation sequence\(s\) from beginWord to endWord, such that:
@@ -245,7 +243,8 @@ Explanation: The endWord "cog" is not in wordList, therefore no possible transfo
     }
 ```
 
-![](/assets/101-200/126-s-2-1.png)
+![](/assets/101-200/126-s-2-1.png)  
+相比上述方法一快了一点
 
 ### DFS pattern判断相邻
 
@@ -314,7 +313,197 @@ Explanation: The endWord "cog" is not in wordList, therefore no possible transfo
     }
 ```
 
-![](/assets/101-200/126-s-3-1.png)
+![](/assets/101-200/126-s-3-1.png)  
+相比上述方法一快了一点
+
+### DFS 记忆化 深度
 
 
 
+![](/assets/101-200/126-s-4-1.png)
+
+假如我们在考虑上图中黄色节点的相邻节点，发现第三层的 abc 在第二层已经考虑过了。所以第三层的 abc 其实不用再考虑了，第三层的 abc 后边的结构一定和第二层后边的结构一样，因为要找最短的路径，所以如果产生了最短路径，一定是第二层的 abc 首先达到结束单词。
+
+
+所以在考虑第 k 层的某一个单词，如果这个单词在第 1 到 k-1 层已经出现过，就不继续向下探索了。
+
+```java
+    public List<List<String>> findLadders3(String beginWord, String endWord, List<String> wordList) {
+        List<List<String>> listList = new ArrayList<>();
+        if (!wordList.contains(endWord)) {
+            return listList;
+        }
+        Map<String, Integer> levelMap = new HashMap<>();
+        Map<String, List<String>> adjacentMap = new HashMap<>();
+        findLevelAdjacent3(beginWord, endWord, wordList, adjacentMap, levelMap);
+        List<String> path = new ArrayList<>();
+        path.add(beginWord);
+        findLadders3(listList, path, beginWord, endWord, wordList, adjacentMap, levelMap);
+        return listList;
+    }
+
+    public void findLadders3(List<List<String>> listList, List<String> path, String beginWord, String endWord, List<String> wordList, Map<String, List<String>> adjacentMap, Map<String, Integer> levelMap) {
+        if (beginWord.equals(endWord)) {
+            listList.add(new ArrayList<>(path));
+            return;
+        }
+        List<String> adjacentList = adjacentMap.getOrDefault(beginWord, new ArrayList<>());
+        for (String word : adjacentList) {
+            if (levelMap.get(beginWord) + 1 == levelMap.get(word)) {
+                path.add(word);
+                findLadders3(listList, path, word, endWord, wordList, adjacentMap, levelMap);
+                path.remove(path.size() - 1);
+            }
+        }
+    }
+
+    public void findLevelAdjacent3(String beginWord, String endWord, List<String> wordList, Map<String, List<String>> adjacentMap, Map<String, Integer> levelMap) {
+
+        Queue<String> queue = new LinkedList<>();
+        queue.add(beginWord);
+        levelMap.put(beginWord, 0);
+        Set<String> wordSet = new HashSet<>(wordList);
+        boolean found = false;
+        int depth = 0;
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            depth++;
+            for (int i = 0; i < size; i++) {
+                String word = queue.poll();
+                List<String> adjacentList = getAdjacentList(word, wordSet);
+                adjacentMap.put(word, adjacentList);
+                for (String adjacent : adjacentList) {
+                    if (!levelMap.containsKey(adjacent)) {
+                        levelMap.put(adjacent, depth);
+                        if (adjacent.equals(endWord)) {
+                            found = true;
+                        }
+                        queue.add(adjacent);
+                    }
+                }
+            }
+            if (found) {
+                break;
+            }
+        }
+    }
+    
+    private List<String> getAdjacentList(String str, Set<String> wordSet) {
+        List<String> list = new ArrayList<>();
+        char[] s = str.toCharArray();
+        for (int i = 0; i < s.length; i++) {
+            char old = s[i];
+            for (char c = 'a'; c <= 'z'; c++) {
+                if (s[i] == c) {
+                    continue;
+                }
+                s[i] = c;
+                String t = String.valueOf(s);
+                if (wordSet.contains(t)) {
+                    list.add(t);
+                }
+            }
+            s[i] = old;
+        }
+        return list;
+    }
+```
+
+提前存储了单词所在的 depth以及邻接表，方便在 DFS 中来判断我们是否继续深搜。
+
+
+
+### DFS 记忆化 剪去非最优邻接单词节点
+
+判断之前是否已经处理过，可以用一个 HashSet 来把之前的节点存起来进行判断。
+java 中遍历 List 过程中，不能对 List 元素进行删除。如果想边遍历边删除，可以借助迭代器。
+
+
+```java
+    public List<List<String>> findLadders4(String beginWord, String endWord, List<String> wordList) {
+        List<List<String>> listList = new ArrayList<>();
+        if (!wordList.contains(endWord)) {
+            return listList;
+        }
+        Map<String, List<String>> adjacentMap = new HashMap<>();
+        findLevelAdjacent4(beginWord, endWord, wordList, adjacentMap);
+        List<String> path = new ArrayList<>();
+        path.add(beginWord);
+        findLadders4(listList, path, beginWord, endWord, wordList, adjacentMap);
+        return listList;
+    }
+
+    public void findLadders4(List<List<String>> listList, List<String> path, String beginWord, String endWord, List<String> wordList, Map<String, List<String>> adjacentMap) {
+        if (beginWord.equals(endWord)) {
+            listList.add(new ArrayList<>(path));
+            return;
+        }
+        List<String> adjacentList = adjacentMap.getOrDefault(beginWord, new ArrayList<>());
+        for (String word : adjacentList) {
+            path.add(word);
+            findLadders4(listList, path, word, endWord, wordList, adjacentMap);
+            path.remove(path.size() - 1);
+        }
+    }
+
+    public void findLevelAdjacent4(String beginWord, String endWord, List<String> wordList, Map<String, List<String>> adjacentMap) {
+
+        Queue<String> queue = new LinkedList<>();
+        Set<String> visited = new HashSet<>();
+        queue.add(beginWord);
+        visited.add(beginWord);
+        Set<String> wordSet = new HashSet<>(wordList);
+        boolean found = false;
+        int depth = 0;
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            depth++;
+            Set<String> subVisited = new HashSet<>();
+            for (int i = 0; i < size; i++) {
+                String word = queue.poll();
+                List<String> adjacentList = getAdjacentList(word, wordSet);
+                Iterator<String> iterator = adjacentList.iterator();
+                while (iterator.hasNext()) {
+                    String adjacent = iterator.next();
+                    if (visited.contains(adjacent)) {
+                        iterator.remove();
+                    } else {
+                        subVisited.add(adjacent);
+                        queue.add(adjacent);
+                        if (adjacent.equals(endWord)) {
+                            found = true;
+                        }
+                    }
+                }
+                adjacentMap.put(word, adjacentList);
+            }
+            visited.addAll(subVisited);
+            if (found) {
+                break;
+            }
+        }
+    }
+    private List<String> getAdjacentList(String str, Set<String> wordSet) {
+        List<String> list = new ArrayList<>();
+        char[] s = str.toCharArray();
+        for (int i = 0; i < s.length; i++) {
+            char old = s[i];
+            for (char c = 'a'; c <= 'z'; c++) {
+                if (s[i] == c) {
+                    continue;
+                }
+                s[i] = c;
+                String t = String.valueOf(s);
+                if (wordSet.contains(t)) {
+                    list.add(t);
+                }
+            }
+            s[i] = old;
+        }
+        return list;
+    }
+
+```
+
+
+### BFS
