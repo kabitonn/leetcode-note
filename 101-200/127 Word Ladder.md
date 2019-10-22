@@ -45,6 +45,9 @@ Explanation: The endWord "cog" is not in wordList, therefore no possible trans
 
 ## 思路
 
+- BFS 求邻接点
+- 双向BFS
+
 
 
 ## 解决方法
