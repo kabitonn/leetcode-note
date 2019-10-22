@@ -53,7 +53,8 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 正向遍历，保存当前最小值，计算最大利益
 
 ```java
-    int maxProfit = 0;
+    public int maxProfit1(int[] prices) {
+        int maxProfit = 0;
         int minPrice = Integer.MAX_VALUE;
         for (int price : prices) {
             if (price < minPrice) {
