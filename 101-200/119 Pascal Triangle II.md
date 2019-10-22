@@ -33,18 +33,20 @@ Follow up:
 
 ```java
     public List<Integer> getRow(int rowIndex) {
-    	if(rowIndex==0) {return new ArrayList<>(Arrays.asList(1));}
-    	//if(rowIndex==1) {return new ArrayList<>(Arrays.asList(1,1));}
-    	List<Integer> row = null;
+        if (rowIndex == 0) {
+            return new ArrayList<>(Arrays.asList(1));
+        }
+        //if(rowIndex==1) {return new ArrayList<>(Arrays.asList(1,1));}
+        List<Integer> row = null;
         List<Integer> preLine = new ArrayList<>(Arrays.asList(1));
-        for(int i=1;i<=rowIndex;i++) {
-        	row = new ArrayList<>();
-        	row.add(1);
-        	for(int j=1;j<i;j++) {
-        		row.add(preLine.get(j-1)+preLine.get(j));
-        	}
-        	row.add(1);
-        	preLine = row;
+        for (int i = 1; i <= rowIndex; i++) {
+            row = new ArrayList<>();
+            row.add(1);
+            for (int j = 1; j < i; j++) {
+                row.add(preLine.get(j - 1) + preLine.get(j));
+            }
+            row.add(1);
+            preLine = row;
         }
         return row;
     }
@@ -52,20 +54,50 @@ Follow up:
 时间复杂度 $$O(n^2)$$
 空间复杂度 O(n)
 
+```java
+    public List<Integer> getRow0(int rowIndex) {
+        if (rowIndex == 0) {
+            return new ArrayList<>(Arrays.asList(1));
+        }
+        Integer[] line = new Integer[rowIndex + 1];
+        line[0] = 1;
+        for (int i = 1; i <= rowIndex; i++) {
+            int pre = line[0];
+            for (int j = 1; j < i; j++) {
+                int tmp = line[j];
+                line[j] = line[j] + pre;
+                pre = tmp;
+            }
+            line[i] = 1;
+        }
+        return new ArrayList<>(Arrays.asList(line));
+    }
+```
+
+时间复杂度 $$O(n^2)$$
+空间复杂度 O(n)
+
+
 ### 行内逆向遍历
 
 每行首尾为1，自后向前计算该位置数值，覆盖已不再使用的位置的数据
 
+倒着进行，这样就不会存在覆盖的情况了。
+
+因为更新完j的信息后，虽然把j之前的信息覆盖掉了。但是下一次我们更新的是j - 1，需要的是j - 1和j - 2 的信息，j信息覆盖就不会造成影响了
+
 ```java
-    public List<Integer> getRow(int rowIndex) {
-    	if(rowIndex==0) {return new ArrayList<>(Arrays.asList(1));}
-    	Integer[] line = new Integer[rowIndex+1];
-        for(int i=1;i<=rowIndex;i++) {
-        	line[0] = 1;
-        	line[i] = 1;
-        	for(int j=i-1;j>=1;j--) {
-        		line[j] = line[j]+line[j-1];
-        	}
+    public List<Integer> getRow1(int rowIndex) {
+        if (rowIndex == 0) {
+            return new ArrayList<>(Arrays.asList(1));
+        }
+        Integer[] line = new Integer[rowIndex + 1];
+        line[0] = 1;
+        for (int i = 1; i <= rowIndex; i++) {
+            for (int j = i - 1; j >= 1; j--) {
+                line[j] = line[j] + line[j - 1];
+            }
+            line[i] = 1;
         }
         List<Integer> row = new ArrayList<>(Arrays.asList(line));
         return row;
