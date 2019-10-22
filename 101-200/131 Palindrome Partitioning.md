@@ -102,6 +102,10 @@ aabb
 ```
 
 ### 动态规划 + 分治
+
+用 dp[ i ][ j ] 表示 s[ i, j ] 是否是回文串。
+
+然后有 dp[ i ][ j ] = s[ i ] == s[ j ] && dp[ i + 1 ][ j - 1 ] 。
  
 ```java
     public List<List<String>> partition1(String s) {
