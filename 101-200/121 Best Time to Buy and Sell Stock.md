@@ -49,7 +49,7 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 空间复杂度：O(1)
 
 
-### 一次遍历
+### 一次遍历 双指针
 正向遍历，保存当前最小值，计算最大利益
 
 ```java
@@ -70,6 +70,27 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 空间复杂度：O(1)
 
 ### 动态规划
+对于数组 1 6 2 8，代表股票每天的价格。
 
+定义一下转换规则，当前天的价格减去前一天的价格，第一天由于没有前一天，规定为 0，用来代表不操作。
 
+数组就转换为 0 6-1 2-6 8-2，也就是 0 5 -4 6。现在的数组的含义就变成了股票相对于前一天的变化了。
 
+现在我们只需要找出连续的和最大是多少就可以了
+
+```java
+    public int maxProfit2(int[] prices) {
+        int n = prices.length;
+        int dp = 0;
+        int max = 0;
+        for (int i = 1; i < n; i++) {
+            int num = prices[i] - prices[i - 1];
+            dp = Math.max(dp + num, num);
+            max = Math.max(max, dp);
+        }
+        return max;
+    }
+```
+
+这个算法其实叫做 Kadane 算法
+如果序列中含有负数，并且可以不选择任何一个数，那么最小的和也肯定是 0，也就是上边的情况，这也是把我们把第一天的浮动当作是 0 的原因。所以 max初始化成了 0
