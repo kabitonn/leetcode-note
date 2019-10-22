@@ -54,6 +54,7 @@ Output: 4
 
 ### HashMap 计数
 
+也可简化成HashSet 
 
 ```java
     public int singleNumber(int[] nums) {
@@ -91,4 +92,10 @@ Output: 4
     	return xor;
     }
 ```
+
+时间复杂度： O(n) 
+空间复杂度： O(1) 
+
+
+
 
