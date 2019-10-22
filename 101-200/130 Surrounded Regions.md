@@ -158,6 +158,8 @@ Surrounded regions shouldn’t be on the border, which means that any 'O' on th
 
 ### 边界节点DFS 空间优化
 
+从边界的 O 做 DFS，然后把遇到的 O 都修改为 * ，最后遍历节点，恢复原状
+
 ```java
     public void solve2(char[][] board) {
         if (board.length == 0 || board[0].length == 0) {
