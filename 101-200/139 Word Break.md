@@ -99,12 +99,12 @@ dp[0,len) =    wordDict.contains(s[i,len)) && dp[0,1)
 dp[0,len) 就代表着 s 是否能由 wordDict 构成。
 
 ```java
-    public boolean wordBreak1(String s, List<String> wordDict) {
+    public boolean wordBreak1_1(String s, List<String> wordDict) {
         Set<String> wordSet = new HashSet<>(wordDict);
-        return wordBreak1(s, wordSet, new HashMap<String, Boolean>());
+        return wordBreak1_1(s, wordSet, new HashMap<String, Boolean>());
     }
 
-    public boolean wordBreak1(String s, Set<String> wordSet, Map<String, Boolean> map) {
+    public boolean wordBreak1_1(String s, Set<String> wordSet, Map<String, Boolean> map) {
         if (s.length() == 0) {
             return true;
         }
@@ -112,18 +112,45 @@ dp[0,len) 就代表着 s 是否能由 wordDict 构成。
             return map.get(s);
         }
         for (int i = 0; i < s.length(); i++) {
-            if (wordSet.contains(s.substring(i)) && wordBreak1(s.substring(0, i), wordSet, map)) {
+            if (wordSet.contains(s.substring(i)) && wordBreak1_1(s.substring(0, i), wordSet, map)) {
                 map.put(s, true);
                 return true;
             }
         }
-        
+
         map.put(s, false);
         return false;
     }
 ```
 
-另一种分治思路
+该思路另一种写法
+```java
+
+    public boolean wordBreak2_1(String s, List<String> wordDict) {
+        return wordBreak2_1(s, new HashSet(wordDict), s.length(), new Boolean[s.length() + 1]);
+    }
+
+    public boolean wordBreak2_1(String s, Set<String> wordDict, int end, Boolean[] memo) {
+        if (end == 0) {
+            return true;
+        }
+        if (memo[end] != null) {
+            return memo[end];
+        }
+        for (int start = 0; start <= end; start++) {
+            if (wordDict.contains(s.substring(start, end)) && wordBreak2_1(s, wordDict, start, memo)) {
+                return memo[end] = true;
+            }
+        }
+        return memo[end] = false;
+    }
+
+```
+
+
+
+
+**另一种分治思路**
 
 ```
 dp[0,len) =    wordDict.contains(s[0,1)) && dp[1,len)
@@ -138,20 +165,20 @@ HashMap存储考虑过的解，value 的话就代表以当前 key作为结束的
 
 
 ```java
-    public boolean wordBreak1(String s, List<String> wordDict) {
+    public boolean wordBreak1_2(String s, List<String> wordDict) {
         Set<String> wordSet = new HashSet<>(wordDict);
-        return wordBreak1(s, wordSet, new HashMap<String, Boolean>());
+        return wordBreak1_2(s, wordSet, new HashMap<String, Boolean>());
     }
 
-    public boolean wordBreak1(String s, Set<String> wordSet, Map<String, Boolean> map) {
+    public boolean wordBreak1_2(String s, Set<String> wordSet, Map<String, Boolean> map) {
         if (s.length() == 0) {
             return true;
         }
         if (map.containsKey(s)) {
             return map.get(s);
         }
-        for (int i = len; i>0; i--) {
-            if (wordSet.contains(s.substring(0, i)) && wordBreak1(s.substring(i), wordSet, map)) {
+        for (int i = s.length(); i > 0; i--) {
+            if (wordSet.contains(s.substring(0, i)) && wordBreak1_2(s.substring(i), wordSet, map)) {
                 map.put(s, true);
                 return true;
             }
@@ -159,21 +186,22 @@ HashMap存储考虑过的解，value 的话就代表以当前 key作为结束的
         map.put(s, false);
         return false;
     }
+
 ```
 
-分治思路二的另一种写法
+另一种写法
 
 ```java
-    public boolean wordBreak3(String s, List<String> wordDict) {
-        return wordBreak3(s, new HashSet(wordDict), 0);
+    public boolean wordBreak2_2_0(String s, List<String> wordDict) {
+        return wordBreak2_2_0(s, new HashSet(wordDict), 0);
     }
 
-    public boolean wordBreak3(String s, Set<String> wordDict, int start) {
+    public boolean wordBreak2_2_0(String s, Set<String> wordDict, int start) {
         if (start == s.length()) {
             return true;
         }
         for (int end = start + 1; end <= s.length(); end++) {
-            if (wordDict.contains(s.substring(start, end)) && wordBreak3(s, wordDict, end)) {
+            if (wordDict.contains(s.substring(start, end)) && wordBreak2_2_0(s, wordDict, end)) {
                 return true;
             }
         }
@@ -181,11 +209,11 @@ HashMap存储考虑过的解，value 的话就代表以当前 key作为结束的
     }
     
     //记忆化回溯
-    public boolean wordBreak4(String s, List<String> wordDict) {
-        return wordBreak4(s, new HashSet(wordDict), 0, new Boolean[s.length()]);
+    public boolean wordBreak2_2(String s, List<String> wordDict) {
+        return wordBreak2_2(s, new HashSet(wordDict), 0, new Boolean[s.length()]);
     }
 
-    public boolean wordBreak4(String s, Set<String> wordDict, int start, Boolean[] memo) {
+    public boolean wordBreak2_2(String s, Set<String> wordDict, int start, Boolean[] memo) {
         if (start == s.length()) {
             return true;
         }
@@ -193,12 +221,13 @@ HashMap存储考虑过的解，value 的话就代表以当前 key作为结束的
             return memo[start];
         }
         for (int end = start + 1; end <= s.length(); end++) {
-            if (wordDict.contains(s.substring(start, end)) && wordBreak4(s, wordDict, end, memo)) {
+            if (wordDict.contains(s.substring(start, end)) && wordBreak2_2(s, wordDict, end, memo)) {
                 return memo[start] = true;
             }
         }
         return memo[start] = false;
     }
+
 ```
 
 
@@ -208,7 +237,7 @@ HashMap存储考虑过的解，value 的话就代表以当前 key作为结束的
 用 dp[i] 表示字符串 s[0,i) 能否由 wordDict 构成。对应分治思路一
 
 ```java
-    public boolean wordBreak2(String s, List<String> wordDict) {
+    public boolean wordBreak3_1(String s, List<String> wordDict) {
         Set<String> wordSet = new HashSet<>(wordDict);
         boolean[] dp = new boolean[s.length() + 1];
         dp[0] = true;
@@ -228,13 +257,13 @@ HashMap存储考虑过的解，value 的话就代表以当前 key作为结束的
 用 dp[i] 表示字符串 s[i,len) 能否由 wordDict 构成。对应分治思路二
 
 ```java
-    public boolean wordBreak2_1(String s, List<String> wordDict) {
+    public boolean wordBreak3_2(String s, List<String> wordDict) {
         Set<String> wordSet = new HashSet<>(wordDict);
         int len = s.length();
         boolean[] dp = new boolean[len + 1];
         dp[len] = true;
         for (int i = len - 1; i >= 0; i--) {
-            for (int j = len; j >= i; j--) {
+            for (int j = len; j > i; j--) {
                 dp[i] = dp[j] && wordSet.contains(s.substring(i, j));
                 if (dp[i]) {
                     break;
@@ -243,6 +272,7 @@ HashMap存储考虑过的解，value 的话就代表以当前 key作为结束的
         }
         return dp[0];
     }
+
 ```
 
 

@@ -85,7 +85,7 @@ Output:
 
 ### 记忆化回溯
 
-key 是当前考虑字符串的开始下标， value 包含了所有从头开始的所有可行句子。
+key 是当前考虑字符串的开始下标， value 包含了所有从key开始的所有可行句子。
 
 ```java
     public List<String> wordBreak1(String s, List<String> wordDict) {
@@ -117,7 +117,7 @@ key 是当前考虑字符串的开始下标， value 包含了所有从头开始
 
 另一种回溯记忆化思路
 
-key 是当前考虑字符串的结束下标+1， valuevalue 包含了所有从头开始的所有可行句子。
+key 是当前考虑字符串的结束下标+1， value 包含了所有从头开始到key这个下标的的所有可行句子。
 
 
 ```java
@@ -148,5 +148,86 @@ key 是当前考虑字符串的结束下标+1， valuevalue 包含了所有从�
         }
         map.put(end, list);
         return list;
+    }
+```
+
+
+### 动态规划
+
+dp[k] 被用来存储用 s[0:k) 可被拆分成合法单词的句子
+
+我们以 i 为结尾表示的子字符串的所有前缀，通过指针 j 将 s 拆分成 s1'和 s2'
+  
+
+```java
+    public List<String> wordBreak3(String s, List<String> wordDict) {
+        int len = s.length();
+        Set<String> wordSet = new HashSet<>(wordDict);
+        List<String>[] dp = new ArrayList[len + 1];
+        dp[0] = new ArrayList<>();
+        dp[0].add("");
+        for (int i = 1; i <= len; i++) {
+            List<String> list = new ArrayList<>();
+            for (int j = 0; j < i; j++) {
+                String posterfix = s.substring(j, i);
+                if (dp[j].size() > 0 && wordSet.contains(posterfix)) {
+                    for (String str : dp[j]) {
+                        list.add(str + (str.equals("") ? "" : " ") + posterfix);
+                    }
+                }
+            }
+            dp[i] = list;
+        }
+        return dp[len];
+    }
+```
+
+### 动态规划 + DFS
+
+动态规划判断dp[k]是否为真，然后DFS找路径
+
+```java
+    public List<String> wordBreak4(String s, List<String> wordDict) {
+        int len = s.length();
+        Set<String> wordSet = new HashSet<>(wordDict);
+        boolean[] dp = new boolean[len + 1];
+        dp[0] = true;
+        for (int i = 1; i <= len; i++) {
+            for (int j = 0; j < i; j++) {
+                if (dp[j] && wordSet.contains(s.substring(j, i))) {
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+        List<String> list = new ArrayList<>();
+        if (dp[len]) {
+            Deque<String> queue = new LinkedList<>();
+            dfs(list, s, len, wordSet, queue, dp);
+        }
+        return list;
+    }
+
+    private void dfs(List<String> list, String s, int end, Set<String> wordSet, Deque<String> queue, boolean[] dp) {
+        if (end == 0) {
+            StringBuilder sb = new StringBuilder();
+            for (String word : queue) {
+                sb.append(word);
+                sb.append(" ");
+            }
+            sb.deleteCharAt(sb.length() - 1);
+            list.add(sb.toString());
+            return;
+        }
+        for (int i = 0; i < end; i++) {
+            if (dp[i]) {
+                String suffix = s.substring(i, end);
+                if (wordSet.contains(suffix)) {
+                    queue.addFirst(suffix);
+                    dfs(list, s, i, wordSet, queue, dp);
+                    queue.removeFirst();
+                }
+            }
+        }
     }
 ```
