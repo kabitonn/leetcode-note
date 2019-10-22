@@ -94,6 +94,13 @@ Therefore, you can't travel around the circuit once no matter where you start.
         return start;
     }
 ```
+
+时间复杂度：O(n^2)
+空间复杂度：O(1)
+
+
+
+
 ### 遍历优化
 ```
 * * * * * *
@@ -142,6 +149,10 @@ i     j
         return -1;
     }
 ```
+时间复杂度：O(n)
+空间复杂度：O(1)
+
+
 
 ### 贪心 一次遍历
 
@@ -170,6 +181,9 @@ i     j
         return totalTank >= 0 ? start : -1;
     }
 ```
+
+时间复杂度：O(n)
+空间复杂度：O(1)
 
 
 
