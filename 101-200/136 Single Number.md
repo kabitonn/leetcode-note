@@ -24,7 +24,7 @@ Output: 4
 ## 思路
 
 1. 排序，前后相等即为重复
-2. HashMap
+2. 计数
 3. 异或
 
 
@@ -47,9 +47,12 @@ Output: 4
         return 0;
     }
 ```
+时间复杂度： O(n*log(n)) 
+空间复杂度： O(n) 
 
 
-### HashMap
+
+### HashMap 计数
 
 
 ```java
@@ -68,6 +71,9 @@ Output: 4
     	return 0;
     }
 ```
+时间复杂度： O(n) 
+空间复杂度： O(n) 
+
 
 
 ### 异或运算
