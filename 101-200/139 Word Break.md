@@ -35,6 +35,8 @@ Output: false
 ## 思路
 
 - 回溯
+- 分治
+- 动态规划
 
 ## 解决方法
 
@@ -42,7 +44,8 @@ Output: false
 
 ### 递归回溯 记忆化
 
-HashMap存储考虑过的解，key 的话就存 temp，value 的话就代表以当前 temp 开始的字符串，经过后边的尝试是否能达到目标字符串 s
+HashMap存储考虑过的解，value 的话就代表以当前 key开始的字符串，经过后边的尝试是否能达到目标字符串 s
+
 
 ```java
     public boolean wordBreak(String s, List<String> wordDict) {
@@ -79,6 +82,9 @@ HashMap存储考虑过的解，key 的话就存 temp，value 的话就代表以�
 ### 递归分治 记忆化
 
 dp[i,j)，表示从 s 的第 i 个字符开始，到第 j 个字符的前一个结束的字符串是否能由 wordDict 构成。
+
+HashMap存储考虑过的解，value 的话就代表以当前 key开始的字符串，经过后边的尝试是否能达到目标字符串 s
+
 
 
 ```
@@ -127,6 +133,8 @@ dp[0,len) =    wordDict.contains(s[0,1)) && dp[1,len)
 
 ```
 
+HashMap存储考虑过的解，value 的话就代表以当前 key作为结束的字符串，经过后边的尝试是否能达到目标字符串 s
+
 
 
 
@@ -143,7 +151,7 @@ dp[0,len) =    wordDict.contains(s[0,1)) && dp[1,len)
         if (map.containsKey(s)) {
             return map.get(s);
         }
-        for (int i = 1; i <= s.length(); i++) {
+        for (int i = len; i>0; i--) {
             if (wordSet.contains(s.substring(0, i)) && wordBreak1(s.substring(i), wordSet, map)) {
                 map.put(s, true);
                 return true;
@@ -154,4 +162,49 @@ dp[0,len) =    wordDict.contains(s[0,1)) && dp[1,len)
     }
 
 ```
+
+
+### 动态规划
+
+用 dp[i] 表示字符串 s[0,i) 能否由 wordDict 构成。对应分治思路一
+
+```java
+    public boolean wordBreak2(String s, List<String> wordDict) {
+        Set<String> wordSet = new HashSet<>(wordDict);
+        boolean[] dp = new boolean[s.length() + 1];
+        dp[0] = true;
+        for (int i = 1; i <= s.length(); i++) {
+            for (int j = 0; j < i; j++) {
+                dp[i] = dp[j] && wordSet.contains(s.substring(j, i));
+                if (dp[i]) {
+                    break;
+                }
+            }
+        }
+        return dp[s.length()];
+    }
+
+```
+
+用 dp[i] 表示字符串 s[i,len) 能否由 wordDict 构成。对应分治思路二
+
+```java
+    public boolean wordBreak2_1(String s, List<String> wordDict) {
+        Set<String> wordSet = new HashSet<>(wordDict);
+        int len = s.length();
+        boolean[] dp = new boolean[len + 1];
+        dp[len] = true;
+        for (int i = len - 1; i >= 0; i--) {
+            for (int j = len; j >= i; j--) {
+                dp[i] = dp[j] && wordSet.contains(s.substring(i, j));
+                if (dp[i]) {
+                    break;
+                }
+            }
+        }
+        return dp[0];
+    }
+```
+
+
 
