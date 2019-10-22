@@ -24,6 +24,7 @@ Output:
 ## 思路
 
 - 分治
+- 回溯
 
 ## 解决方法
 
@@ -140,3 +141,66 @@ aabb
     }
 ```
 
+### 回溯 DFS
+
+
+```
+aabb
+先考虑在第 1 个位置切割，a | abb
+把 a 加入到结果中 [a]
+
+然后考虑 abb
+先考虑在第 1 个位置切割，a | bb
+把 a  加入到结果中 [a a]
+
+然后考虑 bb
+先考虑在第 1 个位置切割，b | b
+把 b 加入到结果中 [a a b] 
+
+然后考虑 b
+先考虑在第 1 个位置切割，b | 
+把 b 加入到结果中 [a a b b] 
+
+然后考虑空串
+把结果加到最终结果中 [[a a b b]]
+
+回溯到上一层 
+考虑 bb
+考虑在第 2 个位置切割，bb |
+把 bb 加入到结果中 [a a bb] 
+
+然后考虑 空串
+把结果加到最终结果中 [[a a b b] [a a bb]]
+
+然后继续回溯
+```
+
+```java
+    public List<List<String>> partition2(String s) {
+        int len = s.length();
+        boolean[][] dp = new boolean[len][len];
+        for (int l = 1; l <= len; l++) {
+            for (int i = 0; i <= len - l; i++) {
+                int j = i + l - 1;
+                dp[i][j] = s.charAt(i) == s.charAt(j) && (l < 3 || dp[i + 1][j - 1]);
+            }
+        }
+        List<List<String>> listList = new ArrayList<>();
+        backtrack(s, 0, listList, new ArrayList<>(), dp);
+        return listList;
+    }
+
+    public void backtrack(String s, int start, List<List<String>> listList, List<String> list, boolean[][] dp) {
+        if (start == s.length()) {
+            listList.add(new ArrayList<>(list));
+            return;
+        }
+        for (int i = start; i < s.length(); i++) {
+            if (dp[start][i]) {
+                list.add(s.substring(start, i + 1));
+                backtrack(s, i + 1, listList, list, dp);
+                list.remove(list.size() - 1);
+            }
+        }
+    }
+```
