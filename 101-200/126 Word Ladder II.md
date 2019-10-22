@@ -568,7 +568,7 @@ BFS 的队列就不去存储 String 了，直接去存到目前为止的路径�
     }
 ```
 
-### 双向BFS
+### DFS+双向BFS
 
 
 利用 BFS 建立了每个节点的邻居节点
@@ -595,7 +595,101 @@ BFS 的队列就不去存储 String 了，直接去存到目前为止的路径�
 
 
 ```java
+    //DFS+BFS 双向搜索
+    public List<List<String>> findLadders6(String beginWord, String endWord, List<String> wordList) {
+        List<List<String>> listList = new ArrayList<>();
+        if (!wordList.contains(endWord)) {
+            return listList;
+        }
+        Map<String, List<String>> adjacentMap = new HashMap<>();
 
+        Set<String> set1 = new HashSet<>();
+        set1.add(beginWord);
+        Set<String> set2 = new HashSet<>();
+        set2.add(endWord);
+        Set<String> wordSet = new HashSet<>(wordList);
+        twoEndBfs(set1, set2, wordSet, true, adjacentMap);
+
+        List<String> path = new ArrayList<>();
+        path.add(beginWord);
+        findLadders6(listList, path, beginWord, endWord, adjacentMap);
+        return listList;
+    }
+    //DFS
+    private void findLadders6(List<List<String>> listList, List<String> path, String beginWord, String endWord, Map<String, List<String>> adjacentMap) {
+        if (beginWord.equals(endWord)) {
+            listList.add(new ArrayList<>(path));
+            return;
+        }
+        // 得到所有的下一个的节点
+        List<String> adjacentList = adjacentMap.getOrDefault(beginWord, new ArrayList<>());
+        for (String adjacent : adjacentList) {
+            path.add(adjacent);
+            findLadders6(listList, path, adjacent, endWord, adjacentMap);
+            path.remove(path.size() - 1);
+        }
+    }
+
+    //利用递归实现了双向搜索
+    //direction 为 true 代表向下扩展，false 代表向上扩展
+    private boolean twoEndBfs(Set<String> set1, Set<String> set2, Set<String> wordSet, boolean direction,
+                              Map<String, List<String>> adjacentMap) {
+
+        if (set1.isEmpty()) {
+            return false;
+        }
+        // set1 的数量多，就反向扩展
+        if (set1.size() > set2.size()) {
+            return twoEndBfs(set2, set1, wordSet, !direction, adjacentMap);
+        }
+        // 将已经访问过单词删除
+        wordSet.removeAll(set1);
+        wordSet.removeAll(set2);
+
+        boolean done = false;
+
+        // 保存新扩展得到的节点
+        Set<String> set = new HashSet<>();
+
+        for (String word : set1) {
+            //遍历每一位
+            for (int i = 0; i < word.length(); i++) {
+                char[] s = word.toCharArray();
+
+                // 尝试所有字母
+                for (char ch = 'a'; ch <= 'z'; ch++) {
+                    if (s[i] == ch) {
+                        continue;
+                    }
+                    s[i] = ch;
+
+                    String adj = new String(s);
+
+                    // 根据方向得到 map 的 key 和 val
+                    String key = direction ? word : adj;
+                    String val = direction ? adj : word;
+
+                    List<String> list = adjacentMap.getOrDefault(key, new ArrayList<>());
+
+                    //如果相遇了就保存结果
+                    if (set2.contains(adj)) {
+                        done = true;
+                        list.add(val);
+                        adjacentMap.put(key, list);
+                    }
+
+                    //如果还没有相遇，并且新的单词在 wordSet 中，那么就加到 set 中
+                    if (!done && wordSet.contains(adj)) {
+                        set.add(adj);
+                        list.add(val);
+                        adjacentMap.put(key, list);
+                    }
+                }
+            }
+        }
+        //一般情况下新扩展的元素会多一些，所以我们下次反方向扩展  set2
+        return done || twoEndBfs(set2, set, wordSet, !direction, adjacentMap);
+    }
 ```
 
 
