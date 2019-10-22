@@ -1,18 +1,17 @@
-# 131. Palindrome Partitioning(M)
-
+# 131. Palindrome Partitioning\(M\)
 
 [131. 分割回文串](https://leetcode-cn.com/problems/palindrome-partitioning/)
 
-
-## 题目描述(中等)
+## 题目描述\(中等\)
 
 Given a string s, partition s such that every substring of the partition is a palindrome.
 
 Return all possible palindrome partitioning of s.
 
 Example:
+
 ```
-Input: "aab"
+Input: "aab"
 Output:
 [
   ["aa","b"],
@@ -20,15 +19,12 @@ Output:
 ]
 ```
 
-
 ## 思路
 
-- 分治
-- 回溯
+* 分治
+* 回溯
 
 ## 解决方法
-
-
 
 ### 分治
 
@@ -55,7 +51,6 @@ aabb
 
 最后所有的结果就是所有的加起来
 [a a b b] [a a bb] [aa b b] [aa bb]
-
 ```
 
 ```java
@@ -99,15 +94,14 @@ aabb
         }
         return true;
     }
-
 ```
 
 ### 动态规划 + 分治
 
-用 dp[ i ][ j ] 表示 s[ i, j ] 是否是回文串。
+用 dp\[ i \]\[ j \] 表示 s\[ i, j \] 是否是回文串。
 
-然后有 dp[ i ][ j ] = s[ i ] == s[ j ] && dp[ i + 1 ][ j - 1 ] 。
- 
+然后有 dp\[ i \]\[ j \] = s\[ i \] == s\[ j \] && dp\[ i + 1 \]\[ j - 1 \] 。
+
 ```java
     public List<List<String>> partition1(String s) {
         int len = s.length();
@@ -143,7 +137,6 @@ aabb
 
 ### 回溯 DFS
 
-
 ```
 aabb
 先考虑在第 1 个位置切割，a | abb
@@ -175,6 +168,12 @@ aabb
 然后继续回溯
 ```
 
+
+
+![](/assets/101-200/131-s-3-1.png)
+
+
+
 ```java
     public List<List<String>> partition2(String s) {
         int len = s.length();
@@ -204,3 +203,6 @@ aabb
         }
     }
 ```
+
+
+
