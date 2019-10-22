@@ -87,8 +87,8 @@ Bonus point if you are able to do this using only O(n) extra space, where n is t
 ```
 
 ### 动态规划
-
-dp[ i ][ j ] = min(dp[ i + 1][ j ], dp[ i + 1][ j + 1]) + triange[i][j]
+自底向上
+dp[ i ][ j ] = min(dp[ i + 1][ j ], dp[ i + 1][ j + 1]) + triange[ i ][ j ]
 
 ```java
     public int minimumTotal1(List<List<Integer>> triangle) {
@@ -113,6 +113,10 @@ dp[ i ][ j ] = min(dp[ i + 1][ j ], dp[ i + 1][ j + 1]) + triange[i][j]
 ```
 
 ### 动态规划空间优化
+
+自底向上
+dp[ j ] = min([ j ], [ j + 1]) + triange[ i ][ j ]
+
 
 ```java
     public int minimumTotal2(List<List<Integer>> triangle) {
