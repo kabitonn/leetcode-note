@@ -26,23 +26,21 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
 ## 思路
 
-1. 二次遍历
+1. 双重遍历
 2. 一次遍历 动态规划
 
 ## 解决方法
 
-### 二次遍历
+### 暴力法 双重遍历
 遍历所有情况，求出最大利益
 
 ```java
     public int maxProfit(int[] prices) {
         int max = 0;
-        for(int i=0;i<prices.length-1;i++) {
-        	for(int j=i+1;j<prices.length;j++) {
-        		if(prices[j]-prices[i]>max) {
-        			max = prices[j]-prices[i];
-        		}
-        	}
+        for (int i = 0; i < prices.length - 1; i++) {
+            for (int j = i + 1; j < prices.length; j++) {
+                max = Math.max(prices[j] - prices[i], max);
+            }
         }
         return max;
     }
@@ -51,24 +49,26 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 空间复杂度：O(1)
 
 
-### 一次遍历 动态规划
+### 一次遍历
 正向遍历，保存当前最小值，计算最大利益
 
 ```java
-    public int maxProfit(int[] prices) {
-        int maxProfit = 0;
+    int maxProfit = 0;
         int minPrice = Integer.MAX_VALUE;
-        for(int i=0;i<prices.length;i++) {
-        	if(prices[i]<minPrice) {minPrice=prices[i];}
-        	else if(prices[i] - minPrice > maxProfit) {
-        		maxProfit = prices[i] - minPrice;
-        	}
+        for (int price : prices) {
+            if (price < minPrice) {
+                minPrice = price;
+            } else {
+                maxProfit = Math.max(price - minPrice, maxProfit);
+            }
         }
         return maxProfit;
     }
 ```
 时间复杂度：O(n)
 空间复杂度：O(1)
+
+### 动态规划
 
 
 

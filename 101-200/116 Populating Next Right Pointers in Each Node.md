@@ -33,6 +33,9 @@ Example:
 
 ### 递归
 
+对根节点的左右子树连接，并将右子树next连接根节点的next的左子树(由于完美二叉树父节点的兄弟节点是完备的
+)
+
 ```java
     public Node connect(Node root) {
         if (root == null) {
@@ -52,6 +55,7 @@ Example:
 ```
 
 ### BFS
+队列将每层节点存储并连接
 
 ```java
     public Node connect1(Node root) {

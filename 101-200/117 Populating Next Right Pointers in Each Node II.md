@@ -32,6 +32,8 @@ Initially, all next pointers are set to NULL.
 
 ### 递归
 
+对根节点的左右子树连接next指针，然后递归对右子树左子树连接
+
 ```java
     public Node connect0(Node root) {
         if (root == null) {
@@ -99,6 +101,10 @@ Initially, all next pointers are set to NULL.
     }
 ```
 ### BFS
+
+
+采用队列将每层节点存储并连接
+
 
 ```java
     public Node connect1(Node root) {

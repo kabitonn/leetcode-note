@@ -25,11 +25,11 @@ Follow up:
 
 1. 每行正向遍历，根据上一行计算该行数据
 2. 每行逆向遍历，当前行即可作为上一行
+3. 公式法
 
 ## 解决方法
 
 ### 行内正向遍历
-
 
 ```java
     public List<Integer> getRow(int rowIndex) {
@@ -51,8 +51,9 @@ Follow up:
         return row;
     }
 ```
-时间复杂度 $$O(n^2)$$
-空间复杂度 O(n)
+
+时间复杂度 $$O(n^2)$$  
+空间复杂度 O\(n\)
 
 ```java
     public List<Integer> getRow0(int rowIndex) {
@@ -74,9 +75,8 @@ Follow up:
     }
 ```
 
-时间复杂度 $$O(n^2)$$
-空间复杂度 O(n)
-
+时间复杂度 $$O(n^2)$$  
+空间复杂度 O\(n\)
 
 ### 行内逆向遍历
 
@@ -103,10 +103,33 @@ Follow up:
         return row;
     }
 ```
-时间复杂度 $$O(n^2)$$
-空间复杂度 O(n)
 
+时间复杂度 $$O(n^2)$$  
+空间复杂度 O\(n\)
 
+### 公式法
+杨辉三角其实可以看做由组合数构成
+
+![](/assets/101-200/119-s-3-1.png)
+
+$$ C_n^​k=n!/(k!(n-k)!)=(n*(n-1)*(n-2)∗...(n-k+1))/k! $$
+
+$$ C_n^k = C_n^{k-1} * (n-k+1)/k $$
+
+```java
+    public List<Integer> getRow2(int rowIndex) {
+        List<Integer> row = new ArrayList<>();
+        int N = rowIndex;
+        long pre = 1;
+        row.add(1);
+        for (int k = 1; k <= N; k++) {
+            long cur = pre * (N - k + 1) / k;
+            row.add((int) cur);
+            pre = cur;
+        }
+        return row;
+    }
+```
 
 
 
