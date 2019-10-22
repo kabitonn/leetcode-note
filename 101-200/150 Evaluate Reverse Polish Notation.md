@@ -1,7 +1,7 @@
 # 150. Evaluate Reverse Polish Notation(M)
 
 
-[]()
+[150. 逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/)
 
 
 ## 题目描述(中等)
@@ -50,7 +50,33 @@ Explanation:
 
 
 
-###
+### 栈
+
+```java
+    public int evalRPN(String[] tokens) {
+        Stack<Integer> stack = new Stack<>();
+        int op1, op2, r = 0;
+        for (String s : tokens) {
+            if ("+".equals(s)) {
+                op2 = stack.pop();
+                stack.push(stack.pop() + op2);
+            } else if ("-".equals(s)) {
+                op2 = stack.pop();
+                stack.push(stack.pop() - op2);
+            } else if ("*".equals(s)) {
+                op2 = stack.pop();
+                stack.push(stack.pop() * op2);
+            } else if ("/".equals(s)) {
+                op2 = stack.pop();
+                stack.push(stack.pop() / op2);
+            } else {
+                stack.push(Integer.valueOf(s));
+            }
+        }
+        int result = stack.pop();
+        return result;
+    }
+```
 
 
 
