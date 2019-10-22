@@ -1,43 +1,46 @@
-# 140. Word Break II(H)
-
+# 140. Word Break II\(H\)
 
 [140. 单词拆分 II](https://leetcode-cn.com/problems/word-break-ii/)
 
+## 题目描述\(困难\)
 
-## 题目描述(困难)
-
-Given a **non-empty** string s and a dictionary wordDict containing a list of **non-empty** words, add spaces in s to construct a sentence where each word is a valid dictionary word. Return all such possible sentences.
+Given a **non-empty** string s and a dictionary wordDict containing a list of **non-empty** words, add spaces in s to construct a sentence where each word is a valid dictionary word. Return all such possible sentences.
 
 **Note**:
 
-- The same word in the dictionary may be reused multiple times in the segmentation.
-- You may assume the dictionary does not contain duplicate words.
+* The same word in the dictionary may be reused multiple times in the segmentation.
+* You may assume the dictionary does not contain duplicate words.
 
 Example 1:
+
 ```
 Input:
 s = "catsanddog"
 wordDict = ["cat", "cats", "and", "sand", "dog"]
 Output:
 [
-  "cats and dog",
-  "cat sand dog"
+  "cats and dog",
+  "cat sand dog"
 ]
 ```
+
 Example 2:
+
 ```
 Input:
 s = "pineapplepenapple"
 wordDict = ["apple", "pen", "applepen", "pine", "pineapple"]
 Output:
 [
-  "pine apple pen apple",
-  "pineapple pen apple",
-  "pine applepen apple"
+  "pine apple pen apple",
+  "pineapple pen apple",
+  "pine applepen apple"
 ]
 Explanation: Note that you are allowed to reuse a dictionary word.
 ```
+
 Example 3:
+
 ```
 Input:
 s = "catsandog"
@@ -48,12 +51,12 @@ Output:
 
 ## 思路
 
-- 回溯
-- 
+* 回溯
+* 记忆化回溯
+* 动态递归
+* 动态递归+DFS
 
 ## 解决方法
-
-
 
 ### 回溯
 
@@ -80,8 +83,10 @@ Output:
     }
 ```
 
-时间复杂度：$$O(n^n)$$，考虑最坏情况 ss = "aaaaaaa"，s 的每一个前缀都在字典中，回溯树的大小会达到 $$ n^n $$
-空间复杂度：O(n^3)，最坏情况下，回溯的深度可以达到 n 层，每层可能包含 n 个字符串，且每个字符串的长度都为 n 。
+必然超时
+
+时间复杂度：$$O(n^n)$$，考虑最坏情况 ss = "aaaaaaa"，s 的每一个前缀都在字典中，回溯树的大小会达到 $$ n^n $$  
+空间复杂度：O\(n^3\)，最坏情况下，回溯的深度可以达到 n 层，每层可能包含 n 个字符串，且每个字符串的长度都为 n 。
 
 ### 记忆化回溯
 
@@ -114,11 +119,9 @@ key 是当前考虑字符串的开始下标， value 包含了所有从key开始
     }
 ```
 
-
 另一种回溯记忆化思路
 
 key 是当前考虑字符串的结束下标+1， value 包含了所有从头开始到key这个下标的的所有可行句子。
-
 
 ```java
     public List<String> wordBreak2(String s, List<String> wordDict) {
@@ -151,13 +154,11 @@ key 是当前考虑字符串的结束下标+1， value 包含了所有从头开�
     }
 ```
 
-
 ### 动态规划
 
-dp[k] 被用来存储用 s[0:k) 可被拆分成合法单词的句子
+dp\[k\] 被用来存储用 s\[0:k\) 可被拆分成合法单词的句子
 
 我们以 i 为结尾表示的子字符串的所有前缀，通过指针 j 将 s 拆分成 s1'和 s2'
-  
 
 ```java
     public List<String> wordBreak3(String s, List<String> wordDict) {
@@ -181,13 +182,18 @@ dp[k] 被用来存储用 s[0:k) 可被拆分成合法单词的句子
         return dp[len];
     }
 ```
-时间复杂度：O(n^3)，求 dp 需要两重循环，添加一个新的列表需要额外一重循环。
 
-空间复杂度：O(n^3)，dp 数组的长度是n ，dp 数组里保存了数组，数组里是一些字符串，也就是每个 dp 元素需要 n^2的空间。
+![](/assets/101-200/140-s-3-1.png)
+
+超时，极端情况下
+
+时间复杂度：O\(n^3\)，求 dp 需要两重循环，添加一个新的列表需要额外一重循环。
+
+空间复杂度：O\(n^3\)，dp 数组的长度是n ，dp 数组里保存了数组，数组里是一些字符串，也就是每个 dp 元素需要 n^2的空间。
 
 ### 动态规划 + DFS
 
-动态规划判断dp[k]是否为真，然后DFS找路径
+动态规划判断dp\[k\]是否为真，然后DFS找路径
 
 ```java
     public List<String> wordBreak4(String s, List<String> wordDict) {
@@ -234,3 +240,6 @@ dp[k] 被用来存储用 s[0:k) 可被拆分成合法单词的句子
         }
     }
 ```
+
+
+
