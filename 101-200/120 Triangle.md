@@ -58,6 +58,8 @@ Bonus point if you are able to do this using only O(n) extra space, where n is t
 
 ### 递归 记忆化
 
+把每次的结果存起来，进入递归前先判断当前解有没有求出来。我们可以用 HashMap 存，也可以用二维数组存
+
 ```java
     public int minimumTotal0(List<List<Integer>> triangle) {
         int size = triangle.size();
