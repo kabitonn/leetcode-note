@@ -31,6 +31,7 @@ Surrounded regions shouldn’t be on the border, which means that any 'O' on th
 
 - 当前节点DFS
 - 边界节点开始DFS
+- 并查集
 
 ## 解决方法
 
@@ -202,3 +203,8 @@ Surrounded regions shouldn’t be on the border, which means that any 'O' on th
         }
     }
 ```
+
+### 并查集
+
+
+//TODO
