@@ -136,8 +136,6 @@ dp[0,len) =    wordDict.contains(s[0,1)) && dp[1,len)
 HashMap存储考虑过的解，value 的话就代表以当前 key作为结束的字符串，经过后边的尝试是否能达到目标字符串 s
 
 
-
-
 ```java
     public boolean wordBreak1(String s, List<String> wordDict) {
         Set<String> wordSet = new HashSet<>(wordDict);
@@ -160,8 +158,48 @@ HashMap存储考虑过的解，value 的话就代表以当前 key作为结束的
         map.put(s, false);
         return false;
     }
-
 ```
+
+分治思路二的另一种写法
+
+```java
+    public boolean wordBreak3(String s, List<String> wordDict) {
+        return wordBreak3(s, new HashSet(wordDict), 0);
+    }
+
+    public boolean wordBreak3(String s, Set<String> wordDict, int start) {
+        if (start == s.length()) {
+            return true;
+        }
+        for (int end = start + 1; end <= s.length(); end++) {
+            if (wordDict.contains(s.substring(start, end)) && wordBreak3(s, wordDict, end)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    //记忆化回溯
+    public boolean wordBreak4(String s, List<String> wordDict) {
+        return wordBreak4(s, new HashSet(wordDict), 0, new Boolean[s.length()]);
+    }
+
+    public boolean wordBreak4(String s, Set<String> wordDict, int start, Boolean[] memo) {
+        if (start == s.length()) {
+            return true;
+        }
+        if (memo[start] != null) {
+            return memo[start];
+        }
+        for (int end = start + 1; end <= s.length(); end++) {
+            if (wordDict.contains(s.substring(start, end)) && wordBreak4(s, wordDict, end, memo)) {
+                return memo[start] = true;
+            }
+        }
+        return memo[start] = false;
+    }
+```
+
 
 
 ### 动态规划
@@ -207,4 +245,35 @@ HashMap存储考虑过的解，value 的话就代表以当前 key作为结束的
 ```
 
 
+### BFS
 
+将字符串可视化成一棵树，每一个节点是用 endend 为结尾的前缀字符串。当两个节点之间的所有节点都对应了字典中一个有效字符串时，两个节点可以被连接。
+
+为了形成这样的一棵树，我们从给定字符串的第一个字符开始（比方说 ss ），将它作为树的根部，开始找所有可行的以该字符为首字符的可行子串。进一步的，将每一个子字符串的结束字符的下标（比方说 ii）放在队列的尾部供宽搜后续使用。
+
+每次我们从队列最前面弹出一个元素，并考虑字符串 s(i+1,end)s(i+1,end) 作为原始字符串，并将当前节点作为树的根。这个过程会一直重复，直到队列中没有元素。如果字符串最后的元素可以作为树的一个节点，这意味着初始字符串可以被拆分成多个给定字典中的子字符串。
+
+```java
+    public boolean wordBreak5(String s, List<String> wordDict) {
+        Set<String> wordDictSet = new HashSet<>(wordDict);
+        Queue<Integer> queue = new LinkedList<>();
+        int[] visited = new int[s.length()];
+        queue.add(0);
+        while (!queue.isEmpty()) {
+            int start = queue.remove();
+            if (visited[start] == 0) {
+                for (int end = start + 1; end <= s.length(); end++) {
+                    if (wordDictSet.contains(s.substring(start, end))) {
+                        queue.add(end);
+                        if (end == s.length()) {
+                            return true;
+                        }
+                    }
+                }
+                visited[start] = 1;
+            }
+        }
+        return false;
+    }
+
+```
