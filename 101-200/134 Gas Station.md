@@ -63,6 +63,16 @@ Therefore, you can't travel around the circuit once no matter where you start.
 
 ### 遍历
 
+考虑从第`0`个点出发，能否回到第`0`个点。
+
+考虑从第`1`个点出发，能否回到第`1`个点。
+
+考虑从第`2`个点出发，能否回到第`2`个点。
+
+... ...
+
+考虑从第`n`个点出发，能否回到第`n`个点。
+
 ```java
     public int canCompleteCircuit(int[] gas, int[] cost) {
         int len = gas.length;
