@@ -1,7 +1,5 @@
 # 138. Copy List with Random Pointer\(M\)
 
-
-
 ## 题目描述\(中等\)
 
 A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
@@ -32,10 +30,9 @@ class Node {
 
 ## 思路
 
-- 遍历生成同时进行
-- 两次遍历 生成 设置
-- 
-
+* 遍历生成同时进行
+* 两次遍历 生成 设置
+* 
 ## 解决方法
 
 ### 遍历生成 递归
@@ -66,7 +63,6 @@ public Node copyRandomList(Node head) {
         return newHead;
     }
 ```
-
 
 ```java
 public Node copyRandomList0(Node head) {
@@ -102,8 +98,8 @@ public Node copyRandomList0(Node head) {
     }
 ```
 
-
 ### 两次遍历
+
 遍历第一遍链表，我们不考虑链表之间的相互关系，仅仅生成所有节点，然后把它存到 HashMap 中，val 作为 key，Node 作为 value。
 
 遍历第二遍链表，将之前生成的节点取出来，更新它们的 next 和 random 指针。
@@ -135,15 +131,17 @@ public Node copyRandomList0(Node head) {
         }
         return map.get(head.val);
     }
-
 ```
-
 
 ### 利用next域保存生成的结点
 
 1. 生成所有的节点，并且分别插入到原有节点的后边
-- 更新插入节点的 random
-- 将新旧节点分离开来
+2. 更新插入节点的 random
+3. 将新旧节点分离开来
+
+![](/assets/101-200/138-s-3-1.png)
+
+
 
 ```java
     public Node copyRandomList1(Node head) {
@@ -184,13 +182,15 @@ public Node copyRandomList0(Node head) {
     }
 ```
 
-
 ### 利用random域保存生成的结点
 
 1. 生成所有的节点，将它们保存到原链表的 random 域，同时利用新生成的节点的 next 域保存原链表的 random。
-- 更新新生成节点的 random 指针。
-- 恢复原链表的 random 指针，同时更新新生成节点的 next 指针。
+2. 更新新生成节点的 random 指针。
+3. 恢复原链表的 random 指针，同时更新新生成节点的 next 指针。
 
+
+
+![](/assets/101-200/138-s-4-1.png)
 
 ```java
     public Node copyRandomList3(Node head) {
@@ -228,8 +228,6 @@ public Node copyRandomList0(Node head) {
         return l2Head;
     }
 ```
-
-
 
 
 
