@@ -94,6 +94,31 @@ Therefore, you can't travel around the circuit once no matter where you start.
         return start;
     }
 ```
+### 遍历优化
+```
+* * * * * *
+^     ^
+i     j
+```
+当考虑 i 能到达的最远的时候，假设是 j。
+
+那么 i + 1 到 j 之间的节点是不是就都不可能绕一圈了？
+
+假设 i + 1 的节点能绕一圈，那么就意味着从 i + 1 开始一定能到达 j + 1。
+
+又因为从 i 能到达 i + 1，所以从 i 也能到达 j + 1。
+
+但事实上，i 最远到达 j 。产生矛盾，所以 i + 1 的节点一定不能绕一圈。同理，其他的也是一样的证明。
+
+所以下一次的 i 我们不需要从 i + 1 开始考虑，直接从 j + 1 开始考虑即可。
+
+```
+* * * * * *
+  ^   ^
+  j   i
+
+```
+如果 i 最远能够到达 j ，根据上边的结论 i + 1 到 j 之间的节点都不可能绕一圈了。想象成一个圆，所以 i 后边的节点就都不需要考虑了，直接返回 -1 即可。
 
 ```java
     public int canCompleteCircuit1(int[] gas, int[] cost) {
@@ -118,7 +143,11 @@ Therefore, you can't travel around the circuit once no matter where you start.
     }
 ```
 
-### 贪心
+### 贪心 一次遍历
+
+如果无法环绕一周，那么gas[i]-cost[i]的差值累加必然小于0,；否则，就是能够环绕一周。
+一次遍历，在遍历中一边累加total一边寻找正确的start。
+
 
 ```java
     public int canCompleteCircuit2(int[] gas, int[] cost) {
