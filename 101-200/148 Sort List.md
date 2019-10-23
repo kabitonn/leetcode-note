@@ -56,6 +56,9 @@ Output: -1->0->3->4->5
 ```
 ### 归并排序
 
+- 链表长度为偶数时，slow指向中点偏左端点
+- 链表长度为奇数时，slow指向中点左侧端点
+
 ```java
     public ListNode sortList2(ListNode head) {
         if (head == null || head.next == null) {

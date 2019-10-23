@@ -33,7 +33,9 @@ Output: -1->0->3->4->5
 
 ## 思路
 
-
+- 前向插入
+- 前向插入有序链表
+- 判断插入必要
 
 ## 解决方法
 
@@ -89,7 +91,7 @@ Output: -1->0->3->4->5
 
 ```
 
-### 
+### 判断插入必要
 
 ```java
     public ListNode insertionSortList1(ListNode head) {
