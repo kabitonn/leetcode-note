@@ -71,7 +71,7 @@ Follow up:
 ### 右移遍历取余
 
 ```java
-    public int hammingWeight0(int n) {
+    public int hammingWeight(int n) {
         int count = 0;
         for (int i = 0; i < 32; i++) {
             count += n % 2;
