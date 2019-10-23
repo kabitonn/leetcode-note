@@ -1,5 +1,5 @@
 # 167. Two Sum II - Input array is sorted(E)
-[167. Two Sum II - Input array is sorted](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)
+[167. 两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)
 
 ## 题目描述(简单)
 
@@ -26,6 +26,7 @@ Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
 
 ### 遍历
 
+顺序遍历，若当前和大于target，跳出该层循环
 
 ```java
     public int[] twoSum(int[] numbers, int target) {
