@@ -1,22 +1,21 @@
-# 146. LRU Cache(M)
-
+# 146. LRU Cache\(M\)
 
 [146. LRU缓存机制](https://leetcode-cn.com/problems/lru-cache/)
 
+## 题目描述\(中等\)
 
-## 题目描述(中等)
+Design and implement a data structure for **Least Recently Used \(LRU\) cache**. It should support the following operations: get and put.
 
-Design and implement a data structure for **Least Recently Used (LRU) cache**. It should support the following operations: get and put.
-
-**get(key)** - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.
-**put(key, value)** - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.
+**get\(key\)** - Get the value \(will always be positive\) of the key if the key exists in the cache, otherwise return -1.  
+**put\(key, value\)** - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.
 
 The cache is initialized with a **positive **capacity.
 
-**Follow up**:
-Could you do both operations in **O(1)** time complexity?
+**Follow up**:  
+Could you do both operations in **O\(1\)** time complexity?
 
 Example:
+
 ```
 LRUCache cache = new LRUCache( 2 /* capacity */ );
 
@@ -33,13 +32,21 @@ cache.get(4);       // returns 4
 
 ## 思路
 
-
+* 字典树
+* 哈希+双向链表
 
 ## 解决方法
 
+### 哈希+双向链表
 
+![](/assets/101-200/150-s-2-1.png)
 
-###
+借助哈希表赋予了链表快速查找的特性嘛：可以快速查找某个 key 是否存在缓存（链表）中，同时可以快速删除、添加节点。
+
+- 为什么要是双向链表，单链表行不行？
+    - 单向链表无法实现O(1)的时间复杂度，在插入和删除时是在表头表尾处进行，单向链表对表尾无法满足
+- 另外，既然哈希表中已经存了 key，为什么链表中还要存键值对呢，只存值不就行了？
+    - 在容量满的时候，删除cache中需要根据key，获取链表尾部节点，需要从节点中获取key
 
 ```java
 public class LRUCache {
