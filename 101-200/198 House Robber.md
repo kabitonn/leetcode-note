@@ -33,24 +33,24 @@ $$ f(k) $$ = max $$ (f(k-2) + A_k, f(k-1)) $$
 
 ## 解决方法
 
-### 1
+### dp数组保存各个状态最大值
 
 max\[i\]为抢该房子的最大值
 
 ```java
     public int rob(int[] nums) {
         int len = nums.length;
-        if(len == 0) {return 0;}
-        else if (len == 1) {return nums[0];}
-        int[] max = new int[len];
-        for(int i=0;i<len;i++) {
-            if(i-2<0) {max[i] = nums[i];}
-            else if(i-3<0) {max[i] = nums[i]+nums[i-2];}
-            else {
-                max[i] = Math.max(max[i-2]+nums[i], max[i-3]+nums[i]);
-            }
+        if (len == 0) {
+            return 0;
+        } else if (len == 1) {
+            return nums[0];
         }
-        return Math.max(max[len-1],max[len-2]);
+        int[] max = new int[len + 1];
+        max[1] = nums[0];
+        for (int i = 2; i <= len; i++) {
+            max[i] = Math.max(max[i - 2] + nums[i - 1], max[i - 1]);
+        }
+        return max[len];
     }
 ```
 
@@ -72,6 +72,10 @@ cur 保存当前最大值
         return cur;
     }
 ```
+
+时间复杂度：O(n)。其中 n 为房子的数量。  
+空间复杂度：O(1)。
+
 
 ### 两个变量保存当前位置两种状态
 
