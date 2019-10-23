@@ -137,6 +137,8 @@ Explanation: The two lists do not intersect, so return null.
 
 ### 构造环求入口点
 
+将任意一链表收尾相连构成环，问题转化为环形链表查找入环节点
+
 ```java
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         if (headA == null || headB == null) {    return null;}
