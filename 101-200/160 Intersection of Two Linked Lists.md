@@ -130,7 +130,26 @@ Explanation: The two lists do not intersect, so return null.
 
 ### 哈希
 
-
+```java
+    public ListNode getIntersectionNode3(ListNode headA, ListNode headB) {
+        if (headA == null || headB == null) {
+            return null;
+        }
+        ListNode curA = headA, curB = headB;
+        Set<ListNode> set = new HashSet();
+        while (curA != null) {
+            set.add(curA);
+            curA = curA.next;
+        }
+        while (curB != null) {
+            if (set.contains(curB)) {
+                return curB;
+            }
+            curB = curB.next;
+        }
+        return null;
+    }
+```
 
 时间复杂度 : O(m+n)。
 空间复杂度 : O(m)或O(n)
