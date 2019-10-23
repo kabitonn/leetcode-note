@@ -130,6 +130,8 @@ Explanation: The two lists do not intersect, so return null.
 
 ### 哈希
 
+开辟一个set用以存储一条链表中的指针，遍历另一条链表查找指针是否相等
+
 ```java
     public ListNode getIntersectionNode3(ListNode headA, ListNode headB) {
         if (headA == null || headB == null) {
