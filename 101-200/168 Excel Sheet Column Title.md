@@ -1,5 +1,5 @@
 # 168. Excel Sheet Column Title(E)
-[168. Excel Sheet Column Title](https://leetcode-cn.com/problems/excel-sheet-column-title/)
+[168. 168. Excel表列名称](https://leetcode-cn.com/problems/excel-sheet-column-title/)
 
 ## 题目描述(简单)
 
@@ -34,6 +34,7 @@ Output: "ZY"
 
 
 ## 思路
+
 进制转换
 
 ## 解决方法
