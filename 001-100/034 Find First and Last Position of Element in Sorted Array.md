@@ -309,7 +309,51 @@ Output: [-1,-1]
     ```
     
     
-    
+### 二分查找左右边界(更规范)
+
+```java
+    public int binarySearchLowBound(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;
+        while (left < right) {
+            // 根据分支逻辑，这里选择左中位数
+            int mid = (left + right) >>> 1;
+            // 因为找大于等于 target 的第 1 个数，因此小于一定不符合要求
+            // 把它写在分支的前面
+            if (nums[mid] < target) {
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+        }
+        // 因为有可能不存在目标元素，最后一定要单独判断一下
+        if (nums[left] != target) {
+            return -1;
+        }
+        return left;
+    }
+
+    public int binarySearchUpBound(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;
+        while (left < right) {
+            // 根据分支逻辑，这里选择右中位数
+            int mid = (left + right + 1) >>> 1;
+            // 因为找小于等于 target 的最后 1 个数，因此大于一定不符合要求
+            // 把它写在分支的前面
+            if (nums[mid] > target) {
+                right = mid - 1;
+            } else {
+                left = mid;
+            }
+        }
+        // 因为有可能不存在目标元素，最后一定要单独判断一下
+        if (nums[left] != target) {
+            return -1;
+        }
+        return left;
+    }
+```
     
     
 
