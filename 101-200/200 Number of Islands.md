@@ -129,6 +129,8 @@ Output: 3
 
 ### BFS
 
+如果一个结点包含 1，则以其为根结点启动广度优先搜索。将其放入队列中,并标记为已访问
+
 ```java
     public int numIslands2(char[][] grid) {
         if (grid.length == 0 || grid[0].length == 0) {
