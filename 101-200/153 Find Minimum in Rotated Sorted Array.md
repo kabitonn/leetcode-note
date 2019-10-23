@@ -47,11 +47,13 @@ Output: 0
 
 ### 二分搜索
 
+- 旋转排序数组nums可以被拆分为2个排序数组nums1, nums2，并且nums1中所有元素比nums2大（因为nums中没有重复值）；
+- 因此，考虑二分法寻找值nums[i]，满足nums[i] < nums[i-1] and nums[i] < nums[i+1]
+- 设置left, right指针在nums数组两端，mid为中点：
+    - 当nums[mid] > nums[right]时，一定满足mid < i <= right，因此left = mid + 1；
+    - 当nums[mid] < nums[right]时，一定满足left< i <= mid，因此right = mid；
+    - 当nums[mid] == nums[right]时，说明数组长度len(num) == 1（因为计算mid向下取整）；当left = right也满足，但本题left == right时跳出循环。
 
-设置left, right指针在nums数组两端，mid为中点：
-- 当nums[mid] > nums[right]时，一定满足mid < i <= right，因此left = mid + 1；
-- 当nums[mid] < nums[right]时，一定满足left< i <= mid，因此right = mid；
-- 当nums[mid] == nums[right]时，说明数组长度len(num) == 1（因为计算mid向下取整）；当left = right也满足，但本题left == right时跳出循环。
 
 
 求最小值的偏移点

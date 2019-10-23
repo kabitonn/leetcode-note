@@ -25,7 +25,7 @@ Input: [2,2,2,0,1]
 Output: 0
 ```
 
-Note:
+**Note**:
 
 
 This is a follow up problem to Find Minimum in Rotated Sorted Array.
@@ -36,14 +36,48 @@ Would allow duplicates affect the run-time complexity? How and why?
 
 ## 思路
 
+- 遍历
+- 二分搜索
 
 
 ## 解决方法
 
 
+### 遍历
 
-###
+```java
+public int findMin(int[] nums) {
+        int min = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] < nums[i - 1]) {
+                min = nums[i];
+                break;
+            }
+        }
+        return min;
+    }
+```
 
+
+### 二分搜索
+
+
+```java
+    public int getBiasByMin(int[] nums) {
+        int left = 0, right = nums.length - 1;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] > nums[right]) {
+                left = mid + 1;
+            } else if (nums[mid] == nums[right]) {
+                right = right - 1;
+            } else {
+                right = mid;
+            }
+        }
+        return left;
+    }
+```
 
 
 
