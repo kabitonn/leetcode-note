@@ -1,5 +1,5 @@
 # 169. Majority Element(E)
-[169. Majority Element](https://leetcode-cn.com/problems/majority-element/)
+[169. 求众数](https://leetcode-cn.com/problems/majority-element/)
 
 ## 题目描述(简单)
 
