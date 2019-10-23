@@ -37,8 +37,7 @@ Follow up:
 
 ## 解决方法
 
-### 1
-
+### 取出低位放到对应的高位上
 
 ```java
     public int reverseBits(int n) {
@@ -61,5 +60,17 @@ Follow up:
     }
 ```
 
+### 依次取低位，循环变高位
 
+```java
+    public int reverseBits(int n) {
+        int a = 0;
+        for (int i = 0; i <= 31; i++) {
+            a <<= 1;
+            a += n & 1;
+            n >>= 1;
+        }
+        return a;
+    }
+```
 
