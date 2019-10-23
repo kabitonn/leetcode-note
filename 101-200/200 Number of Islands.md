@@ -125,5 +125,46 @@ Output: 3
 
 空间复杂度 : 最坏情况下为 O(m×n)，此时整个网格均为陆地，深度优先搜索的深度达到 (m×n)。
 
+
+
+### BFS
+
+```java
+    public int numIslands2(char[][] grid) {
+        if (grid.length == 0 || grid[0].length == 0) {
+            return 0;
+        }
+        int m = grid.length, n = grid[0].length;
+        Queue<int[]> queue = new LinkedList<>();
+        boolean[][] visited = new boolean[m][n];
+        int[] dx = {1, 0, -1, 0};
+        int[] dy = {0, 1, 0, -1};
+        int num = 0;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (!visited[i][j] && grid[i][j] == '1') {
+                    num++;
+                    queue.add(new int[]{i, j});
+                    visited[i][j] = true;
+                    while (!queue.isEmpty()) {
+                        int[] point = queue.poll();
+                        for (int k = 0; k < 4; k++) {
+                            int x = point[0] + dx[k];
+                            int y = point[1] + dy[k];
+                            if (x >= 0 && x < m && y >= 0 && y < n && !visited[x][y] && grid[x][y] == '1') {
+                                queue.add(new int[]{x, y});
+                                //入队时就标记为已访问，若出队时标记造成节点重复入队导致会超时
+                                visited[x][y] = true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return num;
+    }
+```
+
+
 ### 并查集
 
