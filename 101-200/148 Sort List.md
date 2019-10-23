@@ -60,21 +60,20 @@ Output: -1->0->3->4->5
 
 ![](/assets/101-200/148-s-2-1.png)
 
-
-
 链表快慢指针找中点trick，判断fast.next.next
+
 * 链表长度为偶数时，slow指向中点偏左结点
 * 链表长度为奇数时，slow指向中点左侧结点
 
 链表快慢指针找中点trick，判断fast.next
+
 * 链表长度为偶数时，slow指向中点偏右结点
 * 链表长度为奇数时，slow指向中点结点
 
 链表快慢指针找中点trick，fast先走一步，判断fast.next
+
 * 链表长度为偶数时，slow指向中点偏左结点
 * 链表长度为奇数时，slow指向中点左侧结点
-
-
 
 ```java
     public ListNode sortList2(ListNode head) {
@@ -109,6 +108,10 @@ Output: -1->0->3->4->5
 
 ### 自底向上归并排序
 
+![](/assets/101-200/148-s-3-1.png)
+
+
+
 counter数组存放归并后的链表头结点，根据下标i确定存放链表长度$$2^i$$，若数组当前下标处有链表存储，则归并后后移，该位置空以待后续继续存放
 
 ```java
@@ -122,9 +125,12 @@ counter数组存放归并后的链表头结点，根据下标i确定存放链表
         ListNode next;
         while (cur != null) {
             next = cur.next;
+            // 拿出的节点就和原来的链表没有关系了，我们在 counter 数组中完成排序，所以要切断它和原链表的关系
             cur.next = null;
             int i = 0;
             ListNode newMergeNode;
+            // 只要非空当前位置非空，就进行一次 merge，merge 以后尝试放到下一格，如果下一格非空就继续合并
+            // 合并以后再尝试放到下一格，直到下一格为空，直接放在那个为空的下一格就好
             while (counter[i] != null) {
                 newMergeNode = mergeTwoLists(cur, counter[i]);
                 cur = newMergeNode;
@@ -136,6 +142,7 @@ counter数组存放归并后的链表头结点，根据下标i确定存放链表
             cur = next;
         }
         ListNode newHead = null;
+        // 遍历整个 count 数组，将它们全部归并，这个操作就和归并 n 个有序单链表是一样的了，这里采用两两归并
         for (ListNode l : counter) {
             newHead = mergeTwoLists(newHead, l);
         }
