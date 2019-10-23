@@ -19,7 +19,9 @@ Output: ["AAAAACCCCC", "CCCCCAAAAA"]
 
 ## 思路
 
-
+- 暴力遍历
+- 滑动窗口 哈希
+- 位运算 数组计数
 
 ## 解决方法
 
@@ -96,7 +98,7 @@ Output: ["AAAAACCCCC", "CCCCCAAAAA"]
     }
 ```
 
-### //位运算 数组计数
+### 位运算 数组计数
 
 
 字符串中只存在四个字符 A，C，G ，T,那么可以用两位的二进制（00，01，10，11）来表示这四个字符，
@@ -113,7 +115,7 @@ Output: ["AAAAACCCCC", "CCCCCAAAAA"]
 
 
 ```java
-    //位运算 数组标记
+    //位运算 数组计数
     public List<String> findRepeatedDnaSequences3(String s) {
         List<String> list = new ArrayList<>();
         int[] nums = new int[1 << 20];
