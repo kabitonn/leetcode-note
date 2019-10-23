@@ -57,6 +57,12 @@ Explanation: The two lists do not intersect, so return null.
 
 ## 思路
 
+- 二次遍历
+- 双指针
+- 哈希
+- 构造环求入口点
+
+
 ## 解决方法
 
 ### 二次遍历
@@ -115,6 +121,13 @@ Explanation: The two lists do not intersect, so return null.
         return pA;
     }
 ```
+
+时间复杂度 : O(m+n)。
+空间复杂度 : O(1)
+
+### 哈希
+
+
 
 ### 构造环求入口点
 
