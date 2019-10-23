@@ -59,8 +59,8 @@ Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
 max, min 存储以当前数字为结尾的子串的最大值最小值
 
 对当前数字num判断
-- num < 0 ：max, min = min * num, max * num
-- num > 0 ：max, min = max * num, min * num
+- num < 0 ：max, min = min * num, max * num (同时和num比较)
+- num > 0 ：max, min = max * num, min * num (同时和num比较)
 
 ```java
     public int maxProduct1(int[] nums) {
