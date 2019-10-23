@@ -184,7 +184,7 @@ Output: [-1,-1]
     }
 ```
 
-1. 为什么 while 循环的条件中是 &lt;=，而不是 &lt; ？
+1. 为什么 while 循环的条件中是 <=，而不是 < ？
 
     答：因为初始化 right 的赋值是 nums.length-1，即最后一个元素的索引，而不是 nums.length。
 
