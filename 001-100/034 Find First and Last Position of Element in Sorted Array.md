@@ -205,15 +205,24 @@ Output: [-1,-1]
 ```java
     public int binarySearchMin(int[] nums, int target) {
         int left = 0;
-        int right = nums.length;    //注意
-        while(left<right) {    //注意
-            int mid = (left+right)/2;
-            if (nums[mid]<target) {    left = mid + 1;}
-            else if(nums[mid]>=target){    right = mid;}//注意
+        int right = nums.length;
+        //right最大值是取不到的,搜索区间左闭右开
+        while (left < right) {
+            //由分支确定左中点
+            int mid = (left + right) / 2;
+            if (nums[mid] < target) {
+                left = mid + 1;
+                //搜索区间右移
+            } else if (nums[mid] >= target) {
+                right = mid;
+            }
         }
-        left = (left<nums.length && nums[left]==target)?left:-1;
+        //若left == length,则必然不存在目标元素，且所有元素都小于目标元素
+        //其次，也可能不存在目标元素
+        left = (left < nums.length && nums[left] == target) ? left : -1;
         return left;
     }
+
 ```
 
 1. 为什么 while\(left &lt; right\) 而不是 &lt;= ?
@@ -257,13 +266,22 @@ Output: [-1,-1]
 ```java
     public int binarySearchMax(int[] nums, int target) {
         int left = 0;
-        int right = nums.length;    //注意
-        while(left<right) {    //注意
-            int mid = (left+right)/2;
-            if (nums[mid]<=target) {    left = mid + 1;}//注意
-            else if(nums[mid]>target){    right = mid;}//注意
+        int right = nums.length;
+        //right最大值是取不到的,搜索区间左闭右开
+        while (left < right) {    
+            //由分支逻辑确定左中点
+            int mid = (left + right) / 2;
+            if (nums[mid] <= target) {
+                left = mid + 1;
+                //搜索区间右移
+            }
+            else if (nums[mid] > target) {
+                right = mid;
+            }
         }
-        left = (left>0 && nums[left-1]==target)?left-1:-1;
+        //若left == 0,则必然不存在目标元素，且所有元素都大于目标元素
+        //其次，也可能不存在目标元素，返回的left为第一个大于目标元素的下标
+        left = (left > 0 && nums[left - 1] == target) ? left - 1 : -1;
         return left;
     }
 ```
@@ -277,6 +295,7 @@ Output: [-1,-1]
             left = mid + 1;
         }
     ```
+    
 
 2. 返回 -1 的操作？如果 nums 中不存在 target 这个值，怎么办？
 
