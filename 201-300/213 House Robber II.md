@@ -75,4 +75,48 @@ Explanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).
 
 ```
 
-### 动态规划
+### 动态规划优化
+
+max1存放抢第一家的dp
+max2存放抢最后一家的dp
+
+
+```java
+    public int rob01(int[] nums) {
+        int len = nums.length;
+        if (len == 0) {
+            return 0;
+        } else if (len == 1) {
+            return nums[0];
+        }
+        int[] max1 = new int[len];
+        int[] max2 = new int[len + 1];
+        max1[1] = nums[0];
+        for (int i = 2; i < len; i++) {
+            max1[i] = Math.max(max1[i - 2] + nums[i - 1], max1[i - 1]);
+        }
+        for (int i = 2; i <= len; i++) {
+            max2[i] = Math.max(max2[i - 2] + nums[i - 1], max2[i - 1]);
+        }
+        return Math.max(max1[len - 1], max2[len]);
+    }
+```
+继续优化成一个循环
+
+```java
+    public int rob1(int[] nums) {
+        int len = nums.length;
+        if (len == 0) {
+            return 0;
+        } else if (len == 1) {
+            return nums[0];
+        }
+        int[] max1 = new int[len + 1];
+        int[] max2 = new int[len + 1];
+        for (int i = 2; i <= len; i++) {
+            max1[i] = Math.max(max1[i - 2] + nums[i - 2], max1[i - 1]);
+            max2[i] = Math.max(max2[i - 2] + nums[i - 1], max2[i - 1]);
+        }
+        return Math.max(max1[len], max2[len]);
+    }
+```
