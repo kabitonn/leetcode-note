@@ -70,8 +70,6 @@ Output: 0
     所以我们只需要把 mid 和 end 比较，mid < end 丢弃右半部分(更新 end = mid)，mid > end 丢弃左半部分(更新 start = mid + 1)。直到 end 等于 start 时候结束就可以了。 
 
 
-
-
 ```java
     public int getBiasByMin(int[] nums) {
         int left = 0, right = nums.length - 1;
