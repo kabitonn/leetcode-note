@@ -54,6 +54,22 @@ Output: 0
 - 当nums[mid] == nums[right]时，说明数组长度len(num) == 1（因为计算mid向下取整）；当left = right也满足，但本题left == right时跳出循环。
 
 
+求最小值的偏移点
+比较中点和端点值的情况
+- mid 和 start 比较
+    - mid > start: 最小值在左半部分。
+    - mid < start：最小值在左半部分。
+  
+  无论大于小于，最小值都在左半部分，所以 mid 和 start 比较是不可取的
+- mid 和 end 比较
+    - mid < end：最小值在左半部分(包括mid)。
+    - mid > end：最小值在右半部分。
+
+    所以我们只需要把 mid 和 end 比较，mid < end 丢弃右半部分(更新 end = mid)，mid > end 丢弃左半部分(更新 start = mid + 1)。直到 end 等于 start 时候结束就可以了。 
+
+
+
+
 ```java
     public int getBiasByMin(int[] nums) {
         int left = 0, right = nums.length - 1;
@@ -69,6 +85,19 @@ Output: 0
     }
 
 ```
+
+求最大值的偏移点
+- mid 和 end 比较
+    - mid < end：最大值在右半部分。
+    - mid > end：最大值在右半部分。
+
+  无论大于小于，最大值都在右半部分，所以 mid 和 end比较是不可取的
+- mid 和 start 比较
+    - mid > start: 最大值在右半部分(包括mid)。
+    - mid < start：最大值在左半部分。
+
+    所以我们只需要把 mid 和 start比较(取mid时取右端点)，mid < start 丢弃右半部分(更新 end = mid -1 )，mid < start丢弃左半部分(更新 start = mid )。直到 end 等于 start 时候结束就可以了。 
+
 
 
 ```java
