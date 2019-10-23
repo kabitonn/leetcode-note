@@ -225,7 +225,7 @@ Output: [-1,-1]
 
 ```
 
-1. 为什么 while\(left &lt; right\) 而不是 &lt;= ?
+1. 为什么 `while(left < right)` 而不是 `<=` ?
 
     答：用相同的方法分析，因为 right = nums.length 而不是 nums.length - 1。因此每次循环的「搜索区间」是 \[left, right\) 左闭右开。
 
@@ -298,13 +298,13 @@ Output: [-1,-1]
     
 
 2. 返回 -1 的操作？如果 nums 中不存在 target 这个值，怎么办？
-
     ```java
         while (left < right) {
             // ...
         }
         // target 比所有数都小
         if (left == 0) return -1;
+        //返回的left为第一个大于目标元素的下标
         return nums[left-1] == target ? (left-1) : -1;
     ```
 
