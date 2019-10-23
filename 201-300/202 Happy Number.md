@@ -30,19 +30,19 @@ Explanation:
 ```java
     public boolean isHappy(int n) {
         Set<Integer> set = new HashSet<>();
-        while(n!=1) {
-            int num = 0;
-            while(n!=0) {
-                    num += (n%10)*(n%10);
-                n/=10;
-            }
-            if(set.contains(num)) {
-                return false;
-            }
-            set.add(num);
-            n=num;
+    	while(n!=1) {
+        	int num = 0;
+        	while(n!=0) {
+        		num += (n%10)*(n%10);
+        		n/=10;
+        	}
+        	if(set.contains(num)) {
+        		return false;
+        	}
+        	set.add(num);
+        	n=num;
         }
-        return true;
+    	return true;
     }
 ```
 
@@ -50,7 +50,7 @@ Explanation:
 10以内只有1和7是符合要求的数，其余可直接返回false
 
 ```java
-    public boolean isHappy(int n) {
+    public boolean isHappy1(int n) {
         int x = n;
     	while(n!=1) {
         	int num = 0;
