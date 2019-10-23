@@ -13,25 +13,28 @@ Output: 1->2->3->4->5
 
 ## 思路
 
+- 迭代
+- 递归
+
+
 ## 解决方法
 
 ### 迭代双指针 虚拟头结点
 
 
 ```java
-    public ListNode removeElements(ListNode head, int val) {
+    public ListNode removeElements1(ListNode head, int val) {
         ListNode start = new ListNode(0);
         start.next = head;
         ListNode prev = start;
         ListNode cur = prev.next;
-        while(cur!=null) {
-        	if(cur.val==val) {
-        		prev.next = cur.next;
-        	}
-        	else {
-				prev = cur;
-			}
-        	cur = cur.next;
+        while (cur != null) {
+            if (cur.val == val) {
+                prev.next = cur.next;
+            } else {
+                prev = cur;
+            }
+            cur = cur.next;
         }
         return start.next;
     }

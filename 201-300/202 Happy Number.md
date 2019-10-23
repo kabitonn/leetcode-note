@@ -68,5 +68,28 @@ Explanation:
 ```
 
 
+### 快慢指针
 
+“快指针”每次走两步，“慢指针”每次走一步，当二者相等时，即为一个循环周期。此时，判断是不是因为1引起的循环，是的话就是快乐数，否则不是快乐数。
 
+```java
+    public boolean isHappy2(int n) {
+        int slow = n;
+        int fast = bitSquareSum(n);
+        while (slow != fast) {
+            slow = bitSquareSum(slow);
+            fast = bitSquareSum(fast);
+            fast = bitSquareSum(fast);
+        }
+        return slow == 1;
+    }
+
+    public int bitSquareSum(int n) {
+        int num = 0;
+        while (n != 0) {
+            num += (n % 10) * (n % 10);
+            n /= 10;
+        }
+        return num;
+    }
+```
