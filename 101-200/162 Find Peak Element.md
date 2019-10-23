@@ -41,7 +41,34 @@ Your solution should be in logarithmic complexity.
 
 
 
-###
+### 遍历
+
+边界值特殊考虑
+
+```java
+    public int findPeakElement(int[] nums) {
+        int n = nums.length;
+        int i = 0;
+        for (; i < n; i++) {
+            if (i == 0) {
+                if (n > 1 && nums[i] > nums[i + 1]) {
+                    break;
+                } else if (n == 1) {
+                    break;
+                }
+            } else if (i == n - 1) {
+                if (nums[i] > nums[i - 1]) {
+                    break;
+                }
+            } else {
+                if (nums[i] > nums[i - 1] && nums[i] > nums[i + 1]) {
+                    break;
+                }
+            }
+        }
+        return i;
+    }
+```
 
 
 
