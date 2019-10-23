@@ -35,7 +35,7 @@ $$ f(k) $$ = max $$ (f(k-2) + A_k, f(k-1)) $$
 
 ### dp数组保存各个状态最大值
 
-max\[i\]为抢该房子的最大值
+max\[i\]为遍历到第i-1家时的最大值
 
 ```java
     public int rob(int[] nums) {
