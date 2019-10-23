@@ -76,8 +76,6 @@ Output: -1->0->3->4->5
 
 
 
-
-
 ```java
     public ListNode sortList2(ListNode head) {
         if (head == null || head.next == null) {
@@ -109,7 +107,9 @@ Output: -1->0->3->4->5
     }
 ```
 
-### 
+### 自底向上归并排序
+
+counter数组存放归并后的链表头结点，根据下标i确定存放链表长度$$2^i$$，若数组当前下标处有链表存储，则归并后后移，该位置空以待后续继续存放
 
 ```java
     public ListNode sortList3(ListNode head) {
