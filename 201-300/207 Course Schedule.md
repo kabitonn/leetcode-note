@@ -42,7 +42,7 @@ Explanation: There are a total of 2 courses to take.
 
 ## 解决方法
 
-### BFS 入度
+### BFS 入度 拓扑排序
 
 对依赖关系生成入度表和邻接表，对于入度为0的节点为可行节点，加入可行队列；依次取出队首，对其的相邻节点入度减一，并判断入度是否可入队列，直到队列为空
 
@@ -77,8 +77,23 @@ Explanation: There are a total of 2 courses to take.
     }
 
 ```
+时间复杂度 O(N + M)：遍历一个图需要访问所有节点和所有临边，N 和 M 分别为节点数量和临边数量；
+空间复杂度 O(N)，为建立邻接矩阵所需额外空间。
 
 ### 递归DFS
+
+marked 标记节点状态
+- 1 当次DFS中
+- -1 已被其他节点的DFS中访问
+- 0 未访问
+
+对 numCourses 个节点依次执行 DFS，判断每个节点起步 DFS 是否存在环，若存在环直接返回 true
+- 终止条件
+    - marked[i] == -1,说明当前访问节点已被其他节点启动的 DFS 访问，无需再重复搜索，直接返回false
+    - marked[i] == 1, 说明在本轮 DFS 搜索中节点 i 被第 2 次访问，即 课程安排图有环，直接返回true
+- 将当前访问节点 i 对应 marked[i] 置 1，即标记其被本轮 DFS 访问过；
+- 递归访问当前节点 i 的所有邻接节点 j，当发现环直接返回 true；
+- 当前节点所有邻接节点已被遍历，并没有发现环，则将当前节点 flag 置为 −1 并返回 false。
 
 
 ```java
@@ -116,3 +131,7 @@ Explanation: There are a total of 2 courses to take.
         return false;
     }
 ```
+
+时间复杂度 O(N + M)：遍历一个图需要访问所有节点和所有临边，N 和 M 分别为节点数量和临边数量；
+空间复杂度 O(N)，为建立邻接矩阵所需额外空间。
+
