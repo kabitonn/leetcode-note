@@ -32,33 +32,50 @@ minStack.getMin();   --> Returns -2.
 
 ### 辅助栈
 
+借用一个辅助栈min_stack，用于存获取stack中最小值。
+
+算法流程：
+
+- push()方法： 每当push()新值进来时，如果 小于等于 min_stack栈顶值，则一起push()到min_stack，即更新了栈顶最小值；
+- pop()方法： 判断将pop()出去的元素值是否是min_stack栈顶元素值（即最小值），如果是则将min_stack栈顶元素一起pop()，这样可以保证min_stack栈顶元素始终是stack中的最小值。
+- getMin()方法： 返回min_stack栈顶即可。
+
+- min_stack作用分析：
+    - min_stack等价于遍历stack所有元素，把升序的数字都删除掉，留下一个从栈底到栈顶降序的栈。
+    - 相当于给stack中的降序元素做了标记，每当pop()这些降序元素，min_stack会将相应的栈顶元素pop()出去，保证其栈顶元素始终是stack中的最小元素。
+
+
 ![](/assets/101-200/155-s-1-1.gif)
 
 ```java
 class MinStack {
     private Stack<Integer> stack;
-    private Stack<Integer> min_stack;
+    private Stack<Integer> minStack;
+
     public MinStack() {
         stack = new Stack<>();
-        min_stack = new Stack<>();
+        minStack = new Stack<>();
     }
+
     public void push(int x) {
         stack.push(x);
-        if(min_stack.isEmpty() || x <= min_stack.peek())
-            min_stack.push(x);
+        if (minStack.isEmpty() || x <= minStack.peek())
+            minStack.push(x);
     }
+
     public void pop() {
-        if(stack.pop().equals(min_stack.peek()))
-            min_stack.pop();
+        if (stack.pop().equals(minStack.peek()))
+            minStack.pop();
     }
+
     public int top() {
         return stack.peek();
     }
+
     public int getMin() {
-        return min_stack.peek();
+        return minStack.peek();
     }
 }
-
 ```
 
 ### 单个栈
