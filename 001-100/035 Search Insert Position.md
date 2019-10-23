@@ -81,12 +81,19 @@ Output: 0
 
 ### 取中位数索引
 
-```
+
+取
+```java
 int mid = (left + right) / 2;
 int mid = left + (right - left) / 2;
 int mid = (left + right) >>> 1;
 
 ```
 
+```java
+int mid = (left + right + 1) / 2;
+int mid = left + (right - left + 1) / 2;
+int mid = (left + right + 1) >>> 1;
+```
 
 
