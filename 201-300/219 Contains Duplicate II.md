@@ -22,6 +22,10 @@ Output: false
 ```
 ## 思路
 
+- 遍历
+- 哈希表
+- 哈希集 滑动窗口
+
 ## 解决方法
 
 ### 遍历
@@ -40,7 +44,8 @@ Output: false
 时间复杂度：$$O(n * \min(k,n))$$每次搜索都要花费$$ O(\min(k, n))$$ 的时间，哪怕k比n大，一次搜索中也只需比较 n 次。
 
 空间复杂度：O(1)
-### HashMap
+
+### 哈希表
 
 
 ```java
@@ -90,5 +95,29 @@ Output: false
 空间复杂度：O(min(n, k)) 开辟的额外空间取决于散列表中存储的元素的个数，也就是滑动窗口的大小 
 
 
+### 滑动窗口
 
+```java
+    public boolean containsNearbyDuplicate3(int[] nums, int k) {
+        if (nums.length == 0 || k <= 0) {
+            return false;
+        }
+        int i = 0, j = i + 1;
+        int len = nums.length;
+        while (i < len - 1) {
+            if (i < j && nums[j] == nums[i] && j - i <= k) {
+                return true;
+            }
+            if (j - i < k && j < len - 1) {
+                j++;
+            } else {
+                i++;
+            }
+        }
+        return false;
+    }
+```
+时间复杂度：O(n) 
+
+空间复杂度：O(1)
 
