@@ -73,6 +73,20 @@ Output: 0
     }
 ```
 
+
+## 二分查找详解
+
+
 ![](/assets/001-100/035-solution-2-1.png)
+
+### 取中位数索引
+
+```
+int mid = (left + right) / 2;
+int mid = left + (right - left) / 2;
+int mid = (left + right) >>> 1;
+
+```
+
 
 
