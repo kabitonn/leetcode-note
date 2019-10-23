@@ -30,6 +30,10 @@ Output: true
 
 ## 思路
 
+- 哈希映射
+- 索引
+
+
 ## 解决方法
 
 ### HashMap替换对应字符
@@ -88,28 +92,37 @@ Output: true
 对比两个字符串对应位置的字符在字符串内第一次出现的位置。
 
 ```java
-    public boolean isIsomorphic(String s, String t) {
-    	if(s.length()!=t.length()) {return false;}
-    	for(int i=0;i<s.length();i++) {
-    		if(s.indexOf(s.charAt(i))!=t.indexOf(t.charAt(i))) {return false;}
-    	}
-    	return true;
+    public boolean isIsomorphic2(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+        for (int i = 0; i < s.length(); i++) {
+            if (s.indexOf(s.charAt(i)) != t.indexOf(t.charAt(i))) {
+                return false;
+            }
+        }
+        return true;
     }
+
 ```
 
 
 ```java
-    public boolean isIsomorphic(String s, String t) {
-    	if(s.length()!=t.length()) {return false;}
-    	char[] ss = s.toCharArray();
-    	char[] tt = t.toCharArray();
-    	int[] sIndex = new int[256];
-    	int[] tIndex = new int[256];
-    	for(int i=ss.length-1;i>=0;i--) {
-    		if(sIndex[ss[i]]!=tIndex[tt[i]]) {return false;}
-    		sIndex[ss[i]] = tIndex[tt[i]] = i;
-    	}
-    	return true;
+    public boolean isIsomorphic3(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+        char[] ss = s.toCharArray();
+        char[] tt = t.toCharArray();
+        int[] sIndex = new int[256];
+        int[] tIndex = new int[256];
+        for (int i = ss.length - 1; i >= 0; i--) {
+            if (sIndex[ss[i]] != tIndex[tt[i]]) {
+                return false;
+            }
+            sIndex[ss[i]] = tIndex[tt[i]] = i;
+        }
+        return true;
     }
 ```
 
