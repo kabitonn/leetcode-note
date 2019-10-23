@@ -307,6 +307,11 @@ Output: [-1,-1]
         //返回的left为第一个大于目标元素的下标
         return nums[left-1] == target ? (left-1) : -1;
     ```
+    
+    
+    
+    
+    
 
 
 
