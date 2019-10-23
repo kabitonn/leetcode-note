@@ -25,15 +25,49 @@ minStack.getMin();   --> Returns -2.
 
 ## 思路
 
-栈顶存放最小值
+- 辅助栈
+- 单个栈栈顶存放最小值
+
 ## 解决方法
 
-### 1
+### 辅助栈
+
+![](/assets/101-200/155-s-1-1.gif)
+
+```java
+class MinStack {
+    private Stack<Integer> stack;
+    private Stack<Integer> min_stack;
+    public MinStack() {
+        stack = new Stack<>();
+        min_stack = new Stack<>();
+    }
+    public void push(int x) {
+        stack.push(x);
+        if(min_stack.isEmpty() || x <= min_stack.peek())
+            min_stack.push(x);
+    }
+    public void pop() {
+        if(stack.pop().equals(min_stack.peek()))
+            min_stack.pop();
+    }
+    public int top() {
+        return stack.peek();
+    }
+    public int getMin() {
+        return min_stack.peek();
+    }
+}
+
+```
+
+### 单个栈
 
 入栈出栈判断最小值是否改变并进行栈操作
 
+
 ```java
-public class MinStack {
+class MinStack {
 	
 	private Deque<Integer> stack = null;
 	public MinStack() {
