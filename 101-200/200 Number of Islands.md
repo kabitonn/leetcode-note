@@ -31,13 +31,15 @@ Output: 3
 
 ## 思路
 
-
+- DFS
+- BFS
+- 并查集
 
 ## 解决方法
 
 
 
-###
+### DFS
 
 从1的位置开始连通，数目+1，不通后则继续遍历
 
@@ -77,4 +79,43 @@ Output: 3
     }
 ```
 
+
+**使用原数组标记**
+
+
+```java
+    public int numIslands1(char[][] grid) {
+        if (grid.length == 0 || grid[0].length == 0) {
+            return 0;
+        }
+        int m = grid.length, n = grid[0].length;
+        int num = 0;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (grid[i][j] == '1') {
+                    num++;
+                    connect1(grid, i, j);
+                }
+            }
+        }
+        return num;
+    }
+
+    public void connect1(char[][] grid, int i, int j) {
+        if (i < 0 || i == grid.length || j < 0 || j == grid[0].length) {
+            return;
+        }
+
+        if (grid[i][j] == '0') {
+            return;
+        }
+        grid[i][j] = '0';
+        connect1(grid, i + 1, j);
+        connect1(grid, i, j + 1);
+        connect1(grid, i - 1, j);
+        connect1(grid, i, j - 1);
+    }
+```
+
+### 并查集
 
