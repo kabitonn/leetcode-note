@@ -57,7 +57,23 @@ max\[i\]为抢该房子的最大值
 时间复杂度：O(n)。其中 n 为房子的数量。  
 空间复杂度：O(n)。
 
-### 2
+### 两个变量保存前一状态和当前状态最大值
+
+pre 保存上一家最大值
+cur 保存当前最大值
+```java
+    public int rob(int[] nums) {
+        int pre = 0, cur = 0;
+        for (int n : nums) {
+            int tmp = cur;
+            cur = Math.max(pre + n, cur);
+            pre = tmp;
+        }
+        return cur;
+    }
+```
+
+### 两个变量保存当前位置两种状态
 
 sum1为抢当前房子的最大值  
 sum2为不抢当前房子最大值
