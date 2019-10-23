@@ -30,7 +30,6 @@ Explanation: 5! = 120, one trailing zero.
 
 ### 迭代
 
-
 ```java
     public int trailingZeroes(int n) {
     	int count = 0;
@@ -42,6 +41,7 @@ Explanation: 5! = 120, one trailing zero.
     }
 ```
 
+时间复杂度： $$O(log_5(n))$$
 
 
 ### 递归
