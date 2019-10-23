@@ -173,6 +173,24 @@ int mid = (left + right + 1) >>> 1;
         return left;
     }
  ```
+ 
+ ```java
+ public int binarySearch() {
+        int left = 0;
+        int right = n - 1;
+        while (left < right) {
+            // 根据分支逻辑，这里选择左中位数
+            int mid = (left + right + 1) >>> 1;
+            if (排除中位数逻辑) {
+                right = mid - 1;
+            } else {
+                left = mid;
+            }
+        }
+        return left;
+    }
+
+ ```
 
 
 
