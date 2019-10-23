@@ -96,11 +96,10 @@ For C programmers, try to solve it in-place in O(1) extra space.
 
 　　（一）代表特殊字符：\t代表制表符，\n代表换行....等。
 　　（二）代表转义，在字符串中，如果出现" ' \，会造成代码歧义，如：
-```
+        ```
         String s = "小明说："学习快乐"";//原来的一句话被分成两份
         Invalid escape sequence (valid ones are  \b  \t  \n  \f  \r  \"  \'  \\ )
         这时，就需要在造成歧义的字符前加\，来告诉编译器：这个字符只是一个普通字符。
-```
+        ```
         
     会造成歧义的有 \    '    "当我们想让他们代表普通字符的时候就需要变成\\    \'   \"
-        
