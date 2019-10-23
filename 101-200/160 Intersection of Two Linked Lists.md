@@ -129,6 +129,9 @@ Explanation: The two lists do not intersect, so return null.
 
 
 
+时间复杂度 : O(m+n)。
+空间复杂度 : O(m)或O(n)
+
 ### 构造环求入口点
 
 ```java
@@ -159,5 +162,6 @@ Explanation: The two lists do not intersect, so return null.
     }
 ```
 
-
+时间复杂度 : O(m+n)。
+空间复杂度 : O(1)
 
