@@ -95,3 +95,24 @@ public int findMin(int[] nums) {
 
 时间复杂度 O(logN，在特例情况下会退化到 O(N)(例如 [1, 1, 1, 1])
 
+
+另一种写法
+
+```java
+public int getBiasByMin(int[] nums) {
+        int left = 0, right = nums.length - 1;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] > nums[right]) {
+                left = mid + 1;
+            } else if (nums[mid] == nums[left] && nums[mid] == nums[right]) {
+                right--;
+                left++;
+            } else {
+                right = mid;
+            }
+        }
+        return left;
+    }
+
+```
