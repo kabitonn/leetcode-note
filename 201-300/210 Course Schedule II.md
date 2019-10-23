@@ -90,7 +90,8 @@ Explanation: There are a total of 4 courses to take. To take course 3 you shoul
     }
 
 ```
-
+时间复杂度：O(E + V)；
+空间复杂度：O(V)。
 
 ### DFS
 
@@ -152,3 +153,6 @@ Explanation: There are a total of 4 courses to take. To take course 3 you shoul
         return false;
     }
 ```
+
+时间复杂度：O(E + V)；
+空间复杂度：O(V)。
