@@ -42,7 +42,7 @@ Follow up:
 
 ## 解决方法
 
-### 右移遍历
+### 右移遍历与操作
 
 ```java
     public int hammingWeight(int n) {
@@ -63,6 +63,19 @@ Follow up:
         while(n!=0) {
             count+=(n&1);
             n>>>=1;
+        }
+        return count;
+    }
+```
+
+### 右移遍历取余
+
+```java
+    public int hammingWeight0(int n) {
+        int count = 0;
+        for (int i = 0; i < 32; i++) {
+            count += n % 2;
+            n >>= 1;
         }
         return count;
     }
