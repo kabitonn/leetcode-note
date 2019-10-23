@@ -1,34 +1,33 @@
-# 148. Sort List(M)
-
+# 148. Sort List\(M\)
 
 [148. 排序链表](https://leetcode-cn.com/problems/sort-list/)
 
+## 题目描述\(中等\)
 
-## 题目描述(中等)
-Sort a linked list in O(n log n) time using constant space complexity.
+Sort a linked list in O\(n log n\) time using constant space complexity.
 
 Example 1:
+
 ```
 Input: 4->2->1->3
 Output: 1->2->3->4
 ```
+
 Example 2:
+
 ```
 Input: -1->5->3->4->0
 Output: -1->0->3->4->5
 ```
 
-
 ## 思路
 
-
-
+* 插入排序
+* 归并排序
+* 
 ## 解决方法
 
-
-
 ### 插入排序
-
 
 ```java
     public ListNode sortList1(ListNode head) {
@@ -52,12 +51,21 @@ Output: -1->0->3->4->5
         }
         return dummy.next;
     }
-
 ```
-### 归并排序
 
-- 链表长度为偶数时，slow指向中点偏左端点
-- 链表长度为奇数时，slow指向中点左侧端点
+时间复杂度：O\(n^2\)
+
+### 归并排序 递归
+
+链表快慢指针找中点trick，判断fast.next.next
+
+* 链表长度为偶数时，slow指向中点偏左结点
+* 链表长度为奇数时，slow指向中点左侧结点
+
+链表快慢指针找中点trick，判断fast.next
+
+* 链表长度为偶数时，slow指向中点偏右结点
+* 链表长度为奇数时，slow指向中点结点
 
 ```java
     public ListNode sortList2(ListNode head) {
@@ -88,8 +96,9 @@ Output: -1->0->3->4->5
         cur.next = left != null ? left : right;
         return dummy.next;
     }
-
 ```
+
+### 
 
 ```java
     public ListNode sortList3(ListNode head) {
@@ -138,4 +147,6 @@ Output: -1->0->3->4->5
         }
     }
 ```
+
+
 
