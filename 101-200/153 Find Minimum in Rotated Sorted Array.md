@@ -34,7 +34,6 @@ Output: 0
 ## 解决方法
 
 
-
 ### 遍历
 
 
@@ -55,7 +54,7 @@ Output: 0
 - 当nums[mid] == nums[right]时，说明数组长度len(num) == 1（因为计算mid向下取整）；当left = right也满足，但本题left == right时跳出循环。
 
 
-```
+```java
     public int getBiasByMin(int[] nums) {
         int left = 0, right = nums.length - 1;
         while (left < right) {
@@ -69,5 +68,21 @@ Output: 0
         return left;
     }
 
+```
+
+
+```java
+    public int getBiasByMax(int[] nums) {
+        int left = 0, right = nums.length - 1;
+        while (left < right) {
+            int mid = left + (right - left + 1) / 2;
+            if (nums[mid] <= nums[left]) {
+                right = mid - 1;
+            } else {
+                left = mid;
+            }
+        }
+        return (right + 1) % nums.length;
+    }
 ```
 
