@@ -44,6 +44,7 @@ Explanation: There are a total of 2 courses to take.
 
 ### BFS 入度
 
+对依赖关系生成入度表和邻接表，对于入度为0的节点为可行节点，加入可行队列；依次取出队首，对其的相邻节点入度减一，并判断入度是否可入队列，直到队列为空
 
 ```java
     public boolean canFinish(int numCourses, int[][] prerequisites) {
