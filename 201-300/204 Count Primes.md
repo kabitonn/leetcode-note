@@ -17,7 +17,7 @@ Explanation: There are 4 prime numbers less than 10, they are 2, 3, 5, 7.
 
 ## 解决方法
 
-### 遍历
+### 遍历判断
 
 
 ```java
