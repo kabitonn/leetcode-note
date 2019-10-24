@@ -43,6 +43,17 @@ Explanation: [3,0,6,1,5] means the researcher has 5 papers in total and each of 
         int len = citations.length;
         int h = 0;
         // 倒序扫描
+        // citations[i] > i
+        while (h < len && citations[len - h - 1] > h) {
+            h++;
+        }
+        return h;
+    }
+
+    public int hIndex0_1(int[] citations) {
+        Arrays.sort(citations);
+        int len = citations.length;
+        int h = 0;
         // 至多有 h 篇论文分别被引用了至少 h 次
         while (h < len && citations[len - h - 1] >= h + 1) {
             h++;
@@ -50,6 +61,10 @@ Explanation: [3,0,6,1,5] means the researcher has 5 papers in total and each of 
         return h;
     }
 ```
+h = len - index - 1
+
+跳出循环时,index + 1为最后满足citations[index] >= len - index的索引，
+至多有len-(index + 1)篇被引用了至少h篇(h=len-index-1)
 
 ```java
     public int hIndex0(int[] citations) {
@@ -63,7 +78,13 @@ Explanation: [3,0,6,1,5] means the researcher has 5 papers in total and each of 
     }
 ```
 
+时间复杂度：O(nlogn)，即为排序的时间复杂度。
+
+
+
 ### 排序 二分搜索
+
+找到满足citations[i] >= len - i 的左边界的索引 i ，
 
 ```java
     public int hIndex2(int[] citations) {
@@ -79,8 +100,35 @@ Explanation: [3,0,6,1,5] means the researcher has 5 papers in total and each of 
                 right = mid;
             }
         }
+        //left为满足citations[i] >= len - i 的左边界的索引
+        if (left < len && citations[left] < len - left) {
+            left++;
+        }
         return len - left;
     }
+    
+    public int hIndex2_1(int[] citations) {
+        Arrays.sort(citations);
+        int len = citations.length;
+        int left = 0;
+        int right = len;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (citations[mid] < len - mid) {
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+        }
+        //left为满足citations[i] >= len - i 的左边界的索引
+        return len - left;
+    }
+```
+
+找到满足citations[i] >= len - i 的左边界的 i ，
+
+```java
+
 ```
 
 ### 计数
@@ -103,10 +151,14 @@ $$ citations=[1,3,2,3,5] $$
 
 计数排序得到的结果如下：
 
-| --- | --- | --- | --- | --- | --- |
-|k	|0|	1|	2|	3|	4|	5|
-|count	|0	|1	|1|	2	|0|	1|
-|sk |5	|5	|4	|3|	1|	1|
+
+| k     | 0   | 1   | 2   | 3   | 4   | 5   |
+| ----- | --- | --- | --- | --- | --- | --- |
+| count | 0   | 1   | 1   | 2   | 0   | 1   |
+| sk    | 5   | 5   | 4   | 3   | 1   | 1   |
+
+其中 sk表示至少有 k 次引用的论文数量，在表中即为在它之后的列（包括本身）的 count 一行的和。根据定义，最大的满足 k<=sk 的 k 即为所求的 h。在表中，这个 k 为 3，因此 h 指数为 3。
+
 
 ```java
     public int hIndex1(int[] citations) {
@@ -125,5 +177,7 @@ $$ citations=[1,3,2,3,5] $$
     }
 ```
 
+时间复杂度：O(n)。在计数时，我们仅需要遍历 citations 数组一次，因此时间复杂度为 O(n)。在找出最大的 k 时，我们最多需要遍历计数的数组一次，而计数的数组的长度为 O(n)，因此这一步的时间复杂度为 O(n)，即总的时间复杂度为 O(n)。
+空间复杂度：O(n)。我们需要使用 O(n) 的空间来存放计数的结果。
 
 
