@@ -34,6 +34,7 @@ Explanation: [3,0,6,1,5] means the researcher has 5 papers in total and each of 
 
 ![](/assets/201-300/274-s-1-1.png)
 
+首先我们将引用次数降序排序，在排完序的数组 citations 中，如果 citations[i]>i，那么说明第 0 到 i 篇论文都有至少 i+1 次引用。因此我们只要找到最大的 i 满足 citations[i]>i，那么 h 指数即为 i+1。例如：
 
 
 ```java
@@ -41,6 +42,7 @@ Explanation: [3,0,6,1,5] means the researcher has 5 papers in total and each of 
         Arrays.sort(citations);
         int len = citations.length;
         int h = 0;
+        // 倒序扫描
         // 至多有 h 篇论文分别被引用了至少 h 次
         while (h < len && citations[len - h - 1] >= h + 1) {
             h++;
@@ -83,11 +85,28 @@ Explanation: [3,0,6,1,5] means the researcher has 5 papers in total and each of 
 
 ### 计数
 
+论文的引用次数可能会非常多，这个数值很可能会超过论文的总数 nn，因此使用计数排序是非常不合算的（会超出空间限制）。在这道题中，我们可以通过一个不难发现的结论来让计数排序变得有用，
 
+> 如果一篇文章的引用次数超过论文的总数 nn，那么将它的引用次数降低为 nn 也不会改变 hh 指数的值。
+
+由于 h 指数一定小于等于 n，因此这样做是正确的。在直方图中，将所有超过 y 轴值大于 n 的变为 n 等价于去掉 y>n 的整个区域。
 
 ![](/assets/201-300/274-s-3-1.png)
 
+我们用一个例子来说明如何使用计数排序得到 h 指数。首先，引用次数如下所示：
 
+$$ citations=[1,3,2,3,100] $$
+
+将所有大于 n=5 的引用次数变为 n，得到：
+
+$$ citations=[1,3,2,3,5] $$
+
+计数排序得到的结果如下：
+
+| --- | --- | --- | --- | --- | --- |
+|k	|0|	1|	2|	3|	4|	5|
+|count	|0	|1	|1|	2	|0|	1|
+|sk |5	|5	|4	|3|	1|	1|
 
 ```java
     public int hIndex1(int[] citations) {
