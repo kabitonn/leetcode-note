@@ -342,3 +342,67 @@ sign记录前一个运算符，若是 + - 将操作数入栈，若是 * / 取出
 
 
 ### 递归下降
+
+递归下降分析来求表达式的值。表达式的文法如下
+
+```
+expr = term {+、-} term
+term = factor {*、/} factor
+factor = (expr) or number
+```
+
+表达式中将空格去除
+
+```java
+    public int calculate4(String s) {
+        s=s.replaceAll("\\s*","");
+        return expression(s);
+    }
+
+    int curPos = 0;
+
+    public int expression(String s) {
+        int num1 = term(s);
+        while (curPos < s.length() && (s.charAt(curPos) == '+' || s.charAt(curPos) == '-')) {
+            char op = s.charAt(curPos++);
+            int num2 = term(s);
+            if (op == '+') {
+                num1 += num2;
+            } else {
+                num1 -= num2;
+            }
+        }
+
+        if (curPos < s.length() && s.charAt(curPos) == ')') {
+            curPos++;
+        }
+        return num1;
+    }
+
+    public int term(String s) {
+        int num1 = factor(s);
+        while (curPos < s.length() && (s.charAt(curPos) == '*' || s.charAt(curPos) == '/')) {
+            char op = s.charAt(curPos++);
+            int num2 = factor(s);
+            if (op == '*') {
+                num1 *= num2;
+            } else {
+                num1 /= num2;
+            }
+        }
+        return num1;
+    }
+
+    public int factor(String s) {
+        if (s.charAt(curPos) == '(') {
+            curPos++;
+            return expression(s);
+        }
+        String str = "";
+        while (curPos < s.length() && s.charAt(curPos) >= '0' && s.charAt(curPos) <= '9') {
+            str += s.charAt(curPos++);
+        }
+        return Integer.valueOf(str);
+    }
+```
+
