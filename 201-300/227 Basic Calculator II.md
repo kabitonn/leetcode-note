@@ -20,10 +20,12 @@ Input: " 3/2 "
 Output: 1
 ```
 Example 3:
+
 ```
 Input: " 3+5 / 2 "
 Output: 5
 ```
+
 **Note**:
 
 - You may assume that the given expression is always valid.
@@ -31,11 +33,9 @@ Output: 5
 
 ## 思路
 
-
 - 栈
 - 中缀转后缀表达式
 - 递归下降(词法分析)
-
 
 ## 解决方法
 
