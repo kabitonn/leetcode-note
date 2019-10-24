@@ -54,7 +54,10 @@
             ]
         },
         "anchor-navigation-ex": {
-            "multipleH1": false
+            "multipleH1": false,
+            "tocLevel1Icon": "fa fa-hand-o-right",
+            "tocLevel2Icon": "fa fa-hand-o-right",
+            "tocLevel3Icon": "fa fa-hand-o-right"
         },
         "sharing": {
             "douban": false,

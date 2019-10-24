@@ -1,5 +1,5 @@
 # Summar
-* [Introduction](README.md)
+>* [Introduction](README.md)
 >* [001-100](/001-100/README.md)
    * [001. Two Sum(E)](/001-100/001 Two Sum.md)
    * [002. Add Two Numbers(M)](/001-100/002 Add Two Numbers.md)
@@ -204,7 +204,7 @@
    * [199. Binary Tree Right Side View(M)](/101-200/199 Binary Tree Right Side View.md)
    * [200. Number of Islands(M)](/101-200/200 Number of Islands.md)
 
-* [201-300](/201-300/README.md)
+>* [201-300](/201-300/README.md)
    * [201. Bitwise AND of Numbers Range(M)](/201-300/201 Bitwise AND of Numbers Range.md)
    * [202. Happy Number(E)](/201-300/202 Happy Number.md)
    * [203. Remove Linked List Elements(E)](/201-300/203 Remove Linked List Elements.md)
