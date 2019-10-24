@@ -109,7 +109,7 @@ Could you do it in O(n) time and O(1) space?
 
 
 1. 快慢指针找中点
-2. 中点后继节点逆序$$\lfoor n/2 \rfloor $$个节点
+2. 中点后继节点逆序$$ \lfloor n/2 \rfloor $$个节点
 3. 回文判断
 
 ```java
@@ -144,7 +144,7 @@ Could you do it in O(n) time and O(1) space?
 ```
 ### 快慢指针-前部翻转
 
-1. 前半段逆转 $$\lfoor n/2 \rfloor $$ 个节点
+1. 前半段逆转 $$ \lfloor n/2 \rfloor $$ 个节点
 2. 快慢指针找中点
 3. 回文判断
 
