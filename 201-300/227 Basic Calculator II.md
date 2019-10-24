@@ -146,6 +146,8 @@ Output: 5
 ### 一个数据栈
 
 数据栈保存表达式中的和因子，最后统一计算求和
+只需关注上一个运算符
+sign记录前一个运算符，若是 + - 将操作数入栈，若是 * / 取出上个操作数和当前计算并入栈
 
 ```java
     public int calculate1(String s) {
@@ -179,5 +181,56 @@ Output: 5
             result += nums[i];
         }
         return result;
+    }
+```
+
+### 实时计算，乘除回退
+
+默认表达式第一个操作数为0，第一个操作符为+，向后遍历获取第二个操作数，直接计算
+
++ - 计算可以直接计算，需要将右操作数记录为左操作数留待后续可能的回退操作
+* / 计算需要先回退左操作数的运算，然后再将左操作数和右操作数计算加入结果中
+
+```java
+    public int calculate2(String s) {
+        int num = 0;
+        String str = s + '+';
+        int res = 0;
+        int[] left = {0};
+        char sign = '+';
+        for (char c : str.toCharArray()) {
+            if (c == ' ') {
+                continue;
+            }
+            if (c >= '0' && c <= '9') {
+                num = num * 10 + c - '0';
+                continue;
+            }
+            res = compute(left, num, sign, res);
+            sign = c;
+            num = 0;
+        }
+        return res;
+    }
+
+    public int compute(int[] left, int right, char operator, int res) {
+
+        if (operator == '+') {
+            res += right;
+            left[0] = right;
+        }
+        if (operator == '-') {
+            res -= right;
+            left[0] = -right;
+        }
+        if (operator == '*') {
+            res = res - left[0] + left[0] * right;
+            left[0] = left[0] * right;
+        }
+        if (operator == '/') {
+            res = res - left[0] + left[0] / right;
+            left[0] = left[0] / right;
+        }
+        return res;
     }
 ```
