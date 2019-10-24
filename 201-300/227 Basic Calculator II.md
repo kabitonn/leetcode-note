@@ -14,6 +14,20 @@ Input: "3+2*2"
 Output: 7
 Example 2:
 ```
+Example 2:
+```
+Input: " 3/2 "
+Output: 1
+```
+Example 3:
+```
+Input: " 3+5 / 2 "
+Output: 5
+```
+**Note**:
+
+- You may assume that the given expression is always valid.
+- Do not use the eval built-in library function.
 
 ## 思路
 
@@ -24,6 +38,19 @@ Example 2:
 
 ### 两个栈(数据+操作符)
 
+1. 用stack nums记录操作数，用stack ops记录操作符
+- 顺序遍历，按顺序读取每个char。
+    1. 空格再见。
+    2. 如果是数字，记录
+    3. 运算符，开始计算
+        1. 上次的操作符是*/，那么上个操作数和当前刚拿到的第二操作数都在，直接计算这一步的结果，然后把他们出栈。
+        2. 判断栈和当前运算符
+            1. 如果当前操作符是*/，那么不管上个操作数是+还是-，操作数和操作符都要入栈。因为优先级高。
+            2. 当然如果你上个操作数是空，也要入栈。
+            3. 剩下一种情况，就是上个操作符是+-了，计算结果入栈，新操作符也入栈
+        3. 数值归零，以待重新获取
+- 因为遇到操作符才会计算，为了在循环里一同处理，在字符串后面加个操作符。
+- 遍历完毕的时候，nums顶为计算结果。
 
 ```java
     public int calculate0(String s) {
@@ -71,7 +98,8 @@ Example 2:
 
 数组替代栈
 
-```javapublic int calculate(String s) {
+```java
+    public int calculate(String s) {
         int[] nums = new int[s.length()];
         char[] ops = new char[s.length()];
         int topNum = 0, topOp = 0;
@@ -114,7 +142,10 @@ Example 2:
     }
 ```
 
+
 ### 一个数据栈
+
+数据栈保存表达式中的和因子，最后统一计算求和
 
 ```java
     public int calculate1(String s) {
