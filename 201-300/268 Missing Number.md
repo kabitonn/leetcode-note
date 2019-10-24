@@ -21,12 +21,15 @@ Output: 8
 
 ## 思路
 
+应出现的n个数为0,1,2,...n-1,n(n为数组长度)
 
+- 排序
+- 求总和
+- 位运算
 
 ## 解决方法
 
 ### 排序
-
 
 ```java
     public int missingNumber(int[] nums) {
@@ -60,6 +63,7 @@ Output: 8
 
 ### 索引和值异或运算
 
+索引和应出现的值成对出现
 missing为缺少的值的索引
 
 ```java

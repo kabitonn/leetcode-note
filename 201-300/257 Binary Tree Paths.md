@@ -24,6 +24,8 @@ Explanation: All root-to-leaf paths are: 1->2->5, 1->3
 
 ## 思路
 
+- DFS
+
 ## 解决方法
 
 ### 递归DFS

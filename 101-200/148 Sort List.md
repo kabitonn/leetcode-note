@@ -60,20 +60,20 @@ Output: -1->0->3->4->5
 
 ![](/assets/101-200/148-s-2-1.png)
 
-链表快慢指针找中点trick，判断fast.next.next
+链表快慢指针找中点trick，判断fast.next和fast.next.next
 
-* 链表长度为偶数时，slow指向中点偏左结点
-* 链表长度为奇数时，slow指向中点左侧结点
+* fast.next!=null时，链表长度为偶数，slow指向偏左中点
+* fast.next==null时，链表长度为奇数，slow指向中点结点
 
-链表快慢指针找中点trick，判断fast.next
+链表快慢指针找中点trick，判断fast和fast.next
+(想要获取中点左侧或偏左结点需要记录前一个指针)
+* fast==null时，链表长度为偶数时，slow指向偏右中点
+* fast!=null时，链表长度为奇数时，slow指向中点结点
 
-* 链表长度为偶数时，slow指向中点偏右结点
-* 链表长度为奇数时，slow指向中点结点
+链表快慢指针找中点trick，fast先走一步，判断fast和fast.next
 
-链表快慢指针找中点trick，fast先走一步，判断fast.next
-
-* 链表长度为偶数时，slow指向中点偏左结点
-* 链表长度为奇数时，slow指向中点左侧结点
+* fast!=null时，链表长度为偶数时，slow指向偏左中点
+* fast==null时，链表长度为奇数时，slow指向中点结点
 
 ```java
     public ListNode sortList2(ListNode head) {

@@ -18,6 +18,9 @@ Could you do it without any loop/recursion in O(1) runtime?
 
 ## 思路
 
+- 暴力法
+- 规律
+
 ## 解决方法
 
 ### 暴力法
