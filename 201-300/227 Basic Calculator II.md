@@ -234,3 +234,90 @@ sign记录前一个运算符，若是 + - 将操作数入栈，若是 * / 取出
         return res;
     }
 ```
+
+### 转为后缀表达式(逆波兰式)求值
+
+
+```java
+    public int calculate3(String s) {
+        List<String> reversePolishNotationToken = infixToSuffix(s);
+        System.out.println(reversePolishNotationToken);
+        return evalSuffix(reversePolishNotationToken);
+    }
+
+    public List<String> infixToSuffix(String s) {
+        List<String> list = new ArrayList<>();
+        char[] ops = new char[s.length() / 2];
+        int top = 0;
+
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (c == ' ') {
+                continue;
+            }
+            if (c >= '0' && c <= '9') {
+                String num = "";
+                while (i < s.length() && s.charAt(i) >= '0' && s.charAt(i) <= '9') {
+                    num += s.charAt(i++);
+                }
+                list.add(num);
+                i--;
+                continue;
+            }
+            if (c == '(') {
+                ops[top++] = c;
+            } else if (c == ')') {
+                while (top > 0 && ops[top - 1] != '(') {
+                    list.add("" + ops[--top]);
+                }
+                if (top > 0) {
+                    --top;
+                }
+            } else {
+                while (top > 0 && priority(c) <= priority(ops[top - 1])) {
+                    list.add("" + ops[--top]);
+                }
+                ops[top++] = c;
+            }
+        }
+        while (top > 0) {
+            list.add("" + ops[--top]);
+        }
+        return list;
+    }
+
+    public int evalSuffix(List<String> strs) {
+        int[] nums = new int[strs.size() / 2 + 1];
+        int top = 0;
+        int op2;
+        for (String s : strs) {
+            if ("+".equals(s)) {
+                op2 = nums[--top];
+                nums[top - 1] = (nums[top - 1] + op2);
+            } else if ("-".equals(s)) {
+                op2 = nums[--top];
+                nums[top - 1] = (nums[top - 1] - op2);
+            } else if ("*".equals(s)) {
+                op2 = nums[--top];
+                nums[top - 1] = (nums[top - 1] * op2);
+            } else if ("/".equals(s)) {
+                op2 = nums[--top];
+                nums[top - 1] = (nums[top - 1] / op2);
+            } else {
+                nums[top++] = (Integer.valueOf(s));
+            }
+        }
+        return nums[0];
+    }
+
+
+    private int priority(char c) {
+        if (c == '+' || c == '-') {
+            return 1;
+        } else if (c == '*' || c == '/') {
+            return 2;
+        }
+        return 0;
+    }
+```
