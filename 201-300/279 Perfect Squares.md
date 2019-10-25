@@ -8,8 +8,8 @@
 
 ### 回溯 剪枝
 
-
 ### 递归分治
+
 ```java
 
 ```
@@ -23,4 +23,4 @@
 ### 数学公式
 
 
-
+[Lagrange's four-square theorem](https://en.wikipedia.org/wiki/Lagrange%27s_four-square_theorem)
