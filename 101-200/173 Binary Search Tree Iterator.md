@@ -10,7 +10,7 @@ Calling `next()` will return the next smallest number in the BST.
 
 Example:
 
-![](/assets/101-200/173-p-1.png)
+![](../assets/101-200/173-p-1.png)
 
 ```
 BSTIterator iterator = new BSTIterator(root);

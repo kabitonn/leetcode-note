@@ -32,7 +32,7 @@ Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 
 ## \# 排序
 
-![](/assets/001-100/056-s-1-1.png)
+![](../assets/001-100/056-s-1-1.png)
 
 根据二维数组第一个数字大小按每一行整体排序  
 判断当前区间的右节点是否大于等于下一区间的左节点，若是则更新右节点，否则当前区间断开

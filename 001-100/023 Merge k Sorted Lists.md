@@ -72,7 +72,7 @@ Output: 1->1->2->3->4->4->5->6
 
 ### 两两归并优化
 
-![](/assets/001-100/023-s-2-1.png)
+![](../assets/001-100/023-s-2-1.png)
 
 ```java
     public ListNode mergeKLists(ListNode[] lists) {
@@ -97,7 +97,7 @@ $$ O(\sum_{i=1}^{log_2k}n)=O(nlogk) $$
 
 ### 垂直归并
 
-![](/assets/001-100/023-s-3-1.png)
+![](../assets/001-100/023-s-3-1.png)
 
 
 

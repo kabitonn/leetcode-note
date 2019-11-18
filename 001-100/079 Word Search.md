@@ -33,7 +33,7 @@ DFS
 
 在深度优先遍历过程中，判断当前遍历元素是否对应 word 元素，如果不匹配就结束当前的遍历，返回上一次的元素，尝试其他路径。当然，和普通的 dfs 一样，我们需要一个 visited 数组标记元素是否访问过。
 
-![](/assets/001-100/079-s-1-1.png)
+![](../assets/001-100/079-s-1-1.png)
 
 ```java
     public boolean exist0(char[][] board, String word) {

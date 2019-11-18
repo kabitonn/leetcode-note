@@ -104,7 +104,7 @@ Explanation: The answer is "wke", with the length of 3.
 
 回到我们的问题，我们使用 HashSet 将字符存储在当前窗口\[i, j\)\(最初j = i\)中。 然后我们向右侧滑动索引j，如果它不在 HashSet 中，我们会继续滑动 j。直到 s\[j\] 已经存在于 HashSet 中。此时，我们找到的没有重复字符的最长子字符串将会以索引i开头。如果我们对所有的i这样做，就可以得到答案。
 
-![](/assets/001-100/003-solution-2-1.png)
+![](../assets/001-100/003-solution-2-1.png)
 
 ```java
     public int lengthOfLongestSubstring03(String s) {
@@ -130,9 +130,9 @@ Explanation: The answer is "wke", with the length of 3.
 
 ### 优化滑动窗口
 
-![](/assets/001-100/003-solution-3-1.png)
+![](../assets/001-100/003-solution-3-1.png)
 
-![](/assets/001-100/003-solution-3--2.png)
+![](../assets/001-100/003-solution-3--2.png)
 
 上述的方法最多需要执行 2n 个步骤。事实上，它可以被进一步优化为仅需要 n 个步骤。我们可以定义字符到索引的映射，而不是使用集合来判断一个字符是否存在。 当我们找到重复的字符时，我们可以立即跳过该窗口。
 

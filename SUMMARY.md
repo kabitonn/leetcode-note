@@ -102,7 +102,7 @@
    * [099. Recover Binary Search Tree(H)](/001-100/099 Recover Binary Search Tree.md)
    * [100. Same Tree(E)](/001-100/100 Same Tree.md)
 
-* [101-200](/101-200/README.md)
+>* [101-200](/101-200/README.md)
    * [101. Symmetric Tree(E)](/101-200/101 Symmetric Tree.md)
    * [102. Binary Tree Level Order Traversal(M)](/101-200/102 Binary Tree Level Order Traversal.md)
    * [103. Binary Tree Zigzag Level Order Traversal(M)](/101-200/103 Binary Tree Zigzag Level Order Traversal.md)
@@ -204,7 +204,7 @@
    * [199. Binary Tree Right Side View(M)](/101-200/199 Binary Tree Right Side View.md)
    * [200. Number of Islands(M)](/101-200/200 Number of Islands.md)
 
-* [201-300](/201-300/README.md)
+>* [201-300](/201-300/README.md)
    * [201. Bitwise AND of Numbers Range(M)](/201-300/201 Bitwise AND of Numbers Range.md)
    * [202. Happy Number(E)](/201-300/202 Happy Number.md)
    * [203. Remove Linked List Elements(E)](/201-300/203 Remove Linked List Elements.md)
@@ -306,7 +306,7 @@
    * [299. Bulls and Cows(M)](/201-300/299 Bulls and Cows.md)
    * [300. Longest Increasing Subsequence(M)](/201-300/300 Longest Increasing Subsequence.md)
 
-* [301-400](/301-400/README.md)
+>* [301-400](/301-400/README.md)
    * [301. Remove Invalid Parenthes(H)](/301-400/301 Remove Invalid Parentheses.md)
    * [302. Smallest Rectangle Enclosing Black Pixels(H)](/301-400/302 Smallest Rectangle Enclosing Black Pixels.md)
    * [303. Range Sum Query - Immutable(E)](/301-400/303 Range Sum Query - Immutable.md)
@@ -408,7 +408,7 @@
    * [399. Evaluate Division(M)](/301-400/399 Evaluate Division.md)
    * [400. Nth Digit(E)](/301-400/400 Nth Digit.md)
 
-* [401-500](/401-500/README.md)
+> * [401-500](/401-500/README.md)
    * [401. Binary Watch(E)](/401-500/401 Binary Watch.md)
    * [402. Remove K Digits(M)](/401-500/402 Remove K Digits.md)
    * [403. Frog Jump(H)](/401-500/403 Frog Jump.md)

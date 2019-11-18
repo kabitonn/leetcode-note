@@ -24,11 +24,11 @@ Output: 1->4->3->2->5->NULL
 首先找到 m 的位置，记录两端的节点 left \(l1\) 和 right\(l2\)  
 倒序 m 到 n 之间的节点
 
-![](/assets/001-100/092-s-1-1.png)
+![](../assets/001-100/092-s-1-1.png)
 
 倒转链表，将 h 的 next 指向 p，并且后移 p 和 h。
 
-![](/assets/001-100/092-s-1-2.png)
+![](../assets/001-100/092-s-1-2.png)
 
 ```java
     public ListNode reverseBetween(ListNode head, int m, int n) {

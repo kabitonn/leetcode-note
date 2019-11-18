@@ -22,7 +22,7 @@ Given 1->2->3->4, you should return the list as 2->1->4->3.
 
 ### 迭代
 
-![](/assets/001-100/024-solution-1-1.png)
+![](../assets/001-100/024-solution-1-1.png)
 
 
 
@@ -55,11 +55,11 @@ Given 1->2->3->4, you should return the list as 2->1->4->3.
 
 ### 递归
 
-![](/assets/001-100/024-solution-2-1.png)
+![](../assets/001-100/024-solution-2-1.png)
 
 
 
-![](/assets/001-100/024-solution-2-2.png)
+![](../assets/001-100/024-solution-2-2.png)
 
 ```java
     public ListNode swapPairs1(ListNode head) {

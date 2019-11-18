@@ -20,7 +20,7 @@ Initially, all next pointers are set to NULL.
 
 **Example**:
 
-![](/assets/101-200/117-p-1.png)
+![](../assets/101-200/117-p-1.png)
 
 ## 思路
 
@@ -186,7 +186,7 @@ Initially, all next pointers are set to NULL.
 
 用一个dummy指针，当连接第一个节点的时候，就将dummy指针指向他。此外，之前用的pre指针，把它当成tail指针可能会更好理解。
 
-![](/assets/101-200/117-s-4-1.png)
+![](../assets/101-200/117-s-4-1.png)
 
 cur 指针利用 next 不停的遍历当前层。
 

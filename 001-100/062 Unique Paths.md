@@ -10,7 +10,7 @@ The robot can only move either down or right at any point in time. The robot is 
 
 How many possible unique paths are there?
 
-![](/assets/001-100/061-p-1.png)
+![](../assets/001-100/061-p-1.png)
 
 Above is a 7 x 3 grid. How many possible unique paths are there?
 
@@ -121,7 +121,7 @@ dp\[ i \]\[ j \] = dp\[ i - 1 \]\[ j \] + dp\[ i \]\[ j - 1 \]
 
 空间优化
 
-![](/assets/001-100/062-s-3-2.png)
+![](../assets/001-100/062-s-3-2.png)
 
 ```java
 public int uniquePaths2(int m, int n) {
@@ -150,7 +150,7 @@ public int uniquePaths2(int m, int n) {
 
 dp\[ i \]\[ j \] = dp\[ i + 1 \]\[ j \] + dp\[ i \]\[ j + 1 \]。
 
-![](/assets/001-100/062-s-3-3.png)
+![](../assets/001-100/062-s-3-3.png)
 
 ```java
     public int uniquePaths3(int m, int n) {

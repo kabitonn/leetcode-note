@@ -12,7 +12,7 @@ Sort a linked list using insertion sort.
 A graphical example of insertion sort. The partial sorted list (black) initially contains only the first element in the list.
 With each iteration one element (red) is removed from the input data and inserted in-place into the sorted list
 
-![](/assets/101-200/147-p-1.gif)
+![](../assets/101-200/147-p-1.gif)
 
 **Algorithm of Insertion Sort**:
 

@@ -8,7 +8,7 @@ Given a reference of a node in a **connected **undirected graph, return a **deep
 
 Example:
 
-![](/assets/101-200/133-p-1.png)
+![](../assets/101-200/133-p-1.png)
 
 图的节点定义
 ```java

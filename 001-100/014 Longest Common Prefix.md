@@ -36,7 +36,7 @@ Explanation: There is no common prefix among the input strings.
 
 ### 垂直比较
 
-![](/assets/001-100/014-solution-1.png)
+![](../assets/001-100/014-solution-1.png)
 所有字符串垂直排列，然后一列一列的比较，直到某一个字符串到达结尾或者该列字符不完全相同。
 首先找到最短字符串长度，然后一列一列比较
 ```java
@@ -83,7 +83,7 @@ Explanation: There is no common prefix among the input strings.
 
 ### 水平比较
 
-![](/assets/001-100/014-solution-2.png)
+![](../assets/001-100/014-solution-2.png)
 
 ```java
     public String longestCommonPrefix2(String[] strs) {
@@ -106,7 +106,7 @@ Explanation: There is no common prefix among the input strings.
 
 ### 递归分治
 
-![](/assets/001-100/014-solution-3.png)
+![](../assets/001-100/014-solution-3.png)
 
 把原来的数组分成两部分，求出左半部分的最长公共前缀，求出右半部分的最长公共前缀，然后求出的两个结果再求最长公共前缀，就是最后的结果了。
 

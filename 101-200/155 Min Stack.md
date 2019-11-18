@@ -45,7 +45,7 @@ minStack.getMin();   --> Returns -2.
     - 相当于给stack中的降序元素做了标记，每当pop()这些降序元素，min_stack会将相应的栈顶元素pop()出去，保证其栈顶元素始终是stack中的最小元素。
 
 
-![](/assets/101-200/155-s-1-1.gif)
+![](../assets/101-200/155-s-1-1.gif)
 
 ```java
 class MinStack {

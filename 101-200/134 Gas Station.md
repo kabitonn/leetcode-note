@@ -57,7 +57,7 @@ Therefore, you can't travel around the circuit once no matter where you start.
 
 ## 思路
 
-![](/assets/101-200/134-t-1.png)
+![](../assets/101-200/134-t-1.png)
 
 * ## 解决方法
 

@@ -137,7 +137,7 @@ rotate the input matrix in-place such that it becomes:
 
 可以先转置，然后把每列对称交换交换一下
 
-![](/assets/001-100/048-s-3-1.png)
+![](../assets/001-100/048-s-3-1.png)
 
 ```java
 //转置加翻转

@@ -79,7 +79,7 @@ Explanation: We define the gray code sequence to begin with 0.
 
 假设我们有了 n = 2 的解，考虑怎么得到 n = 3 的解。
 
-![](/assets/001-100/089-s-2-1.png)
+![](../assets/001-100/089-s-2-1.png)
 
 ```java
     public List<Integer> grayCode2(int n) {
@@ -160,7 +160,7 @@ Explanation: We define the gray code sequence to begin with 0.
 ### 公式
 
 二进制转成格雷码公式
-![](/assets/001-100/089-s-4-1.png)
+![](../assets/001-100/089-s-4-1.png)
 
 遍历 0 到 $$ 2^n-1 $$，然后利用公式转换即可。即最高位保留，其它位是当前位和它的高一位进行异或操作。
 

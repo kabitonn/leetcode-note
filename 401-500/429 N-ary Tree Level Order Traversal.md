@@ -7,7 +7,7 @@ Given an n-ary tree, return the level order traversal of its nodes' values. \(ie
 
 For example, given a 3-ary tree:
 
-![](/assets/401-500/429-problem-1.png)
+![](../assets/401-500/429-problem-1.png)
 
 ```
 We should return its level order traversal:

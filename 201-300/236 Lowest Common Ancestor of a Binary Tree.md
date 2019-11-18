@@ -10,7 +10,7 @@ According to the definition of LCA on Wikipedia: “The lowest common ancestor i
 
 Given the following binary tree:  root = \[3,5,1,6,2,0,8,null,null,7,4\]
 
-![](/assets/201-300/236-p-1.png)
+![](../assets/201-300/236-p-1.png)
 
 Example 1:
 

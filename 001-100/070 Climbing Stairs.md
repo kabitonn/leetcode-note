@@ -109,7 +109,7 @@ Explanation: There are three ways to climb to the top.
 
 ### 公式法
 
-![](/assets/001-100/070-solution-3-1.png)
+![](../assets/001-100/070-solution-3-1.png)
 
 ```java
     public int climbStairs(int n) {
