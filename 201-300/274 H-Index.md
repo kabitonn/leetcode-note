@@ -30,6 +30,9 @@ Explanation: [3,0,6,1,5] means the researcher has 5 papers in total and each of 
 
 ### 排序
 
+
+![](/assets/201-300/274-s-1-1.svg)
+
 首先我们将引用次数降序排序，在排完序的数组 citations 中，如果 citations\[i\]&gt;i，那么说明第 0 到 i 篇论文都有至少 i+1 次引用。因此我们只要找到最大的 i 满足 citations\[i\]&gt;i，那么 h 指数即为 i+1。例如：
 
 ```java
@@ -121,9 +124,7 @@ h = len - index - 1
 
 找到满足citations\[i\] &gt;= len - i 的左边界的 i ，
 
-```java
 
-```
 
 ### 计数
 
