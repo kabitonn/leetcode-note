@@ -32,8 +32,9 @@ Explanation: [3,0,6,1,5] means the researcher has 5 papers in total and each of 
 
 ### 排序
 
+```
 <div align="center"><img src = "../assets/201-300/274-s-1-1.svg" width="400" /></div>
-
+```
 首先我们将引用次数降序排序，在排完序的数组 citations 中，如果 citations[i]>i，那么说明第 0 到 i 篇论文都有至少 i+1 次引用。因此我们只要找到最大的 i 满足 citations[i]>i，那么 h 指数即为 i+1。例如：
 
 
@@ -138,9 +139,9 @@ h = len - index - 1
 > 如果一篇文章的引用次数超过论文的总数 nn，那么将它的引用次数降低为 nn 也不会改变 hh 指数的值。
 
 由于 h 指数一定小于等于 n，因此这样做是正确的。在直方图中，将所有超过 y 轴值大于 n 的变为 n 等价于去掉 y>n 的整个区域。
-
+```
 <div align="center"><img src = "../assets/201-300/274-s-3-1.svg" width="400" /></div>
-
+```
 
 我们用一个例子来说明如何使用计数排序得到 h 指数。首先，引用次数如下所示：
 
