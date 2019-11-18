@@ -1,7 +1,5 @@
 # 274. H-Index\(M\)
 
-
-
 ## 题目描述\(中等\)
 
 Given an array of citations \(each citation is a non-negative integer\) of a researcher, write a function to compute the researcher's h-index.
@@ -32,11 +30,7 @@ Explanation: [3,0,6,1,5] means the researcher has 5 papers in total and each of 
 
 ### 排序
 
-
-
-
-首先我们将引用次数降序排序，在排完序的数组 citations 中，如果 citations[i]>i，那么说明第 0 到 i 篇论文都有至少 i+1 次引用。因此我们只要找到最大的 i 满足 citations[i]>i，那么 h 指数即为 i+1。例如：
-
+首先我们将引用次数降序排序，在排完序的数组 citations 中，如果 citations\[i\]&gt;i，那么说明第 0 到 i 篇论文都有至少 i+1 次引用。因此我们只要找到最大的 i 满足 citations\[i\]&gt;i，那么 h 指数即为 i+1。例如：
 
 ```java
     public int hIndex(int[] citations) {
@@ -62,10 +56,11 @@ Explanation: [3,0,6,1,5] means the researcher has 5 papers in total and each of 
         return h;
     }
 ```
+
 h = len - index - 1
 
-跳出循环时,index + 1为最后满足citations[index] >= len - index的索引，
-至多有len-(index + 1)篇被引用了至少h篇(h=len-index-1)
+跳出循环时,index + 1为最后满足citations\[index\] &gt;= len - index的索引，  
+至多有len-\(index + 1\)篇被引用了至少h篇\(h=len-index-1\)
 
 ```java
     public int hIndex0(int[] citations) {
@@ -79,13 +74,11 @@ h = len - index - 1
     }
 ```
 
-时间复杂度：O(nlogn)，即为排序的时间复杂度。
-
-
+时间复杂度：O\(nlogn\)，即为排序的时间复杂度。
 
 ### 排序 二分搜索
 
-找到满足citations[i] >= len - i 的左边界的索引 i ，
+找到满足citations\[i\] &gt;= len - i 的左边界的索引 i ，
 
 ```java
     public int hIndex2(int[] citations) {
@@ -107,7 +100,7 @@ h = len - index - 1
         }
         return len - left;
     }
-    
+
     public int hIndex2_1(int[] citations) {
         Arrays.sort(citations);
         int len = citations.length;
@@ -126,7 +119,7 @@ h = len - index - 1
     }
 ```
 
-找到满足citations[i] >= len - i 的左边界的 i ，
+找到满足citations\[i\] &gt;= len - i 的左边界的 i ，
 
 ```java
 
@@ -138,10 +131,9 @@ h = len - index - 1
 
 > 如果一篇文章的引用次数超过论文的总数 nn，那么将它的引用次数降低为 nn 也不会改变 hh 指数的值。
 
-由于 h 指数一定小于等于 n，因此这样做是正确的。在直方图中，将所有超过 y 轴值大于 n 的变为 n 等价于去掉 y>n 的整个区域。
-```
-<div align="center"><img src = "../assets/201-300/274-s-3-1.svg" width="400" /></div>
-```
+由于 h 指数一定小于等于 n，因此这样做是正确的。在直方图中，将所有超过 y 轴值大于 n 的变为 n 等价于去掉 y&gt;n 的整个区域。
+
+![](/assets/201-300/274-s-1-1.svg)
 
 我们用一个例子来说明如何使用计数排序得到 h 指数。首先，引用次数如下所示：
 
@@ -153,14 +145,12 @@ $$ citations=[1,3,2,3,5] $$
 
 计数排序得到的结果如下：
 
+| k | 0 | 1 | 2 | 3 | 4 | 5 |
+| --- | --- | --- | --- | --- | --- | --- |
+| count | 0 | 1 | 1 | 2 | 0 | 1 |
+| sk | 5 | 5 | 4 | 3 | 1 | 1 |
 
-| k     | 0   | 1   | 2   | 3   | 4   | 5   |
-| ----- | --- | --- | --- | --- | --- | --- |
-| count | 0   | 1   | 1   | 2   | 0   | 1   |
-| sk    | 5   | 5   | 4   | 3   | 1   | 1   |
-
-其中 sk表示至少有 k 次引用的论文数量，在表中即为在它之后的列（包括本身）的 count 一行的和。根据定义，最大的满足 k<=sk 的 k 即为所求的 h。在表中，这个 k 为 3，因此 h 指数为 3。
-
+其中 sk表示至少有 k 次引用的论文数量，在表中即为在它之后的列（包括本身）的 count 一行的和。根据定义，最大的满足 k&lt;=sk 的 k 即为所求的 h。在表中，这个 k 为 3，因此 h 指数为 3。
 
 ```java
     public int hIndex1(int[] citations) {
@@ -179,7 +169,6 @@ $$ citations=[1,3,2,3,5] $$
     }
 ```
 
-时间复杂度：O(n)。在计数时，我们仅需要遍历 citations 数组一次，因此时间复杂度为 O(n)。在找出最大的 k 时，我们最多需要遍历计数的数组一次，而计数的数组的长度为 O(n)，因此这一步的时间复杂度为 O(n)，即总的时间复杂度为 O(n)。
-空间复杂度：O(n)。我们需要使用 O(n) 的空间来存放计数的结果。
-
+时间复杂度：O\(n\)。在计数时，我们仅需要遍历 citations 数组一次，因此时间复杂度为 O\(n\)。在找出最大的 k 时，我们最多需要遍历计数的数组一次，而计数的数组的长度为 O\(n\)，因此这一步的时间复杂度为 O\(n\)，即总的时间复杂度为 O\(n\)。  
+空间复杂度：O\(n\)。我们需要使用 O\(n\) 的空间来存放计数的结果。
 
