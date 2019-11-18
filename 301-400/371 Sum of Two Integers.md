@@ -25,7 +25,7 @@ Output: 1
 
 ### 位运算
 
-$$ a \bigoplus b $$ 无进位的相加  
+$ a \bigoplus b $ 无进位的相加  
 $ (a \& b) $ 每一位的进位
 
 
