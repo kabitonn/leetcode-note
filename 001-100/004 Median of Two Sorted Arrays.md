@@ -139,7 +139,7 @@ B[0], B[1], ..., B[j-1]  |  B[j], B[j+1], ..., B[n-1]
 
 如果我们可以确认：  
     1.  len\(leftpart\) = len\(rightpart\)  
-    2.  max\(leftpart\) &lt; = min\(rightpart\)  
+    2.  max\(leftpart\) <= min\(rightpart\)  
 那么，我们已经将A,B两个数组所有元素划分为相同长度的两个部分，且其中一部分中的元素总是大于另一部分中的元素。那么：   median = \(max\(leftpart\)+min\(rightpart\)\) / 2
 
 * 当 A 数组和 B 数组的总长度是偶数时，如果我们能够保证
