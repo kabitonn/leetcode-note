@@ -38,8 +38,8 @@ If there are several possible values for h, the maximum one is taken as the h-i
 
 ### 二分搜索
 
-当 i 满足至多有h篇论文至少被引用h次时，h = len - i
-即满足 citations[i] >= len - i 
+当 i 满足至多有h篇论文至少被引用h次时，h = len - i，
+即满足 citations[i] >= len - i ，
 找到满足该条件的左边界
 
 下面两种方法
@@ -64,7 +64,8 @@ If there are several possible values for h, the maximum one is taken as the h-i
 
 搜索区间为[0,len-1)
 最后判断left是否为满足条件的左边界，否则 +1
-```
+
+```java
     public int hIndex2(int[] citations) {
         int len = citations.length;
         int left = 0;
