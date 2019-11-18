@@ -308,7 +308,7 @@
 
 * [301-400](/301-400/README.md)
    * [301. Remove Invalid Parenthes(H)](/301-400/301 Remove Invalid Parentheses.md)
-   * [302. Smallest Rectangle Enclosing Black Pixels(H)](/301-400/321 Smallest Rectangle Enclosing Black Pixels.md)
+   * [302. Smallest Rectangle Enclosing Black Pixels(H)](/301-400/302 Smallest Rectangle Enclosing Black Pixels.md)
    * [303. Range Sum Query - Immutable(E)](/301-400/303 Range Sum Query - Immutable.md)
    * [304. Range Sum Query 2D - Immutable(M)](/301-400/304 Range Sum Query 2D - Immutable.md)
    * [305. Number of Islands II(H)](/301-400/305 Number of Islands II.md)
