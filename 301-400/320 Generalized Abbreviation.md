@@ -1,4 +1,4 @@
-
+# 320. Generalized Abbreviation(M)
 
 []()
 

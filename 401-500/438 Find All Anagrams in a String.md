@@ -1,42 +1,44 @@
-# 438. Find All Anagrams in a String(E)
-[438. Find All Anagrams in a String](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/)
+# 438. Find All Anagrams in a String(M)
 
-## 题目描述\(简单\)
+[438. 找到字符串中所有字母异位词](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/)
 
-Given a string s and a non-empty string p, find all the start indices of p's anagrams in s.
+## 题目描述\(中等\)
 
-Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.
+给定一个字符串 `s` 和一个非空字符串 `p`，找到 s 中所有是 p 的字母异位词的子串，返回这些子串的起始索引。
 
-The order of output does not matter.  
-**  
-Example 1:**
+字符串只包含小写英文字母，并且字符串 s 和 p 的长度都不超过 20100。
 
+**说明：**
+- 字母异位词指字母相同，但排列不同的字符串。
+- 不考虑答案输出的顺序。
+
+示例 1:
 ```
-Input:
+输入:
 s: "cbaebabacd" p: "abc"
 
-Output:
+输出:
 [0, 6]
 
-Explanation:
-The substring with start index = 0 is "cba", which is an anagram of "abc".
-The substring with start index = 6 is "bac", which is an anagram of "abc".
+解释:
+起始索引等于 0 的子串是 "cba", 它是 "abc" 的字母异位词。
+起始索引等于 6 的子串是 "bac", 它是 "abc" 的字母异位词。
 ```
 
-**Example 2:**
-
+示例 2:
 ```
-Input:
+输入:
 s: "abab" p: "ab"
 
-Output:
+输出:
 [0, 1, 2]
 
-Explanation:
-The substring with start index = 0 is "ab", which is an anagram of "ab".
-The substring with start index = 1 is "ba", which is an anagram of "ab".
-The substring with start index = 2 is "ab", which is an anagram of "ab".
+解释:
+起始索引等于 0 的子串是 "ab", 它是 "ab" 的字母异位词。
+起始索引等于 1 的子串是 "ba", 它是 "ab" 的字母异位词。
+起始索引等于 2 的子串是 "ab", 它是 "ab" 的字母异位词。
 ```
+
 
 ## 思路
 

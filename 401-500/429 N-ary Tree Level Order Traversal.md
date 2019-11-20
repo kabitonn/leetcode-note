@@ -1,16 +1,16 @@
-# 429. N-ary Tree Level Order Traversal(E)
-[429. N-ary Tree Level Order Traversal](https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/)
+# 429. N-ary Tree Level Order Traversal(M)
+[429. N叉树的层序遍历](https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/)
 
-## 题目描述\(简单\)
+## 题目描述\(中等\)
 
-Given an n-ary tree, return the level order traversal of its nodes' values. \(ie, from left to right, level by level\).
+给定一个 N 叉树，返回其节点值的层序遍历。 (即从左到右，逐层遍历)。
 
-For example, given a 3-ary tree:
+例如，给定一个 3叉树 :
 
 ![](../assets/401-500/429-problem-1.png)
 
 ```
-We should return its level order traversal:
+返回其层序遍历:
 
 [
      [1],
@@ -19,10 +19,9 @@ We should return its level order traversal:
 ]
 ```
 
-**Note:**
-
-1. The depth of the tree is at most 1000.
-2. The total number of nodes is at most 5000.
+**说明**:
+- 树的深度不会超过 1000。
+- 树的节点总数不会超过 5000。
 
 ## 思路
 

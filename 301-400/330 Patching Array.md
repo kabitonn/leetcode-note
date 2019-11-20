@@ -1,4 +1,5 @@
 
+# 330. Patching Array(H)
 
 []()
 

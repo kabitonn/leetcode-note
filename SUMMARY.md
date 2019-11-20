@@ -406,7 +406,7 @@
    * [397. Integer Replacement(M)](/301-400/397 Integer Replacement.md)
    * [398. Random Pick Index(M)](/301-400/398 Random Pick Index.md)
    * [399. Evaluate Division(M)](/301-400/399 Evaluate Division.md)
-   * [400. Nth Digit(E)](/301-400/400 Nth Digit.md)
+   * [400. Nth Digit(M)](/301-400/400 Nth Digit.md)
 
 > * [401-500](/401-500/README.md)
    * [401. Binary Watch(E)](/401-500/401 Binary Watch.md)

@@ -1,0 +1,16 @@
+
+# 478. Generate Random Point in a Circle(M)
+
+[]()
+
+## 题目描述(中等)
+
+## 思路
+
+## 解决方法
+
+### 
+
+```java
+
+```

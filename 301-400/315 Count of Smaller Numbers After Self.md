@@ -1,8 +1,8 @@
-
+# 315. Count of Smaller Numbers After Self(H)
 
 []()
 
-## 题目描述(中等)
+## 题目描述(困难)
 
 
 ## 思路
