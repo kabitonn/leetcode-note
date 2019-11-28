@@ -9,7 +9,7 @@ Given n non-negative integers a1, a2, ..., an , where each represents a point at
 
 > You may not slant the container and n is at least 2.
 
-![](../assets/001-100/011-p-1.png)
+![](../assets/leetcode-note/001-100/011-p-1.png)
 
 The above vertical lines are represented by array \[1,8,6,2,5,4,8,3,7\]. In this case, the max area of water \(blue section\) the container can contain is 49.
 

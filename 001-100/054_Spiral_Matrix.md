@@ -77,7 +77,7 @@ Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 
 依此四个方向为一圈遍历
 
-![](../assets/001-100/054-s-2-1.png)
+![](../assets/leetcode-note/001-100/054-s-2-1.png)
 
 ```java
     public List<Integer> spiralOrder1(int[][] matrix) {

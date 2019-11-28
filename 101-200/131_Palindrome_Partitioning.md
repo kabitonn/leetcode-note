@@ -170,7 +170,7 @@ aabb
 
 
 
-![](../assets/101-200/131-s-3-1.png)
+![](../assets/leetcode-note/101-200/131-s-3-1.png)
 
 
 

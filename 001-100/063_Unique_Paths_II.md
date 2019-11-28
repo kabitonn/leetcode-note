@@ -10,7 +10,7 @@ The robot can only move either down or right at any point in time. The robot is 
 
 Now consider if some obstacles are added to the grids. How many unique paths would there be?
 
-![](../assets/001-100/063-p-1.png)
+![](../assets/leetcode-note/001-100/063-p-1.png)
 
 An obstacle and empty space is marked as 1 and 0 respectively in the grid.
 

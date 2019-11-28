@@ -7,13 +7,13 @@ Write a program to find the node at which the intersection of two singly linked 
 
 For example, the following two linked lists:
 
-![](../assets/101-200/160-problem-1.png)
+![](../assets/leetcode-note/101-200/160-problem-1.png)
 
 begin to intersect at node c1.
 
 Example 1:
 
-![](../assets/101-200/160-problem-2.png)
+![](../assets/leetcode-note/101-200/160-problem-2.png)
 
 ```
 Input: intersectVal = 8, listA = [4,1,8,4,5], listB = [5,0,1,8,4,5], skipA = 2, skipB = 3  
@@ -25,7 +25,7 @@ Input Explanation: The intersected node's value is 8 (note that this must not be
 
 Example 2:
 
-![](../assets/101-200/160-problem-3.png)
+![](../assets/leetcode-note/101-200/160-problem-3.png)
 
 ```
 Input: intersectVal = 2, listA = [0,9,1,2,4], listB = [3,2,4], skipA = 3, skipB = 1
@@ -37,7 +37,7 @@ Input Explanation: The intersected node's value is 2 (note that this must not be
 
 Example 3:
 
-![](../assets/101-200/160-problem-4.png)
+![](../assets/leetcode-note/101-200/160-problem-4.png)
 
 ```
 Input: intersectVal = 0, listA = [2,6,4], listB = [1,5], skipA = 3, skipB = 2
@@ -110,7 +110,7 @@ Explanation: The two lists do not intersect, so return null.
 
 拼接两链表。 设长-短链表为 C ，短-长链表为 D （分别代表长链表在前和短链表在前的拼接链表），则当 C 走到长短链表交接处时， D 走在长链表中，且与长链表头距离为长度差; 当双指针相同时跳出循环，交点或null
 
-![](../assets/101-200/160-solution-2-1.png)
+![](../assets/leetcode-note/101-200/160-solution-2-1.png)
 
 ```java
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {

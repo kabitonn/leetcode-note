@@ -6,7 +6,7 @@ A linked list is given such that each node contains an additional random pointer
 
 Return a deep copy of the list.
 
-![](../assets/101-200/138-p-1.png)
+![](../assets/leetcode-note/101-200/138-p-1.png)
 
 **Note**:
 
@@ -139,7 +139,7 @@ public Node copyRandomList0(Node head) {
 2. 更新插入节点的 random
 3. 将新旧节点分离开来
 
-![](../assets/101-200/138-s-3-1.png)
+![](../assets/leetcode-note/101-200/138-s-3-1.png)
 
 
 
@@ -190,7 +190,7 @@ public Node copyRandomList0(Node head) {
 
 
 
-![](../assets/101-200/138-s-4-1.png)
+![](../assets/leetcode-note/101-200/138-s-4-1.png)
 
 ```java
     public Node copyRandomList3(Node head) {

@@ -36,7 +36,7 @@ rotate 4 steps to the right: 2->0->1->NULL
 
 ### 快慢指针
 
-![](../assets/001-100/061-s-1-1.png)
+![](../assets/leetcode-note/001-100/061-s-1-1.png)
 
 求出倒数第k个节点的前一个节点pre(倒数第k+1个节点)，
 快指针求出正数第k+1个节点，

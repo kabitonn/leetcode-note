@@ -93,7 +93,7 @@ nums: [1, 2, 3, 4, 5, 6]
 k: 2
 ```
 
-![](../assets/101-200/189-solution-3-1.png)
+![](../assets/leetcode-note/101-200/189-solution-3-1.png)
 
 ```java
     public void rotate(int[] nums,int k) {

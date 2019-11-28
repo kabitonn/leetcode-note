@@ -54,11 +54,11 @@ Given 1->2->3->4->5, reorder it to 1->5->2->4->3.
 
 归函数能够返回当前头元素对应的尾元素，并且将头元素和尾元素之间的链表按要求完成
 
-![](../assets/101-200/143-s-2-1.png)
+![](../assets/leetcode-note/101-200/143-s-2-1.png)
 
 如上图，只需要将 head 指向 tail，tail 指向处理完的链表头即可
 
-![](../assets/101-200/143-s-2-2.png)
+![](../assets/leetcode-note/101-200/143-s-2-2.png)
 
 然后把之前的 tail.next 返回就是外层 head 对应的 tail 了
 

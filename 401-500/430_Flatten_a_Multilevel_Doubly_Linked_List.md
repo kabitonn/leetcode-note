@@ -27,11 +27,11 @@
 
 给出以下多级双向链表:
 
-![](../a/../assets/401-500/430-p-1.png)
+![](../a/../assets/leetcode-note/401-500/430-p-1.png)
 
 我们应该返回如下所示的扁平双向链表:
 
-![](../a/../assets/401-500/430-p-2.png)
+![](../a/../assets/leetcode-note/401-500/430-p-2.png)
 
 ```java
 class Node {

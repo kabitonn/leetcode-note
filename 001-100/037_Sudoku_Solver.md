@@ -14,11 +14,11 @@ A sudoku solution must satisfy all of the following rules:
 
 Empty cells are indicated by the character '.'.
 
-![](../assets/001-100/037-p-1.png)
+![](../assets/leetcode-note/001-100/037-p-1.png)
 
 A sudoku puzzle...
 
-![](../assets/001-100/037-p-2.png)
+![](../assets/leetcode-note/001-100/037-p-2.png)
 
 ...and its solution numbers marked in red.
 

@@ -70,7 +70,7 @@ max=
 
 ### 记忆化 递归
 
-![](../assets/301-400/343-s-2-1.png)
+![](../assets/leetcode-note/301-400/343-s-2-1.png)
 
 i * (num - i) 对于求n=3时很关键
 

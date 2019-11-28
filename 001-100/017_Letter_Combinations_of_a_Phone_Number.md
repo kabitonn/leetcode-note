@@ -8,7 +8,7 @@ Given a string containing digits from 2-9 inclusive, return all possible letter 
 
 A mapping of digit to letters \(just like on the telephone buttons\) is given below. Note that 1 does not map to any letters.
 
-![](../assets/001-100/017-p-1.png)
+![](../assets/leetcode-note/001-100/017-p-1.png)
 
 Example:
 
@@ -84,7 +84,7 @@ Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 
 ### 递归
 
-![](../assets/001-100/017-s-3-1.png)
+![](../assets/leetcode-note/001-100/017-s-3-1.png)
 
 ```java
     private String[] mapping = new String[] {"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};

@@ -15,7 +15,7 @@ Output: true
 Explanation: There is a cycle in the linked list, where tail connects to the second node.
 ```
 
-![](../assets/101-200/141-problem-1.png)
+![](../assets/leetcode-note/101-200/141-problem-1.png)
 
 Example 2:
 
@@ -25,7 +25,7 @@ Output: true
 Explanation: There is a cycle in the linked list, where tail connects to the first node.
 ```
 
-![](../assets/101-200/141-problem-2.png)
+![](../assets/leetcode-note/101-200/141-problem-2.png)
 
 Example 3:
 
@@ -35,7 +35,7 @@ Output: false
 Explanation: There is no cycle in the linked list.
 ```
 
-![](../assets/101-200/141-problem-3.png)
+![](../assets/leetcode-note/101-200/141-problem-3.png)
 
 Follow up:
 

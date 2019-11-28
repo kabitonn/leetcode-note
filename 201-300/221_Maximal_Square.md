@@ -83,7 +83,7 @@ Output: 4
 4. 用一个变量记录当前出现的最大边长，这样遍历一次，找到最大的正方形边长 max，那么结果就是max^2
 
 
-![](../assets/201-300/221-s-2-1.png)
+![](../assets/leetcode-note/201-300/221-s-2-1.png)
 
 
 
@@ -116,7 +116,7 @@ Output: 4
 
 
 
-![](../assets/201-300/221-s-3-1.png)
+![](../assets/leetcode-note/201-300/221-s-3-1.png)
 
 ```java
     public int maximalSquare1(char[][] matrix) {

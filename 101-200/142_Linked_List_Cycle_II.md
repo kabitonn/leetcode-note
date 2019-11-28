@@ -16,7 +16,7 @@ Output: tail connects to node index 1
 Explanation: There is a cycle in the linked list, where tail connects to the second node.
 ```
 
-![](../assets/101-200/142-p-1.png)
+![](../assets/leetcode-note/101-200/142-p-1.png)
 
 Example 2:
 
@@ -26,7 +26,7 @@ Output: tail connects to node index 0
 Explanation: There is a cycle in the linked list, where tail connects to the first node.
 ```
 
-![](../assets/101-200/142-p-2.png)
+![](../assets/leetcode-note/101-200/142-p-2.png)
 
 Example 3:
 
@@ -36,7 +36,7 @@ Output: no cycle
 Explanation: There is no cycle in the linked list.
 ```
 
-![](../assets/101-200/142-p-3.png)
+![](../assets/leetcode-note/101-200/142-p-3.png)
 
 **Follow-up**:  
 Can you solve it without using extra space?
@@ -54,7 +54,7 @@ Can you solve it without using extra space?
 - 环的长度为n
 - 环首与快慢指针的环内相遇点距离y
 
-![](../assets/101-200/142-s-1-1.png)
+![](../assets/leetcode-note/101-200/142-s-1-1.png)
 
 设 slow 指针走过的距离为 t，那么 fast 指针走过的一定是 slow 指针的 2 倍，也就是 2t
 

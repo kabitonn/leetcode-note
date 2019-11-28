@@ -111,35 +111,35 @@ ans                  add 4   add 2           add 5   add 1
 
    2.2 last.right 不为 null，说明之前已经访问过，第二次来到这里，表明当前子树遍历完成，保存 cur 的值，更新 cur = cur.right
 
-![](../assets/001-100/094-s-3-1.png)  
+![](../assets/leetcode-note/001-100/094-s-3-1.png)  
 如上图，cur 指向根节点。 当前属于 2.1 的情况，cur.left 不为 null，cur 的左子树最右边的节点的右孩子为 null，那么我们把最右边的节点的右孩子指向 cur。
 
-![](../assets/001-100/094-s-3-2.png)  
+![](../assets/leetcode-note/001-100/094-s-3-2.png)  
 接着，更新 cur = cur.left。
 
-![](../assets/001-100/094-s-3-3.png)  
+![](../assets/leetcode-note/001-100/094-s-3-3.png)  
 如上图，当前属于 2.1 的情况，cur.left 不为 null，cur 的左子树最右边的节点的右孩子为 null，那么我们把最右边的节点的右孩子指向 cur。
 
-![](../assets/001-100/094-s-3-4.png)  
+![](../assets/leetcode-note/001-100/094-s-3-4.png)  
 更新 cur = cur.left。
 
-![](../assets/001-100/094-s-3-5.png)  
+![](../assets/leetcode-note/001-100/094-s-3-5.png)  
 如上图，当前属于情况 1，cur.left 为 null，保存 cur 的值，更新 cur = cur.right。
 
-![](../assets/001-100/094-s-3-6.png)  
+![](../assets/leetcode-note/001-100/094-s-3-6.png)  
 如上图，当前属于 2.2 的情况，cur.left 不为 null，cur 的左子树最右边的节点的右孩子已经指向 cur，保存 cur 的值，更新 cur = cur.right。
 
-![](../assets/001-100/094-s-3-7.png)  
+![](../assets/leetcode-note/001-100/094-s-3-7.png)  
 如上图，当前属于情况 1，cur.left 为 null，保存 cur 的值，更新 cur = cur.right。
 
-![](../assets/001-100/094-s-3-8.png)  
+![](../assets/leetcode-note/001-100/094-s-3-8.png)  
 如上图，当前属于 2.2 的情况，cur.left 不为 null，cur 的左子树最右边的节点的右孩子已经指向 cur，保存 cur 的值，更新 cur = cur.right。
 
-![](../assets/001-100/094-s-3-9.png)
+![](../assets/leetcode-note/001-100/094-s-3-9.png)
 
 当前属于情况 1，cur.left 为 null，保存 cur 的值，更新 cur = cur.right。
 
-![](../assets/001-100/094-s-3-10.png)
+![](../assets/leetcode-note/001-100/094-s-3-10.png)
 
 cur 指向 null，结束遍历。
 

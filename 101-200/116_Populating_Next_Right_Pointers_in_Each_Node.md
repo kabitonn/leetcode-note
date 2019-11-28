@@ -20,7 +20,7 @@ Populate each next pointer to point to its next right node. If there is no next 
 Initially, all next pointers are set to NULL.
 
 Example:  
-![](../assets/101-200/116-p-1.png)
+![](../assets/leetcode-note/101-200/116-p-1.png)
 
 **Note**:
 
@@ -106,11 +106,11 @@ Example:
     这里的话，额外需要一个变量把它存起来。
 
 
-![](../assets/101-200/116-s-3-1.png)
+![](../assets/leetcode-note/101-200/116-s-3-1.png)
 如上图，我们需要把 pre 的左孩子的 next 指向右孩子，pre 的右孩子的next指向cur的左孩子。
 
 
-![](../assets/101-200/116-s-3-2.png)
+![](../assets/leetcode-note/101-200/116-s-3-2.png)
 
 如上图，当 cur 指向 null 以后，我们只需要把 pre 的左孩子的 next 指向右孩子。
 ```java

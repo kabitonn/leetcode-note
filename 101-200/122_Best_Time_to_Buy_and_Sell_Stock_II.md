@@ -54,7 +54,7 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
 ### 一次遍历
 
-![](../assets/101-200/122-solution-1-1.png)
+![](../assets/leetcode-note/101-200/122-solution-1-1.png)
 
 如果第二个数字大于第一个数字，我们获得的总和将是最大利润
 
@@ -75,7 +75,7 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
 ### 峰谷法
 
-![](../assets/101-200/122-solution-2-1.png)
+![](../assets/leetcode-note/101-200/122-solution-2-1.png)
 
 数学语言：  
 $$TotalProfit = \sum_i(height(peak_i) - height(valley_i)) $$

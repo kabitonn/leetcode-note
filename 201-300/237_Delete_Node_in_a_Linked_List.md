@@ -7,7 +7,7 @@ Write a function to delete a node \(except the tail\) in a singly linked list, g
 
 Given linked list -- head = \[4,5,1,9\], which looks like following:
 
-![](../assets/201-300/237-problem-1.png)
+![](../assets/leetcode-note/201-300/237-problem-1.png)
 
 **Example 1:**
 

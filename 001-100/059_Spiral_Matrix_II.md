@@ -85,7 +85,7 @@ Output:
     }
 ```
 
-![](../assets/001-100/059-s-2-1.png)
+![](../assets/leetcode-note/001-100/059-s-2-1.png)
 
 ```java
     public int[][] generateMatrix2(int n) {
@@ -119,7 +119,7 @@ Output:
 ```
 
 ### 洋葱遍历 
-![](../assets/001-100/059-s-3-1.png)
+![](../assets/leetcode-note/001-100/059-s-3-1.png)
 
 ```java
     public int[][] generateMatrix3(int n) {

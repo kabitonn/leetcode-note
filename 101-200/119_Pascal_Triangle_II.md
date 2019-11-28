@@ -6,7 +6,7 @@ Given a non-negative index k where k ≤ 33, return the kth index row of the Pas
 
 **Note **that the row index starts from 0.
 
-![](../assets/101-200/119-problem-1.png)
+![](../assets/leetcode-note/101-200/119-problem-1.png)
 
 In Pascal's triangle, each number is the sum of the two numbers directly above it.
 
@@ -110,7 +110,7 @@ Follow up:
 ### 公式法
 杨辉三角其实可以看做由组合数构成
 
-![](../assets/101-200/119-s-3-1.png)
+![](../assets/leetcode-note/101-200/119-s-3-1.png)
 
 $$ C_n^k = n!/(k!(n-k)!) = (n*(n-1)*(n-2)*...(n-k+1))/k! $$
 

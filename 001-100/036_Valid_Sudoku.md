@@ -10,7 +10,7 @@ Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be valid
 2. Each column must contain the digits 1-9 without repetition.  
 3. Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.
 
-![](../assets/001-100/036-p-1.png)
+![](../assets/leetcode-note/001-100/036-p-1.png)
 
 A partially filled sudoku which is valid.
 

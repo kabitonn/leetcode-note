@@ -133,7 +133,7 @@ Explanation: 13 = 4 + 9.
 
 为了节省遍历的时间，曾经（ n - 以前出现的平方数） 这个值出现过，则在此出现这样的数时直接忽略
 
-![](../assets/201-300/279-s-4-1.png)
+![](../assets/leetcode-note/201-300/279-s-4-1.png)
 
 ```java
     public int numSquares3(int n) {
