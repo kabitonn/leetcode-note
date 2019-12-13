@@ -46,7 +46,7 @@
 * [043. Multiply Strings(M)](/001-100/043_Multiply_Strings.md)
 * [044. Wildcard Matching(H)](/001-100/044_Wildcard_Matching.md)
 * [045. Jump Game II(H)](/001-100/045_Jump_Game_II.md)
-* [046. Permutations(M)](/001-100/045_Permutations.md)
+* [046. Permutations(M)](/001-100/046_Permutations.md)
 * [047. Permutations II(M)](/001-100/047_Permutations_II.md)
 * [048. Rotate Image(M)](/001-100/048_Rotate_Image.md)
 * [049. Group Anagrams(M)](/001-100/049_Group_Anagrams.md)
