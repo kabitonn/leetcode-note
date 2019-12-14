@@ -78,9 +78,9 @@ Output: 4
 
 
 ### 异或运算
-- $$ a \bigoplus 0 = a $$
-- $$ a \bigoplus a = 0 $$
-- $$ a \bigoplus b \bigoplus a=(a \bigoplus a) \bigoplus b=0 \bigoplus b=b $$
+- $a \bigoplus 0 = a$
+- $a \bigoplus a = 0$
+- $a \bigoplus b \bigoplus a=(a \bigoplus a) \bigoplus b=0 \bigoplus b=b$
 
 
 ```java

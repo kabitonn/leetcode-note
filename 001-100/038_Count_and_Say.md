@@ -24,7 +24,7 @@ The count-and-say sequence is the sequence of integers with the first five terms
 ```
 
 
-Given an integer n where 1 ≤ n ≤ 30, generate the $$ n^{th} $$ term of the count-and-say sequence.
+Given an integer n where 1 ≤ n ≤ 30, generate the $n^{th}$ term of the count-and-say sequence.
 
 **Note**: Each term of the sequence of integers will be represented as a string.
 

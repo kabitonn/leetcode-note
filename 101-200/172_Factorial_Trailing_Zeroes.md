@@ -41,7 +41,7 @@ Explanation: 5! = 120, one trailing zero.
     }
 ```
 
-时间复杂度： $$O(log_5(n))$$
+时间复杂度： $O(log_5(n))$
 
 
 ### 递归

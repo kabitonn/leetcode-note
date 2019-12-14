@@ -45,7 +45,7 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
         return max;
     }
 ```
-时间复杂度：$$O(n^2)$$，循环运行$$n(n-1)/2$$次
+时间复杂度：$O(n^2)$，循环运行$n(n-1)/2$次
 空间复杂度：O(1)
 
 

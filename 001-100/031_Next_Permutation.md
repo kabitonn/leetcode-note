@@ -64,7 +64,7 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
     }
 ```
 
-时间复杂度：$$ O(n^2) $$。
+时间复杂度：$O(n^2)$。
 
 空间复杂度：O\(1\)。
 

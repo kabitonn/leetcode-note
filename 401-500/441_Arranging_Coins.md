@@ -56,7 +56,7 @@ Because the 4th row is incomplete, we return 3.
 ### 二分法
 
 求小于等于符合要求的最大值
-求满足 $$i * (i + 1) / 2 <= n $$的最大的那个 i
+求满足 $i * (i + 1) / 2 <= n$的最大的那个 i
 ```java
     public int arrangeCoins(int n) {
     	int low = 1;

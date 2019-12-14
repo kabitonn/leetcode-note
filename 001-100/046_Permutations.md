@@ -1,6 +1,6 @@
 # 046. Permutations\(M\)
 
-[046. Permutations](https://leetcode-cn.com/problems/permutations/)
+[046. 全排列](https://leetcode-cn.com/problems/permutations/)
 
 ## 题目描述\(中等\)
 
@@ -23,15 +23,16 @@ Output:
 
 ## 思路
 
-回溯  
-递归
-动态规划
+- 回溯  
+- 递归
+- 动态规划
 
 ## 解决方法
 
 ### 回溯
 
 ![](../assets/leetcode-note/001-100/046-s-1-1.png)
+
 每调用一层就进入一个 for 循环，相当于列出了所有解，然后挑选了我们需要的。其实本质上就是深度优先遍历 DFS。
 
 
@@ -86,7 +87,7 @@ visited记录是否使用过(数组或二进制位来实现)
     }
 ```
 
-时间复杂度：$$O(\sum_{k = 1}^{N}{P(N, k)})$$
+时间复杂度：$O(\sum_{k = 1}^{N}{P(N, k)})$
 
 空间复杂度：O(n!)。
 
@@ -132,7 +133,7 @@ visited记录是否使用过(数组或二进制位来实现)
         nums[i] = nums[i] ^ nums[j];
     }
 ```
-时间复杂度：$$O(\sum_{k = 1}^{N}{P(N, k)})$$
+时间复杂度：$O(\sum_{k = 1}^{N}{P(N, k)})$
 
 空间复杂度：O(n!)。
 
@@ -165,7 +166,7 @@ visited记录是否使用过(数组或二进制位来实现)
     }
 ```
 
-时间复杂度：$$O(\sum_{k = 1}^{N}{P(N, k)})$$
+时间复杂度：$O(\sum_{k = 1}^{N}{P(N, k)})$
 
 空间复杂度：O(n!)。
 
@@ -201,11 +202,11 @@ visited记录是否使用过(数组或二进制位来实现)
         return listList;
     }
 ```
-时间复杂度：$$\mathcal{O}(\sum_{k = 1}^{N}{P(N, k)})$$
+时间复杂度：$\mathcal{O}(\sum_{k = 1}^{N}{P(N, k)})$
 
-$$ P(N, k) = \frac{N!}{(N - k)!} = N (N - 1) ... (N - k + 1)$$
+$P(N, k) = \frac{N!}{(N - k)!} = N (N - 1) ... (N - k + 1)$
 
-$$ N! \leq \sum_{k = 1}^{N}{P(N, k)} \leq N * N!$$
+$N! \leq \sum_{k = 1}^{N}{P(N, k)} \leq N * N!$
 ​	
 
 空间复杂度：O(n!)。

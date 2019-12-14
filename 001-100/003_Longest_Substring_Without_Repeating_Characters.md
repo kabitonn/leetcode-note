@@ -70,7 +70,7 @@ Explanation: The answer is "wke", with the length of 3.
     }
 ```
 
-时间复杂度$$ O(n^3) $$
+时间复杂度 $O(n^3)$
 
 ```java
     public int lengthOfLongestSubstring(String s) {

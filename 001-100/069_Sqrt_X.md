@@ -44,7 +44,7 @@ Explanation: The square root of 8 is 2.82842..., and since
     }
 ```
 
-时间复杂度：$$O(\sqrt{x})$$。
+时间复杂度：$O(\sqrt{x})$。
 
 空间复杂度：O(1)。
 

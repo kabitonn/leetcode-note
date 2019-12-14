@@ -35,7 +35,7 @@ This problem was inspired by this original tweet by Max Howell:
 ## 解决方法
 
 ### 递归
-反转一颗空树结果还是一颗空树。对于一颗根为 r，左子树为 $${right}$$， 右子树为 $${left}$$ 的树来说，它的反转树是一颗根为 r，左子树为 $${right}$$ 的反转树，右子树为 $${left}$$ 的反转树的树。
+反转一颗空树结果还是一颗空树。对于一颗根为 r，左子树为 ${right}$， 右子树为 ${left}$ 的树来说，它的反转树是一颗根为 r，左子树为 ${right}$ 的反转树，右子树为 ${left}$ 的反转树的树。
 
 ```java
     public TreeNode invertTree(TreeNode p) {
@@ -49,7 +49,7 @@ This problem was inspired by this original tweet by Max Howell:
     }
 ```
 时间复杂度: O(n)，其中 n 是树中节点的个数。
-空间复杂度: O(n)，在最坏情况下栈内需要存放 O(h) 个方法调用，其中 h 是树的高度。由于 $$h\in O(n)$$
+空间复杂度: O(n)，在最坏情况下栈内需要存放 O(h) 个方法调用，其中 h 是树的高度。由于 $h\in O(n)$
 
 ### 迭代BFS
 核心在于遍历节点，只要能接触到每一个节点，就能反转它的左右孩子，至于遍历方式反而不重要，DFS也可

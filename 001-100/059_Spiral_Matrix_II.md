@@ -4,7 +4,7 @@
 
 ## 题目描述\(中等\)
 
-Given a positive integer n, generate a square matrix filled with elements from 1 to $$n^2$$ in spiral order.
+Given a positive integer n, generate a square matrix filled with elements from 1 to $n^2$ in spiral order.
 
 Example:
 

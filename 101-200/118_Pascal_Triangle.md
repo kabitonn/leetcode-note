@@ -50,8 +50,8 @@ Output:
         return lists;
     }
 ```
-时间复杂度：$$O(numRows^2)$$
-空间复杂度：$$O(numRows^2)$$
+时间复杂度：$O(numRows^2)$
+空间复杂度：$O(numRows^2)$
 
 
 

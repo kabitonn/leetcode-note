@@ -15,7 +15,7 @@ By listing and labeling all of the permutations in order, we get the following s
 5. "312"
 6. "321"
 ```
-Given n and k, return the $$ k^{th} $$ permutation sequence.
+Given n and k, return the $k^{th}$ permutation sequence.
 
 **Note**:
 - Given n will be between 1 and 9 inclusive.

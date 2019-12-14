@@ -49,9 +49,9 @@ public class NumArray {
 ### 动态规划+缓存
 
 
-$$sums[k]$$ 定义为 $$nums[0 \cdots k-1]$$的累积和
+$sums[k]$ 定义为 $nums[0 \cdots k-1]$的累积和
 
-$$sumrange(i, j)=sums[j+1] - sums[i]$$
+$sumrange(i, j)=sums[j+1] - sums[i]$
 
 
 ```java

@@ -42,9 +42,9 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
 股票买卖策略：
 
-单独交易日： 设今天价格 $$p_1$$明天价格 $$p_2$$，则今天买入、明天卖出可赚取金额 $$p_2 - p_1$$p(负值代表亏损)。
+单独交易日： 设今天价格 $p_1$明天价格 $p_2$，则今天买入、明天卖出可赚取金额 $p_2 - p_1$p(负值代表亏损)。
 
-连续上涨交易日： 设此上涨交易日股票价格分别为 $$p_1, p_2, ... , p_n$$，则第一天买最后一天卖收益最大，即 $$p_n-p_1$$；等价于每天都买卖，即 $$ p_n - p_1=(p_2 - p_1)+(p_3 - p_2)+...+(p_n - p_{n-1})$$
+连续上涨交易日： 设此上涨交易日股票价格分别为 $p_1, p_2, ... , p_n$，则第一天买最后一天卖收益最大，即 $p_n-p_1$；等价于每天都买卖，即 $p_n - p_1=(p_2 - p_1)+(p_3 - p_2)+...+(p_n - p_{n-1})$
 
 连续下降交易日： 则不买卖收益最大，即不会亏钱。
 
@@ -78,7 +78,7 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 ![](../assets/leetcode-note/101-200/122-solution-2-1.png)
 
 数学语言：  
-$$TotalProfit = \sum_i(height(peak_i) - height(valley_i)) $$
+$TotalProfit = \sum_i(height(peak_i) - height(valley_i))$
 
 ```java
     public int maxProfit(int[] prices) {
