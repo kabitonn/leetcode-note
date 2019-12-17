@@ -51,7 +51,7 @@
 * [449. Serialize and Deserialize BST(M)](/401-500/449_Serialize_and_Deserialize_BST.md)
 * [450. Delete Node in a BST(M)](/401-500/450_Delete_Node_in_a_BST.md)
 
-## 450-500
+## 451-500
 
 * [451. Sort Characters By Frequency(M)](/401-500/451_Sort_Characters_By_Frequency.md)
 * [452. Minimum Number of Arrows to Burst Balloons(M)](/401-500/452_Minimum_Number_of_Arrows_to_Burst_Balloons.md)

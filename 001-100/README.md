@@ -5,7 +5,7 @@
 * [002. Add Two Numbers(M)](/001-100/002_Add_Two_Numbers.md)
 * [003. Longest Substring Without Repeating Characters(M)](/001-100/003_Longest_Substring_Without_Repeating_Characters.md)
 * [004. Median of Two Sorted Arrays(H)](/001-100/004_Median_of_Two_Sorted_Arrays.md)
-* [005. Longest Palindromic Substring(H)](/001-100/005_Longest_Palindromic_Substring.md)
+* [005. Longest Palindromic Substring(M)](/001-100/005_Longest_Palindromic_Substring.md)
 * [006. ZigZag Conversion(M)](/001-100/006_ZigZag_Conversion.md)
 * [007. Reverse Integer(E)](/001-100/007_Reverse_Integer.md)
 * [008. String to Integer (atoi)(M)](/001-100/008_String_to_Integer.md)
