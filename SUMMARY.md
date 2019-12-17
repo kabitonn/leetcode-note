@@ -612,7 +612,6 @@
    * [599. Minimum Index Sum of Two Lists(E)](/501-600/599_Minimum_Index_Sum_of_Two_Lists.md)
    * [600. Non-negative Integers without Consecutive Ones(H)](/501-600/600_Non-negative_Integers_without_Consecutive_Ones.md)
 
-
 * [601-700](/601-700/README.md)
    * [601. ()](/601-700/601 .md)
    * [602. ()](/601-700/602 .md)
