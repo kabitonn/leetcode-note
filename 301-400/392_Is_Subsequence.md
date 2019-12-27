@@ -1,6 +1,6 @@
 # 392. Is Subsequence(M)
 
-[]()
+[392. 判断子序列](https://leetcode-cn.com/problems/is-subsequence/)
 
 ## 题目描述(中等)
 

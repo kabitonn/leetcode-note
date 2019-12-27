@@ -16,9 +16,9 @@
 `split(regex, limit)` 用法
 - regex:正则表达式或字符串
 - 控制模式应用的次数 
-  - limit =0 表示模式应用尽可能多的次数，数组可以是任意长度，并且结尾空字符串将被丢弃。
+  - limit=0   表示模式应用尽可能多的次数，数组可以是任意长度，并且结尾空字符串将被丢弃。
   - limit>0时 那么模式将会应用limit-1次 数组长度不会超过limit
-  -  limit为非正整数表示 模式被应用尽可能多的次数 比如-1
+  - limit为非正整数表示 模式被应用尽可能多的次数 比如-1
 
 ```java
     public String validIPAddress(String IP) {
