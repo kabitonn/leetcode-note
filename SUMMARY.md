@@ -601,7 +601,7 @@
    * [588. Design In-Memory File System(H)](/501-600/588_Design_In-Memory_File_System.md)
    * [589. N-ary Tree Preorder Traversal(E)](/501-600/589_N-ary_Tree_Preorder_Traversal.md)
    * [590. N-ary Tree Postorder Traversal(E)](/501-600/590_N-ary_Tree_Postorder_Traversal.md)
-   * [591. Tag Validator(H](/501-600/591_Tag_Validator.md)
+   * [591. Tag Validator(H)](/501-600/591_Tag_Validator.md)
    * [592. Fraction Addition and Subtraction(M)](/501-600/592_Fraction_Addition_and_Subtraction.md)
    * [593. Valid Square(M)](/501-600/593_Valid_Square.md)
    * [594. Longest Harmonious Subsequence(E)](/501-600/594_Longest_Harmonious_Subsequence.md)
