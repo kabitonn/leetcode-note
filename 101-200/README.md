@@ -20,7 +20,7 @@
 * [117. Populating Next Right Pointers in Each Node II(M)](/101-200/117_Populating_Next_Right_Pointers_in_Each_Node_II.md)
 * [118. Pascal's Triangle(E)](/101-200/118_Pascal_Triangle.md)
 * [119. Pascal's Triangle II(E)](/101-200/119_Pascal_Triangle_II.md)
-* [120. Triangle(M)](/101-200/120_120_Triangle.md)
+* [120. Triangle(M)](/101-200/120_Triangle.md)
 * [121. Best Time to Buy and Sell Stock(E)](/101-200/121_Best_Time_to_Buy_and_Sell_Stock.md)
 * [122. Best Time to Buy and Sell Stock II(E)](/101-200/122_Best_Time_to_Buy_and_Sell_Stock_II.md)
 * [123. Best Time to Buy and Sell Stock III(H)](/101-200/123_Best_Time_to_Buy_and_Sell_Stock_III.md)
