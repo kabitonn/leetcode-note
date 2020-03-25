@@ -63,7 +63,7 @@ Return 3. The paths that sum to 8 are:
     public int pathSum(TreeNode root, int sum) {
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         map.put(0, 1);
-        return getPathSum1(root, map, sum, 0);
+        return getPathSum(root, map, sum, 0);
     }
     
     int getPathSum(TreeNode pNode, HashMap<Integer, Integer> map, int target, int pathSum){

@@ -116,9 +116,8 @@ index 已压缩的结果的末尾,
         	if(j-i!=1) {
         		String strCount = String.valueOf(j-1-1);
         		for(char c:strCount.toCharArray()) {chars[index++]=c;}
-        		i=j;
         	}
-        	i++;
+        	i=j;
         }
         return index;
     }

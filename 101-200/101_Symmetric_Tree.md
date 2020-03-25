@@ -154,8 +154,11 @@ public boolean isSymmetric0(TreeNode root) {
                 }
             }
             for (int i = 0, j = line.size() - 1; i < j; i++, j--) {
-                //if(line.get(i)==null&&line.get(j)==null) {continue;}
-                if (line.get(i).equals(line.get(j))) {
+                if (line.get(i) == null && line.get(j) == null) {
+                    continue;
+                } else if (line.get(i) == null || line.get(j) == null) {
+                    return false;
+                } else if (!line.get(i).equals(line.get(j))) {
                     return false;
                 }
             }

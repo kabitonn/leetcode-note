@@ -149,7 +149,7 @@
 - "#".equals(preorder) 判断是否剩下根节点
 
 ```java
-     static final Pattern pattern = Pattern.compile("[^,#]+,#,#");
+    static final Pattern pattern = Pattern.compile("[^,#]+,#,#");
 
     public boolean isValidSerialization1(String preorder) {
         Matcher matcher = pattern.matcher(preorder);
