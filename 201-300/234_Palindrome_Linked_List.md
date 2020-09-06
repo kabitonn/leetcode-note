@@ -185,13 +185,13 @@ Could you do it in O(n) time and O(1) space?
 
 链表快慢指针找中点trick，判断fast和fast.next
 (想要获取中点左侧或偏左结点需要记录前一个指针)
-* fast==null时，链表长度为偶数时，slow指向偏右中点
-* fast!=null时，链表长度为奇数时，slow指向中点结点
+* fast==null时，链表长度为偶数，slow指向偏右中点
+* fast!=null时，链表长度为奇数，slow指向中点结点
 
 链表快慢指针找中点trick，fast先走一步，判断fast和fast.next
 
-* fast!=null时，链表长度为偶数时，slow指向偏左中点
-* fast==null时，链表长度为奇数时，slow指向中点结点
+* fast!=null时，链表长度为偶数，slow指向偏左中点
+* fast==null时，链表长度为奇数，slow指向中点结点
 
 
 第一种

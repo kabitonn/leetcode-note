@@ -96,7 +96,7 @@ Output: false
 
 ### 牛顿迭代法
 
-![](../assets/leetcode-note/301-400/367-solution-3-1.png)
+![](../assets/leetcode-note/301-400/367-s-3-1.png)
 
 ```java
     public boolean isPerfectSquare(int num) {

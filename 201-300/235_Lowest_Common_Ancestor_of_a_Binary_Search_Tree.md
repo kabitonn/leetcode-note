@@ -9,7 +9,7 @@ According to the definition of LCA on Wikipedia: “The lowest common ancestor i
 
 Given binary search tree:  root = \[6,2,8,0,4,7,9,null,null,3,5\]
 
-![](../assets/leetcode-note/201-300/235-problem-1.png)
+![](../assets/leetcode-note/201-300/235-p-1.png)
 
 Example 1:
 

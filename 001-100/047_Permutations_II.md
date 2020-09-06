@@ -98,7 +98,6 @@ Output:
 ```java
     public List<List<Integer>> permuteUnique3(int[] nums) {
         List<List<Integer>> listList = new ArrayList<>();
-        Arrays.sort(nums);
         permute(nums, 0, listList);
         return listList;
     }

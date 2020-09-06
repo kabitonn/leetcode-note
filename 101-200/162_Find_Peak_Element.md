@@ -87,7 +87,7 @@ Your solution should be in logarithmic complexity.
 
 ### 线性扫描
 
-本方法利用了连续的两个元素 nums\[j\]nums\[j\] 和 nums\[j + 1\]nums\[j+1\] 不会相等这一事实。于是，我们可以从头开始遍历 numsnums 数组。每当我们遇到数字 nums\[i\]nums\[i\]，只需要检查它是否大于下一个元素 nums\[i+1\]nums\[i+1\] 即可判断 nums\[i\]nums\[i\] 是否是峰值。
+本方法利用了连续的两个元素 nums\[j\] 和 nums\[j + 1\]不会相等这一事实。于是，我们可以从头开始遍历 nums 数组。每当我们遇到数字 nums\[i\]，只需要检查它是否大于下一个元素 nums\[i+1\] 即可判断 nums\[i\] 是否是峰值。
 
 ![](../assets/leetcode-note/101-200/162-s-2-1.png)
 

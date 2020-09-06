@@ -131,8 +131,8 @@ Output: -1
 求最小值的偏移点
 比较中点和端点值的情况
 - mid 和 start 比较
-    - mid > start: 最小值在左半部分。
-    - mid < start：最小值在左半部分。
+    - mid > start: 最小值在左半部分或右半部分。
+    - mid < start：最小值在左半部分(包括mid)。
   
   无论大于小于，最小值都在左半部分，所以 mid 和 start 比较是不可取的
 - mid 和 end 比较
@@ -144,7 +144,7 @@ Output: -1
 求最大值的偏移点
 - mid 和 end 比较
     - mid < end：最大值在右半部分。
-    - mid > end：最大值在右半部分。
+    - mid > end：最大值在右半部分(包括mid)。
 
   无论大于小于，最大值都在右半部分，所以 mid 和 end比较是不可取的
 - mid 和 start 比较

@@ -5,7 +5,7 @@
 
 Given a non-negative integer numRows, generate the first numRows of Pascal's triangle.
 
-![](../assets/leetcode-note/101-200/118-problem-1.png)
+![](../assets/leetcode-note/101-200/118-p-1.png)
 
 In Pascal's triangle, each number is the sum of the two numbers directly above it.
 

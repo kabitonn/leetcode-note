@@ -7,7 +7,7 @@
 
 例如，给定一个 3叉树 :
 
-![](../assets/leetcode-note/401-500/429-problem-1.png)
+![](../assets/leetcode-note/401-500/429-p-1.png)
 
 ```
 返回其层序遍历:

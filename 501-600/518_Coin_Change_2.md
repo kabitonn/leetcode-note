@@ -60,10 +60,6 @@
         return sum;
     }
 
-    public int change0(int amount, int[] coins) {
-        Arrays.sort(coins);
-        return change0(coins, amount, 0, new Integer[coins.length + 1][amount + 1]);
-    }
 ```
 
 ### 递归 记忆化
